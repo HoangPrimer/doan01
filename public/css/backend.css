@@ -1,0 +1,440 @@
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Roboto:wght@100;300&display=swap');
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-size: 16px;
+    }
+    
+    input:not([type="radio"]) {
+        font-size: 14px;
+    }
+    /* Thanh Công Cụ Header Backend -> Layout */
+    
+    .navbar-brand {
+        padding: 1rem;
+        font-size: 1rem;
+        background-color: rgba(0, 0, 0, .25);
+        box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+        font-weight: 500;
+    }
+    
+    .navbar .navbar-toggler {
+        top: .25rem;
+        right: 1rem;
+    }
+    
+    .navbar .form-control {
+        padding: 1rem;
+        border-width: 0;
+        border-radius: 0;
+        font-size: 16px;
+    }
+    
+    .form-control-dark {
+        color: #fff;
+        background-color: rgba(255, 255, 255, .1);
+        border-color: rgba(255, 255, 255, .1);
+    }
+    
+    .form-control-dark:focus {
+        border-color: transparent;
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+    }
+    /* slidebar Thanh menu bên trái Backend -> Layout */
+    
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+        padding: 100px 15px 0;
+        box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    }
+    
+    @media (max-width: 767.98px) {
+        .sidebar {
+            top: 5rem;
+        }
+        .navbar-brand {
+            margin-left: 10px;
+        }
+        .navbar .container-fluid {
+            margin-top: 10px;
+        }
+        .navbar .container-fluid .d-flex {
+            margin-top: 10px;
+        }
+        .live_seach_category {
+            margin-top: 10px;
+        }
+    }
+    
+    .sidebar-sticky {
+        position: relative;
+        top: 0;
+        height: calc(100vh - 100px);
+        padding-top: .5rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+        /* Scrollable contents if viewport is shorter than content. */
+    }
+    /*  */
+    
+    .user-panel {
+        border-radius: 5px;
+    }
+    
+    @media (max-width: 1120px) and (min-width:992px) {
+        .dropdown-btn {
+            font-size: 14px !important;
+        }
+    }
+    /* menu dropdown Layout -> id="sidebarMenu" */
+    
+    .dropdown-btn {
+        padding: 5px 0 5px 10px;
+        color: rgb(0, 0, 0);
+        width: 100%;
+        cursor: pointer;
+        outline: none;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgb(255, 241, 241);
+        margin: 5px 0;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .dropdown-btn:hover {
+        color: blue;
+    }
+    
+    .active {
+        background-color: rgb(94, 255, 234);
+    }
+    
+    .dropdown-container {
+        display: none;
+        overflow: hidden;
+        padding: 0 10px;
+    }
+    
+    .dropdown-container .abc {
+        padding: 3px 0 3px 10px;
+        margin: 5px 0;
+        color: rgb(40, 61, 245);
+        position: relative;
+        background-color: rgb(255, 255, 255);
+        transition: 0.5s;
+        border: 1px solid #a8d6f5;
+    }
+    
+    .dropdown-container .abc::before {
+        content: "";
+        position: absolute;
+        width: 3px;
+        height: 100%;
+        background-color: #3498db;
+        top: 0px;
+        left: 0px;
+        transition: 0.3s;
+        opacity: 0;
+    }
+    
+    .dropdown-container .abc:hover {
+        box-shadow: 0 0 2px 2px #c9d4f1;
+    }
+    
+    .dropdown-container .abc:hover:before {
+        opacity: 1;
+    }
+    
+    .fa-caret-down {
+        float: right;
+        padding-right: 8px;
+    }
+    /*End Backend -> Layout*/
+    /* hiển thị ảnh logo trước khi upload Backend -> Trademark-> Create*/
+    
+    .upload_logo {
+        width: 160px;
+        height: 120px;
+        border: 1px dashed #9aafe7;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+    }
+    
+    .upload_logo .close_logo_preview {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        font-size: 18px;
+        cursor: pointer;
+        background-color: red;
+        color: #fff;
+        border-radius: 50%;
+        display: none;
+    }
+    
+    .upload_logo label {
+        cursor: pointer;
+    }
+    
+    .upload_logo .logo_preview {
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    /* end BAckend -> Trademark -> Create */
+    /*------------------  hien anh truoc khi upload -----------------------*/
+    
+    .dandev-reviews {
+        margin: 10px 0;
+        min-height: 200px;
+        display: block;
+    }
+    
+    .dandev-reviews .form_upload {
+        width: 100%;
+        display: inline-block;
+        height: 40px;
+    }
+    
+    .dandev-reviews .form_upload>label {
+        height: 40px;
+        width: 200px;
+        display: block;
+        cursor: pointer;
+        border: 1px solid #3498db;
+        line-height: 40px;
+        transition: 1s;
+        border-radius: 5px;
+        box-shadow: 1px 2px #333;
+    }
+    
+    .dandev-reviews .form_upload>label:hover {
+        background-color: #47d864;
+    }
+    
+    navigate .table-add .form .block .error .dandev-reviews .form_upload label:hover {
+        background-color: #333;
+        color: #fff;
+    }
+    
+    .dandev-reviews label span {
+        padding: 0 20px;
+        font-size: 20px;
+        display: inline-block;
+        line-height: 30px;
+    }
+    
+    .dandev-reviews label i {
+        padding: 0 20px;
+        font-size: 20px;
+        display: inline-block;
+        line-height: 30px;
+        border-right: 2px solid #47d864;
+    }
+    
+    .list_attach {
+        display: block;
+        margin-top: 10px;
+        width: 100%;
+        height: 150px;
+        border: 2px dashed #3498db;
+    }
+    
+    ul.dandev_attach_view {
+        list-style: none;
+    }
+    
+    ul.dandev_attach_view li {
+        float: left;
+        width: 150px;
+        margin: 0 20px 20px 0 !important;
+        padding: 0 !important;
+        border: 0 !important;
+        overflow: inherit;
+        clear: none;
+        height: 100%;
+    }
+    
+    ul.dandev_attach_view .img-wrap {
+        position: relative;
+    }
+    
+    ul.dandev_attach_view .img-wrap .close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        background: #000;
+        color: #fff !important;
+        border-radius: 50%;
+        z-index: 2;
+        display: block;
+        width: 20px;
+        height: 20px;
+        font-size: 16px;
+        text-align: center;
+        line-height: 18px;
+        cursor: pointer !important;
+        opacity: 1 !important;
+        text-shadow: none;
+    }
+    
+    ul.dandev_attach_view li.li_file_hide {
+        opacity: 0;
+        visibility: visible;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden;
+        margin: 0 !important;
+    }
+    
+    ul.dandev_attach_view .img-wrap-box {
+        position: relative;
+        padding-top: 100%;
+        height: auto;
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+    
+    .img-wrap-box img {
+        width: 120px !important;
+        height: 120px !important;
+        top: 15px;
+        left: 15px;
+        position: absolute;
+        object-position: 50% 50%;
+        transition: all .5s linear;
+        -moz-transition: all .5s linear;
+        -webkit-transition: all .5s linear;
+        -ms-transition: all .5s linear;
+    }
+    
+    ul li,
+    ol li {
+        list-style-position: inside;
+    }
+    
+    .dandev-reviews .list_attach span.dandev_insert_attach {
+        width: 120px;
+        height: 120px;
+        text-align: center;
+        border: 2px dashed #ccc;
+        line-height: 120px;
+        font-size: 25px;
+        color: #ccc;
+        display: none;
+        cursor: pointer;
+        float: left;
+        margin-top: 100px;
+    }
+    
+    .list_attach.show-btn span.dandev_insert_attach {
+        display: block;
+        margin: 15px !important;
+    }
+    
+    i.dandev-plus {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 35px;
+        line-height: 1;
+    }
+    
+    .dandev-reviews .list_attach ul.dandev_attach_view li input {
+        display: none;
+    }
+    /*-------------------------------------------------toassst----*/
+    
+    .toast {
+        min-width: 250px;
+        max-width: 600px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        border-radius: 5px;
+        border-left: 3px solid;
+        border: 0.5px solid #3498db;
+        animation: left 1s ease, out 2s ease 5s forwards;
+    }
+    
+    @keyframes left {
+        from {
+            opacity: 0;
+            transform: translateY(-120px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes out {
+        to {
+            opacity: 0;
+        }
+    }
+    
+    #toast {
+        position: fixed;
+        top: 100px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    
+    .toast .toast__icon {
+        font-size: 25px;
+    }
+    
+    .toast .toast__close {
+        font-size: 24px;
+        color: rgb(151, 146, 146);
+        cursor: pointer;
+    }
+    
+    .toast .toast__body {
+        flex-grow: 1;
+        font-size: 20px;
+    }
+    
+    .toast .toast__icon,
+    .toast .toast__close {
+        padding: 16px;
+    }
+    
+    .toast--success {
+        border-color: #47d864;
+    }
+    
+    .toast--success .toast__icon {
+        color: #47d864;
+    }
+    
+    .toast--success .toast__body {
+        color: #47d864;
+    }
+    
+    .toast--error {
+        border-color: red;
+    }
+    
+    .toast--error .toast__icon {
+        color: red;
+    }
+    
+    .toast--error .toast__body {
+        color: red;
+    }
+    /*--------------------------------------------------------------------------------------------------*/

@@ -1,0 +1,1 @@
+Đồng hồ Orient là thương hiệu không còn xa lạ với những tay chơi đồng hồ trên thế giới nói chung và dân sành đồng hồ tại Việt Nam nói riêng. Những sản phẩm với mẫu mã sang trọng, được chế tác từ những nguyên liệu đẳng cấp, hoàn hảo nhất cùng những tính năng ưu việt đã thực sự gây ấn tượng sâu đậm trong tâm trí người tiêu dùng từ những ngày đầu tiên cho tới tận bây giờ.

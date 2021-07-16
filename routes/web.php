@@ -10,6 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/aaa',function(){
+    return view('backend.layout.tesst');
+});
 Route::group(['namespace' => 'User'], function () {
     Route::get('/', [
         'as' => 'home',
@@ -54,15 +58,6 @@ Route::get('/Dong-Ho-{id}', [
     'as' => 'drec',
     'uses' => 'Frontend@directory'
 ]);
-////////////////////////////////////////////
-
-
-
-///////////////////////////////////////////////////////
-
-
-
-///////////////////////////////////////////////////////////
 
 
 //////////////////////////////////////////////////////////
@@ -130,12 +125,6 @@ Route::group(['prefix' => 'product'], function () {
         'uses' => 'Frontend@comment'
     ]);
 });
-
-//////////////////////////////////////////////////
-
-////////////////////////////////////////////////////////
-
-
 
 
 ////////////////////////////////////////////////////////
@@ -246,19 +235,44 @@ Route::middleware(['admin'])->group(function () {
         });
 
         Route::group(['prefix' => 'product'], function () {
-            Route::get('add', [
-                'as' => 'add_product',
-                'uses' => 'Product_Controller@get_add_product'
+            Route::get('create', [
+                'as' => 'create_product',
+                'uses' => 'Product_Controller@create_product'
             ]);
 
-            Route::post('add', [
-                'as' => 'p.a.product',
-                'uses' => 'Product_Controller@post_product'
+            Route::post('create', [
+                'as' => 'post_create_product',
+                'uses' => 'Product_Controller@post_create_product'
             ]);
 
             Route::get('list', [
                 'as' => 'list_product',
                 'uses' => 'Product_Controller@list_product'
+            ]);
+
+            Route::get('sort_product/{id}', [
+                'as' => 'sort_product',
+                'uses' => 'Product_Controller@sort_product'
+            ]);
+
+            Route::post('sort}', [
+                'as' => 'sort',
+                'uses' => 'Product_Controller@sort'
+            ]);
+
+            Route::get('live_search_product', [
+                'as' => 'live_search_product',
+                'uses' => 'Product_Controller@live_search_product'
+            ]);
+
+            Route::get('show_hide/{id}', [
+                'as' => 'show_hide_product',
+                'uses' => 'Product_Controller@show_hide_product'
+            ]);
+
+            Route::get('show_hot/{id}', [
+                'as' => 'show_hot_product',
+                'uses' => 'Product_Controller@show_hot_product'
             ]);
 
             Route::get('update/{id}', [
@@ -267,8 +281,8 @@ Route::middleware(['admin'])->group(function () {
             ]);
 
             Route::post('updates/{id}', [
-                'as' => 'updates',
-                'uses' => 'Product_Controller@updates'
+                'as' => 'post_update_product',
+                'uses' => 'Product_Controller@post_update_product'
             ]);
 
             Route::get('delete/{id}', [

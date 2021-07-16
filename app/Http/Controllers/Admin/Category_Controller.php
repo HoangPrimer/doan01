@@ -17,8 +17,9 @@ class Category_Controller extends Controller
 
     public function list_category()
     {
-        $list_category  = Category::orderBy('id', 'desc')->paginate(10);
-        return view('backend.category.list', compact('list_category'));
+        $list_category  = Category::orderBy('id', 'desc')->paginate(20);
+        $all_category = Category::all();
+        return view('backend.category.list', compact('list_category', 'all_category'));
     }
 
 
@@ -28,21 +29,17 @@ class Category_Controller extends Controller
         if (request()->ajax()) {
             $keys = $id;
             if ($keys === 'new') {
-
-                $list_category  = Category::orderBy('id', 'desc')->paginate(10);
+                $list_category  = Category::orderBy('id', 'desc')->paginate(20);
                 $new_list_category = view('backend.category.child_list', compact('list_category'))->render();
                 return response()->json([
-                    'code' => 200,
                     'new_list_category' => $new_list_category,
                 ], 200);
             }
             if ($keys === 'old') {
-
-                $list_category  = Category::orderBy('id', 'asc')->paginate(10);
-                $old_list_category = view('backend.category.child_list', compact('list_category'))->render();
+                $list_category  = Category::orderBy('id', 'asc')->paginate(20);
+                $new_list_category = view('backend.category.child_list', compact('list_category'))->render();
                 return response()->json([
-                    'code' => 300,
-                    'old_list_category' => $old_list_category,
+                    'new_list_category' => $new_list_category,
                 ], 200);
             }
         }
@@ -52,24 +49,20 @@ class Category_Controller extends Controller
     {
 
         $keys = $request->key;
-
         if ($keys == "") {
-            $list_category  = Category::orderBy('id', 'desc')->paginate(10);
+            $list_category  = Category::orderBy('id', 'desc')->paginate(20);
             $live_search_category = view('backend.category.child_list', compact('list_category'))->render();
             return response()->json([
-                'code' => 200,
                 'live_search_category' => $live_search_category,
             ], 200);
         } else {
-            $list_category  = Category::where('id', 'like', '%' . $keys . '%')
-                ->orwhere('c_name', 'like', '%' . $keys . '%')
+            $list_category  = Category::where('c_name', 'like', '%' . $keys . '%')
                 ->orwhere('c_slug', 'like', '%' . $keys . '%')
                 ->orwhere('c_desc', 'like', '%' . $keys . '%')
                 ->orwhere('c_status', 'like', '%' . $keys . '%')
-                ->orwhere('created_at', 'like', '%' . $keys . '%')->paginate(10);
+                ->orwhere('created_at', 'like', '%' . $keys . '%')->orderBy('id','desc')->paginate(20);
             $live_search_category = view('backend.category.child_list', compact('list_category'))->render();
             return response()->json([
-                'code' => 300,
                 'live_search_category' => $live_search_category,
             ], 200);
         }
@@ -119,6 +112,17 @@ class Category_Controller extends Controller
                 $category->c_desc = $request->c_desc;
                 $category->c_slug = $slug;
                 $category->save();
+
+                activity()
+                    ->withProperties([
+                        'customProperty' => 'customValue',
+                        'aaa' => 'aaaaaaa',
+                        'aaa' => 'aaaaaaa',
+                        'aaa' => 'aaaaaaa',
+                        'aaa' => 'aaaaaaa',
+                    ])
+                    ->log('Look mum, I logged something');
+
                 return response()->json([
                     'code' => 300,
                 ], 200);
@@ -208,11 +212,14 @@ class Category_Controller extends Controller
             $delete_category = Category::find($id);
             $delete_category->delete();
 
-            $list_category  = Category::orderBy('id', 'desc')->paginate(10);
+            $all_category = Category::all();
+            $all = count($all_category);
+
+            $list_category  = Category::orderBy('id', 'desc')->paginate(20);
             $new_list_category = view('backend.category.child_list', compact('list_category'))->render();
             return response()->json([
-                'code' => 300,
-                'new_list_category' => $new_list_category,
+                'all' => $all,
+                'new_list_category'  => $new_list_category,
             ], 200);
         }
     }
@@ -223,14 +230,13 @@ class Category_Controller extends Controller
     {
         if (request()->ajax()) {
             $show_hide = Category::find($id);
-            $show_hide->c_status = ! $show_hide->c_status;
+            $show_hide->c_status = !$show_hide->c_status;
             $show_hide->save();
 
-            $list_category  = Category::orderBy('id', 'desc')->paginate(10);
-            $new_list_category = view('backend.category.child_list', compact('list_category'))->render();
+            $hide_category =  Category::find($id);
+            $hide = $hide_category->c_status;
             return response()->json([
-                'code' => 300,
-                'new_list_category' => $new_list_category,
+                'hide' => $hide,
             ], 200);
         }
     }

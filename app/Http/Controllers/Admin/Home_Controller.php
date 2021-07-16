@@ -9,19 +9,14 @@ use App\Product;
 use App\User;
 use App\Action_Admin;
 use Illuminate\Support\Facades\Validator;
+use Spatie\Activitylog\Models\Activity;
 
 class Home_Controller extends Controller
 {
-    public function home()
-    {
-        $id = Auth::id();
-        $user = User::find($id);
-        $neww = Order::where('TrangThai','Chờ Duyệt')->get();
-
-        $hot = Order::with('Item')->where('TrangThai','Đã Giao')->get();
-        $top_product = Product::orderBy('SoLuongBan','desc')->paginate(5);
-     
-        return view('backend\home',compact('neww','user','top_product'));
+    public function home(){
+        
+       
+        return view('backend.home');
     }
     public function change_profile(Request $request){
         if(request()->ajax()){

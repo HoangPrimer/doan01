@@ -1,274 +1,94 @@
 @extends('backend.layout.layout')
 @section('content')
 
-<div class="table-text">
-    <div class="links">
-        <h1>Product</h1>
-    </div>
-    <div class="title">
-         <div class="title-left">
-               <h3>Cập Nhật Sản Phẩm</h3>
-         </div>
-         <div class="title-right">
-              <a href="{{route('add_product')}}">
-                ADD
-                <i class="fas fa-plus"></i>
-            </a>
-         </div>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center mb-3 border-bottom">
+    <h2 class="m-0">Cập Nhật Sản Phẩm </h2>
+    <div class="nav">
+        <div class="nav-item">
+            <a href="" class="nav-link">Home /</a>
+        </div>
+        <div class="nav-item">
+            <a href="" class="nav-link">Product /</a>
+        </div>
+        <div class="nav-item">
+            <a href="" class="nav-link">Update</a>
+        </div>
     </div>
 </div>
-<div class="table-add">
-<form action="{{route('updates',$update->id)}}" class="form" method="post" enctype="multipart/form-data">
-    @csrf
-        <div class="form-group">
-                <label for="masp">Mã Sản Phẩm :</label>
-                
-                <div class="error">
-                <input type="text" name="masp" required value="{{$update->MaSP}}">
-                    @error('masp')
-                        <span>{{ $message }}</span>
-                    @enderror
-                </div>
-        </div>
-        <div class="form-group">
-                <label for="nhanhieu">Nhãn Hiệu :</label>
-                
-                <div class="error">
-                <input type="text" name="nhanhieu" required value="{{$update->ThuongHieu}}">
-                    @error('nhanhieu')
-                        <span>{{ $message }}</span>
-                    @enderror
-                </div>
-        </div>
-         <div class="form-group">
-                <label for="kieumay">Kiểu Máy :</label>
-                
-                <div class="error" >
-                <select name="kieumay" value="{{$update->KieuMay}}">
-                    <option value="Automatic">AUTOMATIC</option>
-                    <option value="Quartz">QUARTZ</option>
-                    <option value="Năng Lượng Mặt Trời">Năng Lượng Mặt Trời</option>
-                    <option value="KINETIC">KINETIC</option>
-                    <option value="Lên Cót Tay">Lên Cót Tay</option>
-                </select>
-                    @error('kieumay')
-                    <span>{{ $message }}</span>
-                    @enderror
-                </div>
-        </div>
-        <div class="form-group">
-                <label for="nguongoc" >Nguồn Gốc :</label>
-               
-                <div class="error">
-                <input type="text" name="nguongoc" required value="{{$update->NguonGoc}}">
-                    @error('nguongoc')
-                    <span>{{ $message }}</span>
-                    @enderror
-                </div>
-        </div>
-       
-        <div class="form-group">
-                <label for="kichco">Kích Cỡ, Đường Kính (mm):</label>
-                
-                <div class="error" >
-                <input type="number" name="kichco" min="20"  max="50" required value="{{$update->KichCo}}">
-                    @error('kichco')
-                    <span>{{ $message }}</span>
-                    @enderror
-                </div>
-        </div>
-        <div class="form-group">
-                <label for="doday">Độ Dày (mm) :</label>
-               
-                <div class="error">
-                <input type="number" name="doday" min="6"  max="40" required value="{{$update->DoDay}}">
-                    @error('doday')
-                    <span>{{ $message }}</span>
-                    @enderror
-                </div>
-        </div>
-        <div class="form-group">
-                <label for="chatlieuvo">Chất Liệu Vỏ :</label>
-               
-                <div class="error">
-                <input type="text" name="chatlieuvo" required value="{{$update->ChatLieuVo}}">
-                    @error('chatlieuvo')
-                    <span>{{ $message }}</span>
-                    @enderror
-                </div>
-        </div>
-        <div class="form-group">
-                <label for="chatlieuday">Chất Liệu Dây :</label>
-               
-                <div class="error">
-                <select name="chatlieuday"  value="{{$update->ChatLieuDay}}">
-                    <option value="Thép Không Gỉ">Thép Không Gỉ</option>
-                    <option value="Dây Da">Dây Da</option>
-                    <option value="Dây Vải">Dây Vải</option>
-                    <option value="Titanium">Titanium</option>
-                    <option value="Dây Cao Su">Dây Cao Su</option>
-                    <option value="Dây Nhựa">Dây Nhựa</option>
-                </select>
-                    @error('chatlieuday')
-                    <span>{{ $message }}</span>
-                    @enderror
-                </div>
-        </div>
-        <div class="form-group">
-                <label for="chatlieukinh">Chất Liệu Kính : </label>
-               
-                <div class="error">
-                <input type="text" name="chatlieukinh" required value="{{$update->ChatLieuKinh}}">
-                    @error('chatlieukinh')
-                    <span>{{ $message }}</span>
-                    @enderror
-                </div>
-        </div>
-        <div class="form-group">
-                <label for="dochiunuoc">Độ Chịu Nước (m) :</label>
-               
-                <div class="error">
-                <input type="number" name="dochiunuoc" min="0" required value="{{$update->DoChiuNuoc}}">
-                    @error('dochiunuoc')
-                    <span>{{ $message }}</span>
-                    @enderror
-                </div>
-        </div>
-        <div class="form-group">
-                <label for="chucnang">Chức Năng :</label>
-               
-                <div class="error">
-                <input type="text" name="chucnang" required value="{{$update->ChucNang}}">
-                    @error('chucnang')
-                    <span>{{ $message }}</span>
-                    @enderror
-                </div>
-        </div>
-        <div class="form-group">
-                <label for="baohanh">Bảo Hành :</label>
-               
-                <div class="error">
-                <input type="text" name="baohanh" required value="{{$update->BaoHanh}}">
-                    @error('baohanh')
-                    <span>{{ $message }}</span>
-                    @enderror
-                </div>
-        </div>
-        <div class="form-group">
-                <label for="gioitinh">Giới Tính : {{$update->GioiTinh}}</label>
-               
-                <div class="error">
-                <input type="radio" name="gioitinh" value="Nam" required> Nam
-                <input type="radio" name="gioitinh" value="Nu" required> Nữ
-                <input type="radio" name="gioitinh" value="Cap-Doi" required> Cặp Đôi
-                    @error('gioitinh')
-                    <span>{{ $message }}</span>
-                    @enderror
-                </div>
-        </div>
-        <div class="form-group">
-                <label for="hot">Hot :{{$update->Hot}}</label>
-               
-                <div class="error">
-                <input type="radio" name="hot" value="Có" required> Có
-                <input type="radio" name="hot" value="Không" required> Không
-                    @error('hot')
-                    <span>{{ $message }}</span>
-                    @enderror
-                </div>
-        </div>
-        <div class="form-group">
-                <label for="gia">Giá Nhập:</label>
-               
-                <div class="error">
-                <input type="number" name="gianhap"  min="100000" value="{{$update->GiaNhap}}" required>
-                    @error('gianhap')
-                    <span>{{ $message }}</span>
-                    @enderror
-                </div>
-        </div>
-        <div class="form-group">
-                <label for="gia">Giá Bán :</label>
-               
-                <div class="error">
-                <input type="number" name="giaban"  min="100000" value="{{$update->GiaBan}}" required>
-                    @error('giaban')
-                    <span>{{ $message }}</span>
-                    @enderror
-                </div>
-        </div>
-        <div class="form-group">
-                <label for="giakm">Giá KM :</label>
-               
-                <div class="error">
-                <input type="number" name="giakm"  min="100000" value="{{$update->GiaKM}}" required>
-                    @error('giakm')
-                    <span>{{ $message }}</span>
-                    @enderror
-                </div>
-        </div>
-        <div class="form-group">
-                <label for="soluong">Số Lượng :</label>
-               
-                <div class="error">
-                <input type="number" name="soluong" min="1" value="{{$update->SoLuong}}" required>
-                    @error('soluong')
-                    <span>{{ $message }}</span>
-                    @enderror
-                </div>
-        </div>
-        <div class="block">
-                <label for="mota">Mô Tả :</label>
-               
-                <div class="error">
-                <textarea name="mota" class="ckeditor " >{{$update->MoTa}}</textarea>
-                <!-- <textarea name="mota" id="" ></textarea> -->
-                     @error('mota')
-                    <span>{{ $message }}</span>
-                    @enderror
-                </div>
-        </div>
-        <div class="block">
-                <label >Ảnh Cũ : </label>
-                <div class="image" >
-                    @foreach($update->Image as $img)
-                        <img  src="{{$img->File_Path}}" alt="">
+<div class="card col-lg-12 p-2 ">
+    <form data-url="{{route('post_update_product',$update_product->id)}}" method="post" id="update_product">
+        @csrf
+        <div class="row mt-2">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <label for="pro_code">Mã Sản Phẩm :</label>
+                <input type="text" class="form-control" name="pro_code" id="pro_code" placeholder="{{$update_product->pro_code}}">
+                <span class="text-danger err_pro_code fs-5"></span>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <label for="pro_category_id">Danh Mục Sản Phẩm : </label>
+                <select type="text" class="form-control" name="pro_category_id" id="pro_category_id">
+                    <option value="{{$update_product->Category->id}}">{{$update_product->Category->c_name}}</option>
+                    @foreach($list_category as $category)
+                    <option value="{{$category->id}}"> {{$category->c_name}}</option>
                     @endforeach
-                </div>
-        </div>
-        <div class=" block">
-                <label for="anh">Lưu Ý:  Nếu bạn thêm ảnh mới thì tất cả ảnh cũ sẽ bị xóa. Nên chọn đủ 5 ảnh để đảm bảo!!!</label>
-                <label for="anh">Ảnh : Chọn tối đa 5 ảnh và đúng định dạng bao gồm các đuôi 'jpg','png','jpeg','gif','psd','pdf'</label>
-              
-                    <div class="dandev-reviews">
-                            <div class="form_upload">
-                                <label class="dandev_insert_attach"><i class="fas fa-camera-retro"></i><span>Thêm Ảnh</span></label>
-                                <input type="file" name="anh[]" class="dandev_insert_attach" hidden>
-                            </div>
-                            <div class="list_attach ">
-                                <ul class="dandev_attach_view">
+                </select>
+                <span class="text-danger err_pro_category_id fs-5"></span>
+            </div>
 
-                                </ul>
-                                <span class="dandev_insert_attach"> <i class="dandev-plus">+</i></span>
-                            </div>
-                    </div>
-                @error('anh')
-                    <span>{{ $message }}</span>
-                    @enderror
-                    @error('anh.*')
-                    <span>{{ $message }}</span>
-                    @enderror
-              
-                   
-                
-         </div>
-        <div class="block">
-               <button type="submit">
-                   Cập Nhật
-               </button>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <label for="pro_guarantee">Bảo Hành :</label>
+                <input type="text" class="form-control" name="pro_guarantee" id="pro_guarantee" value="{{$update_product->pro_guarantee}}">
+                <span class="text-danger err_pro_guarantee fs-5"></span>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 mt-2">
+                <label for="pro_price">Giá Bán :</label>
+                <input type="number" class="form-control" name="pro_price" id="pro_price" value="{{$update_product->pro_price}}">
+                <span class="text-danger err_pro_price fs-5"></span>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6  mt-2">
+                <label for="pro_sale">Giá Khuyến Mãi :</label>
+                <input type="number" class="form-control" name="pro_sale" id="pro_sale" value="{{$update_product->pro_sale}}">
+                <span class="text-danger err_pro_sale fs-5"></span>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6  mt-2">
+                <label for="pro_amount">Số Lượng :</label>
+                <input type="number" class="form-control" name="pro_amount" id="pro_amount" value="{{$update_product->pro_amount}}">
+                <span class="text-danger err_pro_amount fs-5"></span>
+            </div>
         </div>
+        <div class="form-group mt-3">
+            <label>Ảnh : Chọn tối đa 5 ảnh.</label>
+            <div class="table-responsive">
+                <table class="table  table-striped table-bordered p-0 m-0">
+                    <thead>
+                        <tr class="d-flex p-3 list_pro_image justify-content-between">
+                            @foreach($update_product->Image as $key => $img)
+                            <th class="list_pro_image_item">
+                                <i class="far fa-times-circle close_pro_image"></i>
+                                <label for="" class="fa fa-plus fs-3 label_pluss"></label>
+                                <input type="file" name="pro_image[]" id="pro_image_{{$key}}" hidden />
+                                <img src="{{$img->img_file_path}}" alt="" class="pro_image " />
+                            </th>
+                            @endforeach
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <span class="text-danger err_pro_image  fs-5"></span>
+            <span class="text-danger err_pro_image1  fs-5"></span>
+        </div>
+        <div class="form-group mt-3">
+            <label for="pro_desc">Mô Tả :</label>
+            <textarea name="pro_desc" class="ckeditor form-control" id="pro_desc"> {{$update_product->pro_desc}}</textarea>
+            <span class="text-danger err_pro_desc  fs-5"></span>
+        </div>
+        <div class="form-group mt-3">
+            <button type="submit" class="btn btn-success btn-lg">Lưu <i class="fas fa-check ms-2"></i></button>
+            <a href="{{ route ('list_product')}}" class="btn btn-danger btn-lg">Back List<i class="fas fa-undo ms-2"></i></a>
+        </div>
+</div>
 </form>
-                    
 </div>
 
 @endsection

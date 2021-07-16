@@ -15,10 +15,10 @@ class CreateImagesTable extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->Increments('id');
-            $table->integer('Product_id')->unsigned();
-            $table->foreign('Product_id')->references('id')->on('products')->onDelete('cascade');
-            $table->string('Name');
-            $table->string('File_Path');
+            $table->integer('img_product_id')->unsigned();
+            $table->foreign('img_product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->string('img_name');
+            $table->string('img_file_path');
             $table->timestamps();
         });
     }

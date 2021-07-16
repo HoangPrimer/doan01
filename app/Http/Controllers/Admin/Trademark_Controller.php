@@ -12,8 +12,9 @@ class Trademark_Controller extends Controller
 {
     public function list_trademark()
     {
-        $list_trademark  = Trademark::orderBy('id', 'desc')->paginate(10);
-        return view('backend.trademark.list', compact('list_trademark'));
+        $list_trademark  = Trademark::orderBy('id', 'desc')->paginate(20);
+        $all_trademark = Trademark::all();
+        return view('backend.trademark.list', compact('list_trademark', 'all_trademark'));
     }
 
 
@@ -23,21 +24,17 @@ class Trademark_Controller extends Controller
         if (request()->ajax()) {
             $keys = $id;
             if ($keys === 'new') {
-
-                $list_trademark  = Trademark::orderBy('id', 'desc')->paginate(10);
+                $list_trademark  = Trademark::orderBy('id', 'desc')->paginate(20);
                 $new_list_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render();
                 return response()->json([
-                    'code' => 200,
                     'new_list_trademark' => $new_list_trademark,
                 ], 200);
             }
             if ($keys === 'old') {
-
-                $list_trademark  = Trademark::orderBy('id', 'asc')->paginate(10);
-                $old_list_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render();
+                $list_trademark  = Trademark::orderBy('id', 'asc')->paginate(20);
+                $new_list_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render();
                 return response()->json([
-                    'code' => 300,
-                    'old_list_trademark' => $old_list_trademark,
+                    'new_list_trademark' => $new_list_trademark,
                 ], 200);
             }
         }
@@ -45,32 +42,25 @@ class Trademark_Controller extends Controller
 
     public function live_search_trademark(Request $request)
     {
-
         $keys = $request->key;
-
         if ($keys == "") {
-            $list_trademark  = Trademark::orderBy('id', 'desc')->paginate(10);
+            $list_trademark  = Trademark::orderBy('id', 'desc')->paginate(20);
             $live_search_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render();
             return response()->json([
-                'code' => 200,
                 'live_search_trademark' => $live_search_trademark,
             ], 200);
         } else {
-            $list_trademark  = Trademark::where('id', 'like', '%' . $keys . '%')
-                ->orwhere('tr_name', 'like', '%' . $keys . '%')
+            $list_trademark  = Trademark::where('tr_name', 'like', '%' . $keys . '%')
                 ->orwhere('tr_slug', 'like', '%' . $keys . '%')
                 ->orwhere('tr_logo', 'like', '%' . $keys . '%')
                 ->orwhere('tr_desc', 'like', '%' . $keys . '%')
-                ->orwhere('created_at', 'like', '%' . $keys . '%')->paginate(10);
+                ->orwhere('created_at', 'like', '%' . $keys . '%')->orderBy('id', 'desc')->paginate(20);
             $live_search_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render();
             return response()->json([
-                'code' => 300,
                 'live_search_trademark' => $live_search_trademark,
             ], 200);
         }
     }
-
-
     // tao moi thương hiệu san pham
 
     public function create_trademark()
@@ -181,7 +171,7 @@ class Trademark_Controller extends Controller
                         $file = $request->file('tr_logo');
                         $file_name = $file->getClientOriginalName();
                         $name_random = rand(1000000000000, 9999999999999) . '_' . $file_name;
-    
+
                         $file->move("./image/Image_Thuonghieu", $name_random);
                         $update_trademark->tr_logo = "/image/Image_Thuonghieu/$name_random";
                     }
@@ -197,7 +187,7 @@ class Trademark_Controller extends Controller
                         $file = $request->file('tr_logo');
                         $file_name = $file->getClientOriginalName();
                         $name_random = rand(1000000000000, 9999999999999) . '_' . $file_name;
-    
+
                         $file->move("./image/Image_Thuonghieu", $name_random);
                         $update_trademark->tr_logo = "/image/Image_Thuonghieu/$name_random";
                     }
@@ -220,13 +210,15 @@ class Trademark_Controller extends Controller
             $delete_trademark = Trademark::find($id);
             $delete_trademark->delete();
 
-            $list_trademark  = Trademark::orderBy('id', 'desc')->paginate(10);
+            $all_trademark = Trademark::all();
+
+            $all = count($all_trademark);
+            $list_trademark  = Trademark::orderBy('id', 'desc')->paginate(20);
             $new_list_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render();
             return response()->json([
-                'code' => 300,
+                'all' => $all,
                 'new_list_trademark' => $new_list_trademark,
             ], 200);
         }
     }
-
 }

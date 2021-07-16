@@ -8,9 +8,9 @@ class Image extends Model
 {
        
     protected $fillable = [
-        'Product_id', 'Name', 'File_Path',
+        'img_product_id', 'img_name', 'img_file_path',
     ];
     public function Product(){
-        return $this->belongsTo('App\Product','Product_id','id');
+        return $this->belongsTo('App\Product','img_product_id','id');
     }
 }

@@ -42,7 +42,7 @@ class CreateProductsTable extends Migration
             $table->integer('pro_amount');
             $table->integer('pro_amount_sell')->default(0);
             $table->text('pro_desc');
-            $table->boolean('pro_status')->default('0');
+            $table->boolean('pro_status')->default('1');
             $table->timestamps();
         });
     }

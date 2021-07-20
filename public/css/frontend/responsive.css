@@ -1,0 +1,446 @@
+/********************************************************************/
+
+@media only screen and (max-width: 1199.98px) {
+    .topbar-hotline {
+        display: none !important;
+    }
+    .footer__hotline {
+        width: 100%;
+    }
+    /* protomotion */
+    .promotion-image {
+        height: 450px !important;
+    }
+    .news__item {
+        padding-left: 0px !important;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .text-history {
+        font-size: 14px;
+    }
+    .history {
+        display: none;
+    }
+    .footer__hotline i {
+        font-size: 30px;
+    }
+    .nav-link {
+        font-size: 14px;
+    }
+    .footer__info {
+        margin-bottom: 20px;
+    }
+    .footer__share {
+        width: 55%;
+    }
+    .footer__share a {
+        font-size: 14px;
+    }
+    .footer__share1>a {
+        width: 40px;
+        height: 40px;
+    }
+    .footer__share1>a>i {
+        font-size: 25px;
+    }
+    .line {
+        height: 2px;
+    }
+    .footer__logo img {
+        width: 100%;
+    }
+    .footer__logo img:nth-of-type(4) {
+        width: 100%;
+        margin-right: 0;
+    }
+    .footer__logo img:nth-of-type(5) {
+        width: 80%;
+        margin-bottom: 0 !important;
+    }
+    ul.region1>li.add {
+        font-size: 14px;
+    }
+    /* sanpham trang chu */
+    .album {
+        padding: 20px 0 !important;
+    }
+    .sale,
+    .sale-1 {
+        font-size: 12px !important;
+        padding-top: 5px !important;
+        height: 40px !important;
+        width: 30px !important;
+    }
+    .tragop {
+        font-size: 10px !important;
+    }
+    /* dich vu */
+    .shipping__item,
+    .shipping__item1 {
+        height: 150px !important;
+    }
+    .shipping__item--link {
+        width: 100% !important;
+    }
+    .shipping__item--link .alink-dark {
+        font-size: 14px;
+    }
+    /* promotion */
+    .promotion-image {
+        height: 300px !important;
+    }
+    /* feedback */
+    .feedback__video {
+        height: 225px !important;
+        padding: 5px !important;
+    }
+    /* tham dinh dong ho */
+    .expertise__image {
+        padding: 0 !important;
+    }
+    .expertise__title {
+        width: 60% !important;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    h2 {
+        font-size: 25px !important;
+    }
+    .navbar .container .container-fluid {
+        margin-top: 5px;
+    }
+    .nav-link {
+        margin: 0 !important;
+        padding-left: 20px !important;
+    }
+    /* foooter */
+    .footer__hotline i {
+        width: 10%;
+        margin: 0 20px;
+    }
+    .footer__info {
+        margin-bottom: 20px;
+    }
+    .footer__share>a {
+        line-height: 24px;
+    }
+    .footer__share1>a {
+        margin-right: 10px;
+    }
+    ul.menu-sub1 {
+        flex-direction: column;
+    }
+    ul.menu-sub1>li {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #83cdff;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+    .sub-menu {
+        height: 0;
+        overflow: hidden;
+        transition: all 0.5s;
+        margin: 0 20px;
+    }
+    .footer__share1 {
+        justify-content: space-between;
+    }
+    .show_info_footer {
+        cursor: pointer;
+    }
+    .footer__share1>a>i {
+        font-size: 20px;
+    }
+    .footer__logo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .footer__logo img {
+        width: 45% !important;
+        margin-bottom: 10px !important;
+    }
+    ul.region1 {
+        width: 50%;
+    }
+    /* san pham trang chu */
+    .card {
+        height: 440px !important;
+    }
+    /* dich vu */
+    .shipping__item,
+    .shipping__item1 {
+        height: 100px !important;
+    }
+    .shipping__item--link {
+        width: 100% !important;
+    }
+    .shipping__item--link .alink-dark {
+        font-size: 10px;
+    }
+    .shipping__item a svg,
+    .shipping__item1 a svg {
+        width: 40px !important;
+        margin-bottom: 10px !important;
+    }
+    /* promotion */
+    .promotion-image {
+        height: 500px !important;
+    }
+    .promotion-left {
+        width: 100% !important;
+        height: 65% !important;
+    }
+    .promotion-right {
+        width: 100% !important;
+        height: 35% !important;
+    }
+    .promotion-items {
+        width: 50% !important;
+        height: 100% !important;
+    }
+    .promotion-items a {
+        padding: 10px !important;
+        text-align: center !important;
+        width: 120px !important;
+    }
+    /* feed back */
+    .main-feedback {
+        overflow: scroll;
+    }
+    .main-feedback::-webkit-scrollbar,
+    .list-new::-webkit-scrollbar {
+        display: none;
+    }
+    .list-feedback {
+        height: 400px !important;
+        width: 940px !important;
+        overflow-x: auto !important;
+        overflow-y: hidden;
+        margin-top: 10px !important;
+        background-color: #fff !important;
+        display: flex;
+    }
+    .list-feedback .col {
+        width: 310px !important;
+    }
+    .feedback__video {
+        height: auto !important;
+        padding: 10px !important;
+    }
+    /* tham dinh dong ho */
+    .expertise__title {
+        width: 100% !important;
+        font-size: 14px !important;
+    }
+    /*new */
+    .list-new {
+        width: 100% !important;
+        overflow: scroll !important;
+        height: 400px !important;
+        margin: 0 !important;
+    }
+    .news__tv {
+        flex-direction: row !important;
+        padding: 0 !important;
+        justify-content: space-between !important;
+    }
+    .news__tv a {
+        width: 32% !important;
+    }
+    .news__tv a img {
+        width: 100% !important;
+    }
+    /* san pham theo danh muc */
+    /* banner quang cao */
+    .ads__right>img+img {
+        margin-top: 5px !important;
+    }
+    /* bo lọc */
+    .list-fillter {
+        padding: 0 !important;
+    }
+    .fillter-item {
+        width: 46% !important;
+        border-bottom: 1px solid #83cdff;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .fillter-item .sub-fillter {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: .5s;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    h2 {
+        font-size: 20px !important;
+    }
+    a {
+        font-size: 14px;
+    }
+    p,
+    span {
+        font-size: 12px;
+    }
+    /* header */
+    .logo {
+        width: 45%;
+    }
+    .logo img {
+        width: 100%;
+    }
+    .amount-pro {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+    }
+    /* footer */
+    .footer__share,
+    .footer__share1 {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .footer__share1>a>i {
+        font-size: 15px;
+    }
+    ul.region1 {
+        width: 100%;
+    }
+    /* san pham trang chu */
+    .product__hot-menu>span {
+        padding: 5px !important;
+        margin: 0 10px !important;
+        font-size: 12px !important;
+    }
+    .card {
+        height: 400px !important;
+    }
+    sao,
+    gia {
+        font-size: 13px !important;
+    }
+    del {
+        font-size: 11px !important;
+    }
+    .sale,
+    .sale-1 {
+        font-size: 8px !important;
+        padding-top: 2px !important;
+        height: 30px !important;
+        width: 20px !important;
+    }
+    .tragop {
+        font-size: 8px !important;
+        padding: 0 !important;
+    }
+    .w-100 {
+        margin-top: 20px !important;
+    }
+    .all-product {
+        font-size: 14px !important;
+    }
+    /* dich vu */
+    .shipping__item,
+    .shipping__item1 {
+        height: 40px !important;
+        flex-direction: row !important;
+    }
+    .shipping__item--link {
+        width: 100% !important;
+        align-items: flex-start !important;
+        padding-left: 30px !important;
+    }
+    .shipping__item--link .alink-dark {
+        font-size: 14px;
+    }
+    .shipping__item a svg,
+    .shipping__item1 a svg {
+        width: 40px !important;
+        margin-bottom: 10px !important;
+    }
+    .shipping__item1::after,
+    .shipping__item1::before {
+        display: none;
+    }
+    /* promotion */
+    .promotion-image {
+        height: 350px !important;
+    }
+    /* tin tuc */
+    .news__title {
+        padding: 10px !important;
+    }
+    .news__title>span {
+        font-size: 20px !important;
+    }
+    .list-new {
+        height: 300px !important;
+    }
+    .news__tv a {
+        margin-bottom: 10px !important;
+        display: inline !important;
+    }
+    /*san pham  theo danh muc */
+    .c_desc {
+        height: 80px !important;
+        overflow: scroll !important;
+    }
+    .c_desc::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .card {
+        height: 350px !important;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .card {
+        height: 330px !important;
+    }
+}
+
+
+/* san pham trang chu */
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .card {
+        height: 440px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .card {
+        height: 410px !important;
+    }
+    .bot-item>img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 575.98px) {
+    .image-product {
+        display: flex !important;
+        justify-content: center !important;
+    }
+    .img-fluid {
+        width: 50%;
+    }
+    .card {
+        height: 280px !important;
+    }
+}

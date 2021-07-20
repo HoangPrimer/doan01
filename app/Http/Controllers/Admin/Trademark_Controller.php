@@ -12,7 +12,7 @@ class Trademark_Controller extends Controller
 {
     public function list_trademark()
     {
-        $list_trademark  = Trademark::orderBy('id', 'desc')->paginate(20);
+        $list_trademark  = Trademark::orderBy('id', 'desc')->simplepaginate(20);
         $all_trademark = Trademark::all();
         return view('backend.trademark.list', compact('list_trademark', 'all_trademark'));
     }
@@ -24,14 +24,14 @@ class Trademark_Controller extends Controller
         if (request()->ajax()) {
             $keys = $id;
             if ($keys === 'new') {
-                $list_trademark  = Trademark::orderBy('id', 'desc')->paginate(20);
+                $list_trademark  = Trademark::orderBy('id', 'desc')->simplepaginate(20);
                 $new_list_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render();
                 return response()->json([
                     'new_list_trademark' => $new_list_trademark,
                 ], 200);
             }
             if ($keys === 'old') {
-                $list_trademark  = Trademark::orderBy('id', 'asc')->paginate(20);
+                $list_trademark  = Trademark::orderBy('id', 'asc')->simplepaginate(20);
                 $new_list_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render();
                 return response()->json([
                     'new_list_trademark' => $new_list_trademark,
@@ -44,7 +44,7 @@ class Trademark_Controller extends Controller
     {
         $keys = $request->key;
         if ($keys == "") {
-            $list_trademark  = Trademark::orderBy('id', 'desc')->paginate(20);
+            $list_trademark  = Trademark::orderBy('id', 'desc')->simplepaginate(20);
             $live_search_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render();
             return response()->json([
                 'live_search_trademark' => $live_search_trademark,
@@ -54,7 +54,7 @@ class Trademark_Controller extends Controller
                 ->orwhere('tr_slug', 'like', '%' . $keys . '%')
                 ->orwhere('tr_logo', 'like', '%' . $keys . '%')
                 ->orwhere('tr_desc', 'like', '%' . $keys . '%')
-                ->orwhere('created_at', 'like', '%' . $keys . '%')->orderBy('id', 'desc')->paginate(20);
+                ->orwhere('created_at', 'like', '%' . $keys . '%')->orderBy('id', 'desc')->simplepaginate(20);
             $live_search_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render();
             return response()->json([
                 'live_search_trademark' => $live_search_trademark,
@@ -213,7 +213,7 @@ class Trademark_Controller extends Controller
             $all_trademark = Trademark::all();
 
             $all = count($all_trademark);
-            $list_trademark  = Trademark::orderBy('id', 'desc')->paginate(20);
+            $list_trademark  = Trademark::orderBy('id', 'desc')->simplepaginate(20);
             $new_list_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render();
             return response()->json([
                 'all' => $all,

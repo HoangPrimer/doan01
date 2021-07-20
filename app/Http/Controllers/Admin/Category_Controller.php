@@ -17,7 +17,7 @@ class Category_Controller extends Controller
 
     public function list_category()
     {
-        $list_category  = Category::orderBy('id', 'desc')->paginate(20);
+        $list_category  = Category::orderBy('id', 'desc')->simplepaginate(20);
         $all_category = Category::all();
         return view('backend.category.list', compact('list_category', 'all_category'));
     }
@@ -29,14 +29,14 @@ class Category_Controller extends Controller
         if (request()->ajax()) {
             $keys = $id;
             if ($keys === 'new') {
-                $list_category  = Category::orderBy('id', 'desc')->paginate(20);
+                $list_category  = Category::orderBy('id', 'desc')->simplepaginate(20);
                 $new_list_category = view('backend.category.child_list', compact('list_category'))->render();
                 return response()->json([
                     'new_list_category' => $new_list_category,
                 ], 200);
             }
             if ($keys === 'old') {
-                $list_category  = Category::orderBy('id', 'asc')->paginate(20);
+                $list_category  = Category::orderBy('id', 'asc')->simplepaginate(20);
                 $new_list_category = view('backend.category.child_list', compact('list_category'))->render();
                 return response()->json([
                     'new_list_category' => $new_list_category,
@@ -50,7 +50,7 @@ class Category_Controller extends Controller
 
         $keys = $request->key;
         if ($keys == "") {
-            $list_category  = Category::orderBy('id', 'desc')->paginate(20);
+            $list_category  = Category::orderBy('id', 'desc')->simplepaginate(20);
             $live_search_category = view('backend.category.child_list', compact('list_category'))->render();
             return response()->json([
                 'live_search_category' => $live_search_category,
@@ -60,7 +60,7 @@ class Category_Controller extends Controller
                 ->orwhere('c_slug', 'like', '%' . $keys . '%')
                 ->orwhere('c_desc', 'like', '%' . $keys . '%')
                 ->orwhere('c_status', 'like', '%' . $keys . '%')
-                ->orwhere('created_at', 'like', '%' . $keys . '%')->orderBy('id','desc')->paginate(20);
+                ->orwhere('created_at', 'like', '%' . $keys . '%')->orderBy('id','desc')->simplepaginate(20);
             $live_search_category = view('backend.category.child_list', compact('list_category'))->render();
             return response()->json([
                 'live_search_category' => $live_search_category,
@@ -215,7 +215,7 @@ class Category_Controller extends Controller
             $all_category = Category::all();
             $all = count($all_category);
 
-            $list_category  = Category::orderBy('id', 'desc')->paginate(20);
+            $list_category  = Category::orderBy('id', 'desc')->simplepaginate(20);
             $new_list_category = view('backend.category.child_list', compact('list_category'))->render();
             return response()->json([
                 'all' => $all,

@@ -27,7 +27,7 @@
             <div class="form-group mt-3">
                 <label for="tr_logo" class="btn btn-lg btn-primary">Logo : <i class="fas fa-camera-retro fs-3 ms-2"></i></label>
                 <input type="file" id="tr_logo" name="tr_logo" hidden/>
-                <div class="table-responsive mt-2">
+                <div class="table-responsive mt-2 pt-3">
                     <table class="table  table-striped p-0 m-0">
                         <thead>
                             <tr class="d-flex px-3 ">

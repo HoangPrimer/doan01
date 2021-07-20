@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Home</title>
     <link rel="stylesheet" href="{{ asset ('/bootstaps5/css/bootstrap.css') }}">
-    <link rel="stylesheet" href="{{asset('css/backend.css')}}">
+    <link rel="stylesheet" href="{{asset('css/backend/backend.css')}}">
     <link href="{{asset('css/fontawesome-free-5.15.3-web/css/all.css')}}" rel="stylesheet">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+    <!-- <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
     <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
-    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
@@ -46,7 +46,11 @@
         }
     </script>
     <script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
-    <script type="text/javascript" src="/js/backend.js"></script>
+    <script type="text/javascript" src="/js/backend/layout.js"></script>
+    <script type="text/javascript" src="/js/backend/category.js"></script>
+    <script type="text/javascript" src="/js/backend/trademark.js"></script>
+    <script type="text/javascript" src="/js/backend/product.js"></script>
+    <script type="text/javascript" src="/js/backend/order.js"></script>
     <script src="/bootstaps5/js/bootstrap.js"></script>
 </body>
 

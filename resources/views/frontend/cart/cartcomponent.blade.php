@@ -1,7 +1,7 @@
- @if(session('cart'))
+ @if(count($cart) > 0 )
     <form data-url="{{route('oder')}}" method="post" id="form_oder">
     @csrf
-    <table class="update_cart_url  table table-bordered border-primary data-url="{{ route('updatecart')}}">
+    <table class="update_cart_url  table table-bordered border-primary" data-url="{{ route('updatecart')}}">
         <thead>
             <tr>
                 <td><p>STT</p></td>
@@ -15,20 +15,21 @@
         <tbody>
             @php
                 $total = 0;
+                $id = 0;
             @endphp
-            @foreach($cart as $id => $ac)
+            @foreach($cart as $key => $ac)
             @php
                 $total += $ac['price'] * $ac['soluong'];
             @endphp
                 <tr>
-                    <td class=" text-align-center">{{$id}}</td>
+                    <td >{{$id +=1}}</td>
                     <td><p>Đồng hồ {{$ac['thuonghieu']}} {{$ac['masp']}}</p></td>
                     <td><p>{{number_format( $ac['price'])}} VNĐ</p></td>
-                    <td><input class="form-control" type="number" class="soluong" value="{{$ac['soluong']}}" min="1"></td>
+                    <td><input class="form-control soluong" type="number" value="{{$ac['soluong']}}" min="1"></td>
                     <td><p>{{number_format( $ac['price'] *$ac['soluong'])}} VNĐ</p></td>
                     <td>
-                        <a href="" data-id="{{$id}}" class="cart_update btn-primary p-2 mb-3">Cập nhật</a>
-                        <a href="" data-id="{{$id}}" class="del_cart btn-danger p-2">Xóa</a>
+                        <a href="" data-id="{{$key}}" class="cart_update btn-primary p-2 mb-3">Cập nhật</a>
+                        <a href="" data-id="{{$key}}" class="del_cart btn-danger p-2">Xóa</a>
                     </td>
                 </tr>
             @endforeach

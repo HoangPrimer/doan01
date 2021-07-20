@@ -1,0 +1,10 @@
+@extends('frontend.layout.layout')
+@section('content')
+@include('frontend.home.slide')
+@include('frontend.home.product')
+@include('frontend.home.service')
+@include('frontend.home.protomation')
+@include('frontend.home.feedback')
+@include('frontend.home.expertise')
+@include('frontend.home.new')
+@endsection

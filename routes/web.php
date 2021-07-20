@@ -11,14 +11,13 @@
 |
 */
 
-Route::get('/aaa',function(){
-    return view('backend.layout.tesst');
-});
 Route::group(['namespace' => 'User'], function () {
     Route::get('/', [
         'as' => 'home',
         'uses' => 'Home_Controller@home'
     ]);
+
+    // đăng nhập đăng ký đăng xuất
     Route::get('login', [
         'as' => 'login',
         'uses' => 'Login_Register_Controller@getlogin'
@@ -44,6 +43,7 @@ Route::group(['namespace' => 'User'], function () {
         'uses' => 'Login_Register_Controller@postlogin'
     ]);
 
+    // trang cá nhân
     Route::get('profile/{id}', [
         'as' => 'profile',
         'uses' => 'Home_Controller@profile'
@@ -53,79 +53,104 @@ Route::group(['namespace' => 'User'], function () {
         'as' => 'profiles',
         'uses' => 'Home_Controller@profiles'
     ]);
-});
-Route::get('/Dong-Ho-{id}', [
-    'as' => 'drec',
-    'uses' => 'Frontend@directory'
-]);
 
-
-//////////////////////////////////////////////////////////
-
-Route::get('search', [
-    'as' => 'search',
-    'uses' => 'Frontend@search'
-]);
-
-///////////////////////////////////////////////////////////
-
-Route::get('new-product', [
-    'as' => 'new_product',
-    'uses' => 'Frontend@new_product'
-]);
-
-
-//////////////////////////////////////////////////////////////
-Route::group(['prefix' => 'product'], function () {
-
-    Route::get('shopping_cart', [
-        'as' => 'shopping',
-        'uses' => 'Shopping_cart@cart'
+    // sản phẩm theo danh mục
+    Route::get('danh-muc/{id}', [
+        'as' => 'category.product',
+        'uses' => 'Category_Product_Controller@list_product'
     ]);
 
-    Route::get('add-to-cart/{id}', [
-        'as' => 'addtocart',
-        'uses' => 'Shopping_cart@add_to_cart'
+    // lọc sản phẩm
+    Route::get('fillter', [
+        'as' => 'fillter',
+        'uses' => 'Category_Product_Controller@fillter'
     ]);
 
-    Route::get('update-cart', [
-        'as' => 'updatecart',
-        'uses' => 'Shopping_cart@update_cart'
+    // sap  xep 
+    Route::get('sort-category-product', [
+        'as' => 'sort_category_product',
+        'uses' => 'Category_Product_Controller@sort_category_product'
     ]);
 
-    Route::get('del-cart', [
-        'as' => 'delcart',
-        'uses' => 'Shopping_cart@del_cart'
+    //sap xêp post
+    Route::post('sort', [
+        'as' => 'page_product',
+        'uses' => 'Category_Product_Controller@sort'
     ]);
 
-    Route::get('buy_now/{id}', [
-        'as' => 'buy_now',
-        'uses' => 'Shopping_cart@buy_now'
+    //tim kiem trực tuyến san pham theo danh muc
+    Route::get('danh-muc-san-pham', [
+        'as' => 'search_cate_product',
+        'uses' => 'Category_Product_Controller@search_category_product'
     ]);
 
-    Route::post('oder', [
-        'as' => 'oder',
-        'uses' => 'Shopping_cart@oder'
+    // tim kiem
+    Route::get('search', [
+        'as' => 'search',
+        'uses' => 'Home_Controller@search'
     ]);
 
-    Route::get('continue', [
-        'as' => 'continue',
-        'uses' => 'Shopping_cart@continue'
-    ]);
-    Route::get('Chi-Tiet-San-Pham/{id}', [
+    //san phẩm chi tiết
+    Route::get('danh-muc/{category}/{id}', [
         'as' => 'prode',
-        'uses' => 'Frontend@product_details'
+        'uses' => 'Home_Controller@product_details'
     ]);
+
+    //đánh giá san phẩm
     Route::get('/rate', [
         'as' => 'rate',
         'uses' => 'Frontend@rate'
     ]);
+
+    // binh luận
     Route::get('/comment', [
         'as' => 'comment',
         'uses' => 'Frontend@comment'
     ]);
-});
 
+
+    // gio hang
+    Route::get('shopping-cart', [
+        'as' => 'shopping',
+        'uses' => 'Cart_Controller@cart'
+    ]);
+
+    //them vao gio hang
+    Route::get('add-to-cart/{id}', [
+        'as' => 'addtocart',
+        'uses' => 'Cart_Controller@add_to_cart'
+    ]);
+
+    //cap nhat gio hang
+    Route::get('update-cart', [
+        'as' => 'updatecart',
+        'uses' => 'Cart_Controller@update_cart'
+    ]);
+
+    // xoa gio hang
+    Route::get('del-cart', [
+        'as' => 'delcart',
+        'uses' => 'Cart_Controller@del_cart'
+    ]);
+
+    // mua ngay chi tiet san pham
+    Route::get('buy_now/{id}', [
+        'as' => 'buy_now',
+        'uses' => 'Cart_Controller@buy_now'
+    ]);
+
+    //dat hang gio hang
+    Route::post('oder', [
+        'as' => 'oder',
+        'uses' => 'Cart_Controller@oder'
+    ]);
+
+    //trang chủ gio hang
+    Route::get('continue', [
+        'as' => 'continue',
+        'uses' => 'Cart_Controller@continue'
+    ]);
+});
 
 ////////////////////////////////////////////////////////
 
@@ -255,7 +280,7 @@ Route::middleware(['admin'])->group(function () {
                 'uses' => 'Product_Controller@sort_product'
             ]);
 
-            Route::post('sort}', [
+            Route::post('sort', [
                 'as' => 'sort',
                 'uses' => 'Product_Controller@sort'
             ]);

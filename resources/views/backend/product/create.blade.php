@@ -60,7 +60,7 @@
                     <option value="Automatic "> Automatic </option>
                     <option value="Năng Lượng Mặt Trời"> Năng Lượng Mặt Trời</option>
                     <option value="Kinetic"> Kinetic</option>
-                    <option value="Lên cót tay"> Lên cót tay</option>
+                    <option value="Lên Cót Tay"> Lên Cót Tay</option>
                 </select>
                 <span class="text-danger err_pro_machine_type fs-5"></span>
             </div>
@@ -87,10 +87,10 @@
                     <option value="">Chọn --</option>
                     <option value="Thép Không Gỉ"> Thép Không Gỉ</option>
                     <option value="Dây Da"> Dây Da </option>
-                    <option value="Dây vải"> Dây vải</option>
+                    <option value="Dây Vải"> Dây Vải</option>
                     <option value="Titanium"> Titanium</option>
                     <option value="Dây Cao Su">Dây Cao Su</option>
-                    <option value="Dây nhựa">Dây nhựa</option>
+                    <option value="Dây Nhựa">Dây nhựa</option>
                 </select>
                 <span class="text-danger err_pro_rope_material fs-5"></span>
             </div>

@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="product__details--info">
-                    @include('frontend.child.info')
+                    @include('frontend.product.info')
                 </div>
             </div>
             <div class="col-lg-4 col-md-12">
@@ -201,7 +201,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <div class="rating">
-                    @include('frontend.child.rate')
+                    @include('frontend.product.rate')
                 </div>
             </div>
         </div>
@@ -215,7 +215,7 @@
                 <div class="comment">
                     <z style="font-size:25px; display:block; padding-bottom:10px; color:firebrick; font-weight:700; cursor: pointer; " class="show_comment">Bình Luận</small> </z>
                     <div class="abc" style="display: inline-block;width:100%;min-height:10px;">
-                        @include('frontend.child.comment')
+                        @include('frontend.product.comment')
                     </div>
                 </div>
             </div>

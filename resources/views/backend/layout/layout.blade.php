@@ -19,7 +19,7 @@
 <body>
     <a id="url_list_category" data-url="{{route('list_category')}}" hidden>location</a>
     <a id="url_list_trademark" data-url="{{route('list_trademark')}}" hidden>location</a>
-    <a id="url_list_product" data-url="{{route('list_product')}}" hidden>location</a>
+    <a id="url_list_product" data-url="{{route('a.list_product')}}" hidden>location</a>
 
     @include('backend.layout.header')
     <div class="container-fluid  ">

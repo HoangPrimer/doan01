@@ -7,7 +7,7 @@
         <a href="#" 
            title="Thêm vào giỏ hàng" 
             class="add_comment"
-            data-url="{{route('comment',$a->id)}}"
+            data-url="{{route('product.comment',$a->id)}}"
         >
                               Bình Luận
         </a>

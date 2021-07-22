@@ -1,8 +1,9 @@
     a {
         text-decoration: none !important;
-        font-size: 16px;
+        font-size: 13px;
         transition: .5s;
         margin: 0;
+        line-height: 18px;
     }
     
     h2 {
@@ -12,7 +13,11 @@
     
     p {
         margin: 0;
-        font-size: 15px;
+        font-size: 13px;
+    }
+    
+    .container {
+        max-width: 1140px !important;
     }
     
     a:hover {
@@ -20,8 +25,8 @@
     }
     
     span {
-        font-size: 14px;
-        line-height: 16px;
+        font-size: 12px;
+        line-height: 14px;
         word-wrap: break-word;
     }
     

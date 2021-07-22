@@ -40,7 +40,7 @@
                     <i class="fa fa-caret-down"></i>
                 </a>
                 <div class="dropdown-container">
-                    <a class="nav-link abc" href="{{route('list_product')}}">Danh Sách </a>
+                    <a class="nav-link abc" href="{{route('a.list_product')}}">Danh Sách </a>
                     <a class="nav-link abc" href="{{route('create_product')}}">Thêm Mới</a>
                 </div>
             </li>

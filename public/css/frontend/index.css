@@ -33,9 +33,11 @@
 }
 
 .card {
-    height: 460px;
-    transition: 0.5s;
-    opacity: .9;
+    border: none;
+}
+
+.col {
+    margin-bottom: 20px;
 }
 
 .card:hover {
@@ -50,13 +52,12 @@
     left: 5px;
     background: #59b1ec;
     color: rgb(255, 255, 255);
-    padding: 10px 0px 0px;
-    font-size: 14px;
+    padding: 5px 0px 0px;
+    font-size: 12px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 77%, 0 100%);
-    height: 48px;
-    width: 38px;
+    height: 40px;
+    width: 30px;
     text-align: center;
-    display: flex;
 }
 
 .sale-1 {
@@ -64,30 +65,31 @@
     top: 0px;
     text-align: center;
     right: 5px;
-    font-size: 14px;
+    font-size: 12px;
     background: #fd4011;
     color: rgb(255, 255, 255);
-    padding: 10px 0px 0px;
+    padding: 5px 0px 0px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 77%, 0 100%);
-    height: 48px;
-    width: 38px;
+    height: 40px;
+    width: 30px;
 }
 
 .tragop {
     position: absolute;
     bottom: 0;
     left: 0;
-    font-size: 14px;
+    font-size: 10px;
     padding: 2px 4px;
 }
 
 sao,
 gia {
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 del {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .all-product {
@@ -212,7 +214,7 @@ del {
     border-radius: 5px;
     margin-bottom: 40px;
     position: relative;
-    height: 325px;
+    height: 300px;
 }
 
 .feedback__video::before {

@@ -1,5 +1,8 @@
 /********************************************************************/
 
+
+/* 8***********************************************************8 */
+
 @media only screen and (max-width: 1199.98px) {
     .topbar-hotline {
         display: none !important;
@@ -47,6 +50,7 @@
     }
     .line {
         height: 2px;
+        margin-top: 20px;
     }
     .footer__logo img {
         width: 100%;
@@ -102,6 +106,13 @@
     }
     .expertise__title {
         width: 60% !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .bot-item>img {
+        width: 60px !important;
+        height: 60px !important;
     }
 }
 
@@ -166,10 +177,6 @@
     }
     ul.region1 {
         width: 50%;
-    }
-    /* san pham trang chu */
-    .card {
-        height: 440px !important;
     }
     /* dich vu */
     .shipping__item,
@@ -286,13 +293,6 @@
     h2 {
         font-size: 20px !important;
     }
-    a {
-        font-size: 14px;
-    }
-    p,
-    span {
-        font-size: 12px;
-    }
     /* header */
     .logo {
         width: 45%;
@@ -322,9 +322,6 @@
         padding: 5px !important;
         margin: 0 10px !important;
         font-size: 12px !important;
-    }
-    .card {
-        height: 400px !important;
     }
     sao,
     gia {
@@ -398,49 +395,5 @@
     }
     .c_desc::-webkit-scrollbar {
         display: none;
-    }
-}
-
-@media only screen and (max-width: 430px) {
-    .card {
-        height: 350px !important;
-    }
-}
-
-@media only screen and (max-width: 360px) {
-    .card {
-        height: 330px !important;
-    }
-}
-
-
-/* san pham trang chu */
-
-@media (min-width: 1200px) and (max-width: 1399.98px) {
-    .card {
-        height: 440px !important;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .card {
-        height: 410px !important;
-    }
-    .bot-item>img {
-        width: 60px !important;
-        height: 60px !important;
-    }
-}
-
-@media (min-width: 500px) and (max-width: 575.98px) {
-    .image-product {
-        display: flex !important;
-        justify-content: center !important;
-    }
-    .img-fluid {
-        width: 50%;
-    }
-    .card {
-        height: 280px !important;
     }
 }

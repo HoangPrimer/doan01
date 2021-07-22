@@ -16,7 +16,11 @@ Route::group(['namespace' => 'User'], function () {
         'as' => 'home',
         'uses' => 'Home_Controller@home'
     ]);
-
+    // tim kiem
+    Route::get('search', [
+        'as' => 'search',
+        'uses' => 'Home_Controller@search'
+    ]);
     // đăng nhập đăng ký đăng xuất
     Route::get('login', [
         'as' => 'login',
@@ -53,59 +57,61 @@ Route::group(['namespace' => 'User'], function () {
         'as' => 'profiles',
         'uses' => 'Home_Controller@profiles'
     ]);
+});
+
+// san pham theo danh muc
+Route::group(['namespace' => 'User'], function () {
 
     // sản phẩm theo danh mục
     Route::get('danh-muc/{id}', [
-        'as' => 'category.product',
-        'uses' => 'Category_Product_Controller@list_product'
+        'as' => 'category.index',
+        'uses' => 'Category_Product_Controller@index'
     ]);
 
     // lọc sản phẩm
-    Route::get('fillter', [
-        'as' => 'fillter',
-        'uses' => 'Category_Product_Controller@fillter'
+    Route::get('loc-san-pham', [
+        'as' => 'filter',
+        'uses' => 'Category_Product_Controller@filter'
     ]);
 
     // sap  xep 
-    Route::get('sort-category-product', [
-        'as' => 'sort_category_product',
-        'uses' => 'Category_Product_Controller@sort_category_product'
-    ]);
-
-    //sap xêp post
-    Route::post('sort', [
-        'as' => 'page_product',
+    Route::get('sap-xep', [
+        'as' => 'category.sort',
         'uses' => 'Category_Product_Controller@sort'
     ]);
 
-    //tim kiem trực tuyến san pham theo danh muc
-    Route::get('danh-muc-san-pham', [
-        'as' => 'search_cate_product',
-        'uses' => 'Category_Product_Controller@search_category_product'
+    //sap xêp post
+    Route::post('paginate', [
+        'as' => 'category.paginate',
+        'uses' => 'Category_Product_Controller@paginate'
     ]);
 
-    // tim kiem
-    Route::get('search', [
-        'as' => 'search',
-        'uses' => 'Home_Controller@search'
+    //tim kiem trực tuyến san pham theo danh muc
+    Route::get('tim-kiem', [
+        'as' => 'category.search',
+        'uses' => 'Category_Product_Controller@search'
     ]);
+});
+
+// chi  tiet san pham
+Route::group(['namespace' => 'User'], function () {
 
     //san phẩm chi tiết
     Route::get('danh-muc/{category}/{id}', [
-        'as' => 'prode',
-        'uses' => 'Home_Controller@product_details'
+        'as' => 'product.index',
+        'uses' => 'Product_Details_Controller@index'
     ]);
 
     //đánh giá san phẩm
-    Route::get('/rate', [
-        'as' => 'rate',
-        'uses' => 'Frontend@rate'
+    Route::get('danh-gia', [
+        'as' => 'product.rate',
+        'uses' => 'Product_Details_Controller@rate'
     ]);
 
     // binh luận
-    Route::get('/comment', [
-        'as' => 'comment',
-        'uses' => 'Frontend@comment'
+    Route::get('binh-luan', [
+        'as' => 'product.comment',
+        'uses' => 'Product_Details_Controller@comment'
     ]);
 
 
@@ -271,22 +277,22 @@ Route::middleware(['admin'])->group(function () {
             ]);
 
             Route::get('list', [
-                'as' => 'list_product',
+                'as' => 'a.list_product',
                 'uses' => 'Product_Controller@list_product'
             ]);
 
             Route::get('sort_product/{id}', [
-                'as' => 'sort_product',
+                'as' => 'a.sort_product',
                 'uses' => 'Product_Controller@sort_product'
             ]);
 
             Route::post('sort', [
-                'as' => 'sort',
+                'as' => 'a.sort',
                 'uses' => 'Product_Controller@sort'
             ]);
 
             Route::get('live_search_product', [
-                'as' => 'live_search_product',
+                'as' => 'a.live_search_product',
                 'uses' => 'Product_Controller@live_search_product'
             ]);
 

@@ -20,15 +20,15 @@
         <a class="btn btn-lg btn-primary me-2" href="{{route('create_product')}}">Thêm</a>
         <button class="btn-sort btn btn-light border">Sắp xếp theo : <span class="text-sort  ms-2 fs-5">Mới Nhất</span> <i class="fa fa-angle-down ms-2"></i>
             <div class="menu-sort">
-                <a class=" sort_product " data-url="{{route('sort_product','new')}}" onclick="change_sort_product(this)">Mới Nhất</a>
-                <a class=" sort_product" data-url="{{route('sort_product','old')}}" onclick="change_sort_product(this)">Cũ Nhất</a>
-                <a class=" sort_product" data-url="{{route('sort_product','abc_asc')}}" onclick="change_sort_product(this)">A -> Z</a>
-                <a class=" sort_product" data-url="{{route('sort_product','abc_desc')}}" onclick="change_sort_product(this)">Z -> A</a>
+                <a class=" sort_product " data-url="{{route('a.sort_product','new')}}" onclick="change_sort_product(this)">Mới Nhất</a>
+                <a class=" sort_product" data-url="{{route('a.sort_product','old')}}" onclick="change_sort_product(this)">Cũ Nhất</a>
+                <a class=" sort_product" data-url="{{route('a.sort_product','abc_asc')}}" onclick="change_sort_product(this)">A -> Z</a>
+                <a class=" sort_product" data-url="{{route('a.sort_product','abc_desc')}}" onclick="change_sort_product(this)">Z -> A</a>
             </div>
         </button>
     </div>
     <div class="col-lg-8 col-md-12 col-sm-12 live_seach_category">
-        <input class="form-control form-control-light w-100 py-2 " type="text" id="live_search_product" data-url="{{ route ('live_search_product')}}" placeholder="Search" aria-label="Search">
+        <input class="form-control form-control-light w-100 py-2 " type="text" id="live_search_product" data-url="{{ route ('a.live_search_product')}}" placeholder="Search" aria-label="Search">
     </div>
 </div>
 @csrf
@@ -62,7 +62,7 @@
         function fetch_data(page, key) {
             var _token = $("input[name=_token]").val();
             $.ajax({
-                url: "{{route('sort')}}",
+                url: "{{route('a.sort')}}",
                 method: "POST",
                 data: {
                     _token: _token,

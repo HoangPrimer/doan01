@@ -74,7 +74,7 @@
                 @foreach($category as $cate)
                     @if(count(DB::table('products')->where('pro_category_id',$cate->id)->get())>0)
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('category.product',$cate->c_slug)}}">
+                            <a class="nav-link" href="{{route('category.index',$cate->c_slug)}}">
                             {{$cate->c_name}}
                             </a>
                         </li>

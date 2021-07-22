@@ -1,4 +1,4 @@
-<section class="bg-secondary py-2">
+<section class="bg-secondary ">
     <div class="container">
         <div class="row row-cols-1 row-cols-sm-3 g-3">
             <div class="col">

@@ -57,7 +57,7 @@
         <a href="#" 
            title="Thêm vào giỏ hàng" 
             class="add_rate"
-            data-url="{{route('rate',$a->id)}}"
+            data-url="{{route('product.rate',$a->id)}}"
         >
                             Gửi
         </a>

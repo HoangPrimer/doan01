@@ -14,8 +14,8 @@ class Order_Controller extends Controller
 {
     public function order_new(){
       
-        $new  =  Order::where('TrangThai','Chờ Duyệt')->orwhere('TrangThai','Đã Duyệt')->orderBy('id','desc')->paginate(20);
-        return view('backend.Oder.Oder_New',compact('new'));
+        $list_product  =  Order::where('od_status','Chờ Duyệt')->orwhere('od_status','Đã Duyệt')->orderBy('id','desc')->paginate(20);
+        return view('backend.order.Oder_New',compact('list_product'));
     }
 
     public function order_onbyway(){

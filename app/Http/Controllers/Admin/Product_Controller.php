@@ -28,7 +28,7 @@ class Product_Controller extends Controller
     }
 
     
-    function sort(Request $request)
+    function paginate(Request $request)
     {
         if ($request->ajax()) {
             $keys = $request->key;
@@ -41,7 +41,6 @@ class Product_Controller extends Controller
                 return view('backend.product.child_list', compact('list_product'))->render();
             }
             if ($keys === 'abc_asc') {
-
                 $list_product  = Product::orderBy('pro_code', 'asc')->simplepaginate(20);
                 return view('backend.product.child_list', compact('list_product'))->render();
             }
@@ -49,43 +48,50 @@ class Product_Controller extends Controller
                 $list_product  = Product::orderBy('pro_code', 'desc')->simplepaginate(20);
                 return view('backend.product.child_list', compact('list_product'))->render();
             }
+            if ($keys === 'hot_sell') {
+                $list_product  = Product::orderBy('pro_amount_sell', 'desc')->simplepaginate(20);
+                return view('backend.product.child_list', compact('list_product'))->render();
+            }
+            if ($keys === 'hot') {
+                $list_product  = Product::orderBy('pro_hot', 'desc')->simplepaginate(20);
+                return view('backend.product.child_list', compact('list_product'))->render();
+            }
+           
         }
     }
 
-    public function sort_product($id)
+    public function sort_product( Request $request )
     {
         if (request()->ajax()) {
-            $keys = $id;
+            $keys = $request-> key;
             if ($keys === 'new') {
-
                 $list_product  = Product::orderBy('id', 'desc')->simplepaginate(20);
-                $new_list_product = view('backend.product.child_list', compact('list_product'))->render();
-                return response()->json([
-                    'new_list_product' => $new_list_product,
-                ], 200);
+                $abc =  view('backend.product.child_list', compact('list_product'))->render();
             }
             if ($keys === 'old') {
                 $list_product  = Product::orderBy('id', 'asc')->simplepaginate(20);
-                $new_list_product = view('backend.product.child_list', compact('list_product'))->render();
-                return response()->json([
-                    'new_list_product' => $new_list_product,
-                ], 200);
+                $abc = view('backend.product.child_list', compact('list_product'))->render();
             }
             if ($keys === 'abc_asc') {
-
                 $list_product  = Product::orderBy('pro_code', 'asc')->simplepaginate(20);
-                $new_list_product = view('backend.product.child_list', compact('list_product'))->render();
-                return response()->json([
-                    'new_list_product' => $new_list_product,
-                ], 200);
+                $abc = view('backend.product.child_list', compact('list_product'))->render();
             }
             if ($keys === 'abc_desc') {
                 $list_product  = Product::orderBy('pro_code', 'desc')->simplepaginate(20);
-                $new_list_product = view('backend.product.child_list', compact('list_product'))->render();
-                return response()->json([
-                    'new_list_product' => $new_list_product,
-                ], 200);
+                $abc =  view('backend.product.child_list', compact('list_product'))->render();
             }
+            if ($keys === 'hot_sell') {
+                $list_product  = Product::orderBy('pro_amount_sell', 'desc')->simplepaginate(20);
+                $abc = view('backend.product.child_list', compact('list_product'))->render();
+            }
+            if ($keys === 'hot') {
+                $list_product  = Product::orderBy('pro_hot', 'desc')->simplepaginate(20);
+                $abc = view('backend.product.child_list', compact('list_product'))->render();
+            }
+            return response()->json([
+                'abc' => $abc,
+            ], 200);
+          
         }
     }
 

@@ -125,3 +125,18 @@ $(document).ready(function() {
     }
 
 });
+
+//            doc them nut 
+
+$(document).on('click', '.read_more', function read_more() {
+    $('.product-desc').css('height', 'auto');
+    $('.hide-more').removeClass('d-none');
+    $(this).addClass('d-none');
+
+});
+$(document).on('click', '.hide-more', function hide_more() {
+    $('.product-desc').css('height', '600px');
+    $('.read_more').removeClass('d-none');
+    $(this).addClass('d-none');
+
+});

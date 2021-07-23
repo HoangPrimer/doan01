@@ -116,39 +116,34 @@ Route::group(['namespace' => 'User'], function () {
 
 
     // gio hang
-    Route::get('shopping-cart', [
-        'as' => 'shopping',
-        'uses' => 'Cart_Controller@cart'
+    Route::get('gio-hang', [
+        'as' => 'cart',
+        'uses' => 'Cart_Controller@index'
     ]);
 
     //them vao gio hang
     Route::get('add-to-cart/{id}', [
-        'as' => 'addtocart',
-        'uses' => 'Cart_Controller@add_to_cart'
+        'as' => 'cart.add',
+        'uses' => 'Cart_Controller@create'
     ]);
 
     //cap nhat gio hang
     Route::get('update-cart', [
-        'as' => 'updatecart',
-        'uses' => 'Cart_Controller@update_cart'
+        'as' => 'cart.update',
+        'uses' => 'Cart_Controller@update'
     ]);
 
     // xoa gio hang
     Route::get('del-cart', [
-        'as' => 'delcart',
-        'uses' => 'Cart_Controller@del_cart'
+        'as' => 'cart.delete',
+        'uses' => 'Cart_Controller@delete'
     ]);
 
-    // mua ngay chi tiet san pham
-    Route::get('buy_now/{id}', [
-        'as' => 'buy_now',
-        'uses' => 'Cart_Controller@buy_now'
-    ]);
 
     //dat hang gio hang
-    Route::post('oder', [
-        'as' => 'oder',
-        'uses' => 'Cart_Controller@oder'
+    Route::post('dat-hang', [
+        'as' => 'order',
+        'uses' => 'Cart_Controller@order'
     ]);
 
     //trang chủ gio hang
@@ -192,7 +187,7 @@ Route::middleware(['admin'])->group(function () {
                 'uses' => 'Category_Controller@list_category'
             ]);
 
-            Route::get('sort_category/{id}', [
+            Route::get('sort_category', [
                 'as' => 'sort_category',
                 'uses' => 'Category_Controller@sort_category'
             ]);
@@ -224,6 +219,7 @@ Route::middleware(['admin'])->group(function () {
         });
 
         Route::group(['prefix' => 'trademark'], function () {
+
             Route::get('create', [
                 'as' => 'create_trademark',
                 'uses' => 'Trademark_Controller@create_trademark'
@@ -239,7 +235,7 @@ Route::middleware(['admin'])->group(function () {
                 'uses' => 'Trademark_Controller@list_trademark'
             ]);
 
-            Route::get('sort_trademark/{id}', [
+            Route::get('sort_trademark', [
                 'as' => 'sort_trademark',
                 'uses' => 'Trademark_Controller@sort_trademark'
             ]);
@@ -281,14 +277,14 @@ Route::middleware(['admin'])->group(function () {
                 'uses' => 'Product_Controller@list_product'
             ]);
 
-            Route::get('sort_product/{id}', [
+            Route::get('sort_product', [
                 'as' => 'a.sort_product',
                 'uses' => 'Product_Controller@sort_product'
             ]);
 
-            Route::post('sort', [
-                'as' => 'a.sort',
-                'uses' => 'Product_Controller@sort'
+            Route::post('paginate', [
+                'as' => 'a.paginate',
+                'uses' => 'Product_Controller@paginate'
             ]);
 
             Route::get('live_search_product', [

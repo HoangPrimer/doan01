@@ -24,24 +24,29 @@ class Category_Controller extends Controller
 
 
     // tim kiem sap xep
-    public function sort_category($id)
+    public function sort_category(Request $request)
     {
         if (request()->ajax()) {
-            $keys = $id;
+            $keys = $request->key;
             if ($keys === 'new') {
                 $list_category  = Category::orderBy('id', 'desc')->simplepaginate(20);
                 $new_list_category = view('backend.category.child_list', compact('list_category'))->render();
-                return response()->json([
-                    'new_list_category' => $new_list_category,
-                ], 200);
             }
             if ($keys === 'old') {
                 $list_category  = Category::orderBy('id', 'asc')->simplepaginate(20);
                 $new_list_category = view('backend.category.child_list', compact('list_category'))->render();
-                return response()->json([
-                    'new_list_category' => $new_list_category,
-                ], 200);
             }
+            if ($keys === 'abc_asc') {
+                $list_category  = Category::orderBy('c_name', 'asc')->simplepaginate(20);
+                $new_list_category = view('backend.category.child_list', compact('list_category'))->render();
+            }
+            if ($keys === 'abc_desc') {
+                $list_category  = Category::orderBy('c_name', 'desc')->simplepaginate(20);
+                $new_list_category = view('backend.category.child_list', compact('list_category'))->render();
+            }
+            return response()->json([
+                'new_list_category' => $new_list_category,
+            ], 200);
         }
     }
 
@@ -60,7 +65,7 @@ class Category_Controller extends Controller
                 ->orwhere('c_slug', 'like', '%' . $keys . '%')
                 ->orwhere('c_desc', 'like', '%' . $keys . '%')
                 ->orwhere('c_status', 'like', '%' . $keys . '%')
-                ->orwhere('created_at', 'like', '%' . $keys . '%')->orderBy('id','desc')->simplepaginate(20);
+                ->orwhere('created_at', 'like', '%' . $keys . '%')->orderBy('id', 'desc')->simplepaginate(20);
             $live_search_category = view('backend.category.child_list', compact('list_category'))->render();
             return response()->json([
                 'live_search_category' => $live_search_category,

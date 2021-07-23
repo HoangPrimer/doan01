@@ -18,85 +18,187 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'Admin 1',
                 'email' => 'admin@gmail.com',
-                'password' => Hash::make('111111'),
+                 'password'  =>Hash::make('111111'),
                 'level'  => '2',
 
             ],
             [
                 'name' => 'Admin 2',
                 'email' => 'admin1@gmail.com',
-                'password' => Hash::make('111111'),
+                 'password'  =>Hash::make('111111'),
                 'level'  => '1',
 
             ],
             [
                 'name' => 'Admin 3',
                 'email' => 'admin2@gmail.com',
-                'password' => Hash::make('111111'),
+                 'password'  =>Hash::make('111111'),
                 'level'  => '1',
 
             ],
             [
                 'name' => 'Admin 4',
                 'email' => 'admin3@gmail.com',
-                'password' => Hash::make('111111'),
+                 'password'  =>Hash::make('111111'),
                 'level'  => '1',
 
             ],
             [
                 'name' => 'Admin 5',
                 'email' => 'admin4@gmail.com',
-                'password' => Hash::make('111111'),
+                 'password'  =>Hash::make('111111'),
                 'level'  => '2',
 
             ],
             [
                 'name' => 'Admin 6',
                 'email' => 'admin5@gmail.com',
-                'password' => Hash::make('111111'),
+                 'password'  =>Hash::make('111111'),
                 'level'  => '2',
 
             ],
             [
                 'name' => 'User 1',
                 'email' => 'user1@gmail.com',
-                'password' => Hash::make('111111'),
+                 'password'  =>Hash::make('111111'),
                 'level'  => '0',
             ],
             [
                 'name' => 'User 2',
                 'email' => 'user2@gmail.com',
-                'password' => Hash::make('111111'),
+                 'password'  =>Hash::make('111111'),
                 'level'  => '0',
             ],
             [
                 'name' => 'User 3',
                 'email' => 'user3@gmail.com',
-                'password' => Hash::make('111111'),
+                 'password'  =>Hash::make('111111'),
                 'level'  => '0',
             ],
             [
                 'name' => 'User 4',
                 'email' => 'user4@gmail.com',
-                'password' => Hash::make('111111'),
+                 'password'  =>Hash::make('111111'),
                 'level'  => '0',
             ],
             [
                 'name' => 'User 5',
                 'email' => 'user5@gmail.com',
-                'password' => Hash::make('111111'),
+                 'password'  =>Hash::make('111111'),
                 'level'  => '0',
             ],
             [
                 'name' => 'User 6',
                 'email' => 'user6@gmail.com',
-                'password' => Hash::make('111111'),
+                 'password'  =>Hash::make('111111'),
                 'level'  => '0',
             ],
             [
                 'name' => 'User 7',
                 'email' => 'user7@gmail.com',
-                'password' => Hash::make('111111'),
+                 'password'  =>Hash::make('111111'),
+                'level'  => '0',
+            ],
+            [
+                'name' => 'Nguyễn Thị Mai',
+                'email' => 'Mai123@gmail.com',
+                 'password'  =>Hash::make('111111'),
+                'level'  => '0',
+            ],
+            [
+                'name' => 'Đào Văn Tân',
+                'email' => 'Tan123@gmail.com',
+                 'password'  =>Hash::make('111111'),
+                'level'  => '0',
+            ],
+            [
+                'name' => 'Xuân Quý',
+                'email' => 'xuanquy123@gmail.com',
+                 'password'  =>Hash::make('111111'),
+                'level'  => '0',
+            ],
+            [
+                'name' => 'Đức Anh',
+                'email' => 'ducanh221@gmail.com',
+                 'password'  =>Hash::make('111111'),
+                'level'  => '0',
+            ],
+            [
+                'name' => 'Huệ',
+                'email' => 'hue321@gmail.com',
+                 'password'  =>Hash::make('111111'),
+                'level'  => '0',
+            ],
+            [
+                'name' => 'Tiến Nguyễn',
+                'email' => 'tiennguyen11@gmail.com',
+                 'password'  =>Hash::make('111111'),
+                'level'  => '0',
+            ],
+            [
+                'name' => 'Đạt Đỗ',
+                'email' => 'datdo43@gmail.com',
+                 'password'  =>Hash::make('111111'),
+                'level'  => '0',
+            ],
+            [
+                'name' => 'Hương Bùi',
+                'email' => 'huongbui32@gmail.com',
+                 'password'  =>Hash::make('111111'),
+                'level'  => '0',
+            ],
+            [
+                'name' => 'Hòa Tuấn',
+                'email' => 'tuanhoa3112@gmail.com',
+                 'password'  =>Hash::make('111111'),
+                'level'  => '0',
+            ],
+            [
+                'name' => 'Thủy Nguyễn',
+                'email' => 'thuy21@gmail.com',
+                 'password'  =>Hash::make('111111'),
+                'level'  => '0',
+            ],
+            [
+                'name' => 'Lâm Văn Tú',
+                'email' => 'lamtu43@gmail.com',
+                 'password'  =>Hash::make('111111'),
+                'level'  => '0',
+            ],
+            [
+                'name' => 'Sang Nguyễn',
+                'email' => 'nguyensang21@gmail.com',
+                 'password'  =>Hash::make('111111'),
+                'level'  => '0',
+            ],
+            [
+                'name' => 'Trận ',
+                'email' => 'tran321@gmail.com',
+                 'password'  =>Hash::make('111111'),
+                'level'  => '0',
+            ],
+            [
+                'name' => 'Thanh Nguyễn',
+                'email' => 'thanhnguyen44@gmail.com',
+                 'password'  =>Hash::make('111111'),
+                'level'  => '0',
+            ],
+            [
+                'name' => 'Trinh Nguyễn',
+                'email' => 'trinhtrang@gmail.com',
+                 'password'  =>Hash::make('111111'),
+                'level'  => '0',
+            ],
+            [
+                'name' => 'Thu Trần',
+                'email' => 'thutran@gmail.com',
+                 'password'  =>Hash::make('111111'),
+                'level'  => '0',
+            ],
+            [
+                'name' => 'Sỹ',
+                'email' => 'sy@gmail.com',
+                 'password'  =>Hash::make('111111'),
                 'level'  => '0',
             ],
         ]);
@@ -305,78 +407,78 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-        DB::table('customers')->insert([
-            [
-                'Name' => Str::random(10),
-                'Phone' => random_int(1000000, 55555555),
-                'Address' => Str::random(10),
-                'Gender'  => 'Nam',
-                'Email' => Str::random(10) . '@gmail.com',
-            ],
-            [
-                'Name' => Str::random(10),
-                'Phone' => random_int(1000000, 55555555),
-                'Address' => Str::random(10),
-                'Gender'  => 'Nam',
-                'Email' => Str::random(10) . '@gmail.com',
-            ],
-            [
-                'Name' => Str::random(10),
-                'Phone' => random_int(1000000, 55555555),
-                'Address' => Str::random(10),
-                'Gender'  => 'Nữ',
-                'Email' => Str::random(10) . '@gmail.com',
-            ],
-            [
-                'Name' => Str::random(10),
-                'Phone' => random_int(1000000, 55555555),
-                'Address' => Str::random(10),
-                'Gender'  => 'Nam',
-                'Email' => Str::random(10) . '@gmail.com',
-            ],
-            [
-                'Name' => Str::random(10),
-                'Phone' => random_int(1000000, 55555555),
-                'Address' => Str::random(10),
-                'Gender'  => 'Nữ',
-                'Email' => Str::random(10) . '@gmail.com',
-            ],
-            [
-                'Name' => Str::random(10),
-                'Phone' => random_int(1000000, 55555555),
-                'Address' => Str::random(10),
-                'Gender'  => 'Nam',
-                'Email' => Str::random(10) . '@gmail.com',
-            ],
-            [
-                'Name' => Str::random(10),
-                'Phone' => random_int(1000000, 55555555),
-                'Address' => Str::random(10),
-                'Gender'  => 'Nữ',
-                'Email' => Str::random(10) . '@gmail.com',
-            ],
-            [
-                'Name' => Str::random(10),
-                'Phone' => random_int(1000000, 55555555),
-                'Address' => Str::random(10),
-                'Gender'  => 'Nam',
-                'Email' => Str::random(10) . '@gmail.com',
-            ],
-            [
-                'Name' => Str::random(10),
-                'Phone' => random_int(1000000, 55555555),
-                'Address' => Str::random(10),
-                'Gender'  => 'Nữ',
-                'Email' => Str::random(10) . '@gmail.com',
-            ],
-            [
-                'Name' => Str::random(10),
-                'Phone' => random_int(1000000, 55555555),
-                'Address' => Str::random(10),
-                'Gender'  => 'Nữ',
-                'Email' => Str::random(10) . '@gmail.com',
-            ],
-        ]);
+        // DB::table('customers')->insert([
+        //     [
+        //         'Name' => Str::random(10),
+        //         'Phone' => random_int(1000000, 55555555),
+        //         'Address' => Str::random(10),
+        //         'Gender'  => 'Nam',
+        //         'Email' => Str::random(10) . '@gmail.com',
+        //     ],
+        //     [
+        //         'Name' => Str::random(10),
+        //         'Phone' => random_int(1000000, 55555555),
+        //         'Address' => Str::random(10),
+        //         'Gender'  => 'Nam',
+        //         'Email' => Str::random(10) . '@gmail.com',
+        //     ],
+        //     [
+        //         'Name' => Str::random(10),
+        //         'Phone' => random_int(1000000, 55555555),
+        //         'Address' => Str::random(10),
+        //         'Gender'  => 'Nữ',
+        //         'Email' => Str::random(10) . '@gmail.com',
+        //     ],
+        //     [
+        //         'Name' => Str::random(10),
+        //         'Phone' => random_int(1000000, 55555555),
+        //         'Address' => Str::random(10),
+        //         'Gender'  => 'Nam',
+        //         'Email' => Str::random(10) . '@gmail.com',
+        //     ],
+        //     [
+        //         'Name' => Str::random(10),
+        //         'Phone' => random_int(1000000, 55555555),
+        //         'Address' => Str::random(10),
+        //         'Gender'  => 'Nữ',
+        //         'Email' => Str::random(10) . '@gmail.com',
+        //     ],
+        //     [
+        //         'Name' => Str::random(10),
+        //         'Phone' => random_int(1000000, 55555555),
+        //         'Address' => Str::random(10),
+        //         'Gender'  => 'Nam',
+        //         'Email' => Str::random(10) . '@gmail.com',
+        //     ],
+        //     [
+        //         'Name' => Str::random(10),
+        //         'Phone' => random_int(1000000, 55555555),
+        //         'Address' => Str::random(10),
+        //         'Gender'  => 'Nữ',
+        //         'Email' => Str::random(10) . '@gmail.com',
+        //     ],
+        //     [
+        //         'Name' => Str::random(10),
+        //         'Phone' => random_int(1000000, 55555555),
+        //         'Address' => Str::random(10),
+        //         'Gender'  => 'Nam',
+        //         'Email' => Str::random(10) . '@gmail.com',
+        //     ],
+        //     [
+        //         'Name' => Str::random(10),
+        //         'Phone' => random_int(1000000, 55555555),
+        //         'Address' => Str::random(10),
+        //         'Gender'  => 'Nữ',
+        //         'Email' => Str::random(10) . '@gmail.com',
+        //     ],
+        //     [
+        //         'Name' => Str::random(10),
+        //         'Phone' => random_int(1000000, 55555555),
+        //         'Address' => Str::random(10),
+        //         'Gender'  => 'Nữ',
+        //         'Email' => Str::random(10) . '@gmail.com',
+        //     ],
+        // ]);
 
 
         DB::table('products')->insert([
@@ -403,8 +505,9 @@ class DatabaseSeeder extends Seeder
                 'pro_hot'     => '1',
                 'pro_price_entry' => '2500000',
                 'pro_price'    => '5800000',
-                'pro_sale'     => '500000',
-                'pro_amount'    => '100',
+                'pro_sale'     => '5350000',
+                'pro_amount'    => '200',
+                'pro_amount_sell'    => '24',
                 'pro_desc'    => '<h2><strong>REVIEW ĐỒNG HỒ NAM CITIZEN NH8363-14H SỬ DỤNG M&Aacute;Y CƠ</strong></h2>
 
                 <p>Lu&ocirc;n nằm trong top 5 những thương hiệu&nbsp;<a href="https://donghohaitrieu.com/tin-tuc/dong-ho/cac-thuong-hieu-dong-ho-nhat-ban-chinh-hang-duoc-ua-chuong.html" rel="noopener noreferrer" target="_blank">đồng hồ Nhật Bản</a>&nbsp;được ưa chuộng v&agrave; y&ecirc;u th&iacute;ch nhất hiện nay, Citizen đ&atilde; v&agrave; đang dần khẳng định bản sắc ri&ecirc;ng của m&igrave;nh tr&ecirc;n thị trường nhờ v&agrave;o những sản phẩm tuy c&oacute; mức gi&aacute; kh&ocirc;ng qu&aacute; cao nhưng chất lượng được đ&aacute;nh gi&aacute; rất tốt.</p>
@@ -537,8 +640,9 @@ class DatabaseSeeder extends Seeder
                 'pro_hot'     => '0',
                 'pro_price_entry'     => '3000000',
                 'pro_price'    => '5500000',
-                'pro_sale'     => '200000',
+                'pro_sale'     => '4650000',
                 'pro_amount'    => '100',
+                'pro_amount_sell'    => '5',
                 'pro_desc'    => '<h2><strong>T&Igrave;M HIỂU CHI TIẾT VỀ PHI&Ecirc;N BẢN ĐỒNG HỒ CITIZEN NH8353-00H</strong></h2>
 
                 <p>Về thị phần đồng hồ tầm trung hiện nay, phải n&oacute;i rằng thương hiệu Citizen ch&iacute;nh l&agrave; một trong những nh&agrave; sản xuất đồng hồ được tin d&ugrave;ng nhất.</p>
@@ -675,8 +779,9 @@ class DatabaseSeeder extends Seeder
                 'pro_hot'     => '1',
                 'pro_price_entry'     => '5000000',
                 'pro_price'    => '8000000',
-                'pro_sale'     => '300000',
+                'pro_sale'     => '6500000',
                 'pro_amount'    => '100',
+                'pro_amount_sell'    => '1',
                 'pro_desc'    => '<p><strong><em>Một trong những c&aacute;i t&ecirc;n kh&ocirc;ng thể n&agrave;o bỏ qua mỗi khi nhắc đến thị trường&nbsp;Nhật Bản đ&oacute; ch&iacute;nh l&agrave;&nbsp;<a href="https://donghohaitrieu.com/brand/Citizen" rel="noopener noreferrer" target="_blank">đồng hồ Citizen</a>. Kh&ocirc;ng chỉ l&agrave;m h&agrave;i l&ograve;ng kh&aacute;ch h&agrave;ng của m&igrave;nh bằng những thiết kế tinh tế, c&ocirc;ng nghệ ti&ecirc;n tiến m&agrave; c&ograve;n cả về mức gi&aacute;. Đơn cử đ&oacute; ch&iacute;nh l&agrave; chiếc&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;Citizen BM7370-89E &ndash; một khối kim loại mạnh mẽ b&ecirc;n ngo&agrave;i, sử dụng năng lượng Eco-Drive bền bỉ b&ecirc;n trong.</em></strong></p>
 
                 <p>&nbsp;</p>
@@ -833,8 +938,9 @@ class DatabaseSeeder extends Seeder
                 'pro_hot'     => '0',
                 'pro_price_entry'     => '4000000',
                 'pro_price'    => '6500000',
-                'pro_sale'     => '200000',
-                'pro_amount'    => '100',
+                'pro_sale'     => '6200000',
+                'pro_amount'    => '200',
+                'pro_amount_sell'    => '8',
                 'pro_desc'    => '<p><strong><em><a href="https://donghohaitrieu.com/brand/Citizen" rel="noopener noreferrer" target="_blank">Đồng hồ Citizen</a>&nbsp;kh&ocirc;ng c&ograve;n l&agrave; một sản phẩm qu&aacute; xa lạ đối với c&aacute;c t&iacute;n đồ đam m&ecirc; sưu tầm cỗ m&aacute;y thời gian. Nhưng ch&iacute;nh nhờ sự đột ph&aacute; từ c&ocirc;ng nghệ Eco Drive m&agrave; h&atilde;ng mang lại, dường như những sản phẩm của Citizen đ&atilde; quay trở lại đường đua tr&ecirc;n thị trường, trong đ&oacute; phải kể đến phi&ecirc;n bản&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;Citizen BM6774-51A.</em></strong></p>
 
                 <p>&nbsp;</p>
@@ -969,8 +1075,9 @@ class DatabaseSeeder extends Seeder
                 'pro_hot'     => '0',
                 'pro_price_entry'     => '6000000',
                 'pro_price'    => '10500000',
-                'pro_sale'     => '500000',
+                'pro_sale'     => '9500000',
                 'pro_amount'    => '100',
+                'pro_amount_sell'    => '13',
                 'pro_desc'    => '<p><em><strong>Kh&ocirc;ng chỉ th&agrave;nh c&ocirc;ng ở mảng năng lượng &aacute;nh s&aacute;ng, đồng hồ cơ đến từ thương hiệu Citizen cũng dẫn đầu trong mảng thời trang đồng hồ tại Nhật Bản v&agrave; c&oacute; ảnh hưởng đến hơn 100 quốc gia tr&ecirc;n to&agrave;n thế giới. Citizen NJ0080-50A l&agrave; một sản phẩm như thế với mức gi&aacute; cực hấp dẫn d&agrave;nh cho người đam m&ecirc;.</strong></em></p>
 
                 <p>&nbsp;</p>
@@ -1108,7 +1215,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '800000',
                 'pro_price'    => '3000000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '165',
+                'pro_amount_sell'    => '35',
                 'pro_desc'    => '<h2><strong>Đ&Aacute;NH GI&Aacute; CHI TIẾT ĐỒNG HỒ CITIZEN&nbsp;</strong><strong>BI5000-10E</strong></h2>
 
                 <p>Xuất hiện ở giai đoạn đầu ph&aacute;t triển của ng&agrave;nh c&ocirc;ng nghiệp chế t&aacute;c đồng hồ tại Nhật Bản, hiện nay Citizen đ&atilde; l&agrave; một &ldquo;&ocirc;ng lớn&rdquo;, c&oacute; nhiều th&agrave;nh tựu đ&aacute;ng mơ ước.</p>
@@ -1256,8 +1364,9 @@ class DatabaseSeeder extends Seeder
                 'pro_hot'     => '0',
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '3000000',
-                'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_sale'     => '2900000',
+                'pro_amount'    => '143',
+                'pro_amount_sell'    => '7',
                 'pro_desc'    => '<h2><strong>Đ&Aacute;NH GI&Aacute; CHI TIẾT ĐỒNG HỒ CITIZEN BI5000-10A</strong></h2>
 
                 <p>&Iacute;t ai biết thương hiệu&nbsp;<a href="https://donghohaitrieu.com/dong-ho-deo-tay-chinh-hang" rel="noopener noreferrer" target="_blank">đồng hồ đeo tay</a>&nbsp;Citizen ra đời v&agrave;o năm 1918 nhưng ch&iacute;nh thức gia nhập thị trường lại v&agrave;o năm 1924. Với ti&ecirc;u ch&iacute; mang&nbsp;<a href="https://donghohaitrieu.com/tin-tuc/dong-ho/30-thuong-hieu-dong-ho-luxury-xa-xi-nhat-tren-the-gioi.html" rel="noopener noreferrer" target="_blank">đồng hồ xa xỉ</a>&nbsp;l&uacute;c bấy giờ trở th&agrave;nh m&oacute;n đồ phổ th&ocirc;ng, được nhiều người ti&ecirc;u d&ugrave;ng tin d&ugrave;ng.</p>
@@ -1411,7 +1520,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '3000000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '148',
+                'pro_amount_sell'    => '2',
                 'pro_desc'    => '<h2><strong>CHI TIẾT THIẾT KẾ PHI&Ecirc;N BẢN ĐỒNG HỒ CITIZEN BI1050-81E</strong></h2>
 
                 <p>Xuất th&acirc;n l&agrave; một viện nghi&ecirc;n cứu đồng hồ Shokosha ra đời v&agrave;o năm 1918, sau một thời gian t&igrave;m hiểu kỹ lưỡng về thị trường n&agrave;y, nh&agrave; s&aacute;ng lập đ&atilde; quyết định đổi t&ecirc;n th&agrave;nh Citizen, ch&iacute;nh thức bước ch&acirc;n v&agrave;o con đường chế t&aacute;c n&ecirc;n những cỗ m&aacute;y thời gian chất lượng.</p>
@@ -1538,8 +1648,9 @@ class DatabaseSeeder extends Seeder
                 'pro_hot'     => '1',
                 'pro_price_entry'     => '4000000',
                 'pro_price'    => '11000000',
-                'pro_sale'     => '500000',
-                'pro_amount'    => '100',
+                'pro_sale'     => '10350000',
+                'pro_amount'    => '94',
+                'pro_amount_sell'    => '6',
                 'pro_desc'    => '<p><strong><em>Phi&ecirc;n bản đồng hồ cơ Citizen NP1026-86A l&agrave; một trong những mẫu&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;g&acirc;y ấn tượng kh&aacute; lớn tr&ecirc;n thị trường hiện nay. Mẫu&nbsp;<a href="https://donghohaitrieu.com/brand/Citizen" rel="noopener noreferrer" target="_blank">đồng hồ Citizen</a>&nbsp;n&agrave;y kh&ocirc;ng chỉ được trang bị m&aacute;y cơ tự động, đạt chuẩn chất lượng, gi&aacute; th&agrave;nh hợp l&yacute; m&agrave; chiếc đồng hồ d&agrave;nh cho ph&aacute;i mạnh n&agrave;y c&ograve;n được t&iacute;ch hợp th&ecirc;m thiết kế Open Heart sang trọng rất th&iacute;ch hợp với ph&aacute;i mạnh.</em></strong></p>
 
                 <p>&nbsp;</p>
@@ -1706,8 +1817,9 @@ class DatabaseSeeder extends Seeder
                 'pro_hot'     => '0',
                 'pro_price_entry'     => '5000000',
                 'pro_price'    => '9200000',
-                'pro_sale'     => '500000',
-                'pro_amount'    => '100',
+                'pro_sale'     => '8650000',
+                'pro_amount'    => '144',
+                'pro_amount_sell'    => '6',
                 'pro_desc'    => '<p><em><strong>Thuộc ph&acirc;n kh&uacute;c cao cấp n&ecirc;n phi&ecirc;n bản đồng hồ Citizen BM6970-52A hiện đang sở hữu nhiều chi tiết đặc biệt như bộ m&aacute;y năng lượng &aacute;nh s&aacute;ng, k&iacute;nh sapphire chống trầy,&hellip; C&ugrave;ng với đ&oacute; l&agrave; phong c&aacute;ch cực kỳ lịch l&atilde;m, sang trọng d&agrave;nh ri&ecirc;ng cho nam.</strong></em></p>
 
                 <p>&nbsp;</p>
@@ -1877,7 +1989,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '3000000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '178',
+                'pro_amount_sell'    => '22',
                 'pro_desc'    => '<h2><strong>ĐỒNG HỒ CITIZEN BI1050-81A SỬ DỤNG BỘ M&Aacute;Y QUARTZ TIỆN LỢI, THIẾT KẾ BẮT MẮT</strong></h2>
 
                 <p>Thật chất, với tầm gi&aacute; khoảng 3 triệu đồng, ph&aacute;i mạnh c&oacute; thể dễ d&agrave;ng bỏ t&uacute;i cho m&igrave;nh những chiếc đồng hồ kh&aacute;c nhau từ&nbsp;<a href="https://donghohaitrieu.com/tin-tuc/dong-ho/15-hang-dong-ho-thoi-trang-nam-nu-dep-gia-re-tai-viet-nam.html" rel="noopener noreferrer" target="_blank">đồng hồ thời trang</a>&nbsp;đến đồng hồ thể thao.</p>
@@ -1989,7 +2102,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '3000000',
                 'pro_price'    => '6200000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '146',
+                'pro_amount_sell'    => '14',
                 'pro_desc'    => '<h2><strong>KH&Aacute;M PH&Aacute; V&Agrave; T&Igrave;M HIỂU ĐỒNG HỒ NAM CITIZEN AU1062-56E</strong></h2>
 
                 <p>Lu&ocirc;n nằm trong top 5 thương hiệu&nbsp;<a href="https://donghohaitrieu.com/tin-tuc/dong-ho/cac-thuong-hieu-dong-ho-nhat-ban-chinh-hang-duoc-ua-chuong.html" rel="noopener noreferrer" target="_blank">đồng hồ Nhật Bản</a>&nbsp;được ưa chuộng nhất, c&oacute; thể n&oacute;i rằng khi nhắc đến những thương hiệu đồng hồ từ xứ sở hoa anh đ&agrave;o chắc hẳn bạn sẽ kh&ocirc;ng thể n&agrave;o bỏ qua được thương hiệu Citizen n&agrave;y.</p>
@@ -2114,8 +2228,9 @@ class DatabaseSeeder extends Seeder
                 'pro_hot'     => '0',
                 'pro_price_entry'     => '2000000',
                 'pro_price'    => '5000000',
-                'pro_sale'     => '100000',
-                'pro_amount'    => '100',
+                'pro_sale'     => '4800000',
+                'pro_amount'    => '55',
+                'pro_amount_sell'    => '35',
                 'pro_desc'    => '<h2><strong>CITIZEN NH8350-08B TUY GIẢN DỊ NHƯNG CHỨA ĐỰNG NHIỀU GI&Aacute; TRỊ</strong></h2>
 
                 <p>Thương hiệu Citizen đến từ Nhật Bản ch&iacute;nh l&agrave; cha đẻ của phi&ecirc;n bản&nbsp;Citizen NH8350-08B m&agrave; ch&uacute;ng ta đang n&oacute;i đến. H&atilde;ng n&agrave;y kh&ocirc;ng chỉ nổi tiếng ở thị trường Việt Nam m&agrave; c&ograve;n được vinh danh rất nhiều khắp 5 ch&acirc;u lục.</p>
@@ -2240,8 +2355,9 @@ class DatabaseSeeder extends Seeder
                 'pro_hot'     => '0',
                 'pro_price_entry'     => '2000000',
                 'pro_price'    => '5200000',
-                'pro_sale'     => '200000',
-                'pro_amount'    => '100',
+                'pro_sale'     => '4750000',
+                'pro_amount'    => '140',
+                'pro_amount_sell'    => '20',
                 'pro_desc'    => '<p><strong><em><a href="https://donghohaitrieu.com/brand/Citizen" rel="noopener noreferrer" target="_blank">Đồng hồ Citizen</a>&nbsp;vẫn lu&ocirc;n rất nổi tiếng với chất lượng vượt trội, ổn định v&agrave; bền bỉ theo thời gian. Đặc biệt l&agrave; d&ograve;ng&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;cơ, cụ thể l&agrave; phi&ecirc;n bản Citizen NH8350-59E với vẻ ngo&agrave;i nam t&iacute;nh, mạnh mẽ kết hợp c&ugrave;ng d&acirc;y kim loại chắc chắn sẽ l&agrave; một trong những sản phẩm m&agrave; ph&aacute;i mạnh kh&ocirc;ng thể n&agrave;o bỏ qua.</em></strong></p>
 
                 <p>&nbsp;</p>
@@ -2390,8 +2506,9 @@ class DatabaseSeeder extends Seeder
                 'pro_hot'     => '0',
                 'pro_price_entry'     => '6000000',
                 'pro_price'    => '12600000',
-                'pro_sale'     => '400000',
-                'pro_amount'    => '100',
+                'pro_sale'     => '11450000',
+                'pro_amount'    => '70',
+                'pro_amount_sell'    => '4',
                 'pro_desc'    => '<p>Chưa c&oacute; th&ocirc;ng tin chi tiết</p>',
 
             ],
@@ -2418,8 +2535,9 @@ class DatabaseSeeder extends Seeder
                 'pro_hot'     => '1',
                 'pro_price_entry'     => '3500000',
                 'pro_price'    => '7500000',
-                'pro_sale'     => '300000',
-                'pro_amount'    => '100',
+                'pro_sale'     => '7200000',
+                'pro_amount'    => '124',
+                'pro_amount_sell'    => '14',
                 'pro_desc'    => '<p><strong><em>Trong bảng m&agrave;u, tone x&aacute;m tro thường bị l&atilde;ng qu&ecirc;n v&igrave; n&oacute; kh&aacute; mờ nhạt. Tuy nhi&ecirc;n,&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;Citizen BM7375-18H lại được nhiều người ch&uacute; &yacute; khi kho&aacute;c l&ecirc;n m&igrave;nh bộ c&aacute;nh c&oacute; sắc m&agrave;u n&agrave;y. H&atilde;y c&ugrave;ng t&igrave;m hiểu xem c&aacute;ch m&agrave;&nbsp;<a href="https://donghohaitrieu.com/brand/Citizen" rel="noopener noreferrer" target="_blank">đồng hồ Citizen</a>&nbsp;l&agrave;m cho kh&aacute;ch h&agrave;ng y&ecirc;u mến phi&ecirc;n bản n&agrave;y đến vậy.</em></strong></p>
 
                 <p>&nbsp;</p>
@@ -2597,7 +2715,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '3500000',
                 'pro_price'    => '6950000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '48',
+                'pro_amount_sell'    => '12',
                 'pro_desc'    => '<p><strong><em>Khi nhắc đến những thương hiệu&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;h&agrave;ng đầu tại Nhật Bản, sẽ thật thiếu s&oacute;t nếu kh&ocirc;ng c&oacute; h&atilde;ng&nbsp;<a href="https://donghohaitrieu.com/brand/Citizen" rel="noopener noreferrer" target="_blank">đồng hồ Citizen</a>. Với tham vọng mang đến sản phẩm chất lượng c&ugrave;ng mức gi&aacute; dễ chịu, thương hiệu n&agrave;y nhanh ch&oacute;ng len lỏi v&agrave;o rất nhiều thị trường kh&aacute;c nhau. Nổi bật trong số đ&oacute; phải kể đến mẫu Citizen BM7370-11A c&oacute; vẻ đẹp ho&agrave;n thiện c&ugrave;ng bộ m&aacute;y hiện đại b&ecirc;n trong.</em></strong></p>
 
                 <p>&nbsp;</p>
@@ -2737,7 +2856,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1500000',
                 'pro_price'    => '4700000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '92',
+                'pro_amount_sell'    => '8',
                 'pro_desc'    => '<p><strong><em>Đi theo thời gian, ai cũng muốn n&acirc;ng cấp&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;ng&agrave;y c&agrave;ng hiện đại, mới mẻ v&agrave; ph&ugrave; hợp với xu hướng. Tuy nhi&ecirc;n, c&oacute; kh&ocirc;ng &iacute;t người d&ugrave;ng lại th&iacute;ch những phong c&aacute;ch ho&agrave;i niệm đơn sơ nhưng kh&ocirc;ng muốn bị qu&aacute; lạc hậu. H&atilde;ng&nbsp;<a href="https://donghohaitrieu.com/brand/Citizen" rel="noopener noreferrer" target="_blank">đồng hồ Citizen</a>&nbsp;l&agrave; thương hiệu đi đầu trong bộ m&aacute;y năng lượng &aacute;nh s&aacute;ng hiện đại, v&agrave; phi&ecirc;n bản Citizen BJ6501-28A vẫn giữ được lối thiết kế quen thuộc, lịch l&atilde;m cho người d&ugrave;ng.</em></strong></p>
 
                 <p>&nbsp;</p>
@@ -2873,7 +2993,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '2000000',
                 'pro_price'    => '5250000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '129',
+                'pro_amount_sell'    => '1',
                 'pro_desc'    => '<p><strong><em>Những chiếc&nbsp;<a href="https://donghohaitrieu.com/brand/Citizen" rel="noopener noreferrer" target="_blank">đồng hồ Citizen</a>&nbsp;lu&ocirc;n nổi tiếng với chất lượng đạt chuẩn Nhật Bản nhưng gi&aacute; th&agrave;nh lại v&ocirc; c&ugrave;ng hợp l&yacute;. Chiếc Citizen NH8350-59A thuộc ph&acirc;n kh&uacute;c tầm trung dễ mua, dễ sử dụng.&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">Đồng hồ</a>&nbsp;c&oacute; vẻ ngo&agrave;i kh&aacute; đơn giản ph&ugrave; hợp với phong c&aacute;ch của nhiều anh nam thời hiện đại.</em></strong></p>
 
                 <p>&nbsp;</p>
@@ -3022,8 +3143,9 @@ class DatabaseSeeder extends Seeder
                 'pro_hot'     => '0',
                 'pro_price_entry'     => '800000',
                 'pro_price'    => '3050000',
-                'pro_sale'     => '100000',
-                'pro_amount'    => '100',
+                'pro_sale'     => '2900000',
+                'pro_amount'    => '83',
+                'pro_amount_sell'    => '7',
                 'pro_desc'    => '<p><strong><em>Phi&ecirc;n bản&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;Citizen BI5006-81L đứng ở đ&acirc;u cũng nổi trội v&agrave; được ch&uacute; &yacute; hơn cả nhờ v&agrave;o c&aacute;ch phối m&agrave;u bắt mắt. Đối với người theo đuổi niềm đam m&ecirc;&nbsp;<a href="https://donghohaitrieu.com/brand/Citizen" rel="noopener noreferrer" target="_blank">đồng hồ Citizen</a>&nbsp;l&acirc;u năm, hẳn cũng phải bất ngờ trước thiết kế mới toanh n&agrave;y, tuy vẫn lịch l&atilde;m v&agrave; sang trọng nhưng k&eacute;m phần hiện đại.</em></strong></p>
 
                 <h2><strong>BẬT M&Iacute; 5 L&Yacute; DO B&Aacute;N CHẠY CỦA ĐỒNG HỒ NAM CITIZEN BI5006-81L</strong></h2>
@@ -3187,7 +3309,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '4000000',
                 'pro_price'    => '8490000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '75',
+                'pro_amount_sell'    => '15',
                 'pro_desc'    => '<p><strong><em>Tr&aacute;i ngược với h&igrave;nh ảnh giản dị trong c&aacute;c mẫu tầm trung, thương hiệu&nbsp;<a href="https://donghohaitrieu.com/brand/Citizen" rel="noopener noreferrer" target="_blank">đồng hồ Citizen</a>&nbsp;ở ph&acirc;n kh&uacute;c cận cao cấp trở l&ecirc;n mang phong th&aacute;i rất kh&aacute;c biệt cả về thiết kế lẫn cấu tạo. Nhằm đ&aacute;p ứng tốt nhu cầu của người d&ugrave;ng về&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;chất lượng tối ưu nhất với số tiền, phi&ecirc;n bản Citizen NH7501-85A l&agrave; sự lựa chọn kh&ocirc;ng thể tốt hơn.</em></strong></p>
 
                 <p>&nbsp;</p>
@@ -3329,7 +3452,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '5000000',
                 'pro_price'    => '9500000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '140',
+                'pro_amount_sell'    => '20',
                 'pro_desc'    => '<p>Chưa c&oacute; th&ocirc;ng tin đ&aacute;nh gi&aacute;</p>',
 
             ],
@@ -3356,8 +3480,9 @@ class DatabaseSeeder extends Seeder
                 'pro_hot'     => '1',
                 'pro_price_entry'     => '2000000',
                 'pro_price'    => '5970000',
-                'pro_sale'     => '100000',
-                'pro_amount'    => '100',
+                'pro_sale'     => '5650000',
+                'pro_amount'    => '126',
+                'pro_amount_sell'    => '34',
                 'pro_desc'    => '<p>Chưa c&oacute; b&agrave;i viết đ&aacute;nh gi&aacute;</p>',
 
             ],
@@ -3385,7 +3510,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '3250000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '69',
+                'pro_amount_sell'    => '1',
                 'pro_desc'    => '<p>Chưa c&oacute; b&agrave;i viết&nbsp; đ&aacute;nh gi&aacute;</p>',
 
             ],
@@ -3412,8 +3538,9 @@ class DatabaseSeeder extends Seeder
                 'pro_hot'     => '0',
                 'pro_price_entry'     => '4500000',
                 'pro_price'    => '9350000',
-                'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_sale'     => '9150000',
+                'pro_amount'    => '113',
+                'pro_amount_sell'    => '7',
                 'pro_desc'    => '<p><strong><em>Phi&ecirc;n bản&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;nữ Citizen EM0335-51D ch&iacute;nh l&agrave; một trong những thương hiệu đồng hồ g&acirc;y ấn tượng nhất thời điểm hiện tại. Kh&ocirc;ng chỉ g&acirc;y ấn tượng với người d&ugrave;ng nhờ v&agrave;o thiết kế đẹp mắt, sang trọng m&agrave; đội ngũ sản xuất c&ograve;n trang bị th&ecirc;m t&iacute;nh năng Eco Drive, một trong những c&ocirc;ng nghệ hiện đại bậc nhất của thương hiệu&nbsp;<a href="https://donghohaitrieu.com/brand/Citizen" rel="noopener noreferrer" target="_blank">đồng hồ Citizen</a>.</em></strong></p>
 
                 <p>&nbsp;</p>
@@ -3533,7 +3660,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '5000000',
                 'pro_price'    => '9650000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '88',
+                'pro_amount_sell'    => '22',
                 'pro_desc'    => '<p><strong><em>Khi nhắc đến những mẫu&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;c&oacute; thiết kế bắt mắt v&agrave; đi k&egrave;m với bộ m&aacute;y chất lượng kh&ocirc;ng cần lo lắng về thời gian sử dụng, kh&ocirc;ng &iacute;t người nghĩ ngay h&atilde;ng&nbsp;<a href="https://donghohaitrieu.com/brand/Citizen" rel="noopener noreferrer" target="_blank">đồng hồ Citizen</a>. Đặc biệt, những sản phẩm ph&acirc;n kh&uacute;c tầm trung của h&atilde;ng như mẫu Citizen FD2012-52P lu&ocirc;n nhận được sự ch&uacute; &yacute; bởi ch&iacute;nh vẻ đẹp sang trọng, bắt m&aacute;y m&agrave; n&oacute; mang lại.</em></strong></p>
 
                 <p>&nbsp;</p>
@@ -3665,11 +3793,12 @@ class DatabaseSeeder extends Seeder
                 'pro_function'     => 'Lịch Ngày',
                 'pro_guarantee'     => '5 Năm',
                 'pro_gender'     => 'Nữ',
-                'pro_hot'     => '0',
+                'pro_hot'     => '1',
                 'pro_price_entry'     => '3500000',
                 'pro_price'    => '6410000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '74',
+                'pro_amount_sell'    => '6',
                 'pro_desc'    => '<p><strong><em>Thương hiệu&nbsp;<a href="https://donghohaitrieu.com/brand/Citizen" rel="noopener noreferrer" target="_blank">đồng hồ Citizen</a>&nbsp;đ&atilde; v&agrave; đang g&acirc;y bất ngờ với người d&ugrave;ng nhờ v&agrave;o những mẫu sản phẩm chất lượng kết hợp với c&aacute;c c&ocirc;ng nghệ hiện đại. Điển h&igrave;nh l&agrave; phi&ecirc;n bản Citizen EW2533-89D n&agrave;y sản phẩm kh&ocirc;ng chỉ được trang bị c&ocirc;ng nghệ Eco-Drive m&agrave; c&ograve;n được ch&uacute; trọng v&agrave;o thiết kế b&ecirc;n trong của&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>.</em></strong></p>
 
                 <p>&nbsp;</p>
@@ -3838,8 +3967,9 @@ class DatabaseSeeder extends Seeder
                 'pro_hot'     => '0',
                 'pro_price_entry'     => '6250000',
                 'pro_price'    => '12580000',
-                'pro_sale'     => '800000',
-                'pro_amount'    => '100',
+                'pro_sale'     => '11750000',
+                'pro_amount'    => '51',
+                'pro_amount_sell'    => '9',
                 'pro_desc'    => '<p><strong><em><a href="https://donghohaitrieu.com/brand/Citizen" rel="noopener noreferrer" target="_blank">Đồng hồ Citizen</a>&nbsp;mang lại cho thế giới nhiều cỗ m&aacute;y thời gian kh&ocirc;ng những chất lượng về c&ocirc;ng nghệ m&agrave; c&ograve;n nổi bật v&agrave; đa dạng về mẫu m&atilde;. Tr&ecirc;n mỗi chiếc&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;của thương hiệu n&agrave;y đều kể một c&acirc;u chuyện về chất liệu, đối với Citizen EM0642-87P th&igrave; đ&oacute; l&agrave; về pha l&ecirc; v&agrave; th&eacute;p mạ v&agrave;ng.</em></strong></p>
 
                 <p>&nbsp;</p>
@@ -4006,6 +4136,7 @@ class DatabaseSeeder extends Seeder
                 'pro_price'    => '5150000',
                 'pro_sale'     => '0',
                 'pro_amount'    => '60',
+                'pro_amount_sell'    => '10',
                 'pro_desc'    => '<p><em><strong>L&agrave; một trong những d&ograve;ng sản phẩm b&aacute;n chạy, đồng hồ Citizen EM0504-81A chắc chắn phải mang đến nhiều thiết kế đặc biệt. Nhất l&agrave; nữ giới ở độ tuổi từ 25 &ndash; 45. Vậy đ&oacute; l&agrave; g&igrave;? H&atilde;y c&ugrave;ng review chi tiết ngay dưới đ&acirc;y.</strong></em></p>
 
                 <p>&nbsp;</p>
@@ -4132,8 +4263,9 @@ class DatabaseSeeder extends Seeder
                 'pro_hot'     => '0',
                 'pro_price_entry'     => '3500000',
                 'pro_price'    => '7100000',
-                'pro_sale'     => '100000',
-                'pro_amount'    => '60',
+                'pro_sale'     => '6900000',
+                'pro_amount'    => '114',
+                'pro_amount_sell'    => '26',
                 'pro_desc'    => '<p><strong><em>Đi ngược với phong c&aacute;ch đơn giản th&ocirc;ng thường, với phi&ecirc;n bản&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;&aacute;nh s&aacute;ng Citizen EX1480-82D sản phẩm đ&atilde; g&acirc;y ấn tượng mạnh với người d&ugrave;ng nhờ v&agrave;o c&aacute;c vi&ecirc;n đ&aacute; sang trọng, thiết kế nhỏ gọn c&ugrave;ng mặt số khảm x&agrave; cừ đẹp mắt. Nhưng quan trọng hơn cả, chất lượng từ&nbsp;<a href="https://donghohaitrieu.com/brand/Citizen" rel="noopener noreferrer" target="_blank">đồng hồ Citizen</a>&nbsp;n&agrave;y mới l&agrave; thu h&uacute;t được ph&aacute;i đẹp nhất.</em></strong></p>
 
                 <p>&nbsp;</p>
@@ -4261,7 +4393,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '4000000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '126',
+                'pro_amount_sell'    => '24',
                 'pro_desc'    => '<p><strong><em>Ng&agrave;y nay, những mẫu</em></strong>&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank"><strong><em>đồng hồ</em></strong></a><strong><em>&nbsp;d&agrave;nh cho chị em phụ nữ kh&ocirc;ng đơn thuần chỉ l&agrave; một c&ocirc;ng cụ để xem giờ nữa, m&agrave; n&oacute; c&ograve;n đ&oacute;ng vai tr&ograve; l&agrave; m&oacute;n&nbsp;</em></strong><a href="https://donghohaitrieu.com/danh-muc/trang-suc" rel="noopener noreferrer" target="_blank"><strong><em>trang sức</em></strong></a><strong><em>&nbsp;qu&yacute; gi&aacute; ph&ocirc; trương gu thẩm mỹ. Nắm bắt kịp thời xu thế, thương hiệu</em></strong>&nbsp;<a href="https://donghohaitrieu.com/brand/Citizen" rel="noopener noreferrer" target="_blank"><strong><em>đồng hồ Citizen</em></strong></a><strong><em>&nbsp;đ&atilde; cho ra mắt mẫu phi&ecirc;n bản Citizen EU6074-51D với thiết kế ấn tượng.</em></strong></p>
 
                 <p>&nbsp;</p>
@@ -4401,7 +4534,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '3450000',
                 'pro_price'    => '7300000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '88',
+                'pro_amount_sell'    => '12',
                 'pro_desc'    => '<p>Chưa c&oacute; th&ocirc;ng tin chi tiết</p>',
 
             ],
@@ -4429,7 +4563,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '7800000',
                 'pro_price'    => '12670000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '75',
+                'pro_amount_sell'    => '5',
                 'pro_desc'    => '<p>Chưa c&oacute; b&agrave;i viết đ&aacute;nh gi&aacute;</p>',
 
             ],
@@ -4457,7 +4592,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '4000000',
                 'pro_price'    => '8550000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '123',
+                'pro_amount_sell'    => '17',
                 'pro_desc'    => '<p>Chưa c&oacute; b&agrave;i viết đ&aacute;nh gi&aacute;</p>',
 
             ],
@@ -4485,7 +4621,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '3260000',
                 'pro_price'    => '7470000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '97',
+                'pro_amount_sell'    => '13',
                 'pro_desc'    => '<p>Chưa c&oacute; th&ocirc;ng tin đ&aacute;nh gi&aacute;</p>',
 
             ],
@@ -4513,7 +4650,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '3250000',
                 'pro_price'    => '6900000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '94',
+                'pro_amount_sell'    => '26',
                 'pro_desc'    => '<p>Chưa c&oacute; th&ocirc;ng tin</p>',
 
             ],
@@ -4541,7 +4679,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '2650000',
                 'pro_price'    => '52000000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '25',
+                'pro_amount_sell'    => '5',
                 'pro_desc'    => '<p><em><strong>L&agrave; một t&iacute;n đồ thời trang, hẳn bạn đ&atilde; kh&ocirc;ng c&ograve;n xa lạ g&igrave; với c&aacute;i t&ecirc;n&nbsp;<a href="https://donghohaitrieu.com/brand/calvin-klein-ck" rel="noopener noreferrer" target="_blank">đồng hồ Calvin Klein</a>&nbsp;rồi đ&uacute;ng kh&ocirc;ng n&agrave;o? Ở hầu hết những chiếc&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;được thương hiệu n&agrave;y đều mang d&aacute;ng vẻ thời trang hiện đại, cực kỳ thu h&uacute;t v&agrave; bắt mắt. Đơn cử r&otilde; n&eacute;t nhất đ&oacute; ch&iacute;nh l&agrave; sự g&oacute;p mặt của cỗ m&aacute;y Calvin Klein K2G221C6.</strong></em></p>
 
                 <p>&nbsp;</p>
@@ -4686,7 +4825,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '4000000',
                 'pro_price'    => '7200000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '145',
+                'pro_amount_sell'    => '15',
                 'pro_desc'    => '<p>Chưa c&oacute; th&ocirc;ng tin</p>',
             ],
             [
@@ -4713,7 +4853,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '4000000',
                 'pro_price'    => '9630000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '142',
+                'pro_amount_sell'    => '8',
                 'pro_desc'    => '<p>Chưa c&oacute; th&ocirc;ng tin</p>',
             ],
             [
@@ -4740,7 +4881,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '5720000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '132',
+                'pro_amount_sell'    => '18',
                 'pro_desc'    => '<p><strong><em>C&oacute; bao giờ bạn thắc mắc tại sao Calvin Klein l&agrave; thương hiệu thời trang đ&igrave;nh đ&aacute;m của mỹ nhưng đa phần&nbsp;<a href="https://donghohaitrieu.com/brand/calvin-klein-ck" rel="noopener noreferrer" target="_blank">đồng hồ Calvin Klein</a>&nbsp;lại c&oacute; d&ograve;ng chữ&nbsp;<a href="https://donghohaitrieu.com/tin-tuc/dong-ho/dong-ho-swiss-made-la-gi-cach-phan-biet-san-pham-noi-bat.html" rel="noopener noreferrer" target="_blank">Swiss Made</a>&nbsp;(chứng nhận&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;Thụy Sỹ) tr&ecirc;n mặt số ? Vậy th&igrave; h&atilde;y để Calvin Klein K8M211C1 giải đ&aacute;p thắc mắc n&agrave;y cho bạn.</em></strong></p>
 
                 <h2><strong>ĐỒNG HỒ CALVIN KLEIN K8M211C1 ĐƠN GIẢN, THỜI TRANG, TINH TẾ</strong></h2>
@@ -4891,7 +5033,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '15980000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '143',
+                'pro_amount_sell'    => '7',
                 'pro_desc'    => '<p>Chưa c&oacute; th&ocirc;ng tin</p>',
             ],
             [
@@ -4918,7 +5061,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '8060000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '144',
+                'pro_amount_sell'    => '16',
                 'pro_desc'    => '<p><em><strong><a href="https://donghohaitrieu.com/brand/calvin-klein-ck" rel="noopener noreferrer" target="_blank">Đồng hồ Calvin Klein</a>&nbsp;&ndash; c&aacute;i t&ecirc;n được ra đời từ nền c&ocirc;ng nghiệp thời trang vượt bậc. Những chiếc&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;đến từ thương hiệu n&agrave;y đều to&aacute;t l&ecirc;n vẻ đẹp hiện đại, cuốn h&uacute;t người nh&igrave;n ngay từ c&aacute;i nh&igrave;n đầu ti&ecirc;n. Một trong số đ&oacute; chắc chắn phải kể đến sự g&oacute;p mặt của phi&ecirc;n bản Calvin Klein K4323185.</strong></em></p>
 
                 <p>&nbsp;</p>
@@ -5075,7 +5219,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '6500000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '88',
+                'pro_amount_sell'    => '12',
                 'pro_desc'    => '<p>Chưa c&oacute; th&ocirc;ng tin</p>',
             ],
             [
@@ -5102,7 +5247,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '5990000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '99',
+                'pro_amount_sell'    => '1',
                 'pro_desc'    => '<p><strong><em>Thương hiệu&nbsp;<a href="https://donghohaitrieu.com/brand/calvin-klein-ck" rel="noopener noreferrer" target="_blank">đồng hồ Calvin Klein</a>&nbsp;vẫn lu&ocirc;n l&agrave; một trong những nh&agrave; sản xuất&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;rất được ph&aacute;i đẹp y&ecirc;u th&iacute;ch v&igrave; những sản phẩm thời trang, bắt mắt. Đơn cử l&agrave; phi&ecirc;n bản Calvin Klein K3M22T26 sở hữu vẻ ngo&agrave;i vừa lấp l&aacute;nh, sang trọng lại đạt chuẩn chất lượng Swiss Made.</em></strong></p>
 
                 <p>&nbsp;</p>
@@ -5229,7 +5375,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '7540000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '150',
+                'pro_amount_sell'    => '0',
                 'pro_desc'    => '<p><em><strong>L&agrave; một t&iacute;n đồ thời trang, ắt hẳn bạn đ&atilde; kh&ocirc;ng c&ograve;n xa lạ g&igrave; với những chiếc&nbsp;<a href="https://donghohaitrieu.com/brand/calvin-klein-ck" rel="noopener noreferrer" target="_blank">đồng hồ Calvin Klein</a>. Điểm đặc trưng của tất cả những chiếc&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;đến từ thương hiệu n&agrave;y đ&oacute; ch&iacute;nh l&agrave; vẻ ngo&agrave;i được đơn giản h&oacute;a c&aacute;ch tối ưu nhưng lại mang một sức h&uacute;t nhất định kh&ocirc;ng thể cưỡng lại. V&agrave; tất nhi&ecirc;n Calvin Klein K3M23U26 cũng kh&ocirc;ng ngoại lệ.</strong></em></p>
 
                 <h2><strong>Đ&Aacute;NH GI&Aacute; CHI TIẾT ĐỒNG HỒ CALVIN KLEIN K3M23U26</strong></h2>
@@ -5384,7 +5531,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '8030000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '140',
+                'pro_amount_sell'    => '0',
                 'pro_desc'    => '<p><strong><em>Ngay khi vừa ra mắt phi&ecirc;n bản Calvin Klein K3M23V26 đ&atilde; nhận được kh&aacute; nhiều lời khen ngợi từ c&aacute;c chuy&ecirc;n gia lẫn c&aacute;c nh&agrave; thiết kế h&agrave;ng đầu. Phi&ecirc;n bản&nbsp;<a href="https://donghohaitrieu.com/brand/calvin-klein-ck" rel="noopener noreferrer" target="_blank">đồng hồ Calvin Klein</a>&nbsp;sở hữu thiết kế ấn tượng với sắc v&agrave;ng sang trọng c&ugrave;ng với những vi&ecirc;n đ&atilde; tạo th&ecirc;m sự đẳng cấp. H&atilde;y c&ugrave;ng Hải Triều t&igrave;m hiểu th&ecirc;m về&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;n&agrave;y nh&eacute;.</em></strong></p>
 
                 <p>&nbsp;</p>
@@ -5526,6 +5674,7 @@ class DatabaseSeeder extends Seeder
                 'pro_price'    => '6770000',
                 'pro_sale'     => '0',
                 'pro_amount'    => '100',
+                'pro_amount_sell'    => '0',
                 'pro_desc'    => '<p><strong><em>Thời trang l&agrave; vậy thế nhưng những chiếc&nbsp;<a href="https://donghohaitrieu.com/brand/calvin-klein-ck" rel="noopener noreferrer" target="_blank">đồng hồ Calvin Klein</a>&nbsp;lại được ưu &aacute;i khi sản phẩm đạt chuẩn chất lượng Swiss Made. Điển h&igrave;nh l&agrave; phi&ecirc;n bản&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;nữ Calvin Klein K7B236C6 với thiết kế đẹp mắt, sang trọng nhưng gi&aacute; th&agrave;nh lại chỉ chưa đầy 7 triệu đồng m&agrave; th&ocirc;i.</em></strong></p>
 
                 <h2><strong>5 L&Yacute; DO N&Ecirc;N MUA ĐỒNG HỒ CALVIN KLEIN K7B236C6</strong></h2>
@@ -5650,7 +5799,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '13000000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '150',
+                'pro_amount_sell'    => '3',
                 'pro_desc'    => '<p>Chưa c&oacute; th&ocirc;ng tin</p>',
             ],
             [
@@ -5677,7 +5827,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '13540000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '177',
+                'pro_amount_sell'    => '23',
                 'pro_desc'    => '<p>Chưa c&oacute; th&ocirc;ng tin</p>',
             ],
             [
@@ -5704,7 +5855,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '11980000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '86',
+                'pro_amount_sell'    => '4',
                 'pro_desc'    => '<p>Chưa c&oacute; th&ocirc;ng tin</p>',
             ],
             [
@@ -5732,6 +5884,7 @@ class DatabaseSeeder extends Seeder
                 'pro_price'    => '4250000',
                 'pro_sale'     => '0',
                 'pro_amount'    => '100',
+                'pro_amount_sell'    => '0',
                 'pro_desc'    => '<p><strong><em>Nằm trong danh s&aacute;ch của top 10 mẫu sản phẩm b&aacute;n chạy nhất của h&atilde;ng&nbsp;<a href="https://donghohaitrieu.com/brand/fossil" rel="noopener noreferrer" target="_blank">đồng hồ Fossil</a>, chỉ ri&ecirc;ng điều đ&oacute; th&ocirc;i cũng đ&atilde; thấy được sức h&uacute;t đến từ phi&ecirc;n bản Fossil FS5404. Để c&oacute; thể ghi được dấu ấn trong mắt của người ti&ecirc;u d&ugrave;ng th&igrave; mẫu&nbsp;<a href="https://haitrieuoutlet.com/" rel="noopener noreferrer nofollow external" target="_blank">đồng hồ</a>&nbsp;n&agrave;y cũng mang cho m&igrave;nh những đặc điểm v&ocirc; c&ugrave;ng ri&ecirc;ng biệt, nổi bật nhất l&agrave; t&ocirc;ng m&agrave;u xanh dương trẻ trung.</em></strong></p>
 
                 <p>&nbsp;</p>
@@ -5870,7 +6023,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '4560000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '78',
+                'pro_amount_sell'    => '12',
                 'pro_desc'    => '<p><em><strong>Si&ecirc;u phẩm đồng hồ Fossil ME3099 cơ lộ m&aacute;y đẹp ngất ng&acirc;y đ&atilde; khiến nam giới m&ecirc; mẩn với mức gi&aacute; chưa đến 6 triệu đồng. Qu&aacute; rẻ cho một thiết kế sở hữu kiểu d&aacute;ng thời trang của thương hiệu uy t&iacute;n Fossil Mỹ, trong đ&oacute; bộ m&aacute;y lại được t&iacute;ch hợp từ Skeleton Nhật Bản bền vượt trội theo thời gian. C&ugrave;ng theo ch&acirc;n Đồng Hồ Hải Triều ngay để được ngắm trọn vẻ đẹp đến m&ecirc; ly ấy.</strong></em></p>
 
                 <p>&nbsp;</p>
@@ -5981,7 +6135,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '7100000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '136',
+                'pro_amount_sell'    => '24',
                 'pro_desc'    => '<p>Chưa c&oacute; th&ocirc;ng tin</p>',
             ],
             [
@@ -6008,7 +6163,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '4900000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '98',
+                'pro_amount_sell'    => '2',
                 'pro_desc'    => '<p>Chưa c&oacute; th&ocirc;ng tin</p>',
             ],
             [
@@ -6035,7 +6191,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '4550000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '99',
+                'pro_amount_sell'    => '1',
                 'pro_desc'    => '<p>Chưa c&oacute; th&ocirc;ng tin</p>',
             ],
             [
@@ -6063,6 +6220,7 @@ class DatabaseSeeder extends Seeder
                 'pro_price'    => '4730000',
                 'pro_sale'     => '0',
                 'pro_amount'    => '100',
+                'pro_amount_sell'    => '0',
                 'pro_desc'    => '<p>Chưa c&oacute; th&ocirc;ng tin</p>',
             ],
             [
@@ -6089,7 +6247,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '4020000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '107',
+                'pro_amount_sell'    => '3',
                 'pro_desc'    => '<p><em><strong><a href="https://donghohaitrieu.com/brand/fossil" rel="noopener noreferrer" target="_blank">Đồng hồ Fossil</a>, c&aacute;i t&ecirc;n đến từ xứ sở cờ hoa đồng thời cũng l&agrave; tiền đề của mọi&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;Mỹ. Tất cả những thiết kế đến từ thương hiệu n&agrave;y đều khiến người d&ugrave;ng phải trầm trồ v&agrave; kinh ngạc kh&ocirc;ng chỉ những đường n&eacute;t thiết kế tinh tế m&agrave; c&ograve;n sở hữu lu&ocirc;n cả bộ m&aacute;y cao cấp b&ecirc;n trong. Một trong những mẫu sản phẩm điển h&igrave;nh nhất c&oacute; thể kể đến đ&oacute; ch&iacute;nh l&agrave; cỗ m&aacute;y mang số hiệu Fossil ES4094.</strong></em></p>
 
                 <p>&nbsp;</p>
@@ -6236,7 +6395,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '3750000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '106',
+                'pro_amount_sell'    => '4',
                 'pro_desc'    => '<p>Chưa c&oacute; th&ocirc;ng tin</p>',
             ],
             [
@@ -6263,7 +6423,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '3750000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '112',
+                'pro_amount_sell'    => '18',
                 'pro_desc'    => '<p><em><strong><a href="https://donghohaitrieu.com/brand/fossil" rel="noopener noreferrer" target="_blank">Đồng hồ Fossil</a>&nbsp;c&oacute; lẽ đ&atilde; trở th&agrave;nh c&aacute;i t&ecirc;n kh&ocirc;ng c&ograve;n qu&aacute; xa lạ với c&aacute;c t&iacute;n đồ thời trang hiện nay. Sản phẩm đến từ thương hiệu n&agrave;y lu&ocirc;n mang đến người d&ugrave;ng những trải nghiệm tuyệt vời tr&ecirc;n cả những g&igrave; m&agrave; một chiếc&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;mang lại, đơn cử đ&oacute; ch&iacute;nh l&agrave; cỗ m&aacute;y Fossil ES4541.</strong></em></p>
 
                 <p>&nbsp;</p>
@@ -6428,7 +6589,8 @@ class DatabaseSeeder extends Seeder
                 'pro_price_entry'     => '1000000',
                 'pro_price'    => '3750000',
                 'pro_sale'     => '0',
-                'pro_amount'    => '100',
+                'pro_amount'    => '126',
+                'pro_amount_sell'    => '14',
                 'pro_desc'    => '<p><strong><em>Thương hiệu&nbsp;<a href="https://donghohaitrieu.com/brand/fossil" rel="noopener noreferrer" target="_blank">đồng hồ Fossil</a>&nbsp;lu&ocirc;n được đ&aacute;nh gi&aacute; cao về những mẫu&nbsp;<a href="https://donghohaitrieu.com/" rel="noopener noreferrer" target="_blank">đồng hồ</a>&nbsp;thời trang, thời thượng v&agrave; đẳng cấp. Để c&oacute; thể h&agrave;i l&ograve;ng ph&aacute;i đẹp, đặc biệt l&agrave; c&aacute;c c&ocirc; n&agrave;ng nữ t&iacute;nh, dịu d&agrave;ng, Fossil đ&atilde; cho ra mắt phi&ecirc;n bản Fossil ES4352 với sắc hồng rạng rỡ hứa hẹn sẽ l&agrave; một chiếc đồng hồ kh&ocirc;ng thể thiếu của ph&aacute;i đẹp.</em></strong></p>
 
                 <p>&nbsp;</p>
@@ -6530,6 +6692,8 @@ class DatabaseSeeder extends Seeder
                 <p>Về mức gi&aacute; tr&ecirc;n Fossil ES4352, chiếc đồng hồ nữ thời trang n&agrave;y c&oacute; mức gi&aacute; rơi v&agrave;o khoảng chưa đến 4 triệu đồng. Với một chiếc&nbsp;<a href="https://donghohaitrieu.com/tin-tuc/dong-ho/15-hang-dong-ho-thoi-trang-nam-nu-dep-gia-re-tai-viet-nam.html" rel="noopener noreferrer" target="_blank">đồng hồ thời trang</a>&nbsp;th&igrave; đ&acirc;y l&agrave; mức gi&aacute; hấp dẫn v&agrave; kh&aacute; hợp l&yacute;.</p>',
             ],
         ]);
+
+        
         DB::table('images')->insert([
             [
                 'img_product_id' => '1',
@@ -8420,249 +8584,2015 @@ class DatabaseSeeder extends Seeder
 
         // ]);
 
-        // DB::table('rates')->insert([
-        //     [
-        //         'Product_id' => '1',
-        //         'User_id' => '7',
-        //         'Star' =>rand(1,5),
-        //         'Content'  => Str::random(20) ,
+        DB::table('rates')->insert([
+            [
+                'r_product_id' => '1',
+                'r_user_id' => '12',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '2',
+                'r_user_id' => '15',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '3',
+                'r_user_id' => '16',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '4',
+                'r_user_id' => '14',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '5',
+                'r_user_id' => '16',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '6',
+                'r_user_id' => '21',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '7',
+                'r_user_id' => '20',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '8',
+                'r_user_id' => '21',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '9',
+                'r_user_id' => '23',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '10',
+                'r_user_id' => '24',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '11',
+                'r_user_id' => '26',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '12',
+                'r_user_id' => '21',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '13',
+                'r_user_id' => '17',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '14',
+                'r_user_id' => '16',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '15',
+                'r_user_id' => '9',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '16',
+                'r_user_id' => '7',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '17',
+                'r_user_id' => '8',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '18',
+                'r_user_id' => '9',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ], [
+                'r_product_id' => '19',
+                'r_user_id' => '10',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '20',
+                'r_user_id' => '11',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '31',
+                'r_user_id' => '13',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '32',
+                'r_user_id' => '14',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '33',
+                'r_user_id' => '25',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '34',
+                'r_user_id' => '25',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '35',
+                'r_user_id' => '29',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '36',
+                'r_user_id' => '29',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '37',
+                'r_user_id' => '27',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '38',
+                'r_user_id' => '27',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '39',
+                'r_user_id' => '26',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '40',
+                'r_user_id' => '26',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '41',
+                'r_user_id' => '19',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '42',
+                'r_user_id' => '19',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '43',
+                'r_user_id' => '16',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '44',
+                'r_user_id' => '16',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '45',
+                'r_user_id' => '9',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '46',
+                'r_user_id' => '9',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '47',
+                'r_user_id' => '8',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '48',
+                'r_user_id' => '8',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ], [
+                'r_product_id' => '49',
+                'r_user_id' => '11',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '50',
+                'r_user_id' => '21',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
 
-        //     ],
-        //     [
-        //         'Product_id' => '2',
-        //         'User_id' => '7',
-        //         'Star' =>rand(1,5),
-        //         'Content'  => Str::random(20) ,
+            [
+                'r_product_id' => '51',
+                'r_user_id' => '30',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '52',
+                'r_user_id' => '24',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '53',
+                'r_user_id' => '22',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '54',
+                'r_user_id' => '19',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '55',
+                'r_user_id' => '18',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '56',
+                'r_user_id' => '17',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '57',
+                'r_user_id' => '19',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '58',
+                'r_user_id' => '16',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '59',
+                'r_user_id' => '16',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
+            [
+                'r_product_id' => '60',
+                'r_user_id' => '11',
+                'r_star' =>'4',
+                'r_content'  => 'Chất lượng ổn' ,
+            ],
 
-        //     ],
-        //     [
-        //         'Product_id' => '3',
-        //         'User_id' => '7',
-        //         'Star' =>rand(1,5),
-        //         'Content'  => Str::random(20) ,
+            ///////////////////////////////////////////
 
-        //     ],
-        //     [
-        //         'Product_id' => '4',
-        //         'User_id' => '7',
-        //         'Star' =>rand(1,5),
-        //         'Content'  => Str::random(20) ,
+            [
+                'r_product_id' => '1',
+                'r_user_id' => '14',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '2',
+                'r_user_id' => '28',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '3',
+                'r_user_id' => '20',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '4',
+                'r_user_id' => '19',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '5',
+                'r_user_id' => '18',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '6',
+                'r_user_id' => '17',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '7',
+                'r_user_id' => '13',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '8',
+                'r_user_id' => '12',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '9',
+                'r_user_id' => '15',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '10',
+                'r_user_id' => '17',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '11',
+                'r_user_id' => '24',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '12',
+                'r_user_id' => '21',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '13',
+                'r_user_id' => '20',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '14',
+                'r_user_id' => '19',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '15',
+                'r_user_id' => '16',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '16',
+                'r_user_id' => '8',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '17',
+                'r_user_id' => '9',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '18',
+                'r_user_id' => '7',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '19',
+                'r_user_id' => '12',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '20',
+                'r_user_id' => '17',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '41',
+                'r_user_id' => '16',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '42',
+                'r_user_id' => '14',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '43',
+                'r_user_id' => '21',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '44',
+                'r_user_id' => '22',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '45',
+                'r_user_id' => '12',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '46',
+                'r_user_id' => '23',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '47',
+                'r_user_id' => '22',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '48',
+                'r_user_id' => '11',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '49',
+                'r_user_id' => '8',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '50',
+                'r_user_id' => '10',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '51',
+                'r_user_id' => '16',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '52',
+                'r_user_id' => '23',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '53',
+                'r_user_id' => '24',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '54',
+                'r_user_id' => '28',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '55',
+                'r_user_id' => '30',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '56',
+                'r_user_id' => '23',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '57',
+                'r_user_id' => '24',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '58',
+                'r_user_id' => '9',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '59',
+                'r_user_id' => '14',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
+            [
+                'r_product_id' => '60',
+                'r_user_id' => '25',
+                'r_star' =>'5',
+                'r_content'  => 'Rất đẹp! Cho hỏi đồng hồ này có ở chi nhánh quận 8 không Hải Triều? Tôi muốn dẫn ba tôi ra xem hàng cho tiện.' ,
+            ],
 
-        //     ],
-        //     [
-        //         'Product_id' => '1',
-        //         'User_id' => '8',
-        //         'Star' =>rand(1,5),
-        //         'Content'  => Str::random(20) ,
+            //////////////////////////////////////////////////
+            [
+                'r_product_id' => '1',
+                'r_user_id' => '16',
+                'r_star' =>'2',
+                'r_content'  => 'Sản phẩm chưa được tốt' ,
+            ],
+            [
+                'r_product_id' => '2',
+                'r_user_id' => '24',
+                'r_star' =>'2',
+                'r_content'  => 'Sản phẩm chưa được tốt' ,
+            ],
+            [
+                'r_product_id' => '3',
+                'r_user_id' => '26',
+                'r_star' =>'2',
+                'r_content'  => 'Sản phẩm chưa được tốt' ,
+            ],
+            [
+                'r_product_id' => '4',
+                'r_user_id' => '27',
+                'r_star' =>'2',
+                'r_content'  => 'Sản phẩm chưa được tốt' ,
+            ],
+            [
+                'r_product_id' => '5',
+                'r_user_id' => '23',
+                'r_star' =>'2',
+                'r_content'  => 'Sản phẩm chưa được tốt' ,
+            ],
+            [
+                'r_product_id' => '6',
+                'r_user_id' => '21',
+                'r_star' =>'2',
+                'r_content'  => 'Sản phẩm chưa được tốt' ,
+            ],
+            [
+                'r_product_id' => '7',
+                'r_user_id' => '18',
+                'r_star' =>'2',
+                'r_content'  => 'Sản phẩm chưa được tốt' ,
+            ],
+            [
+                'r_product_id' => '8',
+                'r_user_id' => '17',
+                'r_star' =>'2',
+                'r_content'  => 'Sản phẩm chưa được tốt' ,
+            ],
+            [
+                'r_product_id' => '9',
+                'r_user_id' => '13',
+                'r_star' =>'2',
+                'r_content'  => 'Sản phẩm chưa được tốt' ,
+            ],
+            [
+                'r_product_id' => '10',
+                'r_user_id' => '9',
+                'r_star' =>'2',
+                'r_content'  => 'Sản phẩm chưa được tốt' ,
+            ],
+            [
+                'r_product_id' => '14',
+                'r_user_id' => '8',
+                'r_star' =>'2',
+                'r_content'  => 'Sản phẩm chưa được tốt' ,
+            ],
+            [
+                'r_product_id' => '18',
+                'r_user_id' => '14',
+                'r_star' =>'2',
+                'r_content'  => 'Sản phẩm chưa được tốt' ,
+            ],
+            [
+                'r_product_id' => '24',
+                'r_user_id' => '16',
+                'r_star' =>'2',
+                'r_content'  => 'Sản phẩm chưa được tốt' ,
+            ],
+            [
+                'r_product_id' => '25',
+                'r_user_id' => '26',
+                'r_star' =>'2',
+                'r_content'  => 'Sản phẩm chưa được tốt' ,
+            ],
+            [
+                'r_product_id' => '35',
+                'r_user_id' => '8',
+                'r_star' =>'2',
+                'r_content'  => 'Sản phẩm chưa được tốt' ,
+            ],
+            [
+                'r_product_id' => '44',
+                'r_user_id' => '11',
+                'r_star' =>'2',
+                'r_content'  => 'Sản phẩm chưa được tốt' ,
+            ],
+            [
+                'r_product_id' => '29',
+                'r_user_id' => '24',
+                'r_star' =>'2',
+                'r_content'  => 'Sản phẩm chưa được tốt' ,
+            ],
+            [
+                'r_product_id' => '57',
+                'r_user_id' => '14',
+                'r_star' =>'2',
+                'r_content'  => 'Sản phẩm chưa được tốt' ,
+            ],
+            [
+                'r_product_id' => '60',
+                'r_user_id' => '9',
+                'r_star' =>'2',
+                'r_content'  => 'Sản phẩm chưa được tốt' ,
+            ],
+            [
+                'r_product_id' => '54',
+                'r_user_id' => '8',
+                'r_star' =>'2',
+                'r_content'  => 'Sản phẩm chưa được tốt' ,
+            ],
+            
+        ]);
 
-        //     ],
-        //     [
-        //         'Product_id' => '1',
-        //         'User_id' => '6',
-        //         'Star' =>rand(1,5),
-        //         'Content'  => Str::random(20) ,
 
-        //     ],
-        //     [
-        //         'Product_id' => '1',
-        //         'User_id' => '9',
-        //         'Star' =>rand(1,5),
-        //         'Content'  => Str::random(20) ,
+        DB::table('comments')->insert([
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'ở đồng hới có hàng ko shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Nguồn gôc xuất xứ của đông hồ này ở đâu vậy shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mẫu này bên chi nhánh nào còn hàng vậy? Mình o tp hcm' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mẫu này còn hàng k ạ? Mình ở Nha Trang' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mình An Giang có hàng ko shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Chỉ giảm 10% tháng ng sn tháng 10 thì quá bất công vs khách hàng .tối 25.9 mún mua mà thấy ko hợp lí' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Hàng có ở chi nhánh bảo lâm, Lâm Đồng k ad' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Ớ Khánh Hòa địa chỉ TGDĐ nào bán đồng hồ em' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cổ tay 16cm mang được không shop' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cho mình hỏi ... ơ sa đéc tỉnh Đồng Tháp con hành hk ban' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Hà tĩnh còn không bạn' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'cho hỏi co phieu mua hang 40 % thì sp này có giá bao nhiêu' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'hiện tại con hàng khu vực q7 ko' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'nếu bh dat hàng mà phiếu mua hàng giảm 40% đến ngày 20/11 này hết hạng thì có dc ap dụng ko ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'bắc giang có hànhg không anh' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'cho mình hỏi Đồng hồ Nam Orient RA-AG0026E10B' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cho e hỏi kính khoan có chống trầy xước ko z' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => '' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Trả góp có áp dụng tặng kèm đồng hồ đồng giá hoặc thấp hơn ko anh' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Xin chào. Cho em hỏi là khi mình ra trực tiếp shop vẫn được giảm 20% đúng không ạ? Mua giảm 20% này có cần yêu cầu gì không ạ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mua trương trình mua 1 tặng 1 đến bh vậy. E dưới tây hồ thì shop nào gần nhất có trường trình nhỉ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đông hồ này có thay được dây da không ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mua một điện thoại cảm ứng thì được giam 40% khi mua đồng hồ, vậy khi mua máy lạnh tai hệ thống tgdđ có được giảm 40% khi mua đồng hồ ko tgdđ ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cao bằng có bán đồng hồ k' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => '' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mã sp này có dây da k shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mã này ở tp hcm chỗ nào còn hàng ạ' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Nói thật bên bạn kinh doanh kiểu gì tôi nom Đồng hồ nào cũng ko có tại nam định vậy tôi thật sự khó hiểu' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cổ tay 16 ad tìm giúp mình 1 vài mẫu automatic phù hợp với!' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Tư vấn giúp em xxxx959394' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'ngoài công ty tài chính homecredit thì có công ty tài chính nào hổ trợ trả góp không' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Em cần tư vấn trả góp xxxx959394' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'co ap dung giam 40% khi mua chung voi dien thoai ko shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Nếu gia thế giới di động có để thử ko' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Còn màu đen k shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Có hỗ trợ bỏ bớt mắt không nhỉ' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Ở Bến Tre không có sẵn hàng đặt về thử có tốn phí gì k vậy shop.' ,
+            ],
 
-        //     ],
-        //     [
-        //         'Product_id' => '10',
-        //         'User_id' => '8',
-        //         'Star' =>rand(1,5),
-        //         'Content'  => Str::random(20) ,
+              [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Shop cho e hỏi là e vừa mua máy samsung và được khuyến mãi 40% khi mua đồng hồ. Có áp dụng cho đồng hồ này ko và giá còn bao nhiêu. E xin cảm ơn' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mẫu này là xanh lục bảo ak shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Làm thế nào để kiểm tra cái đồng hồ này sản xuất năm nào nhỉ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Tg mỹ tho có ko add à' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Kiểm tra giúp em số điện thoại xxxx909585 với xxxx822962 mua đồng hồ này có được giảm giá hay khuyến mãi gì không ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'sản phẩm này có tại quy nhơn không shop
+                ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sp này có dây màu đen ko shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => '@Linh Hân: dạ không anh ơi nhưng em là thành viên MWG' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Em 2001 đủ trả góp chưa ạ' ,
+            ],  [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cho mình hỏi ở mạo khê quảng ninh có hàng k' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Con này ở chi nhánh nào ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mình mới mua 1 đồng hồ này nhưng về mang chưa đk 1 tháng thấy mặt kính nứt. K biết tgdd hỗ trợ đổi mới lại không' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sp này còn ở tgdd chơn thành k ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'cho mình hỏi "Giảm 40% khi mua kèm (không áp dụng kèm khuyến mãi khác)" là sao ạ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mình ở Biên Hoà đồng nai. Chỉ cần với tổng tiền 5.564.000₫ là có thể mua đc 2 món này hay phải mua điện thoại hoặc máy tính thì mới được giảm như này ạ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Có màu xanh lá ko bạn. Nếu có màu xanh lá cây mình sẽ lấy. Orient Sun and Moon RA-AS0104E00B. Liên hệ lại mình nha' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đồng hồ này có cần lên cót tay từng ngày không vậy bạn.hay là cứ đeo trên tay là tự động lên cót.' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cho hỏi mẫu này còn không ạ tôi ở biên hòa' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mặt kinh rất dể rầy sướt shop ak. Hệ thống mình có hỗ trợ đánh bóng hay dán cường lực chống rầy sướt ko Ad' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đồng hồ này mặt màu gì vậy' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đồng hồ mua online ​nhận tại siêu thị được kiểm tra hàng không ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đồng hồ cơ mà chết thì làm ntn ạ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sản phẩm này có ở những cửa hàng nào ở tp HCM ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mặt kính bị trầy mà cửa hàng mình ko hổ trợ đánh bóng thì pải làm sao' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mua đt đập đá 150k có phiếu giảm 40% ko' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đẹp quá. Về là ra xúc ngay' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Hóng từng phút em này về TGDĐ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'sp này có được mua kèm đt giảm 40% không bạn ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sản phẩm này có hàng chưa shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sao e đặt hàng chuyển về mấy bạn siêu thị nói hàng mới chưa có' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sản phẩm này hiện đang bán ở đâu vậy' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Tại nghi sơn thanh hóa bán chưa' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Tiếc là kính khoáng chứ ko phải saphia' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mua trực tiếp giá 4tr9 ko' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Có bán bộ dây ko shop' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mẫu này có giảm 60% không TGDĐ, tại vì Anh có xem ở Tgdđ tại Thị trấn Gia ray nhưng hiên tại đã bán rồi' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Thị trấn Gia Ray, Huyện Xuân Lộc, Tỉnh Đồng Nai nhe' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mã đồng hồ này có đường kính mặt nhỏ hơn không' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Ca cach nao de kim giay nó chay lien tục dc ko ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sao giờ còn giảm có 30% vậy,hôm trước giảm 40% mà' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Thế giới di động có mẫu này ko ạh' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'mua tra gop co ap dung giam 10% thang sinh nhat ko' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mẫu nay co ko a' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cho em hỏi là mã đồng hồ này Orient Có chính hãng giống với các trang watch k ạ?' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cho e xin lại cái mạt hom pua mua gỡ bỏ ở tgdđ duoc k ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'đồng hồ này còn game 40% nữa không ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đồng hồ nay giảm giá 40% thì còn bao nhiêu' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'cho mình hỏi đồng hồ này không đeo tháo ra để bao nhiêu lâu thi may o chạy vây ban' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Dh này nếu k đeo dây da mình có thể thay bằng dây sắt k ad' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Ad ơi bên mình có bán dây kim loại thay vô k' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đồng hồ Nam Orient  Này có trợ cốt tay k ad cách chỉnh sau cho đúng' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Tôi đeo đh này bị dị ứng xin ad chỉ cách chữa trị' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Phiếu giảm 40% là tính giá gốc, không tính cái giảm 20% trừ vào giá. Hay giảm 40% của giá đã trừ 20%' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Con này size dây bn shop ơi' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'ở đồng hới có hàng ko shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Nguồn gôc xuất xứ của đông hồ này ở đâu vậy shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mẫu này bên chi nhánh nào còn hàng vậy? Mình o tp hcm' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mẫu này còn hàng k ạ? Mình ở Nha Trang' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mình An Giang có hàng ko shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Chỉ giảm 10% tháng ng sn tháng 10 thì quá bất công vs khách hàng .tối 25.9 mún mua mà thấy ko hợp lí' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Hàng có ở chi nhánh bảo lâm, Lâm Đồng k ad' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Ớ Khánh Hòa địa chỉ TGDĐ nào bán đồng hồ em' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cổ tay 16cm mang được không shop' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cho mình hỏi ... ơ sa đéc tỉnh Đồng Tháp con hành hk ban' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Hà tĩnh còn không bạn' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'cho hỏi co phieu mua hang 40 % thì sp này có giá bao nhiêu' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'hiện tại con hàng khu vực q7 ko' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'nếu bh dat hàng mà phiếu mua hàng giảm 40% đến ngày 20/11 này hết hạng thì có dc ap dụng ko ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'bắc giang có hànhg không anh' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'cho mình hỏi Đồng hồ Nam Orient RA-AG0026E10B' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cho e hỏi kính khoan có chống trầy xước ko z' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => '' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Trả góp có áp dụng tặng kèm đồng hồ đồng giá hoặc thấp hơn ko anh' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Xin chào. Cho em hỏi là khi mình ra trực tiếp shop vẫn được giảm 20% đúng không ạ? Mua giảm 20% này có cần yêu cầu gì không ạ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mua trương trình mua 1 tặng 1 đến bh vậy. E dưới tây hồ thì shop nào gần nhất có trường trình nhỉ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đông hồ này có thay được dây da không ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mua một điện thoại cảm ứng thì được giam 40% khi mua đồng hồ, vậy khi mua máy lạnh tai hệ thống tgdđ có được giảm 40% khi mua đồng hồ ko tgdđ ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cao bằng có bán đồng hồ k' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => '' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mã sp này có dây da k shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mã này ở tp hcm chỗ nào còn hàng ạ' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Nói thật bên bạn kinh doanh kiểu gì tôi nom Đồng hồ nào cũng ko có tại nam định vậy tôi thật sự khó hiểu' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cổ tay 16 ad tìm giúp mình 1 vài mẫu automatic phù hợp với!' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Tư vấn giúp em xxxx959394' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'ngoài công ty tài chính homecredit thì có công ty tài chính nào hổ trợ trả góp không' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Em cần tư vấn trả góp xxxx959394' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'co ap dung giam 40% khi mua chung voi dien thoai ko shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Nếu gia thế giới di động có để thử ko' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Còn màu đen k shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Có hỗ trợ bỏ bớt mắt không nhỉ' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Ở Bến Tre không có sẵn hàng đặt về thử có tốn phí gì k vậy shop.' ,
+            ],
 
-        //     ],
-        //     [
-        //         'Product_id' => '5',
-        //         'User_id' => '8',
-        //         'Star' =>rand(1,5),
-        //         'Content'  => Str::random(20) ,
+              [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Shop cho e hỏi là e vừa mua máy samsung và được khuyến mãi 40% khi mua đồng hồ. Có áp dụng cho đồng hồ này ko và giá còn bao nhiêu. E xin cảm ơn' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mẫu này là xanh lục bảo ak shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Làm thế nào để kiểm tra cái đồng hồ này sản xuất năm nào nhỉ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Tg mỹ tho có ko add à' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Kiểm tra giúp em số điện thoại xxxx909585 với xxxx822962 mua đồng hồ này có được giảm giá hay khuyến mãi gì không ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'sản phẩm này có tại quy nhơn không shop
+                ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sp này có dây màu đen ko shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => '@Linh Hân: dạ không anh ơi nhưng em là thành viên MWG' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Em 2001 đủ trả góp chưa ạ' ,
+            ],  [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cho mình hỏi ở mạo khê quảng ninh có hàng k' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Con này ở chi nhánh nào ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mình mới mua 1 đồng hồ này nhưng về mang chưa đk 1 tháng thấy mặt kính nứt. K biết tgdd hỗ trợ đổi mới lại không' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sp này còn ở tgdd chơn thành k ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'cho mình hỏi "Giảm 40% khi mua kèm (không áp dụng kèm khuyến mãi khác)" là sao ạ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mình ở Biên Hoà đồng nai. Chỉ cần với tổng tiền 5.564.000₫ là có thể mua đc 2 món này hay phải mua điện thoại hoặc máy tính thì mới được giảm như này ạ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Có màu xanh lá ko bạn. Nếu có màu xanh lá cây mình sẽ lấy. Orient Sun and Moon RA-AS0104E00B. Liên hệ lại mình nha' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đồng hồ này có cần lên cót tay từng ngày không vậy bạn.hay là cứ đeo trên tay là tự động lên cót.' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cho hỏi mẫu này còn không ạ tôi ở biên hòa' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mặt kinh rất dể rầy sướt shop ak. Hệ thống mình có hỗ trợ đánh bóng hay dán cường lực chống rầy sướt ko Ad' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đồng hồ này mặt màu gì vậy' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đồng hồ mua online ​nhận tại siêu thị được kiểm tra hàng không ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đồng hồ cơ mà chết thì làm ntn ạ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sản phẩm này có ở những cửa hàng nào ở tp HCM ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mặt kính bị trầy mà cửa hàng mình ko hổ trợ đánh bóng thì pải làm sao' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mua đt đập đá 150k có phiếu giảm 40% ko' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đẹp quá. Về là ra xúc ngay' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Hóng từng phút em này về TGDĐ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'sp này có được mua kèm đt giảm 40% không bạn ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sản phẩm này có hàng chưa shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sao e đặt hàng chuyển về mấy bạn siêu thị nói hàng mới chưa có' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sản phẩm này hiện đang bán ở đâu vậy' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Tại nghi sơn thanh hóa bán chưa' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Tiếc là kính khoáng chứ ko phải saphia' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mua trực tiếp giá 4tr9 ko' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Có bán bộ dây ko shop' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mẫu này có giảm 60% không TGDĐ, tại vì Anh có xem ở Tgdđ tại Thị trấn Gia ray nhưng hiên tại đã bán rồi' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Thị trấn Gia Ray, Huyện Xuân Lộc, Tỉnh Đồng Nai nhe' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mã đồng hồ này có đường kính mặt nhỏ hơn không' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Ca cach nao de kim giay nó chay lien tục dc ko ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sao giờ còn giảm có 30% vậy,hôm trước giảm 40% mà' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Thế giới di động có mẫu này ko ạh' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'mua tra gop co ap dung giam 10% thang sinh nhat ko' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mẫu nay co ko a' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cho em hỏi là mã đồng hồ này Orient Có chính hãng giống với các trang watch k ạ?' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cho e xin lại cái mạt hom pua mua gỡ bỏ ở tgdđ duoc k ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'đồng hồ này còn game 40% nữa không ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đồng hồ nay giảm giá 40% thì còn bao nhiêu' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'cho mình hỏi đồng hồ này không đeo tháo ra để bao nhiêu lâu thi may o chạy vây ban' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Dh này nếu k đeo dây da mình có thể thay bằng dây sắt k ad' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Ad ơi bên mình có bán dây kim loại thay vô k' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đồng hồ Nam Orient  Này có trợ cốt tay k ad cách chỉnh sau cho đúng' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Tôi đeo đh này bị dị ứng xin ad chỉ cách chữa trị' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Phiếu giảm 40% là tính giá gốc, không tính cái giảm 20% trừ vào giá. Hay giảm 40% của giá đã trừ 20%' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Con này size dây bn shop ơi' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'ở đồng hới có hàng ko shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Nguồn gôc xuất xứ của đông hồ này ở đâu vậy shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mẫu này bên chi nhánh nào còn hàng vậy? Mình o tp hcm' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mẫu này còn hàng k ạ? Mình ở Nha Trang' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mình An Giang có hàng ko shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Chỉ giảm 10% tháng ng sn tháng 10 thì quá bất công vs khách hàng .tối 25.9 mún mua mà thấy ko hợp lí' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Hàng có ở chi nhánh bảo lâm, Lâm Đồng k ad' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Ớ Khánh Hòa địa chỉ TGDĐ nào bán đồng hồ em' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cổ tay 16cm mang được không shop' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cho mình hỏi ... ơ sa đéc tỉnh Đồng Tháp con hành hk ban' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Hà tĩnh còn không bạn' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'cho hỏi co phieu mua hang 40 % thì sp này có giá bao nhiêu' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'hiện tại con hàng khu vực q7 ko' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'nếu bh dat hàng mà phiếu mua hàng giảm 40% đến ngày 20/11 này hết hạng thì có dc ap dụng ko ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'bắc giang có hànhg không anh' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'cho mình hỏi Đồng hồ Nam Orient RA-AG0026E10B' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cho e hỏi kính khoan có chống trầy xước ko z' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => '' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Trả góp có áp dụng tặng kèm đồng hồ đồng giá hoặc thấp hơn ko anh' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Xin chào. Cho em hỏi là khi mình ra trực tiếp shop vẫn được giảm 20% đúng không ạ? Mua giảm 20% này có cần yêu cầu gì không ạ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mua trương trình mua 1 tặng 1 đến bh vậy. E dưới tây hồ thì shop nào gần nhất có trường trình nhỉ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đông hồ này có thay được dây da không ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mua một điện thoại cảm ứng thì được giam 40% khi mua đồng hồ, vậy khi mua máy lạnh tai hệ thống tgdđ có được giảm 40% khi mua đồng hồ ko tgdđ ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cao bằng có bán đồng hồ k' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => '' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mã sp này có dây da k shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mã này ở tp hcm chỗ nào còn hàng ạ' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Nói thật bên bạn kinh doanh kiểu gì tôi nom Đồng hồ nào cũng ko có tại nam định vậy tôi thật sự khó hiểu' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cổ tay 16 ad tìm giúp mình 1 vài mẫu automatic phù hợp với!' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Tư vấn giúp em xxxx959394' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'ngoài công ty tài chính homecredit thì có công ty tài chính nào hổ trợ trả góp không' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Em cần tư vấn trả góp xxxx959394' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'co ap dung giam 40% khi mua chung voi dien thoai ko shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Nếu gia thế giới di động có để thử ko' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Còn màu đen k shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Có hỗ trợ bỏ bớt mắt không nhỉ' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Ở Bến Tre không có sẵn hàng đặt về thử có tốn phí gì k vậy shop.' ,
+            ],
 
-        //     ],
-        //     [
-        //         'Product_id' => '8',
-        //         'User_id' => '8',
-        //         'Star' =>rand(1,5),
-        //         'Content'  => Str::random(20) ,
+              [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Shop cho e hỏi là e vừa mua máy samsung và được khuyến mãi 40% khi mua đồng hồ. Có áp dụng cho đồng hồ này ko và giá còn bao nhiêu. E xin cảm ơn' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mẫu này là xanh lục bảo ak shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Làm thế nào để kiểm tra cái đồng hồ này sản xuất năm nào nhỉ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Tg mỹ tho có ko add à' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Kiểm tra giúp em số điện thoại xxxx909585 với xxxx822962 mua đồng hồ này có được giảm giá hay khuyến mãi gì không ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'sản phẩm này có tại quy nhơn không shop
+                ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sp này có dây màu đen ko shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => '@Linh Hân: dạ không anh ơi nhưng em là thành viên MWG' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Em 2001 đủ trả góp chưa ạ' ,
+            ],  [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cho mình hỏi ở mạo khê quảng ninh có hàng k' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Con này ở chi nhánh nào ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mình mới mua 1 đồng hồ này nhưng về mang chưa đk 1 tháng thấy mặt kính nứt. K biết tgdd hỗ trợ đổi mới lại không' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sp này còn ở tgdd chơn thành k ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'cho mình hỏi "Giảm 40% khi mua kèm (không áp dụng kèm khuyến mãi khác)" là sao ạ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mình ở Biên Hoà đồng nai. Chỉ cần với tổng tiền 5.564.000₫ là có thể mua đc 2 món này hay phải mua điện thoại hoặc máy tính thì mới được giảm như này ạ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Có màu xanh lá ko bạn. Nếu có màu xanh lá cây mình sẽ lấy. Orient Sun and Moon RA-AS0104E00B. Liên hệ lại mình nha' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đồng hồ này có cần lên cót tay từng ngày không vậy bạn.hay là cứ đeo trên tay là tự động lên cót.' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cho hỏi mẫu này còn không ạ tôi ở biên hòa' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mặt kinh rất dể rầy sướt shop ak. Hệ thống mình có hỗ trợ đánh bóng hay dán cường lực chống rầy sướt ko Ad' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đồng hồ này mặt màu gì vậy' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đồng hồ mua online ​nhận tại siêu thị được kiểm tra hàng không ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đồng hồ cơ mà chết thì làm ntn ạ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sản phẩm này có ở những cửa hàng nào ở tp HCM ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mặt kính bị trầy mà cửa hàng mình ko hổ trợ đánh bóng thì pải làm sao' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mua đt đập đá 150k có phiếu giảm 40% ko' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đẹp quá. Về là ra xúc ngay' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Hóng từng phút em này về TGDĐ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'sp này có được mua kèm đt giảm 40% không bạn ?' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sản phẩm này có hàng chưa shop' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sao e đặt hàng chuyển về mấy bạn siêu thị nói hàng mới chưa có' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sản phẩm này hiện đang bán ở đâu vậy' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Tại nghi sơn thanh hóa bán chưa' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Tiếc là kính khoáng chứ ko phải saphia' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mua trực tiếp giá 4tr9 ko' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Có bán bộ dây ko shop' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mẫu này có giảm 60% không TGDĐ, tại vì Anh có xem ở Tgdđ tại Thị trấn Gia ray nhưng hiên tại đã bán rồi' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Thị trấn Gia Ray, Huyện Xuân Lộc, Tỉnh Đồng Nai nhe' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mã đồng hồ này có đường kính mặt nhỏ hơn không' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Ca cach nao de kim giay nó chay lien tục dc ko ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Sao giờ còn giảm có 30% vậy,hôm trước giảm 40% mà' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Thế giới di động có mẫu này ko ạh' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'mua tra gop co ap dung giam 10% thang sinh nhat ko' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Mẫu nay co ko a' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cho em hỏi là mã đồng hồ này Orient Có chính hãng giống với các trang watch k ạ?' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Cho e xin lại cái mạt hom pua mua gỡ bỏ ở tgdđ duoc k ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'đồng hồ này còn game 40% nữa không ạ' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đồng hồ nay giảm giá 40% thì còn bao nhiêu' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'cho mình hỏi đồng hồ này không đeo tháo ra để bao nhiêu lâu thi may o chạy vây ban' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Dh này nếu k đeo dây da mình có thể thay bằng dây sắt k ad' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Ad ơi bên mình có bán dây kim loại thay vô k' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Đồng hồ Nam Orient  Này có trợ cốt tay k ad cách chỉnh sau cho đúng' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Tôi đeo đh này bị dị ứng xin ad chỉ cách chữa trị' ,
+            ],
+            [
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Phiếu giảm 40% là tính giá gốc, không tính cái giảm 20% trừ vào giá. Hay giảm 40% của giá đã trừ 20%' ,
+            ],[
+                'cm_product_id' => rand(1,60),
+                'cm_user_id' => rand(7,30),
+                'cm_content'  => 'Con này size dây bn shop ơi' ,
+            ],
 
-        //     ],
-        //     [
-        //         'Product_id' => '6',
-        //         'User_id' => '9',
-        //         'Star' =>rand(1,5),
-        //         'Content'  => Str::random(20) ,
-
-        //     ],
-        //     [
-        //         'Product_id' => '4',
-        //         'User_id' => '7',
-        //         'Star' =>rand(1,5),
-        //         'Content'  => Str::random(20) ,
-
-        //     ],
-        //     [
-        //         'Product_id' => '9',
-        //         'User_id' => '6',
-        //         'Star' =>rand(1,5),
-        //         'Content'  => Str::random(20) ,
-
-        //     ],
-        //     [
-        //         'Product_id' => '8',
-        //         'User_id' => '6',
-        //         'Star' =>rand(1,5),
-        //         'Content'  => Str::random(20) ,
-
-        //     ],
-
-        // ]);
-        // DB::table('comments')->insert([
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30),
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30),
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30),
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30),
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30),  
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30),  
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30), 
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30), 
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30),
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30),
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30), 
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30),   
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30), 
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30),
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30),
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30),
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30),
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30),
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30),  
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30),  
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30), 
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30), 
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30),
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30),
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30), 
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30),   
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30), 
-        //     ],
-        //     [
-        //         'Product_id' => rand(1,10),
-        //         'User_id' => rand(7,12),
-        //         'Content' =>Str::random(30),
-        //     ],
-
-        // ]);
+        ]);
     }
 }

@@ -110,22 +110,19 @@ $(document).on('click', '#delete_trademark', function delete_trademark(event) {
 
 /* sap xep moi nhat cu nhat thương hiệu*/
 
-function change_sort_trademark(element) {
-    let abc = $(element).text();
-    $(element).parent('.menu-sort').parent('.btn-sort').find('.text-sort').text(abc);
-    let url = $(element).data('url');
+$(document).on('change', '.sort_list_trademark', function sort_list_trademark() {
+    let key = $(this).val();
+    let url = $(this).data('url');
     $.ajax({
         url: url,
         method: "GET",
         dataType: 'JSON',
-        contentType: false,
-        cache: false,
-        processData: false,
+        data: { key: key },
         success: function(data) {
             $('.list_trademark').html(data.new_list_trademark);
         },
     });
-}
+});
 
 /// tim kiem truc tuyen thương hiệu
 

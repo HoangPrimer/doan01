@@ -20,7 +20,7 @@ $(document).on('click', '.shopping', function addTocart(event) {
 $(document).on('click', '.cart_update', function updatecart(event) {
     event.preventDefault();
 
-    let urlUpdate = $('.update_cart_url').data('url');
+    let urlUpdate = $(this).data('url');
     let id = $(this).data('id');
     let soluong = $(this).parents('tr').find('input.soluong').val();
 
@@ -47,7 +47,7 @@ $(document).on('click', '.cart_update', function updatecart(event) {
 $(document).on('click', '.del_cart', function delcart(event) {
     event.preventDefault();
 
-    let urlDel = $('.shopping_cart').data('url');
+    let urlDel = $(this).data('url');
     let id = $(this).data('id');
 
 
@@ -94,7 +94,7 @@ $(document).on('submit', '#form_oder', function form_oder(event) {
             if (data.code === 300) {
                 alert(data.message);
                 $('.shopping_cart').html(data.shopcart);
-                $('.header__cart').html(data.headers);
+                $('#header').html(data.headers);
             }
         },
     });

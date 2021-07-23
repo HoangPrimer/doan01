@@ -237,47 +237,6 @@
         display: none;
     }
     /* nut sap xep trong cac danh dach */
-    
-    .btn-sort {
-        position: relative;
-    }
-    
-    .menu-sort {
-        position: absolute;
-        border: 1px solid #020203;
-        top: 100%;
-        left: 0;
-        min-width: 150px;
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(255, 255, 255);
-        margin-top: 5px;
-        border-radius: 5px;
-        align-items: center;
-        display: none;
-        transition: all 1s;
-        z-index: 10;
-        box-shadow: 0px 0 3px 3px #c9d4f1;
-    }
-    
-    .menu-sort .sort_product {
-        text-decoration: none;
-        font-size: 14px;
-        color: rgb(63, 60, 245);
-        padding: 10px 0;
-        display: block;
-        transition: .5s;
-        width: 100%;
-    }
-    
-    .btn-sort .menu-sort .sort_product:hover {
-        color: rgb(0, 0, 0);
-        background-color: cornflowerblue;
-    }
-    
-    .btn-sort .menu-sort .sort_product+.sort_product {
-        border-top: 1px solid #3498db;
-    }
     /*-------------------------------------------------toassst----*/
     
     .toast {

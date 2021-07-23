@@ -1,0 +1,302 @@
+/* login__register */
+
+#login__register {
+    padding: 50px 0;
+    background-color: #ebe6e7;
+}
+
+.login__register {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.user {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.imgBx {
+    width: 65%;
+    height: 100%;
+}
+
+.imgBx img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user form {
+    width: calc(100% - 65%);
+    height: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.user form h2 {
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.user form input {
+    width: 100%;
+    height: 40px;
+    background-color: #e2e7eb;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    margin: 5px 0;
+    text-indent: 5px;
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+
+.user form button {
+    max-width: 100px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    background-color: #7ec2f0;
+    color: #fff;
+    margin-top: 10px;
+    transition: .5s;
+}
+
+.user form button:hover,
+.user form p a:hover {
+    color: black;
+}
+
+.user form span {
+    display: inline-block;
+}
+
+.user form p a {
+    color: red;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.signinBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.top {
+    animation: top 2s ease forwards;
+}
+
+.top1 {
+    animation: top1 2s ease forwards;
+}
+
+.bot {
+    animation: bot 2s ease forwards;
+}
+
+.bot1 {
+    animation: bot1 2s ease forwards;
+}
+
+.registerBx {
+    position: absolute;
+    top: calc( 100% + 100px);
+    left: 0;
+}
+
+@keyframes top {
+    from {
+        opacity: 1;
+        transform: translateY( 0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY( calc(-100% - 100px));
+    }
+}
+
+@keyframes bot {
+    from {
+        opacity: 0;
+        transform: translateY( 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(calc(-100% - 100px));
+    }
+}
+
+@keyframes top1 {
+    from {
+        opacity: 0;
+        transform: translateY(calc(-100% - 100px));
+    }
+    to {
+        opacity: 1;
+        transform: translateY( 0);
+    }
+}
+
+@keyframes bot1 {
+    from {
+        opacity: 1;
+        transform: translateY(calc(-100% - 100px));
+    }
+    to {
+        opacity: 0;
+        transform: translateY( 0);
+    }
+}
+
+
+/* info__profile */
+
+.info__profile {
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #3498DB;
+}
+
+#a1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#a2 {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 100px);
+    z-index: 2;
+}
+
+.right__anime {
+    animation: right 2s ease forwards;
+}
+
+.right__anime1 {
+    animation: right1 2s ease forwards;
+}
+
+@keyframes right {
+    from {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateX( calc( -100% - 100px));
+    }
+}
+
+@keyframes right1 {
+    from {
+        opacity: 1;
+        transform: translateX( calc( -100% - 100px));
+    }
+    to {
+        opacity: 0;
+        transform: translateX(0);
+    }
+}
+
+.in4 {
+    width: 100%;
+    height: 100%;
+    padding: 60px 0 60px 200px;
+    background-color: #fff;
+    position: relative;
+}
+
+.in4 i {
+    position: absolute;
+    font-size: 30px;
+    top: 20px;
+    right: 20px;
+    color: red;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.in4 i:hover {
+    color: #000000;
+}
+
+.in4 button {
+    font-size: 20px;
+    padding: 5px 20px;
+    min-width: 120px;
+    color: rgb(61, 15, 146);
+    border: none;
+    outline: none;
+    background-color: #aedfee;
+    transition: .5s;
+}
+
+.in4 button:hover {
+    background-color: #e25e5e;
+}
+
+.in4 .row_info {
+    width: 70%;
+    margin: 15px 0;
+}
+
+.in4 .row_info+.row_info {
+    border-bottom: 1px solid #ebebeb;
+}
+
+.in4 .row_info img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid #e6dddd;
+}
+
+.in4 .row_info label {
+    min-width: 160px;
+    font-size: 20px;
+}
+
+.in4 .row_info span {
+    font-size: 20px;
+}
+
+.in4 .err {
+    margin-top: 5px;
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+}
+
+.in4 .err input:not([type="radio"]) {
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    text-indent: 10px;
+}
+
+.footer__logo a:nth-of-type(3),
+.footer__logo a:nth-of-type(4) {
+    display: inline;
+}

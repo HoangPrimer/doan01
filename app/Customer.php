@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Customer extends Model
 {
     protected $fillable = [
-        'name', 'email', 'phone','address','gender',
+        'ct_name', 'ct_email', 'ct_phone','ct_address','ct_gender',
     ];
-    public function Oder(){
-        return $this->hasMany('App\Oder','Customer_id','id');
+    public function Order(){
+        return $this->hasMany('App\Oder','od_customer_id','id');
     }
 }

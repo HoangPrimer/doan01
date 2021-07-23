@@ -21,7 +21,7 @@ class Cart_Controller extends Controller
 
     // gio hang
 
-    public function cart()
+    public function index()
     {
         $cart = session()->get('cart');
         return view('frontend.cart.shopping_cart', compact('cart'));
@@ -29,7 +29,7 @@ class Cart_Controller extends Controller
 
     // dat hang
 
-    public function oder(Request $request)
+    public function order(Request $request)
     {
         if (request()->ajax()) {
             $data = Validator::make(
@@ -71,14 +71,14 @@ class Cart_Controller extends Controller
                     'payment' => $data->errors()->get('payment'),
                 ], 200);
             } else {
-                $check = Customer::where('phone', $request->phone)->get();
+                $check = Customer::where('ct_phone', $request->phone)->get();
                 if (count($check) === 0) {
                     $customer = new Customer();
-                    $customer->name = $request->name;
-                    $customer->email = $request->email;
-                    $customer->phone = $request->phone;
-                    $customer->gender = $request->gender;
-                    $customer->address = $request->address;
+                    $customer->ct_name = $request->name;
+                    $customer->ct_email = $request->email;
+                    $customer->ct_phone = $request->phone;
+                    $customer->ct_gender = $request->gender;
+                    $customer->ct_address = $request->address;
 
                     $customer->save();
                     $customer_id = $customer->id;
@@ -88,16 +88,16 @@ class Cart_Controller extends Controller
                     }
                 }
                 $oder     =  new Order;
-                $oder->Customer_id  = $customer_id;
-                $oder->Name = $request->name;
-                $oder->Phone = $request->phone;
-                $oder->Address = $request->address;
-                $oder->Gender = $request->gender;
-                $oder->Email  =   $request->email;
-                $oder->TrangThai  =   "Chờ Duyệt";
-                $oder->TongTien = $request->tongtien;
-                $oder->HinhThucThanhToan = $request->payment;
-                $oder->GhiChu = $request->note;
+                $oder->od_customer_id  = $customer_id;
+                $oder->od_name = $request->name;
+                $oder->od_phone = $request->phone;
+                $oder->od_address = $request->address;
+                $oder->od_gender = $request->gender;
+                $oder->od_email  =   $request->email;
+                $oder->od_status  =   "Chờ Duyệt";
+                $oder->od_total = $request->tongtien;
+                $oder->od_payment = $request->payment;
+                $oder->od_note = $request->note;
                 $oder->save();
                 $id  = $oder->id;
                 $cart  = session()->get('cart');
@@ -107,16 +107,17 @@ class Cart_Controller extends Controller
                     $Price   =  $tt['price'];
                     $MaSP = $tt['masp'];
                     $total  = $SoLuong * $Price;
-                    $items->Order_id  = $id;
-                    $items->MaSP = $MaSP;
-                    $items->SoLuong  = $SoLuong;
-                    $items->Gia  = $Price;
-                    $items->TongTien  = $total;
+                    $items->i_order_id  = $id;
+                    $items->i_product_code = $MaSP;
+                    $items->i_amount  = $SoLuong;
+                    $items->i_price  = $Price;
+                    $items->i_total  = $total;
 
                     $items->save();
                 }
                 session()->forget('cart');
-                $shopcart = view('frontend.cart.cartcomponent')->render();
+                $cart = session()->get('cart');
+                $shopcart = view('frontend.cart.cartcomponent',compact('cart'))->render();
                 $headers = view('frontend.layout.header', compact('cart'))->render();
                 return response()->json([
                     'code' => 300,
@@ -130,7 +131,7 @@ class Cart_Controller extends Controller
 
     // them san pham vao gio hang
 
-    public function add_to_cart($id)
+    public function create($id)
     {
    // session()->forget('cart');
         $product = Product::find($id);
@@ -166,7 +167,7 @@ class Cart_Controller extends Controller
 
     // cap nhat gio hang
 
-    public function update_cart(Request $request)
+    public function update(Request $request)
     {
         if (request()->ajax()) {
             if ($request->id && $request->soluong) {
@@ -183,7 +184,7 @@ class Cart_Controller extends Controller
             }
         }
     }
-    public function del_cart(Request $request)
+    public function delete(Request $request)
     {
 
         if ($request->id) {
@@ -196,42 +197,6 @@ class Cart_Controller extends Controller
             $cartcomponent = view('frontend.cart.cartcomponent', compact('cart'))->render();
             return response()->json(['cart_component' => $cartcomponent, 'header' => $header, 'code' => 200], 200);
         }
-    }
-
-    //mua ngay
-
-
-    public function buy_now($id)
-    {
-
-        $product = Product::find($id);
-
-        $cart = session()->get('cart');
-        if (isset($cart[$id])) {
-            $cart[$id]['soluong'] =  $cart[$id]['soluong'] + 1;
-        } else {
-            if ($product->GiaKM === 0) {
-                $cart[$id] = [
-                    'id' => $product->id,
-                    'masp' => $product->MaSP,
-                    'thuonghieu' => $product->ThuongHieu,
-                    'price' => $product->GiaBan,
-                    'soluong' => 1,
-                ];
-            } else {
-                $cart[$id] = [
-                    'id' => $product->id,
-                    'masp' => $product->MaSP,
-                    'thuonghieu' => $product->ThuongHieu,
-                    'price' => $product->GiaKM,
-                    'soluong' => 1,
-                ];
-            }
-        }
-        session()->put('cart', $cart);
-        $cart = session()->get('cart');
-
-        return view('frontend.cart.shopping_cart', compact('cart'));
     }
 
     // trang chu

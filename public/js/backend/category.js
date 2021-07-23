@@ -78,23 +78,20 @@ $(document).on('click', '#delete_category', function delete_category(event) {
 
 /* sap xep moi nhat cu nhat danh mục*/
 
-function change_sort_category(element) {
+$(document).on('change', '.sort_list_category', function sort_list_category() {
 
-    let abc = $(element).text();
-    $(element).parent('.menu-sort').parent('.btn-sort').find('.text-sort').text(abc);
-    let url = $(element).data('url');
+    let key = $(this).val();
+    let url = $(this).data('url');
     $.ajax({
         url: url,
         method: "GET",
         dataType: 'JSON',
-        contentType: false,
-        cache: false,
-        processData: false,
+        data: { key: key },
         success: function(data) {
             $('.list_category').html(data.new_list_category);
         },
     });
-}
+});
 
 /// tim kiem truc tuyen danh mục
 

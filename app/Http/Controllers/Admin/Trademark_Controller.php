@@ -19,24 +19,29 @@ class Trademark_Controller extends Controller
 
 
     // tim kiem sap xep 
-    public function sort_trademark($id)
+    public function sort_trademark(Request $request)
     {
         if (request()->ajax()) {
-            $keys = $id;
+            $keys = $request->key;
             if ($keys === 'new') {
                 $list_trademark  = Trademark::orderBy('id', 'desc')->simplepaginate(20);
                 $new_list_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render();
-                return response()->json([
-                    'new_list_trademark' => $new_list_trademark,
-                ], 200);
             }
             if ($keys === 'old') {
                 $list_trademark  = Trademark::orderBy('id', 'asc')->simplepaginate(20);
-                $new_list_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render();
-                return response()->json([
-                    'new_list_trademark' => $new_list_trademark,
-                ], 200);
+                $new_list_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render(); 
             }
+            if ($keys === 'abc_asc') {
+                $list_trademark  = Trademark::orderBy('tr_name', 'asc')->simplepaginate(20);
+                $new_list_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render();
+            }
+            if ($keys === 'abc_desc') {
+                $list_trademark  = Trademark::orderBy('tr_name', 'desc')->simplepaginate(20);
+                $new_list_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render(); 
+            }
+            return response()->json([
+                'new_list_trademark' => $new_list_trademark,
+            ], 200);
         }
     }
 

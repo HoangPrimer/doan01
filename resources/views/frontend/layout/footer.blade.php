@@ -28,8 +28,8 @@
                 <ul class="menu-sub1">
                     <li>
                         <p class="d-flex justify-content-between">Chăm sóc khách hàng
-                            <i class="fas fa-chevron-down d-md-none bg-secondary p-1 show_info_footer"></i>
-                            <i class="fas fa-chevron-up d-none d-md-none bg-secondary p-1 hide_info_footer"></i>
+                            <i class="fas fa-chevron-down d-md-none  p-1 show_info_footer"></i>
+                            <i class="fas fa-chevron-up d-none d-md-none p-1 hide_info_footer"></i>
                         </p>
                         <ul class="sub-menu ">
                             <li><a href=""> Hướng dẫn mua hàng</a></li>
@@ -40,8 +40,8 @@
                     </li>
                     <li>
                         <p class="d-flex justify-content-between">Về Xwatch
-                            <i class="fas fa-chevron-down d-md-none bg-secondary p-1 show_info_footer"></i>
-                            <i class="fas fa-chevron-up d-none d-md-none bg-secondary p-1 hide_info_footer"></i>
+                            <i class="fas fa-chevron-down d-md-none p-1 show_info_footer"></i>
+                            <i class="fas fa-chevron-up d-none d-md-none p-1 hide_info_footer"></i>
                         </p>
                         <ul class="sub-menu">
                             <li><a href="">Giới thiệu về Xwatch</a></li>
@@ -52,8 +52,8 @@
                     </li>
                     <li>
                         <p class="d-flex justify-content-between">Tiện ích
-                            <i class="fas fa-chevron-down d-md-none bg-secondary p-1 show_info_footer"></i>
-                            <i class="fas fa-chevron-up d-none d-md-none bg-secondary p-1 hide_info_footer"></i>
+                            <i class="fas fa-chevron-down d-md-none p-1 show_info_footer"></i>
+                            <i class="fas fa-chevron-up d-none d-md-none p-1 hide_info_footer"></i>
                         </p>
                         <ul class="sub-menu ">
                             <li><a href="">Kiến thức đồng hồ</a></li>

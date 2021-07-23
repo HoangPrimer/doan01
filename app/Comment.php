@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Comment extends Model
 {
     protected $fillable = [
-        'User_id','Product_id', 'Content',
+        'cm_user_id','cm_product_id','cm_content',
     ];
     public function Product(){
-        return $this->belongsTo('App\Product','Product_id','id');
+        return $this->belongsTo('App\Product','cm_product_id','id');
     }
     public function User(){
-        return $this->belongsTo('App\User','User_id','id');
+        return $this->belongsTo('App\User','cm_user_id','id');
     }
 }

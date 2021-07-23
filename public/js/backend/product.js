@@ -249,23 +249,21 @@ $(document).on('click', '.show_hot_product', function show_hot_product(event) {
 
 // sap xep san pham 
 
-function change_sort_product(element) {
+$(document).on('change', '.sort_list_product', function sort_list_product() {
 
-    let abc = $(element).text();
-    $(element).parent('.menu-sort').parent('.btn-sort').find('.text-sort').text(abc);
-    let url = $(element).data('url');
+    let key = $(this).val();
+    let url = $(this).data('url');
+
     $.ajax({
         url: url,
         method: "GET",
         dataType: 'JSON',
-        contentType: false,
-        cache: false,
-        processData: false,
+        data: { key: key },
         success: function(data) {
-            $('.list_product').html(data.new_list_product);
+            $('.list_product').html(data.abc);
         },
     });
-}
+});
 
 /// tim kiem truc tuyen san phẩm
 

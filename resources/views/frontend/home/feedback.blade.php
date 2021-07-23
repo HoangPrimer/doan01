@@ -1,5 +1,5 @@
-<section class=" py-3">
-    <h2 class="mb-2">KHÁCH HÀNG NÓI GÌ VỀ CHÚNG TÔI</h2>
+<section class="my-5 py-3">
+    <h2 class="mb-4">KHÁCH HÀNG NÓI GÌ VỀ CHÚNG TÔI</h2>
     <div class="container main-feedback">
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-3 list-feedback">
             <div class="col">

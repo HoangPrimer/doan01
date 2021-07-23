@@ -12,6 +12,6 @@ class Trademark extends Model
     ];
 
     public function Product(){
-        return $this->hasMany('App\Product','trademark_id','id');
+        return $this->hasMany('App\Product','pro_trademark_id','id');
     }
 }

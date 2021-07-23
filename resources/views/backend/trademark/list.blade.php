@@ -15,17 +15,20 @@
     </div>
 </div>
 
-<div class="row mb-2">
-    <div class="col-lg-4 col-md-12 col-sm-12">
-        <a class="btn btn-lg btn-primary me-2" href="{{route('create_trademark')}}">Thêm</a>
-        <button class="btn-sort btn btn-light border">Sắp xếp theo : <span class="text-sort  ms-2 fs-5">Mới Nhất</span> <i class="fa fa-angle-down ms-2"></i>
-            <div class="menu-sort">
-                <a class="sort_product" data-url="{{route('sort_trademark','new')}}" onclick="change_sort_trademark(this)">Mới Nhất</a>
-                <a class="sort_product" data-url="{{route('sort_trademark','old')}}" onclick="change_sort_trademark(this)">Cũ nhất</a>
-            </div>
-        </button> 
+<div class="row mb-2 py-2">
+    <div class="col-lg-5 col-md-12 col-sm-12 d-flex align-items-center justify-content-between ">
+        <a class="btn btn-lg btn-primary " href="{{route('create_trademark')}}">Thêm</a>
+        <div class="form-group">
+            <span class="fs-4 me-2"> Sắp xếp theo :</span>
+            <select class="sort_list_trademark px-2 py-1" data-url="{{route('sort_trademark')}}">
+                <option value="new">Mới Nhất</option>
+                <option value="old">Cũ Nhất</option>
+                <option value="abc_asc">Từ A -> Z </option>
+                <option value="abc_desc">Từ Z -> A</option>
+            </select>
+        </div>
     </div>
-    <div class="col-lg-8 col-md-12 col-sm-12 live_seach_category">
+    <div class="col-lg-7 col-md-12 col-sm-12 live_seach_category">
         <input class="form-control form-control-light w-100 py-2 " type="text" id="live_search_trademark" data-url="{{ route ('live_search_trademark')}}" placeholder="Search" aria-label="Search">
     </div>
 </div>

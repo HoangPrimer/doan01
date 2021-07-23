@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','phone','address','gender',
+        'name','image','email','password','level','phone','address','gender',
     ];
 
     /**
@@ -38,15 +38,15 @@ class User extends Authenticatable
     ];
 
     public function Comment(){
-        return $this->hasMany('App\Comment','user_id','id');
+        return $this->hasMany('App\Comment','cm_user_id','id');
     }
 
     public function Rate(){
-        return $this->hasMany('App\Rate','user_id','id');
+        return $this->hasMany('App\Rate','r_user_id','id');
     }
 
     public function Product(){
-        return $this->hasMany('App\Product','user_id','id');
+        return $this->hasMany('App\Product','pro_user_id','id');
     }
     
 }

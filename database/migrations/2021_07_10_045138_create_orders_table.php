@@ -15,17 +15,17 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->Increments('id');
-            $table->integer('Customer_id')->unsigned();
-            $table->foreign('Customer_id')->references('id')->on('customers')->onDelete('cascade');
-            $table->string('TrangThai');
-            $table->string('Name');
-            $table->integer('Phone');
-            $table->string('Address');
-            $table->string('Gender');
-            $table->string('Email');
-            $table->integer('TongTien');
-            $table->string('HinhThucThanhToan');
-            $table->string('GhiChu');
+            $table->integer('od_customer_id')->unsigned();
+            $table->foreign('od_customer_id')->references('id')->on('customers')->onDelete('cascade');
+            $table->string('od_status');
+            $table->string('od_name');
+            $table->integer('od_phone');
+            $table->string('od_address');
+            $table->string('od_gender');
+            $table->string('od_email');
+            $table->integer('od_total');
+            $table->string('od_payment');
+            $table->string('od_note');
             $table->timestamps();
         });
     }

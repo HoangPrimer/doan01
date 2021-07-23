@@ -15,12 +15,12 @@ class CreateRatesTable extends Migration
     {
         Schema::create('rates', function (Blueprint $table) {
             $table->Increments('id');
-            $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->integer('product_id')->unsigned();
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
-            $table->integer('star');
-            $table->text('content');
+            $table->integer('r_user_id')->unsigned();
+            $table->foreign('r_user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('r_product_id')->unsigned();
+            $table->foreign('r_product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->integer('r_star');
+            $table->text('r_content');
             $table->timestamps();
         });
     }

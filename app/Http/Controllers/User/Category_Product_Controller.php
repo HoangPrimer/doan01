@@ -7,7 +7,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Product;
 
-
 class Category_Product_Controller extends Controller
 {
     public function index($id)
@@ -16,7 +15,7 @@ class Category_Product_Controller extends Controller
         foreach ($category as $category) {
             $id = $category->id;
         }
-        $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->paginate(21);
+        $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->orderBy('id','desc')->paginate(21);
         $category_desc = Category::find($id);
         $cart = session()->get('cart');
 
@@ -84,11 +83,10 @@ class Category_Product_Controller extends Controller
                         $product->whereBetween('pro_size', [40, 43]);
                         break;
                     case '5':
-                        $product->whereBetween('pro_size', '>', '43');
+                        $product->where('pro_size', '>', '43');
                         break;
                 }
             }
-
 
             $product = $product->orderBy('id', 'desc')->paginate(50);
             $all = count($product);
@@ -125,6 +123,10 @@ class Category_Product_Controller extends Controller
                 $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->orderBy('pro_price', 'desc')->paginate(21);
                 $abc = view('frontend.category.child_category', compact('product'))->render();
             }
+            if ($key == 'hot_sell') {
+                $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->orderBy('pro_amount_sell', 'desc')->paginate(21);
+                $abc = view('frontend.category.child_category', compact('product'))->render();
+            }
             return response()->json([
                 'abc' => $abc,
             ], 200);
@@ -153,6 +155,10 @@ class Category_Product_Controller extends Controller
             }
             if ($key == 'max_price') {
                 $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->orderBy('pro_price', 'desc')->paginate(21);
+                $abc = view('frontend.category.child_category', compact('product'))->render();
+            }
+            if ($key == 'hot_sell') {
+                $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->orderBy('pro_amount_sell', 'desc')->paginate(21);
                 $abc = view('frontend.category.child_category', compact('product'))->render();
             }
             return response()->json([

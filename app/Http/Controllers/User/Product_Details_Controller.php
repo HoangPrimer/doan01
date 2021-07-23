@@ -15,13 +15,13 @@ class Product_Details_Controller extends Controller
 {
     public function index($category, $id)
     {
-        $a = Product::find($id);
-        $star = Rate::where('Product_id', $id)->avg('Star');
+        $product = Product::find($id);
+        $star = Rate::where('r_product_id', $id)->avg('r_star');
 
-        $ratingDetails = Rate::groupBy('Star')
-            ->where('Product_id', $id)
-            ->select(DB::raw('count(Star) as total'), DB::raw('sum(Star) as sum'))
-            ->addSelect('Star')->get()->toArray();
+        $ratingDetails = Rate::groupBy('r_star')
+            ->where('r_product_id', $id)
+            ->select(DB::raw('count(r_star) as total'), DB::raw('sum(r_star) as sum'))
+            ->addSelect('r_star')->get()->toArray();
 
         $arrayRatings = [];
         if (!empty($ratingDetails)) {
@@ -33,17 +33,16 @@ class Product_Details_Controller extends Controller
                     "star" => 0
                 ];
                 foreach ($ratingDetails as $item) {
-                    if ($item['Star']  == $i) {
+                    if ($item['r_star']  == $i) {
                         $arrayRatings[$i] = $item;
                     }
                 }
             }
         }
 
-        $avgstar = round($star);
-        $rate = Rate::where('Product_id', $id)->get();
+
         $cart = session()->get('cart');
-        return view('frontend.product.product_details', compact('a', 'avgstar', 'rate', 'arrayRatings', 'cart', 'star'));
+        return view('frontend.product.product_details', compact('product', 'arrayRatings', 'cart', 'star'));
     }
 
 
@@ -53,7 +52,7 @@ class Product_Details_Controller extends Controller
     {
         if (Auth::check()) {
             $id = Auth::user()->id;
-            $check = Rate::where(['Product_id' => $request->id, 'User_id' => $id])->get();
+            $check = Rate::where(['r_product_id' => $request->id, 'r_user_id' => $id])->get();
             if ($check->count() > 0) {
                 return response()->json([
                     'code' => 300,
@@ -82,17 +81,17 @@ class Product_Details_Controller extends Controller
                         ], 200);
                     } else {
                         $new = new Rate;
-                        $new->User_id = $id;
-                        $new->Product_id = $request->id;
-                        $new->Star = $request->star;
-                        $new->Content = $request->text;
+                        $new->r_user_id = $id;
+                        $new->r_product_id = $request->id;
+                        $new->r_star = $request->star;
+                        $new->r_content = $request->text;
 
                         $new->save();
 
-                        $ratingDetails = Rate::groupBy('Star')
-                            ->where('Product_id', $request->id)
-                            ->select(DB::raw('count(Star) as total'), DB::raw('sum(Star) as sum'))
-                            ->addSelect('Star')->get()->toArray();
+                        $ratingDetails = Rate::groupBy('r_star')
+                            ->where('r_product_id', $request->id)
+                            ->select(DB::raw('count(r_star) as total'), DB::raw('sum(r_star) as sum'))
+                            ->addSelect('r_star')->get()->toArray();
                         $arrayRatings = [];
                         if (!empty($ratingDetails)) {
                             for ($i = 1; $i <= 5; $i++) {
@@ -103,21 +102,20 @@ class Product_Details_Controller extends Controller
                                     "star" => 0
                                 ];
                                 foreach ($ratingDetails as $item) {
-                                    if ($item['Star']  == $i) {
+                                    if ($item['r_star']  == $i) {
                                         $arrayRatings[$i] = $item;
                                     }
                                 }
                             }
                         }
 
-                        $a = Product::with('Image')->with('Comment')->with('Rate')->find($request->id);
-                        $star = Rate::where('Product_id', $request->id)->avg('Star');
-                        $avgstar = round($star);
-                        $rate = Rate::where('Product_id', $request->id)->get();
-                        $cart = session()->get('cart');
+                        $product = Product::find($request->id);
+                        $star = Rate::where('r_product_id', $request->id)->avg('r_star');
 
-                        $viewrate = view('frontend.child.rate', compact('a', 'avgstar', 'rate', 'star', 'arrayRatings', 'cart'))->render();
-                        $viewcenter = view('frontend.child.info', compact('a', 'avgstar', 'rate', 'cart'))->render();
+
+
+                        $viewrate = view('frontend.product.rate', compact('product', 'star', 'arrayRatings'))->render();
+                        $viewcenter = view('frontend.product.info', compact('product', 'star'))->render();
                         return response()->json([
                             'viewrate' => $viewrate,
                             'viewcenter'  => $viewcenter,
@@ -161,26 +159,23 @@ class Product_Details_Controller extends Controller
                 } else {
                     $id = Auth::user()->id;
                     $new = new Comment();
-                    $new->User_id = $id;
-                    $new->Product_id = $request->id;
-                    $new->Content = $request->text;
+                    $new->cm_user_id = $id;
+                    $new->cm_product_id = $request->id;
+                    $new->cm_content = $request->text;
 
                     $new->save();
 
-                    $a = Product::with('Image')->with('Comment')->with('Rate')->find($request->id);
-                    $viewcomment = view('frontend.child.comment', compact('a'))->render();
+                    $product = Product::find($request->id);
+                    $viewcomment = view('frontend.product.comment', compact('product'))->render();
                     return response()->json([
                         'viewcomment' => $viewcomment,
                         'code' => 200,
-                        'message' => 'success'
                     ], 200);
                 }
             }
         } else {
             return response()->json([
-
                 'code' => 300,
-                'message' => 'success'
             ], 200);
         }
     }

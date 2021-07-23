@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="col-xl-1 col-lg-1 col-md-2 col-sm-4 d-flex align-items-center justify-content-end dropdown p-0 order-1 order-md-2 ">
-            <a href="{{route('shopping')}}" class="alink-dark position-relative mt-1 ">
+            <a href="{{route('cart')}}" class="alink-dark position-relative mt-1 ">
                 <i class="fas fa-shopping-cart fs-2"></i>
                 @if(session('cart'))
                 <span class="amount-pro">{{count($cart)}}</span>

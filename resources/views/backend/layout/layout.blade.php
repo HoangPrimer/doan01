@@ -50,7 +50,7 @@
     <script type="text/javascript" src="/js/backend/category.js"></script>
     <script type="text/javascript" src="/js/backend/trademark.js"></script>
     <script type="text/javascript" src="/js/backend/product.js"></script>
-    <script type="text/javascript" src="/js/backend/order.js"></script>
+    {{-- <script type="text/javascript" src="/js/backend/order.js"></script> --}}
     <script src="/bootstaps5/js/bootstrap.js"></script>
 </body>
 

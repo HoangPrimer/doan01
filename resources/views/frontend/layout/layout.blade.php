@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{{ asset ('/css/frontend/responsive.css') }}">
     <link rel="stylesheet" href="{{ asset ('/css/frontend/index.css') }}">
     <link rel="stylesheet" href="{{ asset ('/css/frontend/category.css') }}">
+    <link rel="stylesheet" href="{{ asset ('/css/frontend/product_details.css') }}">
+    <link rel="stylesheet" href="{{ asset ('/css/frontend/login_register.css') }}">
     <link href="{{asset('/css/fontawesome-free-5.15.3-web/css/all.css' )}}" rel="stylesheet">
     <!--load all styles -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -18,7 +20,7 @@
 </head>
 
 <body>
-
+    <a data-url="{{route('cart')}}" class="url_cart" hidden>aaaa</a>
     @if(session('message'))
     <div id="toast">
         <div class="toast toast--success">
@@ -71,6 +73,7 @@
     <script src="/js/frontend/index.js"></script>
     <script src="/js/frontend/shoppingcart.js"></script>
     <script src="/js/frontend/category_product.js"></script>
+    <script src="/js/frontend/product_details.js"></script>
 
 </body>
 

@@ -27,7 +27,7 @@ class Product extends Model
 
     public function Comment()
     {
-        return $this->hasMany('App\Comment', 'product_id', 'id');
+        return $this->hasMany('App\Comment', 'cm_product_id', 'id');
     }
 
     public function Image()
@@ -36,7 +36,7 @@ class Product extends Model
     }
     public function Rate()
     {
-        return $this->hasMany('App\Rate', 'product_id', 'id');
+        return $this->hasMany('App\Rate', 'r_product_id', 'id');
     }
 
 

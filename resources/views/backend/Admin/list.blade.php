@@ -1,63 +1,65 @@
 @extends('backend.layout.layout')
 @section('content')
-<!-- chi tiet san pham -->
-<div class="table-text">
-    <div class="links">
-        <h1>Product</h1>
-    </div>
-    <div class="title">
-         <div class="title-left">
-               <h3>Danh Sách Admin</h3>
-         </div>
-         <div class="title-right">
-         <button class="up_down">Thêm</button>
-              <p style="font-size: 25px;">
-            Số Lượng:    {{count($list_admin)}}
-            </p>
-            
-        </div>
-    </div>
-</div>
-<div class="table-add">
-        <div class="col_2">
-            @if(count($list_admin)>0)
-            <table class="users">
-                <thead>
-                    <tr>
-                        <td>STT</td>
-                        <td>Tên </td>
-                        <td>Email</td>
-                        <td>Điện Thoại</td>
-                        <td>Giới Tính</td>
-                        <td>Địa Chỉ</td>
-                        <td>Hành Động</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($list_admin as $ki => $od )
-                    <tr>
-                        <td><p>{{$ki}}</p></td>
-                        <td><p> {{$od ->name}}</p></td>
-                        <td><p>{{$od -> email}}</p> </td>
-                        <td><p>{{$od->phone}}</p></td>
-                        <td><p>{{$od->gender}}</p></td>
-                        <td><p>{{$od->address}}</p></td>
-                        <td><a href="{{route('del_admin',$od->id)}}">Xóa</a></td>
-                    </tr>
-                    @endforeach
-
-                </tbody>
-            </table>
-            <div class="links">
-                    {{$list_admin->links()}}
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center mb-2 border-bottom">
+        <h2 class="m-0">Danh Sách Admin (<span class="total_admin">{{ count($all_admin) }}</span>) </h2>
+        <div class="nav">
+            <div class="nav-item">
+                <a href="" class="nav-link">Home /</a>
             </div>
-            @else
-            <p style="width:100%;line-height:50px;font-size:30px;text-align:center;color:red;">Không Có Admin </p>
-            @endif
-           
+            <div class="nav-item">
+                <a href="" class="nav-link">Admin /</a>
+            </div>
+            <div class="nav-item">
+                <a href="" class="nav-link">List</a>
+            </div>
         </div>
     </div>
-<!-- ennd chi tiet san pham  -->
 
+    <div class="row mb-2 py-2">
+        <div class="col-lg-5 col-md-12 col-sm-12 d-flex align-items-center justify-content-between">
+            <div class="form-group me-2">
+                <span class="fs-4"> Sắp xếp theo :</span>
+                <select class="sort_list_admin px-2 py-1" data-url="{{ route('sort_admin') }}">
+                    <option value="new">Mới Nhất</option>
+                    <option value="old">Cũ Nhất</option>
+                    <option value="abc_asc">Từ A -> Z</option>
+                    <option value="abc_desc">Từ Z -> A</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-7 col-md-12 col-sm-12 live_seach_category">
+            <input class="form-control form-control-light w-100 py-2 " type="text" id="live_search_admin"
+                data-url="{{ route('live_search_admin') }}" placeholder="Search" aria-label="Search">
+        </div>
+    </div>
 
+    <div class="table-responsive list_admin">
+        @include('backend.admin.child_list')
+    </div>
+    <script>
+        $(document).ready(function() {
+
+            $(document).on('click', '.page-link', function(event) {
+                event.preventDefault();
+                var page = $(this).attr('href').split('page=')[1];
+                let key = $('.sort_list_admin').val();
+                fetch_data(page, key);
+            });
+
+            function fetch_data(page, key) {
+                $.ajax({
+                    url: "{{ route('sort_admin') }}",
+                    method: "GET",
+                    data: {
+                        page: page,
+                        key: key
+                    },
+                    success: function(data) {
+                        $('.list_admin').html(data.new_list_admin);
+                    }
+                });
+            }
+
+        });
+    </script>
 @endsection

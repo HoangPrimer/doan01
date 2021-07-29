@@ -282,11 +282,6 @@ Route::middleware(['admin'])->group(function () {
                 'uses' => 'Product_Controller@sort_product'
             ]);
 
-            Route::post('paginate', [
-                'as' => 'a.paginate',
-                'uses' => 'Product_Controller@paginate'
-            ]);
-
             Route::get('live_search_product', [
                 'as' => 'a.live_search_product',
                 'uses' => 'Product_Controller@live_search_product'
@@ -318,92 +313,248 @@ Route::middleware(['admin'])->group(function () {
             ]);
         });
 
-        Route::group(['prefix' => 'order'], function () {
-            Route::get('order-new', [
+        Route::group(['prefix' => 'don-hang'], function () {
+
+            // don hang moi
+            Route::get('don-hang-moi', [
                 'as' => 'order_new',
                 'uses' => 'Order_Controller@order_new'
             ]);
 
-            Route::get('order-onbyway', [
+            Route::get('don-hang-moi/sort', [
+                'as' => 'sort_order_new',
+                'uses' => 'Order_Controller@sort_order_new'
+            ]);
+
+            Route::get('don-hang-moi/search', [
+                'as' => 'live_search_order_new',
+                'uses' => 'Order_Controller@live_search_order_new'
+            ]);
+
+            // don hang dang giao
+            Route::get('don-dang-giao', [
                 'as' => 'order_onbyway',
                 'uses' => 'Order_Controller@order_onbyway'
             ]);
 
-            Route::get('order-done', [
-                'as' => 'oder_done',
+            Route::get('don-dang-giao/sort', [
+                'as' => 'sort_order_onbyway',
+                'uses' => 'Order_Controller@sort_order_onbyway'
+            ]);
+
+            Route::get('don-dang-giao/search', [
+                'as' => 'live_search_order_onbyway',
+                'uses' => 'Order_Controller@live_search_order_onbyway'
+            ]);
+
+            // don hang da giao
+            Route::get('don-da-giao', [
+                'as' => 'order_done',
                 'uses' => 'Order_Controller@order_done'
             ]);
 
-            Route::get('order-details/{id}', [
+            Route::get('don-da-giao/sort', [
+                'as' => 'sort_order_done',
+                'uses' => 'Order_Controller@sort_order_done'
+            ]);
+
+            Route::get('don-da-giao/search', [
+                'as' => 'live_search_order_done',
+                'uses' => 'Order_Controller@live_search_order_done'
+            ]);
+
+            // đoen đã hủy
+            Route::get('don-da-huy', [
+                'as' => 'order_cancel',
+                'uses' => 'Order_Controller@order_cancel'
+            ]);
+
+            Route::get('don-da-huy/sort', [
+                'as' => 'sort_order_cancel',
+                'uses' => 'Order_Controller@sort_order_cancel'
+            ]);
+
+            Route::get('don-da-huy/search', [
+                'as' => 'live_search_order_cancel',
+                'uses' => 'Order_Controller@live_search_order_cancel'
+            ]);
+
+
+            // chi tiết đơn hàng
+            Route::get('chi-tiet/{id}', [
                 'as' => 'order_details',
                 'uses' => 'Order_Controller@order_details'
             ]);
-            Route::get('order-details/duyet/{id}', [
+
+            Route::get('chi-tiet/duyet/{id}', [
                 'as' => 'accept',
                 'uses' => 'Order_Controller@accept'
             ]);
-            Route::get('order-details/danggiao/{id}', [
+
+            Route::get('chi-tiet/dang-giao/{id}', [
                 'as' => 'onbyway',
                 'uses' => 'Order_Controller@onbyway'
             ]);
 
-            Route::get('order-details/dagiao/{id}', [
+            Route::get('chi-tiet/da-giao/{id}', [
                 'as' => 'done',
                 'uses' => 'Order_Controller@done'
             ]);
-            Route::get('order-delete/{id}', [
-                'as' => 'del_oder',
-                'uses' => 'Order_Controller@del_oder'
+
+
+            // hủy đơn hàng
+            Route::get('huy/{id}', [
+                'as' => 'cancel_order',
+                'uses' => 'Order_Controller@cancel_order'
+            ]);
+
+            Route::get('xoa/{id}', [
+                'as' => 'del_order',
+                'uses' => 'Order_Controller@del_order'
             ]);
         });
+
         Route::group(['prefix' => 'user'], function () {
+
+            // ---------------------------- comment ----------------------------------------//
+
+            // danh sách
             Route::get('list-comment', [
                 'as' => 'list_comment',
                 'uses' => 'User_Controller@list_comment'
             ]);
-            Route::get('list-customer', [
-                'as' => 'list_customer',
-                'uses' => 'User_Controller@list_customer'
+
+            // sắp xếp
+            Route::get('list-comment/sort', [
+                'as' => 'sort_comment',
+                'uses' => 'User_Controller@sort_comment'
             ]);
-            Route::get('delete-customer/{id}', [
-                'as' => 'del_customer',
-                'uses' => 'User_Controller@del_customer'
+
+            // tìm kiếm
+            Route::get('list-comment/search', [
+                'as' => 'live_search_comment',
+                'uses' => 'User_Controller@live_search_comment'
             ]);
+
+            // xóa 
             Route::get('delete-comment/{id}', [
                 'as' => 'del_comment',
                 'uses' => 'User_Controller@del_comment'
             ]);
-            Route::get('list-user', [
-                'as' => 'list_user',
-                'uses' => 'User_Controller@list_user'
-            ]);
-            Route::get('delete-user/{id}', [
-                'as' => 'del_user',
-                'uses' => 'User_Controller@del_user'
-            ]);
+
+
+            // ---------------------------- đánh giá ----------------------------------------//
+
+            // danh sách
             Route::get('list-rate', [
                 'as' => 'list_rate',
                 'uses' => 'User_Controller@list_rate'
             ]);
-            Route::get('delete/{id}', [
+
+            // sắp xếp
+            Route::get('list-rate/sort', [
+                'as' => 'sort_rate',
+                'uses' => 'User_Controller@sort_rate'
+            ]);
+
+            // tìm kiếm
+            Route::get('list-rate/search', [
+                'as' => 'live_search_rate',
+                'uses' => 'User_Controller@live_search_rate'
+            ]);
+
+            // xóa 
+            Route::get('delete-rate/{id}', [
                 'as' => 'del_rate',
                 'uses' => 'User_Controller@del_rate'
+            ]);
+
+
+            // ----------------------------  người dùng ----------------------------------------//
+
+            // danh sách
+            Route::get('list-user', [
+                'as' => 'list_user',
+                'uses' => 'User_Controller@list_user'
+            ]);
+
+            // sắp xếp
+            Route::get('list-user/sort', [
+                'as' => 'sort_user',
+                'uses' => 'User_Controller@sort_user'
+            ]);
+
+            // tìm kiếm
+            Route::get('list-user/search', [
+                'as' => 'live_search_user',
+                'uses' => 'User_Controller@live_search_user'
+            ]);
+
+            // xóa 
+            Route::get('delete-user/{id}', [
+                'as' => 'del_user',
+                'uses' => 'User_Controller@del_user'
+            ]);
+
+
+            // ---------------------------- khách hàng ----------------------------------------//
+
+            // danh sách
+            Route::get('list-customer', [
+                'as' => 'list_customer',
+                'uses' => 'User_Controller@list_customer'
+            ]);
+
+            // sắp xếp
+            Route::get('list-customer/sort', [
+                'as' => 'sort_customer',
+                'uses' => 'User_Controller@sort_customer'
+            ]);
+
+            // tìm kiếm
+            Route::get('list-customer/search', [
+                'as' => 'live_search_customer',
+                'uses' => 'User_Controller@live_search_customer'
+            ]);
+
+            // xóa 
+            Route::get('delete-customer/{id}', [
+                'as' => 'del_customer',
+                'uses' => 'User_Controller@del_customer'
             ]);
         });
 
         Route::group(['prefix' => 'admin'], function () {
+
+
+            // ---------------------------- comment ----------------------------------------//
+
+            // danh sách
             Route::get('list', [
                 'as' => 'list_admin',
                 'uses' => 'Admin_Controller@list_admin'
             ]);
+
+            // sắp xếp
+            Route::get('list/sort', [
+                'as' => 'sort_admin',
+                'uses' => 'Admin_Controller@sort_admin'
+            ]);
+
+            // tìm kiếm
+            Route::get('list/search', [
+                'as' => 'live_search_admin',
+                'uses' => 'Admin_Controller@live_search_admin'
+            ]);
+
+            // xóa 
             Route::get('delete/{id}', [
                 'as' => 'del_admin',
                 'uses' => 'Admin_Controller@del_admin'
             ]);
-        });
-        Route::group(['prefix' => 'history'], function () {
-            Route::get('list', [
-                'as' => 'history_action',
+        
+            Route::get('history', [
+                'as' => 'history',
                 'uses' => 'Admin_Controller@list_history'
             ]);
         });

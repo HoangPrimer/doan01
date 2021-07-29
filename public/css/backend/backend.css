@@ -249,7 +249,7 @@
         border-radius: 5px;
         border-left: 3px solid;
         border: 0.5px solid #3498db;
-        animation: left 1s ease, out 2s ease 5s forwards;
+        animation: left 1s ease forwards, out 1s ease 2s forwards;
     }
     
     @keyframes left {
@@ -289,11 +289,14 @@
     .toast .toast__body {
         flex-grow: 1;
         font-size: 20px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
     }
     
     .toast .toast__icon,
     .toast .toast__close {
-        padding: 16px;
+        padding: 10px 16px;
     }
     
     .toast--success {

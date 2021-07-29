@@ -33,9 +33,34 @@
                 data-url="{{ route('live_search_category') }}" placeholder="Search" aria-label="Search">
         </div>
     </div>
-
     <div class="table-responsive list_category">
         @include('backend.category.child_list')
     </div>
+    <script>
+        $(document).ready(function() {
+
+            $(document).on('click', '.page-link', function(event) {
+                event.preventDefault();
+                var page = $(this).attr('href').split('page=')[1];
+                let key = $('.sort_list_category').val();
+                fetch_data(page, key);
+            });
+
+            function fetch_data(page, key) {
+                $.ajax({
+                    url: "{{ route('sort_category') }}",
+                    method: "GET",
+                    data: {
+                        page: page,
+                        key: key
+                    },
+                    success: function(data) {
+                        $('.list_category').html(data.new_list_category);
+                    }
+                });
+            }
+
+        });
+    </script>
 
 @endsection

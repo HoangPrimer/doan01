@@ -27,71 +27,32 @@ class Product_Controller extends Controller
         return view('backend\product\list', compact('list_product', 'all_product'));
     }
 
-    
-    function paginate(Request $request)
+    public function sort_product(Request $request)
     {
-        if ($request->ajax()) {
+        if (request()->ajax()) {
             $keys = $request->key;
             if ($keys === 'new') {
                 $list_product  = Product::orderBy('id', 'desc')->simplepaginate(20);
-                return view('backend.product.child_list', compact('list_product'))->render();
             }
             if ($keys === 'old') {
                 $list_product  = Product::orderBy('id', 'asc')->simplepaginate(20);
-                return view('backend.product.child_list', compact('list_product'))->render();
             }
             if ($keys === 'abc_asc') {
                 $list_product  = Product::orderBy('pro_code', 'asc')->simplepaginate(20);
-                return view('backend.product.child_list', compact('list_product'))->render();
             }
             if ($keys === 'abc_desc') {
                 $list_product  = Product::orderBy('pro_code', 'desc')->simplepaginate(20);
-                return view('backend.product.child_list', compact('list_product'))->render();
             }
             if ($keys === 'hot_sell') {
                 $list_product  = Product::orderBy('pro_amount_sell', 'desc')->simplepaginate(20);
-                return view('backend.product.child_list', compact('list_product'))->render();
             }
             if ($keys === 'hot') {
                 $list_product  = Product::orderBy('pro_hot', 'desc')->simplepaginate(20);
-                return view('backend.product.child_list', compact('list_product'))->render();
             }
-           
-        }
-    }
-
-    public function sort_product( Request $request )
-    {
-        if (request()->ajax()) {
-            $keys = $request-> key;
-            if ($keys === 'new') {
-                $list_product  = Product::orderBy('id', 'desc')->simplepaginate(20);
-                $abc =  view('backend.product.child_list', compact('list_product'))->render();
-            }
-            if ($keys === 'old') {
-                $list_product  = Product::orderBy('id', 'asc')->simplepaginate(20);
-                $abc = view('backend.product.child_list', compact('list_product'))->render();
-            }
-            if ($keys === 'abc_asc') {
-                $list_product  = Product::orderBy('pro_code', 'asc')->simplepaginate(20);
-                $abc = view('backend.product.child_list', compact('list_product'))->render();
-            }
-            if ($keys === 'abc_desc') {
-                $list_product  = Product::orderBy('pro_code', 'desc')->simplepaginate(20);
-                $abc =  view('backend.product.child_list', compact('list_product'))->render();
-            }
-            if ($keys === 'hot_sell') {
-                $list_product  = Product::orderBy('pro_amount_sell', 'desc')->simplepaginate(20);
-                $abc = view('backend.product.child_list', compact('list_product'))->render();
-            }
-            if ($keys === 'hot') {
-                $list_product  = Product::orderBy('pro_hot', 'desc')->simplepaginate(20);
-                $abc = view('backend.product.child_list', compact('list_product'))->render();
-            }
+            $abc = view('backend.product.child_list', compact('list_product'))->render();
             return response()->json([
                 'abc' => $abc,
             ], 200);
-          
         }
     }
 
@@ -100,20 +61,16 @@ class Product_Controller extends Controller
         $keys = $request->key;
         if ($keys == "") {
             $list_product  = Product::orderBy('id', 'desc')->simplepaginate(20);
-            $live_search_product = view('backend.product.child_list', compact('list_product'))->render();
-            return response()->json([
-                'live_search_product' => $live_search_product,
-            ], 200);
         } else {
             $list_product  = Product::where('created_at', 'like', '%' . $keys . '%')
                 ->orwhere('pro_amount_sell', 'like', '%' . $keys . '%')
                 ->orwhere('pro_code', 'like', '%' . $keys . '%')
-                ->orderBy('id','desc')->simplepaginate(20);
-            $live_search_product = view('backend.product.child_list', compact('list_product'))->render();
-            return response()->json([
-                'live_search_product' => $live_search_product,
-            ], 200);
+                ->orderBy('id', 'desc')->simplepaginate(20);
         }
+        $live_search_product = view('backend.product.child_list', compact('list_product'))->render();
+        return response()->json([
+            'live_search_product' => $live_search_product,
+        ], 200);
     }
 
 
@@ -478,7 +435,7 @@ class Product_Controller extends Controller
             $all_product = Product::all();
             $all = count($all_product);
             return response()->json([
-                'all'=>$all,
+                'all' => $all,
                 'new_list_product' => $new_list_product,
             ], 200);
         }

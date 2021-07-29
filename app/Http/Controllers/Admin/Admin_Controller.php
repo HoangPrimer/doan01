@@ -12,22 +12,73 @@ use Illuminate\Support\Facades\Validator;
 
 class Admin_Controller extends Controller
 {
+
+    // ======================================================== Admin ========================================================= //
+
+    // danh sach
     public function  list_admin(){
-        $id = Auth::id();
-        $user = User::find($id);
-        $list_admin  =   User::with('Comment')->with('Rate')->where('level','1')->orwhere('level','2')->orderBy('id','desc')->paginate(20);
-        $neww = Order::where('TrangThai','Chờ Duyệt')->get();
-        return view('backend.Admin.list',compact('list_admin','neww','user'));
+
+        $list_admin  =   User::where('level','>','0')->orderBy('id','desc')->paginate(50);
+        $all_admin =  User::where('level','>','0')->orderBy('id','desc')->get();
+        return view('backend.admin.list',compact('list_admin','all_admin'));
     }
 
-    public function  del_admin($id){
-        if(Auth::user()->level === 2 ){
-        $del_admin  =   User::with('Comment')->with('Rate')->find($id);
-        $del_admin->delete();
-        return redirect()->route('list_admin')->with('error','Đã Xóa Admin');
+    // sap xep
+    public function sort_admin(Request $request)
+    {
+        if (request()->ajax()) {
+            $keys = $request->key;
+            if ($keys === 'new') {
+                $list_admin  = User::where('level','>','0')->orderBy('id', 'desc')->paginate(50);
+            }
+            if ($keys === 'old') {
+                $list_admin  = User::where('level','>','0')->orderBy('id', 'asc')->paginate(50);
+            }
+            if ($keys === 'abc_asc') {
+                $list_admin  = User::where('level','>','0')->orderBy('name', 'asc')->paginate(50);
+            }
+            if ($keys === 'abc_desc') {
+                $list_admin  = User::where('level','>','0')->orderBy('name', 'desc')->paginate(50);
+            }
+            $new_list_admin = view('backend.admin.child_list', compact('list_admin'))->render();
+            return response()->json([
+                'new_list_admin' => $new_list_admin,
+            ], 200);
         }
-        else{
-            return redirect()->route('list_admin')->with('error','Bạn Không Có Quyền');
+    }
+
+    // tìm kiếm
+    public function live_search_admin(Request $request)
+    {
+        $keys = $request->key;
+        if ($keys == "") {
+            $list_admin = User::where('level','>','0')->orderBy('id', 'desc')->paginate(50);
+        } else {
+            $list_admin  = User::where(function ($query) use ($keys) {
+                $query->where('name', 'like', '%' . $keys . '%')
+                    ->orWhere('email', 'like', '%' . $keys . '%')
+                    ->orWhere('phone', 'like', '%' . $keys . '%');
+            })->where('level','>','0')->orderBy('id', 'desc')->paginate(50);
+        }
+        $new_list_admin = view('backend.admin.child_list', compact('list_admin'))->render();
+        return response()->json([
+            'new_list_admin' => $new_list_admin,
+        ], 200);
+    }
+
+    // xóa
+    public function  del_admin($id)
+    {
+        if (request()->ajax()) {
+            $del_admin = User::find($id);
+            $del_admin->delete();
+            $all = count(User::where('level','>','0')->get());
+            $list_admin  = User::where('level','>','0')->orderBy('id', 'desc')->paginate(50);
+            $new_list_admin = view('backend.admin.child_list', compact('list_admin'))->render();
+            return response()->json([
+                'all' => $all,
+                'new_list_admin'  => $new_list_admin,
+            ], 200);
         }
     }
 

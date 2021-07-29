@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Validator;
 class Category_Controller extends Controller
 {
 
+    // danh sachs danh muc
     public function list_category()
     {
         $list_category  = Category::orderBy('id', 'desc')->simplepaginate(20);
@@ -30,20 +31,18 @@ class Category_Controller extends Controller
             $keys = $request->key;
             if ($keys === 'new') {
                 $list_category  = Category::orderBy('id', 'desc')->simplepaginate(20);
-                $new_list_category = view('backend.category.child_list', compact('list_category'))->render();
             }
             if ($keys === 'old') {
                 $list_category  = Category::orderBy('id', 'asc')->simplepaginate(20);
-                $new_list_category = view('backend.category.child_list', compact('list_category'))->render();
             }
             if ($keys === 'abc_asc') {
                 $list_category  = Category::orderBy('c_name', 'asc')->simplepaginate(20);
-                $new_list_category = view('backend.category.child_list', compact('list_category'))->render();
             }
             if ($keys === 'abc_desc') {
                 $list_category  = Category::orderBy('c_name', 'desc')->simplepaginate(20);
-                $new_list_category = view('backend.category.child_list', compact('list_category'))->render();
             }
+            $new_list_category = view('backend.category.child_list', compact('list_category'))->render();
+
             return response()->json([
                 'new_list_category' => $new_list_category,
             ], 200);
@@ -56,21 +55,17 @@ class Category_Controller extends Controller
         $keys = $request->key;
         if ($keys == "") {
             $list_category  = Category::orderBy('id', 'desc')->simplepaginate(20);
-            $live_search_category = view('backend.category.child_list', compact('list_category'))->render();
-            return response()->json([
-                'live_search_category' => $live_search_category,
-            ], 200);
         } else {
             $list_category  = Category::where('c_name', 'like', '%' . $keys . '%')
                 ->orwhere('c_slug', 'like', '%' . $keys . '%')
                 ->orwhere('c_desc', 'like', '%' . $keys . '%')
                 ->orwhere('c_status', 'like', '%' . $keys . '%')
                 ->orwhere('created_at', 'like', '%' . $keys . '%')->orderBy('id', 'desc')->simplepaginate(20);
-            $live_search_category = view('backend.category.child_list', compact('list_category'))->render();
-            return response()->json([
-                'live_search_category' => $live_search_category,
-            ], 200);
         }
+        $live_search_category = view('backend.category.child_list', compact('list_category'))->render();
+        return response()->json([
+            'live_search_category' => $live_search_category,
+        ], 200);
     }
 
 
@@ -118,16 +113,6 @@ class Category_Controller extends Controller
                 $category->c_slug = $slug;
                 $category->save();
 
-                activity()
-                    ->withProperties([
-                        'customProperty' => 'customValue',
-                        'aaa' => 'aaaaaaa',
-                        'aaa' => 'aaaaaaa',
-                        'aaa' => 'aaaaaaa',
-                        'aaa' => 'aaaaaaa',
-                    ])
-                    ->log('Look mum, I logged something');
-
                 return response()->json([
                     'code' => 300,
                 ], 200);
@@ -150,7 +135,6 @@ class Category_Controller extends Controller
             if ($request->c_name == "") {
                 $data = Validator::make(
                     $request->all(),
-
                     [
                         'c_desc' => 'bail|required|min:20',
                     ],
@@ -160,11 +144,8 @@ class Category_Controller extends Controller
                     ],
                 );
             } else {
-
                 $data = Validator::make(
-
                     $request->all(),
-
                     [
                         'c_name' => 'bail|min:5|max:40|unique:categories,c_name',
                         'c_desc' => 'bail|required|min:20',
@@ -189,18 +170,15 @@ class Category_Controller extends Controller
             } else {
                 $update_category = Category::find($id);
                 if ($request->c_name == "") {
-
                     $update_category->c_desc = $request->c_desc;
                     $update_category->update();
                 } else {
-
                     $slug = Str::slug($request->c_name);
                     $update_category->c_name = $request->c_name;
                     $update_category->C_slug = $slug;
                     $update_category->C_desc = $request->c_desc;
                     $update_category->update();
                 }
-
                 return response()->json([
                     'code' => 300,
                 ], 200);
@@ -216,10 +194,8 @@ class Category_Controller extends Controller
         if (request()->ajax()) {
             $delete_category = Category::find($id);
             $delete_category->delete();
-
             $all_category = Category::all();
             $all = count($all_category);
-
             $list_category  = Category::orderBy('id', 'desc')->simplepaginate(20);
             $new_list_category = view('backend.category.child_list', compact('list_category'))->render();
             return response()->json([
@@ -237,7 +213,6 @@ class Category_Controller extends Controller
             $show_hide = Category::find($id);
             $show_hide->c_status = !$show_hide->c_status;
             $show_hide->save();
-
             $hide_category =  Category::find($id);
             $hide = $hide_category->c_status;
             return response()->json([

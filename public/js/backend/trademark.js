@@ -1,4 +1,4 @@
-//hien thi anh logo thuong hieu
+// hien thi anh logo thuong hieu
 
 $(document).on('change', '#tr_logo', function upload_logo_trademark() {
 

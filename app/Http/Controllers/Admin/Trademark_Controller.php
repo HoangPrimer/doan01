@@ -25,20 +25,17 @@ class Trademark_Controller extends Controller
             $keys = $request->key;
             if ($keys === 'new') {
                 $list_trademark  = Trademark::orderBy('id', 'desc')->simplepaginate(20);
-                $new_list_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render();
             }
             if ($keys === 'old') {
                 $list_trademark  = Trademark::orderBy('id', 'asc')->simplepaginate(20);
-                $new_list_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render(); 
             }
             if ($keys === 'abc_asc') {
                 $list_trademark  = Trademark::orderBy('tr_name', 'asc')->simplepaginate(20);
-                $new_list_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render();
             }
             if ($keys === 'abc_desc') {
                 $list_trademark  = Trademark::orderBy('tr_name', 'desc')->simplepaginate(20);
-                $new_list_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render(); 
             }
+            $new_list_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render();
             return response()->json([
                 'new_list_trademark' => $new_list_trademark,
             ], 200);
@@ -49,22 +46,18 @@ class Trademark_Controller extends Controller
     {
         $keys = $request->key;
         if ($keys == "") {
-            $list_trademark  = Trademark::orderBy('id', 'desc')->simplepaginate(20);
-            $live_search_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render();
-            return response()->json([
-                'live_search_trademark' => $live_search_trademark,
-            ], 200);
+            $list_trademark  = Trademark::orderBy('id', 'desc')->simplepaginate(20); 
         } else {
             $list_trademark  = Trademark::where('tr_name', 'like', '%' . $keys . '%')
                 ->orwhere('tr_slug', 'like', '%' . $keys . '%')
                 ->orwhere('tr_logo', 'like', '%' . $keys . '%')
                 ->orwhere('tr_desc', 'like', '%' . $keys . '%')
                 ->orwhere('created_at', 'like', '%' . $keys . '%')->orderBy('id', 'desc')->simplepaginate(20);
-            $live_search_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render();
-            return response()->json([
-                'live_search_trademark' => $live_search_trademark,
-            ], 200);
         }
+        $live_search_trademark = view('backend.trademark.child_list', compact('list_trademark'))->render();
+        return response()->json([
+            'live_search_trademark' => $live_search_trademark,
+        ], 200);
     }
     // tao moi thương hiệu san pham
 
@@ -79,11 +72,9 @@ class Trademark_Controller extends Controller
         if (request()->ajax()) {
             $data = Validator::make(
                 $request->all(),
-
                 [
                     'tr_name' => 'bail|required|unique:trademarks,tr_name|min:3|max:30',
                     'tr_logo' => 'bail|image',
-
                 ],
                 [
                     'tr_name.required' => 'Vui lòng nhập tên thương hiệu!',
@@ -91,7 +82,6 @@ class Trademark_Controller extends Controller
                     'tr_name.max' => 'Tên dài tối đa 30 ký tự',
                     'tr_name.unique' => 'Thương hiệu đã tồn tại',
                     'tr_logo.image' => 'Ảnh không đúng định dạng ! ',
-
                 ],
             );
             if ($data->fails()) {
@@ -176,7 +166,6 @@ class Trademark_Controller extends Controller
                         $file = $request->file('tr_logo');
                         $file_name = $file->getClientOriginalName();
                         $name_random = rand(1000000000000, 9999999999999) . '_' . $file_name;
-
                         $file->move("./image/Image_Thuonghieu", $name_random);
                         $update_trademark->tr_logo = "/image/Image_Thuonghieu/$name_random";
                     }
@@ -198,7 +187,6 @@ class Trademark_Controller extends Controller
                     }
                     $update_trademark->update();
                 }
-
                 return response()->json([
                     'code' => 300,
                 ], 200);

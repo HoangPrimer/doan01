@@ -10,67 +10,277 @@ use Illuminate\Http\Request;
 use  App\Action_Admin;
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Query\Builder;
+
 class Order_Controller extends Controller
 {
-    public function order_new(){
-      
-        $list_product  =  Order::where('od_status','Chờ Duyệt')->orwhere('od_status','Đã Duyệt')->orderBy('id','desc')->paginate(20);
-        return view('backend.order.Oder_New',compact('list_product'));
+    // đơn hàng mới
+    public function order_new()
+    {
+        $list_order_new  =  Order::where('od_status', 'Chờ Duyệt')->orwhere('od_status', 'Đã Duyệt')->orderBy('id', 'desc')->simplepaginate(20);
+        $all_order_new = Order::where('od_status', 'Chờ Duyệt')->orwhere('od_status', 'Đã Duyệt')->orderBy('id', 'desc')->get();
+        return view('backend.order.order_new', compact('list_order_new','all_order_new'));
     }
 
-    public function order_onbyway(){
-
-        $order_onbyway  =  Order::where('TrangThai','Đang Giao')->orderBy('id','desc')->paginate(20);
-        return view('backend.Oder.Oder_Onbyway',compact('order_onbyway'));
+    public function sort_order_new(Request $request)
+    {
+        if (request()->ajax()) {
+            $keys = $request->key;
+            if ($keys === 'new') {
+                $list_order_new  = Order::where('od_status', 'Chờ Duyệt')->orwhere('od_status', 'Đã Duyệt')->orderBy('id', 'desc')->simplepaginate(20);
+            }
+            if ($keys === 'old') {
+                $list_order_new  = Order::where('od_status', 'Chờ Duyệt')->orwhere('od_status', 'Đã Duyệt')->orderBy('id', 'asc')->simplepaginate(20);
+            }
+            if ($keys === 'abc_asc') {
+                $list_order_new  = Order::where('od_status', 'Chờ Duyệt')->orwhere('od_status', 'Đã Duyệt')->orderBy('od_name', 'asc')->simplepaginate(20);
+            }
+            if ($keys === 'abc_desc') {
+                $list_order_new  = Order::where('od_status', 'Chờ Duyệt')->orwhere('od_status', 'Đã Duyệt')->orderBy('od_name', 'desc')->simplepaginate(20);
+            }
+            $new_list_order_new = view('backend.order.child_order_new', compact('list_order_new'))->render();
+            return response()->json([
+                'new_list_order_new' => $new_list_order_new,
+            ], 200);
+        }
     }
 
-    public function order_done(){
-     
-        $order_done  =  Order::where('TrangThai','Đã Giao')->orderBy('id','desc')->paginate(20);
-        return view('backend.Oder.Oder_Dilivered',compact('order_done'));
+    public function live_search_order_new(Request $request)
+    {
+
+        if (request()->ajax()) {
+            $keys = $request->key;
+            if ($keys == "") {
+                $list_order_new  = Order::where('od_status', 'Chờ Duyệt')->orwhere('od_status', 'Đã Duyệt')->orderBy('id', 'desc')->simplepaginate(20);
+            } else {
+                $list_order_new  = Order::where(function ($query) use ($keys) {
+                    $query->where('od_name', 'like', '%' . $keys . '%')
+                        ->orWhere('od_email', 'like', '%' . $keys . '%')
+                        ->orWhere('od_phone', 'like', '%' . $keys . '%');
+                })->where(function ($query) {
+                    $query->where('od_status', 'Chờ Duyệt')
+                        ->orWhere('od_status', 'Đã Duyệt');
+                })->orderBy('id', 'desc')->simplepaginate(20);
+            }
+            $new_list_order_new = view('backend.order.child_order_new', compact('list_order_new'))->render();
+            return response()->json([
+                'new_list_order_new' => $new_list_order_new,
+            ], 200);
+        }
     }
 
-    public function order_details( $id){
 
-        $order_details  =  Order::with('Item')->find($id);
-        return view('backend.Oder.Oder_Details',compact('order_details'));
+    // đơn hàng đang giao
+    public function order_onbyway()
+    {
+        $all_order_onbyway  =  Order::where('od_status', 'Đang Giao')->orderBy('id', 'desc')->get();
+        $list_order_onbyway  =  Order::where('od_status', 'Đang Giao')->orderBy('id', 'desc')->simplepaginate(20);
+        return view('backend.order.order_onbyway', compact('list_order_onbyway','all_order_onbyway'));
     }
 
-    public function onbyway($id){
+    public function sort_order_onbyway(Request $request)
+    {
+        if (request()->ajax()) {
+            $keys = $request->key;
+            if ($keys === 'new') {
+                $list_order_onbyway  = Order::where('od_status', 'Đang Giao')->orderBy('id', 'desc')->simplepaginate(20);
+            }
+            if ($keys === 'old') {
+                $list_order_onbyway  = Order::where('od_status', 'Đang Giao')->orderBy('id', 'asc')->simplepaginate(20);
+            }
+            if ($keys === 'abc_asc') {
+                $list_order_onbyway  = Order::where('od_status', 'Đang Giao')->orderBy('od_name', 'asc')->simplepaginate(20);
+            }
+            if ($keys === 'abc_desc') {
+                $list_order_onbyway  = Order::where('od_status', 'Đang Giao')->orderBy('od_name', 'desc')->simplepaginate(20);
+            }
+            $new_list_order_onbyway = view('backend.order.child_order_onbyway', compact('list_order_onbyway'))->render();
+            return response()->json([
+                'new_list_order_onbyway' => $new_list_order_onbyway,
+            ], 200);
+        }
+    }
+
+    public function live_search_order_onbyway(Request $request)
+    {
+
+        $keys = $request->key;
+        if ($keys == "") {
+            $list_order_onbyway  = Order::where('od_status', 'Đang Giao')->orderBy('id', 'desc')->simplepaginate(20);
+        } else {
+            $list_order_onbyway  = Order::where(function ($query) use ($keys) {
+                $query->where('od_name', 'like', '%' . $keys . '%')
+                    ->orWhere('od_email', 'like', '%' . $keys . '%')
+                    ->orWhere('od_phone', 'like', '%' . $keys . '%');
+            })->where('od_status', 'Đang Giao')->orderBy('id', 'desc')->simplepaginate(20);
+        }
+        $new_list_order_onbyway = view('backend.order.child_order_onbyway', compact('list_order_onbyway'))->render();
+        return response()->json([
+            'new_list_order_onbyway' => $new_list_order_onbyway,
+        ], 200);
+    }
+
+    // đơn hàng đã giao
+    public function order_done()
+    {
+        $all_order_done  =  Order::where('od_status', 'Đã Giao')->orderBy('id', 'desc')->get();
+        $list_order_done  =  Order::where('od_status', 'Đã Giao')->orderBy('id', 'desc')->simplepaginate(20);
+        return view('backend.order.order_done', compact('list_order_done','all_order_done'));
+    }
+
+
+    public function sort_order_done(Request $request)
+    {
+        if (request()->ajax()) {
+            $keys = $request->key;
+            if ($keys === 'new') {
+                $list_order_done  = Order::where('od_status', 'Đã Giao')->orderBy('id', 'desc')->simplepaginate(20);
+            }
+            if ($keys === 'old') {
+                $list_order_done  = Order::where('od_status', 'Đã Giao')->orderBy('id', 'asc')->simplepaginate(20);
+            }
+            if ($keys === 'abc_asc') {
+                $list_order_done  = Order::where('od_status', 'Đã Giao')->orderBy('od_name', 'asc')->simplepaginate(20);
+            }
+            if ($keys === 'abc_desc') {
+                $list_order_done  = Order::where('od_status', 'Đã Giao')->orderBy('od_name', 'desc')->simplepaginate(20);
+            }
+            $new_list_order_done = view('backend.order.child_order_done', compact('list_order_done'))->render();
+            return response()->json([
+                'new_list_order_done' => $new_list_order_done,
+            ], 200);
+        }
+    }
+
+    public function live_search_order_done(Request $request)
+    {
+
+        $keys = $request->key;
+        if ($keys == "") {
+            $list_order_done  = Order::where('od_status', 'Đã Giao')->orderBy('id', 'desc')->simplepaginate(20);
+        } else {
+            $list_order_done  = Order::where(function ($query) use ($keys) {
+                $query->where('od_name', 'like', '%' . $keys . '%')
+                    ->orWhere('od_email', 'like', '%' . $keys . '%')
+                    ->orWhere('od_phone', 'like', '%' . $keys . '%');
+            })->where('od_status', 'Đã Giao')->orderBy('id', 'desc')->simplepaginate(20);
+        }
+        $new_list_order_done = view('backend.order.child_order_done', compact('list_order_done'))->render();
+        return response()->json([
+            'new_list_order_done' => $new_list_order_done,
+        ], 200);
+    }
+
+    // đơn đã hủy
+    public function order_cancel()
+    {
+        $all_order_cancel =  Order::where('od_status', 'Đã Hủy')->orderBy('id', 'desc')->get();
+        $list_order_cancel =  Order::where('od_status', 'Đã Hủy')->orderBy('id', 'desc')->simplepaginate(20);
+        return view('backend.order.order_cancel', compact('list_order_cancel','all_order_cancel'));
+    }
+
+
+    public function sort_order_cancel(Request $request)
+    {
+        if (request()->ajax()) {
+            $keys = $request->key;
+            if ($keys === 'new') {
+                $list_order_cancel  = Order::where('od_status', 'Đã Hủy')->orderBy('id', 'desc')->simplepaginate(20);
+            }
+            if ($keys === 'old') {
+                $list_order_cancel  = Order::where('od_status', 'Đã Hủy')->orderBy('id', 'asc')->simplepaginate(20);
+            }
+            if ($keys === 'abc_asc') {
+                $list_order_cancel  = Order::where('od_status', 'Đã Hủy')->orderBy('od_name', 'asc')->simplepaginate(20);
+            }
+            if ($keys === 'abc_desc') {
+                $list_order_cancel  = Order::where('od_status', 'Đã Hủy')->orderBy('od_name', 'desc')->simplepaginate(20);
+            }
+            $new_list_order_cancel = view('backend.order.child_order_cancel', compact('list_order_cancel'))->render();
+            return response()->json([
+                'new_list_order_cancel' => $new_list_order_cancel,
+            ], 200);
+        }
+    }
+
+    public function live_search_order_cancel(Request $request)
+    {
+
+        $keys = $request->key;
+        if ($keys == "") {
+            $list_order_cancel  = Order::where('od_status', 'Đã Hủy')->orderBy('id', 'desc')->simplepaginate(20);
+        } else {
+            $list_order_cancel  = Order::where(function ($query) use ($keys) {
+                $query->where('od_name', 'like', '%' . $keys . '%')
+                    ->orWhere('od_email', 'like', '%' . $keys . '%')
+                    ->orWhere('od_phone', 'like', '%' . $keys . '%');
+            })->where('od_status', 'Đã Hủy')->orderBy('id', 'desc')->simplepaginate(20);
+        }
+        $new_list_order_cancel = view('backend.order.child_order_cancel', compact('list_order_cancel'))->render();
+        return response()->json([
+            'new_list_order_cancel' => $new_list_order_cancel,
+        ], 200);
+    }
+
+
+
+    // chi tiết đơn hàng
+    public function order_details($id)
+    {
+
+        $order_details  =  Order::find($id);
+        return view('backend.order.order_details', compact('order_details'));
+    }
+
+    public function accept($id)
+    {
+        $accept = Order::find($id);
+        $accept->od_status = 'Đã Duyệt';
+        $accept->save();
+        return  redirect()->back()->with('message', 'Cập Nhật Thành Công');
+    }
+
+    public function onbyway($id)
+    {
         $onbyway = Order::find($id);
-        $onbyway->TrangThai = 'Đang Giao';
+        $onbyway->od_status = 'Đang Giao';
         $onbyway->save();
-        return  redirect()->route('order_new')->with('message','Cập Nhật Thành Công');
+        return  redirect()->back()->with('message', 'Cập Nhật Thành Công');
     }
 
-    public function done($id){
+    public function done($id)
+    {
         $done = Order::find($id);
-        $done->TrangThai = 'Đã Giao';
+        $done->od_status = 'Đã Giao';
         $done->save();
         $a = $done->Item()->get();
-        foreach($a as $b){
-             $masp  = $b->MaSP;
-             $soluong = $b->SoLuong;
-             $find = Product::where('MaSP',$masp)->get();
-             foreach($find as $dd){
-                $dd->SoLuong -= $soluong;
-                $dd->SoLuongBan += $soluong;
-                 $dd->save();
-             }   
-        } 
-        return  redirect()->route('order_new')->with('message','Cập Nhật Thành Công');
+
+        foreach ($a as $b) {
+            $find = Product::where('pro_code', $b->i_product_code)->first();
+            $find->pro_amount -= $b->i_amount;
+            $find->pro_amount_sell += $b->i_amount;
+            $find->save();
+        }
+        return  redirect()->back()->with('message', 'Cập Nhật Thành Công');
     }
 
-    public function accept($id){
-        $accept = Order::find($id);
-        $accept->TrangThai = 'Đã Duyệt';
-        $accept->save();
-        return  redirect()->route('order_new')->with('message','Cập Nhật Thành Công');
+    // hủy đon hàng
+    public function cancel_order($id)
+    {
+        $onbyway = Order::find($id);
+        $onbyway->od_status = 'Đã Hủy';
+        $onbyway->save();
+        return  redirect()->back()->with('message', 'Cập Nhật Thành Công');
     }
 
-    public function del_oder($id){
-        $del_oder = Order::find($id);
-        $del_oder->delete();
-        return  redirect()->route('order_new')->with('error','Đã Xóa');
+    public function del_order($id)
+    {
+        if (request()->ajax()) {
+            $del_oder = Order::find($id);
+            $del_oder->delete();
+            return response()->json([
+                'success' => 200,
+            ]);
+        }
     }
 }

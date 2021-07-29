@@ -117,7 +117,7 @@ class Cart_Controller extends Controller
                 }
                 session()->forget('cart');
                 $cart = session()->get('cart');
-                $shopcart = view('frontend.cart.cartcomponent',compact('cart'))->render();
+                $shopcart = view('frontend.cart.cartcomponent', compact('cart'))->render();
                 $headers = view('frontend.layout.header', compact('cart'))->render();
                 return response()->json([
                     'code' => 300,
@@ -133,7 +133,7 @@ class Cart_Controller extends Controller
 
     public function create($id)
     {
-   // session()->forget('cart');
+        //session()->forget('cart');
         $product = Product::find($id);
 
         $cart = session()->get('cart');
@@ -142,7 +142,10 @@ class Cart_Controller extends Controller
         } else {
             if ($product->pro_sale === 0) {
                 $cart[$id] = [
+                    'id' => $product->pro_slug,
+                    'category_slug' => $product->Category->c_slug,
                     'masp' => $product->pro_code,
+                    'anh' => $product->Image->first()->img_file_path,
                     'thuonghieu' => $product->Trademark->tr_name,
                     'price' => $product->pro_price,
                     'soluong' => 1,
@@ -150,13 +153,14 @@ class Cart_Controller extends Controller
             } else {
                 $cart[$id] = [
                     'masp' => $product->pro_code,
+                    'anh' => $product->Image->img_file_path,
                     'thuonghieu' => $product->Trademark->tr_name,
                     'price' => $product->pro_sale,
                     'soluong' => 1,
                 ];
             }
         }
-        $cart = session()->put('cart',$cart);
+        $cart = session()->put('cart', $cart);
         $cart = session()->get('cart');
         $header = view('frontend.layout.header', compact('cart'))->render();
 

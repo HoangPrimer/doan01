@@ -6,21 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Home</title>
-    <link rel="stylesheet" href="{{ asset ('/bootstaps5/css/bootstrap.css') }}">
-    <link rel="stylesheet" href="{{asset('css/backend/backend.css')}}">
-    <link href="{{asset('css/fontawesome-free-5.15.3-web/css/all.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('/bootstaps5/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/backend.css') }}">
+    <link href="{{ asset('css/fontawesome-free-5.15.3-web/css/all.css') }}" rel="stylesheet">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <!-- <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
     <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
     <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script> 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
-    <a id="url_list_category" data-url="{{route('list_category')}}" hidden>location</a>
-    <a id="url_list_trademark" data-url="{{route('list_trademark')}}" hidden>location</a>
-    <a id="url_list_product" data-url="{{route('a.list_product')}}" hidden>location</a>
+    <a id="url_list_category" data-url="{{ route('list_category') }}" hidden>location</a>
+    <a id="url_list_trademark" data-url="{{ route('list_trademark') }}" hidden>location</a>
+    <a id="url_list_product" data-url="{{ route('a.list_product') }}" hidden>location</a>
 
+    @if(session('message'))
+    <div id="toast">
+        <div class="toast toast--success">
+            <div class="toast__icon">
+                <i class="far fa-check-circle"></i>
+            </div>
+            <div class="toast__body">
+                <p class="m-0">{{ session('message') }}</p>
+            </div>
+            <div class="toast__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </div>
+    @endif
+    
     @include('backend.layout.header')
     <div class="container-fluid  ">
         <div class="row">
@@ -50,7 +67,9 @@
     <script type="text/javascript" src="/js/backend/category.js"></script>
     <script type="text/javascript" src="/js/backend/trademark.js"></script>
     <script type="text/javascript" src="/js/backend/product.js"></script>
-    {{-- <script type="text/javascript" src="/js/backend/order.js"></script> --}}
+    <script type="text/javascript" src="/js/backend/order.js"></script>
+    <script type="text/javascript" src="/js/backend/user.js"></script>
+    <script type="text/javascript" src="/js/backend/admin.js"></script>
     <script src="/bootstaps5/js/bootstrap.js"></script>
 </body>
 

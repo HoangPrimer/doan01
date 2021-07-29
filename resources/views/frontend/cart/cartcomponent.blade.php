@@ -3,25 +3,28 @@
          @csrf
          <div class="table-responsive">
              <table class="table table-bordered border-primary">
-                 <thead>
+                 <thead >
                      <tr>
-                         <td>
-                             <p class="fs-4">STT</p>
+                         <td >
+                             <p class="fs-5">STT</p>
                          </td>
-                         <td>
-                             <p class="fs-4">Tên Sản Phẩm</p>
+                         <td >
+                             <p class="fs-5">Tên Sản Phẩm</p>
                          </td>
-                         <td>
-                             <p class="fs-4">Đơn Giá</p>
+                         <td >
+                             <p class="fs-5">Ảnh</p>
                          </td>
-                         <td>
-                             <p class="fs-4">Số Lượng</p>
+                         <td >
+                             <p class="fs-5">Đơn Giá</p>
                          </td>
-                         <td>
-                             <p class="fs-4">Thành Tiền</p>
+                         <td >
+                             <p class="fs-5">Số Lượng</p>
                          </td>
-                         <td>
-                             <p class="fs-4">Hành Động</p>
+                         <td >
+                             <p class="fs-5">Thành Tiền</p>
+                         </td>
+                         <td >
+                             <p class="fs-5">Hành Động</p>
                          </td>
                      </tr>
                  </thead>
@@ -36,26 +39,29 @@
                          @endphp
                          <tr>
                              <td>
-                                 <p class="fs-4">{{ $id += 1 }}</p>
+                                 <p class="fs-5">{{ $id += 1 }}</p>
                              </td>
                              <td>
-                                 <p class="fs-4">Đồng hồ {{ $ac['thuonghieu'] }} {{ $ac['masp'] }}</p>
+                                 <a href="{{ route('product.index',['category' => $ac['category_slug'], 'id' => $ac['id']]) }}" class="fs-5">Đồng hồ {{ $ac['thuonghieu'] }} {{ $ac['masp'] }}</a>
+                             </td>
+                             <td style="width: 110px">
+                                 <img src="{{ $ac['anh'] }}" alt="" style="width: 100px">
                              </td>
                              <td>
-                                 <p class="fs-4">{{ number_format($ac['price']) }} VNĐ</p>
+                                 <p class="fs-5">{{ number_format($ac['price']) }} VNĐ</p>
                              </td>
-                             <td><input class="form-control soluong" type="number" value="{{ $ac['soluong'] }}"
+                             <td style="width: 100px"><input class="form-control soluong" type="number" value="{{ $ac['soluong'] }}"
                                      min="1">
                              </td>
                              <td>
-                                 <p class="fs-4">{{ number_format($ac['price'] * $ac['soluong']) }} VNĐ</p>
+                                 <p class="fs-5">{{ number_format($ac['price'] * $ac['soluong']) }} VNĐ</p>
                              </td>
-                             <td>
+                             <td style="width: 160px">
                                  <div class="btn-group d-flex flex-wrap justify-content-between">
                                      <a href="" data-id="{{ $key }}" data-url="{{ route('cart.update') }}"
-                                         class="cart_update btn-primary fs-4 p-2 my-1 me-3">Cập nhật</a>
+                                         class="cart_update btn-primary fs-5 p-2 my-1 me-3">Cập nhật</a>
                                      <a href="" data-id="{{ $key }}" data-url="{{ route('cart.delete') }}"
-                                         class="del_cart btn-danger fs-4 p-2 my-1">Xóa</a>
+                                         class="del_cart btn-danger fs-5 p-2 my-1">Xóa</a>
                                  </div>
                              </td>
                          </tr>
@@ -69,54 +75,54 @@
          <div class="col-lg-6">
              @if (Auth::check())
                  <div class="mb-4">
-                     <span class="fs-3"><i class="fas fa-signature"></i> Họ Tên : </span>
+                     <span class="fs-5"><i class="fas fa-signature me-2"></i> Họ Tên : </span>
                      <div class="my-2 d-flex align-items-center">
                          <input class="form-control" type="text" name="name" value="{{ Auth::user()->name }}">
                      </div>
                      <p class="err_name text-danger fs-5"></p>
                  </div>
                  <div class="mb-4">
-                     <span class="fs-3"> <i class="fas fa-mobile-alt"></i> Số Điện Thoại :</span>
+                     <span class="fs-5"> <i class="fas fa-mobile-alt me-2"></i> Số Điện Thoại :</span>
                      <div class="my-2 d-flex align-items-center">
                          <input class="form-control" type="number" name="phone" value="{{ Auth::user()->phone }}">
                      </div>
                      <p class="err_phone text-danger fs-5"></p>
                  </div>
                  <div class="mb-4">
-                     <span class="fs-3"> <i class="fas fa-at"></i>Email :</span>
+                     <span class="fs-5"> <i class="fas fa-at me-2"></i>Email :</span>
                      <div class="my-2 d-flex align-items-center">
                          <input class="form-control" type="email" name="email" value="{{ Auth::user()->email }}">
                      </div>
                      <p class="err_email text-danger fs-5"></p>
                  </div>
                  <div class="mb-4">
-                     <span class="fs-3"> <i class="fas fa-map-marked-alt"></i>Địa Chỉ :</span>
+                     <span class="fs-5"> <i class="fas fa-map-marked-alt me-2"></i>Địa Chỉ :</span>
                      <div class="my-2 d-flex align-items-center">
                          <input class="form-control" type="text" name="address" value="{{ Auth::user()->address }}">
                      </div>
                      <p class="err_address text-danger fs-5"></p>
                  </div>
                  <div class="mb-4">
-                     <span class="fs-3"><i class="fas fa-venus-mars"></i>Giới tính :</span>
+                     <span class="fs-5"><i class="fas fa-venus-mars me-2"></i>Giới tính :</span>
                      <div class="my-2 d-flex align-items-center">
-                         <input class="form-check-input fs-4" type="radio" name="gender" value="Nam"><span
-                             class="mx-3 fs-4">Nam</span>
-                         <input class="form-check-input fs-4" type="radio" name="gender" value="Nữ"><span
-                             class="mx-3 fs-4">Nữ</span>
+                         <input class="form-check-input fs-5" type="radio" name="gender" value="Nam"><span
+                             class="mx-3 fs-5">Nam</span>
+                         <input class="form-check-input fs-5" type="radio" name="gender" value="Nữ"><span
+                             class="mx-3 fs-5">Nữ</span>
                      </div>
                      <p class="err_gender text-danger fs-5"></p>
                  </div>
                  <div class="mb-4">
-                     <span class="fs-3"><i class="fas fa-dollar-sign"></i>Thanh Toán :</span>
+                     <span class="fs-5"><i class="fas fa-dollar-sign me-2"></i>Thanh Toán :</span>
                      <div class="my-2 d-flex align-items-center">
-                         <input class="form-check-input fs-4 me-3" type="radio" name="payment"
+                         <input class="form-check-input fs-5 me-3" type="radio" name="payment"
                              value="Thanh Toán Khi Nhận Hàng">
-                         <span class="fs-4">Thanh Toán Khi Nhận Hàng</span>
+                         <span class="fs-5">Thanh Toán Khi Nhận Hàng</span>
                      </div>
                      <p class="err_payment text-danger fs-5"></p>
                  </div>
                  <div class="mb-4">
-                     <span class="fs-3"> <i class="fas fa-clipboard-list"></i> Ghi Chú :</span>
+                     <span class="fs-5"> <i class="fas fa-clipboard-list me-2"></i> Ghi Chú :</span>
                      <div class="my-2">
                          <textarea class="form-control" name="note" min="5"> </textarea>
                      </div>
@@ -126,21 +132,21 @@
                  </div>
              @else
                  <div class="mb-4">
-                     <span class="fs-3"><i class="fas fa-signature"></i> Họ Tên : </span>
+                     <span class="fs-5"><i class="fas fa-signature me-2"></i> Họ Tên : </span>
                      <div class="my-2 d-flex align-items-center">
                          <input class="form-control" type="text" name="name" placeholder="Nhập họ tên ...">
                      </div>
                      <p class="err_name text-danger fs-5"></p>
                  </div>
                  <div class="mb-4">
-                     <span class="fs-3"> <i class="fas fa-mobile-alt"></i> Số Điện Thoại :</span>
+                     <span class="fs-5"> <i class="fas fa-mobile-alt me-2"></i> Số Điện Thoại :</span>
                      <div class="my-2 d-flex align-items-center">
                          <input class="form-control" type="number" name="phone" placeholder="Nhập số điện thoại ...">
                      </div>
                      <p class="err_phone text-danger fs-5"></p>
                  </div>
                  <div class="mb-4">
-                     <span class="fs-3"> <i class="fas fa-map-marked-alt"></i>Địa Chỉ :</span>
+                     <span class="fs-5"> <i class="fas fa-map-marked-alt me-2"></i>Địa Chỉ :</span>
                      <div class="my-2 d-flex align-items-center">
                          <input class="form-control" type="text" name="address"
                              placeholder="số nhà, đường, phố, xã phường, quận huyện, tỉnh thành phố ...">
@@ -148,33 +154,33 @@
                      <p class="err_address text-danger fs-5"></p>
                  </div>
                  <div class="mb-4">
-                     <span class="fs-3"> <i class="fas fa-at"></i>Email :</span>
+                     <span class="fs-5"> <i class="fas fa-at me-2"></i>Email :</span>
                      <div class="my-2 d-flex align-items-center">
                          <input class="form-control" type="email" name="email" placeholder="Nhập email ...">
                      </div>
                      <p class="err_email text-danger fs-5"></p>
                  </div>
                  <div class="mb-4">
-                     <span class="fs-3"><i class="fas fa-venus-mars"></i>Giới tính :</span>
+                     <span class="fs-5"><i class="fas fa-venus-mars me-2"></i>Giới tính :</span>
                      <div class="my-2 d-flex align-items-center">
-                         <input class="form-check-input fs-4" type="radio" name="gender" value="Nam"><span
-                             class="mx-3 fs-4">Nam</span>
-                         <input class="form-check-input fs-4" type="radio" name="gender" value="Nữ"><span
-                             class="mx-3 fs-4">Nữ</span>
+                         <input class="form-check-input fs-5" type="radio" name="gender" value="Nam"><span
+                             class="mx-3 fs-5">Nam</span>
+                         <input class="form-check-input fs-5" type="radio" name="gender" value="Nữ"><span
+                             class="mx-3 fs-5">Nữ</span>
                      </div>
                      <p class="err_gender text-danger fs-5"></p>
                  </div>
                  <div class="mb-4">
-                     <span class="fs-3"><i class="fas fa-dollar-sign"></i>Thanh Toán :</span>
+                     <span class="fs-5"><i class="fas fa-dollar-sign me-2"></i>Thanh Toán :</span>
                      <div class="my-2 d-flex align-items-center">
-                         <input class="form-check-input fs-4 me-3" type="radio" name="payment"
+                         <input class="form-check-input fs-5 me-3" type="radio" name="payment"
                              value="Thanh Toán Khi Nhận Hàng">
-                         <span class="fs-4">Thanh Toán Khi Nhận Hàng</span>
+                         <span class="fs-5">Thanh Toán Khi Nhận Hàng</span>
                      </div>
                      <p class="err_payment text-danger fs-5"></p>
                  </div>
                  <div class="mb-4">
-                     <span class="fs-3"> <i class="fas fa-clipboard-list"></i> Ghi Chú :</span>
+                     <span class="fs-5"> <i class="fas fa-clipboard-list me-2"></i> Ghi Chú :</span>
                      <div class="my-2">
                          <textarea class="form-control" name="note" min="5"> </textarea>
                      </div>

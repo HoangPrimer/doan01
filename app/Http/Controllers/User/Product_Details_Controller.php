@@ -15,7 +15,7 @@ class Product_Details_Controller extends Controller
 {
     public function index($category, $id)
     {
-        $product = Product::find($id);
+        $product = Product::where('pro_slug',$id)->first();
         $star = Rate::where('r_product_id', $id)->avg('r_star');
 
         $ratingDetails = Rate::groupBy('r_star')
@@ -43,6 +43,7 @@ class Product_Details_Controller extends Controller
 
         $cart = session()->get('cart');
         return view('frontend.product.product_details', compact('product', 'arrayRatings', 'cart', 'star'));
+      
     }
 
 

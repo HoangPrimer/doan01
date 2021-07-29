@@ -16,7 +16,7 @@
             <div class="col ">
                 <div class="card ">
                     <div class="overflow-hidden position-relative">
-                        <a href="{{ route('product.index',['category'=> $male ->Category->c_slug , 'id' => $male ->id]) }}" title="Chi tiết sản phẩm" class="image-product">
+                        <a href="{{ route('product.index',['category'=> $male ->Category->c_slug , 'id' => $male ->pro_slug]) }}" title="Chi tiết sản phẩm" class="image-product">
                             <img class="img-fluid " src="{{$male->Image()->value('img_file_path')}}" alt="loading">
                         </a>
                         <span class="bg-danger text-light tragop">Trả góp 0 %</span>
@@ -32,7 +32,7 @@
                         @endif
                     </div>
                     <div class="card-body text-center">
-                        <a href="{{route('product.index',['category'=> $male ->Category->c_slug , 'id' => $male ->id])}}" title="Chi tiết sản phẩm" class="d-block ">
+                        <a href="{{route('product.index',['category'=> $male ->Category->c_slug , 'id' => $male ->pro_slug])}}" title="Chi tiết sản phẩm" class="d-block ">
                             {{$male->Trademark->tr_name}} - {{$male->pro_code}} - {{$male->pro_gender}} - {{$male->pro_size}} -
                             {{$male->pro_machine_type}} - {{$male->pro_glass_material}} - {{$male->pro_rope_material}}
                         </a>
@@ -67,7 +67,7 @@
             <div class="col">
                 <div class="card ">
                     <div class="overflow-hidden position-relative">
-                        <a href="{{ route('product.index',['category'=> $male ->Category->c_slug , 'id' => $male ->id]) }}" title="Chi tiết sản phẩm" class="image-product">
+                        <a href="{{ route('product.index',['category'=> $male ->Category->c_slug , 'id' => $male ->pro_slug]) }}" title="Chi tiết sản phẩm" class="image-product">
                             <img class="img-fluid " src="{{$male->Image()->value('img_file_path')}}" alt="loading">
                         </a>
                         <span class="bg-danger text-light tragop">Trả góp 0 %</span>
@@ -83,7 +83,7 @@
                         @endif
                     </div>
                     <div class="card-body text-center">
-                        <a href="{{route('product.index',['category'=> $male ->Category->c_slug , 'id' => $male ->id])}}" title="Chi tiết sản phẩm" class="d-block ">
+                        <a href="{{route('product.index',['category'=> $male ->Category->c_slug , 'id' => $male ->pro_slug])}}" title="Chi tiết sản phẩm" class="d-block ">
                             {{$male->Trademark->tr_name}} - {{$male->pro_code}} - {{$male->pro_gender}} - {{$male->pro_size}} -
                             {{$male->pro_machine_type}} - {{$male->pro_glass_material}} - {{$male->pro_rope_material}}
                         </a>

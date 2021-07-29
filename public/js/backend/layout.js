@@ -81,3 +81,8 @@ if ($(window).width() < 767) {
         }
     });
 }
+
+// remove toát 
+setTimeout(function() {
+    $('#toast').remove();
+}, 3000);

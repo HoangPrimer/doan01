@@ -26,16 +26,16 @@ class Login_Register_Controller extends Controller
    {
        if (Auth::check()) {
            if(Auth::user()->level === 0 ){
-               return redirect()->action('Frontend@home');
+               return redirect()->route('home');
            }
            else
            {
-               return redirect()->action('Home_Controller@home');
+               return redirect()->route('ad.home');
            }
            
        }
        $cart = session()->get('cart');
-       return view('frontend/login/login',compact('cart'));
+       return view('frontend.login.index',compact('cart'));
    }
 
   
@@ -125,7 +125,7 @@ class Login_Register_Controller extends Controller
                $new->password = Hash::make($request->password);
                $new->save();
 
-               $render = view('frontend.child.login_register')->render();
+               $render = view('frontend.login.login_register')->render();
                return response()->json([
                    'code'=>300,
                    'render'=>$render,

@@ -70,15 +70,22 @@ class Admin_Controller extends Controller
     public function  del_admin($id)
     {
         if (request()->ajax()) {
-            $del_admin = User::find($id);
-            $del_admin->delete();
-            $all = count(User::where('level','>','0')->get());
-            $list_admin  = User::where('level','>','0')->orderBy('id', 'desc')->paginate(50);
-            $new_list_admin = view('backend.admin.child_list', compact('list_admin'))->render();
-            return response()->json([
-                'all' => $all,
-                'new_list_admin'  => $new_list_admin,
-            ], 200);
+            if(Auth::user()->level >= 2){
+                $del_admin = User::find($id);
+                $del_admin->delete();
+                $all = count(User::where('level','>','0')->get());
+                $list_admin  = User::where('level','>','0')->orderBy('id', 'desc')->paginate(50);
+                $new_list_admin = view('backend.admin.child_list', compact('list_admin'))->render();
+                return response()->json([
+                    'all' => $all,
+                    'new_list_admin'  => $new_list_admin,
+                ], 200);
+            }
+            else{
+                return response()->json([
+                    'code' => 200,
+                ], 200);
+            }   
         }
     }
 

@@ -1,7 +1,7 @@
 @extends('frontend.layout.layout')
 @section('content')
-    <section class="my-4">
-        <div class="container">
+    <section class="py-5">
+        <div class="container border-show py-3">
             <div class="d-flex justify-content-between">
                 <div class="ads__left">
                     <img src="{{ asset('/image/default/qc1.png') }}" alt="quang cao dong ho">
@@ -11,20 +11,18 @@
                     <img src="{{ asset('/image/default/qc3.png') }}" alt="quang cao dong ho">
                 </div>
             </div>
-            <div class="p-3  my-4 c_desc">
+            <div class="p-3  mt-4 c_desc">
                 {!! $category_desc->c_desc !!}
                 <form action="">
-                    <input type="text" value="{{ $id }}" hidden class="category_id"
-                        data-url="{{ route('category.paginate') }}" />
-                    @csrf
+                    <input type="text" value="{{ $id }}" hidden class="category_id" />
                 </form>
             </div>
         </div>
     </section>
 
     <!-- danh sach san pham -->
-    <section id="product__hot " class=" py-3">
-        <div class="container">
+    <section id="product__hot " class="py-3">
+        <div class="container border-show py-3">
             <div class="row">
                 <div class=" col-lg-3 col-md-4 ">
                     <ul class="list-fillter">
@@ -274,11 +272,12 @@
                     </ul>
                 </div>
                 <div class=" col-lg-9 col-md-8">
-                    <div class="row py-1 mb-3 d-flex align-items-center flex-wrap"
+                    <div class="row py-1 mb-3 mx-2 d-flex align-items-center flex-wrap"
                         style="background-color: bisque;border: 1px solid #ccc; ">
                         <div class="col-sm-6 my-1">
                             <span class="fs-4">Sắp xếp theo :</span>
-                            <select id="sort_category_product" class="ms-3 pe-3 py-1" data-url="{{ route('category.sort') }}">
+                            <select id="sort_category_product" class="ms-3 pe-3 py-1"
+                                data-url="{{ route('category.sort') }}">
                                 <option value="new">Mới Nhất </option>
                                 <option value="old">Cũ Nhất </option>
                                 <option value="hot">Nổi Bật </option>
@@ -300,50 +299,4 @@
             </div>
     </section>
 
-    <script>
-        $(document).ready(function() {
-
-            $(document).on('click', '.ckeck_product', function() {
-
-                let trademark = get_fillter_text('trademark');
-                let may = get_fillter_text('may');
-                let clday = get_fillter_text('clday');
-                let price = $('#price:checked').val();
-                let kichco = $('#kichco:checked').val();
-                let id_category = $('.category_id').val();
-
-
-                $.ajax({
-                    url: "{{ route('filter') }}",
-                    method: "GET",
-                    data: {
-                        id: id_category,
-                        trademark: trademark,
-                        price: price,
-                        may: may,
-                        clday: clday,
-                        kichco: kichco,
-                    },
-                    success: function(data) {
-                        if (data.all === 0) {
-                            $('.category_product_list').html('Không Có Sản Phẩm Phù Hợp !');
-
-                        } else {
-                            $('.category_product_list').html(data.abc);
-                        }
-
-                    },
-                });
-            });
-
-            function get_fillter_text(text_id) {
-                let fillterData = [];
-                $('#' + text_id + ':checked').each(function() {
-                    fillterData.push($(this).val());
-                });
-
-                return fillterData;
-            }
-        });
-    </script>
 @endsection

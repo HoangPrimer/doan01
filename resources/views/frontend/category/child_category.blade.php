@@ -36,14 +36,7 @@
 
                     @for ($i = 1; $i <= 5; $i++)
                         @php
-                            if (
-                                $i <=
-                                number_format(
-                                    DB::table('rates')
-                                        ->where('r_product_id', $male->id)
-                                        ->avg('r_star'),
-                                )
-                            ) {
+                            if ($i <= number_format($male->Rate->avg('r_star'))) {
                                 $color = 'color: #4737d6;';
                             } else {
                                 $color = ' color: #c6caca;';
@@ -51,15 +44,17 @@
                         @endphp
                         <sao data-index="{{ $i }}" class="fa fa-star" style="{{ $color }}"></sao>
                     @endfor
-                    <a href="#" title="Thêm vào giỏ hàng" class="shopping btn btn-success px-4 me-3 my-2 d-block"
-                        data-url="{{ route('cart.add', $male->id) }}">
-                        <i class="fas fa-cart-plus "></i>
-                    </a>
+                    <div class="mt-2 hover-show ">
+                        <a href="#" title="Thêm vào giỏ hàng" class="shopping btn btn-success px-4"
+                            data-url="{{ route('cart.add', $male->id) }}">
+                            <i class="fas fa-cart-plus me-3"></i>Thêm vào giỏ
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     @endforeach
     <div class="w-100 text-center mt-5">
-        {!! $product->links() !!}
+        {{ $product->links() }}
     </div>
 @endif

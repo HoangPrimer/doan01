@@ -10,7 +10,7 @@
         <input class="form-control form-control-light w-100 " type="text" placeholder="Search" aria-label="Search">
         <div class="d-flex me-3">
             <div class="nav-item text-nowrap">
-                <a class="profile  text-light nav-link" href="#">Profile</a>
+                <a class="profile  text-light nav-link" href="{{ route('admin_profile',Auth::user()->id) }}">Profile</a>
             </div>
             <div class="nav-item text-nowrap">
                 <a class="nav-link text-light " href="{{ route('logout') }}">Sign out</a>

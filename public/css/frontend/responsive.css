@@ -444,6 +444,29 @@
     .rate_c_center .main-item {
         margin-bottom: 5px;
     }
+    /* thông tin cá nhân */
+    .img-cover {
+        height: 130px !important;
+    }
+    .avatar {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    .avatar-img label {
+        right: 0 !important;
+        bottom: 0 !important;
+        font-size: 20px !important;
+    }
+    .info {
+        padding: 60px 10px 20px !important;
+    }
+    /* ccap nhat thong tin */
+    .update {
+        padding: 30px 10px !important;
+    }
+    #login {
+        padding: 20px 0 !important;
+    }
 }
 
 @media only screen and (max-width: 399.98px) {

@@ -15,11 +15,11 @@ class Product_Details_Controller extends Controller
 {
     public function index($category, $id)
     {
-        $product = Product::where('pro_slug',$id)->first();
-        $star = Rate::where('r_product_id', $id)->avg('r_star');
-
+        $product = Product::where('pro_slug', $id)->first();
+        
+        $idd = $product->id;
         $ratingDetails = Rate::groupBy('r_star')
-            ->where('r_product_id', $id)
+            ->where('r_product_id', $idd)
             ->select(DB::raw('count(r_star) as total'), DB::raw('sum(r_star) as sum'))
             ->addSelect('r_star')->get()->toArray();
 
@@ -27,7 +27,6 @@ class Product_Details_Controller extends Controller
         if (!empty($ratingDetails)) {
             for ($i = 1; $i <= 5; $i++) {
                 $arrayRatings[$i] = [
-
                     "total" => 0,
                     "sum" => 0,
                     "star" => 0
@@ -39,11 +38,10 @@ class Product_Details_Controller extends Controller
                 }
             }
         }
-
-
         $cart = session()->get('cart');
-        return view('frontend.product.product_details', compact('product', 'arrayRatings', 'cart', 'star'));
-      
+        $product->pro_view +=1;
+        $product->save();
+       return view('frontend.product.product_details', compact('product', 'arrayRatings', 'cart'));
     }
 
 
@@ -109,12 +107,8 @@ class Product_Details_Controller extends Controller
                                 }
                             }
                         }
-
                         $product = Product::find($request->id);
                         $star = Rate::where('r_product_id', $request->id)->avg('r_star');
-
-
-
                         $viewrate = view('frontend.product.rate', compact('product', 'star', 'arrayRatings'))->render();
                         $viewcenter = view('frontend.product.info', compact('product', 'star'))->render();
                         return response()->json([

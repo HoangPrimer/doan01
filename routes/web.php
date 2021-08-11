@@ -12,15 +12,23 @@
 */
 
 Route::group(['namespace' => 'User'], function () {
+
     Route::get('/', [
         'as' => 'home',
         'uses' => 'Home_Controller@home'
     ]);
+
     // tim kiem
     Route::get('search', [
         'as' => 'search',
         'uses' => 'Home_Controller@search'
     ]);
+
+    Route::get('search-sort', [
+        'as' => 'search_sort',
+        'uses' => 'Home_Controller@search_sort'
+    ]);
+
     // đăng nhập đăng ký đăng xuất
     Route::get('login', [
         'as' => 'login',
@@ -48,14 +56,24 @@ Route::group(['namespace' => 'User'], function () {
     ]);
 
     // trang cá nhân
-    Route::get('profile/{id}', [
+    Route::get('user/profile', [
         'as' => 'profile',
-        'uses' => 'Home_Controller@profile'
+        'uses' => 'Profile_Controller@profile'
     ]);
 
-    Route::post('profiles', [
+    Route::post('user/profile/avatar', [
+        'as' => 'avatar',
+        'uses' => 'Profile_Controller@avatar'
+    ]);
+
+    Route::post('user/profiles', [
         'as' => 'profiles',
-        'uses' => 'Home_Controller@profiles'
+        'uses' => 'Profile_Controller@profiles'
+    ]);
+
+    Route::get('user/chi-tiet-don-hang/{id}', [
+        'as' => 'user_order_details',
+        'uses' => 'Profile_Controller@order_details'
     ]);
 });
 
@@ -68,22 +86,10 @@ Route::group(['namespace' => 'User'], function () {
         'uses' => 'Category_Product_Controller@index'
     ]);
 
-    // lọc sản phẩm
-    Route::get('loc-san-pham', [
-        'as' => 'filter',
-        'uses' => 'Category_Product_Controller@filter'
-    ]);
-
     // sap  xep 
     Route::get('sap-xep', [
         'as' => 'category.sort',
         'uses' => 'Category_Product_Controller@sort'
-    ]);
-
-    //sap xêp post
-    Route::post('paginate', [
-        'as' => 'category.paginate',
-        'uses' => 'Category_Product_Controller@paginate'
     ]);
 
     //tim kiem trực tuyến san pham theo danh muc
@@ -158,18 +164,25 @@ Route::group(['namespace' => 'User'], function () {
 Route::middleware(['admin'])->group(function () {
 
     Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
+
         Route::get('home', [
             'as' => 'ad.home',
             'uses' => 'Home_Controller@home'
         ]);
-        Route::get('change-profile', [
-            'as' => 'change_profile',
-            'uses' => 'Home_Controller@change_profile'
-        ]);
-        Route::post('add-admin', [
-            'as' => 'add_admin',
-            'uses' => 'Home_Controller@add_admin'
-        ]);
+
+        Route::group(['prefix' => 'profile'], function () {
+
+            Route::get('/{id}', [
+                'as' => 'admin_profile',
+                'uses' => 'Profile_Controller@admin_profile'
+            ]);
+            Route::post('updates/{id}', [
+                'as' => 'post_update_profile',
+                'uses' => 'Profile_Controller@post_update_profile'
+            ]);
+          
+        });
+
 
         Route::group(['prefix' => 'category'], function () {
             Route::get('create', [
@@ -386,32 +399,20 @@ Route::middleware(['admin'])->group(function () {
                 'uses' => 'Order_Controller@order_details'
             ]);
 
-            Route::get('chi-tiet/duyet/{id}', [
-                'as' => 'accept',
-                'uses' => 'Order_Controller@accept'
-            ]);
-
-            Route::get('chi-tiet/dang-giao/{id}', [
-                'as' => 'onbyway',
-                'uses' => 'Order_Controller@onbyway'
-            ]);
-
-            Route::get('chi-tiet/da-giao/{id}', [
-                'as' => 'done',
-                'uses' => 'Order_Controller@done'
-            ]);
-
-
-            // hủy đơn hàng
-            Route::get('huy/{id}', [
-                'as' => 'cancel_order',
-                'uses' => 'Order_Controller@cancel_order'
+            Route::get('hanh-dong/{id}/{key}', [
+                'as' => 'action',
+                'uses' => 'Order_Controller@action'
             ]);
 
             Route::get('xoa/{id}', [
                 'as' => 'del_order',
                 'uses' => 'Order_Controller@del_order'
             ]);
+
+            // Route::get('chi-tiet/back', [
+            //     'as' => 'order.back',
+            //     'uses' => 'Order_Controller@back'
+            // ]);
         });
 
         Route::group(['prefix' => 'user'], function () {
@@ -552,7 +553,7 @@ Route::middleware(['admin'])->group(function () {
                 'as' => 'del_admin',
                 'uses' => 'Admin_Controller@del_admin'
             ]);
-        
+
             Route::get('history', [
                 'as' => 'history',
                 'uses' => 'Admin_Controller@list_history'

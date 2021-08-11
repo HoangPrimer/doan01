@@ -2,12 +2,11 @@
 @section('content')
     <!-- chi tiet san pham -->
 
-    <section class="py-3 my-5">
-        <div class="container">
-            <div class="row">
+    <section class="py-5">
+        <div class="container border-show py-3">
+            <div class=" row">
                 <div class="col-lg-5 col-md-6 mt-3">
-                    <img class="img-fluid img_parent" src="{{ $product->Image()->value('img_file_path') }}" alt="loading"
-                        >
+                    <img class="img-fluid img_parent" src="{{ $product->Image()->value('img_file_path') }}" alt="loading">
                     <div class="d-flex justify-content-between w-100 mt-3">
                         @foreach ($product->Image as $img)
                             <img class="imgThum" src="{{ $img->img_file_path }}" alt="" class="change_thumb">
@@ -155,7 +154,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row border py-3 shadow" style="margin: 60px 0;">
+            <div class="row  py-3  mt-5 border-top border-2">
                 <div class="col-lg-9 col-md-12">
                     <div class="product-desc">
                         <p>Mô Tả Sản Phẩm</p>
@@ -225,14 +224,22 @@
                     </div>
                 </div>
             </div>
-            <div class="row border shadow py-3 my-5">
+        </div>
+    </section>
+    <section class="py-5">
+        <div class="container border-show py-4">
+            <div class=" row ">
                 <div class="col-lg-12 col-md-12 ">
                     <div class="rating">
                         @include('frontend.product.rate')
                     </div>
                 </div>
             </div>
-            <div class="row border shadow my-5 py-3">
+        </div>
+    </section>
+    <section class="py-5">
+        <div class="container border-show py-4">
+            <div class=" row ">
                 <div class="col-lg-12 col-md-12 ">
                     <div class="d-flex mb-3 justify-content-between px-3">
                         <span class="fw-bold fs-5">{{ count($product->Comment) }} Bình luận</span>
@@ -254,9 +261,9 @@
     <!-- ennd chi tiet san pham  -->
 
     <!-- kien thuc dong ho -->
-    <section id="news" class="mt-5">
-        <div class="container">
-            <div class="row">
+    <section class="py-5">
+        <div class="container border-show py-3">
+            <div class=" row">
                 <div class="col-lg-12 col-md-12">
                     <div class="news__title">
                         <span>XWATCH - TIN TỨC VÀ SỰ KIỆN</span>
@@ -269,7 +276,8 @@
                         <a href="#"><img src="/image/default/tin1.jpg" alt="#"></a>
                         <a href="#">TẤT TẦN TẬT VỀ ĐỒNG HỒ SEIKO 5: HUYỂN THOẠI VỀ...</a>
                         <p> <i class="far fa-calendar-alt me-2"></i>19/04/2021</p>
-                        <span>Cùng với Orient SK Mặt Lửa, Casio F91, Poljot, Rado Silver Star, hai đại diện danh giá đến từ thương ... </span>
+                        <span>Cùng với Orient SK Mặt Lửa, Casio F91, Poljot, Rado Silver Star, hai đại diện danh giá đến từ
+                            thương ... </span>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4">
@@ -277,7 +285,9 @@
                         <a href="#"><img src="/image/default/tin2.png" alt="#"></a>
                         <a href="#">OGIVAL TRÂU VÀNG PHÚ QUÝ - BÁU VẬT PHONG THỦY...</a>
                         <p> <i class="far fa-calendar-alt  me-2"></i>04/02/2021</p>
-                        <span>Năm Tân Sửu sở hữu Ngưu Vàng là chuẩn nhất, đặc biệt là các bác tuổi Sửu lại càng tuyệt vời hơn. ... </span>
+                        <span>Năm Tân Sửu sở hữu Ngưu Vàng là chuẩn nhất, đặc biệt là các bác tuổi Sửu lại càng tuyệt vời
+                            hơn.
+                            ... </span>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4">
@@ -285,7 +295,8 @@
                         <a href="#"><img src="/image/default/tin3.jpg" alt="#"></a>
                         <a href="#">[NEW] SRWATCH GALAXY “LIMITED”: NGỠ TƯỞNG SIÊU ...</a>
                         <p> <i class="far fa-calendar-alt  me-2"></i>02/02/2021</p>
-                        <span>Nếu nhìn thoáng qua, rất nhiều anh em sẽ lầm tưởng đẩy là siêu phẩm đình đám đến từ Thụy Sĩ - HUBLOT ... </span>
+                        <span>Nếu nhìn thoáng qua, rất nhiều anh em sẽ lầm tưởng đẩy là siêu phẩm đình đám đến từ Thụy Sĩ -
+                            HUBLOT ... </span>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4">
@@ -293,7 +304,8 @@
                         <a href="#"><img src="/image/default/tin3.jpg" alt="#"></a>
                         <a href="#">[NEW] SRWATCH GALAXY “LIMITED”: NGỠ TƯỞNG SIÊU ...</a>
                         <p> <i class="far fa-calendar-alt  me-2"></i>02/02/2021</p>
-                        <span>Nếu nhìn thoáng qua, rất nhiều anh em sẽ lầm tưởng đẩy là siêu phẩm đình đám đến từ Thụy Sĩ - HUBLOT ... </span>
+                        <span>Nếu nhìn thoáng qua, rất nhiều anh em sẽ lầm tưởng đẩy là siêu phẩm đình đám đến từ Thụy Sĩ -
+                            HUBLOT ... </span>
                     </div>
                 </div>
             </div>

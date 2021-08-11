@@ -1,5 +1,5 @@
-<section class="py-5 bg-light">
-    <div class="container d-flex flex-wrap">
+<section class="py-5">
+    <div class="container d-flex flex-wrap border-show p-3 ">
         <div class="promotion-image">
             <div class="promotion-left">
                 <img src="./image/default/bst-dong-ho-cho-nam_1562154973.jpg" alt="#">

@@ -11,23 +11,21 @@ class Category_Product_Controller extends Controller
 {
     public function index($id)
     {
-        $category = Category::where('c_slug', $id)->get();
-        foreach ($category as $category) {
-            $id = $category->id;
-        }
-        $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->orderBy('id','desc')->paginate(21);
+        $category = Category::where('c_slug', $id)->first();
+        $id = $category->id;
+        $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->orderBy('id', 'desc')->paginate(21);
         $category_desc = Category::find($id);
         $cart = session()->get('cart');
 
         return view('frontend.category.category', compact('cart', 'product', 'category_desc', 'id'));
     }
 
-    public function filter(Request $request)
+    public function sort(Request $request)
     {
         if (request()->ajax()) {
             $id = $request->id;
-            $product = Product::where('pro_category_id', $id)->where('pro_status', 1);
-
+            $product = Product::where('pro_category_id', $id);
+            
             if ($request->has('trademark')) {
                 $trademark = implode(",", $request->trademark);
                 $product->whereRaw('pro_trademark_id IN (' . $trademark . ') ');
@@ -87,82 +85,34 @@ class Category_Product_Controller extends Controller
                         break;
                 }
             }
+            if ($request->has('key')){
+                $key = $request->key;
+                if ($key == 'new') {
+                    $product->where('pro_status', '1')->orderBy('id', 'desc');
+                }
+                if ($key == 'old') {
+                    $product->where('pro_status', '1')->orderBy('id', 'asc');
+                }
+                if ($key == 'hot') {
+                    $product->where('pro_status', '1')->orderBy('pro_hot', 'desc');
+                }
+                if ($key == 'min_price') {
+                    $product->where('pro_status', '1')->orderBy('pro_price', 'asc');
+                }
+                if ($key == 'max_price') {
+                    $product->where('pro_status', '1')->orderBy('pro_price', 'desc');
+                }
+                if ($key == 'hot_sell') {
+                    $product->where('pro_status', '1')->orderBy('pro_amount_sell', 'desc');
+                }
+            }
 
-            $product = $product->orderBy('id', 'desc')->paginate(50);
+            $product = $product->paginate(21);
             $all = count($product);
             $abc =  view('frontend.category.child_category', compact('product'))->render();
             return response()->json([
                 'abc' => $abc,
                 'all' => $all,
-            ], 200);
-        }
-    }
-
-    function paginate(Request $request)
-    {
-        if ($request->ajax()) {
-            $keys = $request->key;
-            $id = $request->id;
-            if ($keys === 'new') {
-                $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->orderBy('id', 'desc')->paginate(21);
-                $abc = view('frontend.category.child_category', compact('product'))->render();
-            }
-            if ($keys === 'old') {
-                $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->orderBy('id', 'asc')->paginate(21);
-                $abc = view('frontend.category.child_category', compact('product'))->render();
-            }
-            if ($keys === 'hot') {
-                $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->orderBy('pro_hot', 'desc')->paginate(21);
-                $abc = view('frontend.category.child_category', compact('product'))->render();
-            }
-            if ($keys === 'min_price') {
-                $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->orderBy('pro_price', 'asc')->paginate(21);
-                $abc = view('frontend.category.child_category', compact('product'))->render();
-            }
-            if ($keys === 'max_price') {
-                $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->orderBy('pro_price', 'desc')->paginate(21);
-                $abc = view('frontend.category.child_category', compact('product'))->render();
-            }
-            if ($key == 'hot_sell') {
-                $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->orderBy('pro_amount_sell', 'desc')->paginate(21);
-                $abc = view('frontend.category.child_category', compact('product'))->render();
-            }
-            return response()->json([
-                'abc' => $abc,
-            ], 200);
-        }
-    }
-    public function sort(Request $request)
-    {
-        if (request()->ajax()) {
-            $key = $request->key;
-            $id = $request->id;
-            if ($key == 'new') {
-                $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->orderBy('id', 'desc')->paginate(21);
-                $abc = view('frontend.category.child_category', compact('product'))->render();
-            }
-            if ($key == 'old') {
-                $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->orderBy('id', 'asc')->paginate(21);
-                $abc = view('frontend.category.child_category', compact('product'))->render();
-            }
-            if ($key == 'hot') {
-                $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->orderBy('pro_hot', 'desc')->paginate(21);
-                $abc = view('frontend.category.child_category', compact('product'))->render();
-            }
-            if ($key == 'min_price') {
-                $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->orderBy('pro_price', 'asc')->paginate(21);
-                $abc = view('frontend.category.child_category', compact('product'))->render();
-            }
-            if ($key == 'max_price') {
-                $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->orderBy('pro_price', 'desc')->paginate(21);
-                $abc = view('frontend.category.child_category', compact('product'))->render();
-            }
-            if ($key == 'hot_sell') {
-                $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->orderBy('pro_amount_sell', 'desc')->paginate(21);
-                $abc = view('frontend.category.child_category', compact('product'))->render();
-            }
-            return response()->json([
-                'abc' => $abc,
             ], 200);
         }
     }
@@ -175,15 +125,17 @@ class Category_Product_Controller extends Controller
             $id = $request->id;
             if ($key == "") {
                 $product = Product::where('pro_category_id', $id)->where('pro_status', '1')->paginate(21);
-                $abc = view('frontend.category.child_category', compact('product'))->render();
             } else {
                 $product = Product::where('pro_category_id', $id)->where('pro_status', '1')
-                    ->where('pro_code', 'like', '%' . $key . '%')->orwhere('pro_size', 'like', '%' . $key . '%')
-                    ->orwhere('pro_price', 'like', '%' . $key . '%')
-                    ->orwhere('pro_sale', 'like', '%' . $key . '%')->orderBy('id', 'desc')->paginate(21);
-
-                $abc = view('frontend.category.child_category', compact('product'))->render();
+                    ->where(function ($query) use ($key) {
+                        $query->where('pro_code', 'like', '%' . $key . '%')
+                            ->orwhere('pro_size', 'like', '%' . $key . '%')
+                            ->orwhere('pro_price', 'like', '%' . $key . '%')
+                            ->orwhere('pro_sale', 'like', '%' . $key . '%');
+                    })->orderBy('id', 'desc')->paginate(21);
             }
+            $abc = view('frontend.category.child_category', compact('product'))->render();
+
             return response()->json([
                 'code' => 200,
                 'abc' => $abc,

@@ -22,7 +22,8 @@ setTimeout(function() {
     $('#toast').remove();
 }, 3000);
 
-// 
+// =========================== hiển thị thông tin footer
+
 $(document).on('click', '.show_info_footer', function show_info_footer(event) {
     event.preventDefault();
     let me = $(this);
@@ -42,6 +43,10 @@ $(document).on('click', '.show_info_footer', function show_info_footer(event) {
         $(hide).removeClass('d-none');
     }
 });
+
+
+// =========================== ẩn thông tin footer
+
 $(document).on('click', '.hide_info_footer', function hide_info_footer() {
 
     let me = $(this);

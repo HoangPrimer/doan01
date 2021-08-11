@@ -58,6 +58,10 @@
         font-size: 16px;
     }
     
+    .table-responsive::-webkit-scrollbar {
+        display: none;
+    }
+    
     .form-control {
         font-size: 14px;
     }
@@ -162,6 +166,18 @@
         float: right;
         padding-right: 8px;
     }
+    /* ================ */
+    
+    .card-body-item {
+        padding: 30px 0;
+        display: block;
+        text-align: center;
+        width: 40%;
+    }
+    
+    .card-body-item i {
+        font-size: 50px;
+    }
     /*End Backend -> Layout*/
     /* hiển thị ảnh logo trước khi upload Backend -> Trademark-> Create*/
     
@@ -236,7 +252,6 @@
         height: 100%;
         display: none;
     }
-    /* nut sap xep trong cac danh dach */
     /*-------------------------------------------------toassst----*/
     
     .toast {
@@ -323,3 +338,170 @@
         color: red;
     }
     /*--------------------------------------------------------------------------------------------------*/
+    /* profile */
+    
+    .main-profile {
+        width: 100%;
+        height: 90vh;
+        background-color: rgb(76, 80, 80);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+    }
+    
+    .profile-info {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 20px;
+        border-top-left-radius: 80px;
+        border-bottom-right-radius: 80px;
+        box-shadow: 0 0 50px #ccc;
+        max-width: 500px;
+        max-height: 800px;
+        background: rgb(24, 226, 246);
+        background: linear-gradient(32deg, rgba(24, 226, 246, 0.9500175070028011) 6%, rgba(238, 204, 109, 0.8995973389355743) 16%, rgba(246, 158, 143, 0.8883928571428571) 32%, rgba(247, 165, 88, 0.9192051820728291) 44%, rgba(252, 224, 29, 0.8015581232492998) 54%, rgba(247, 203, 90, 0.5858718487394958) 71%, rgba(247, 188, 5, 0.773546918767507) 83%, rgba(232, 206, 162, 0.773546918767507) 92%);
+    }
+    
+    .update-profile {
+        position: fixed;
+        right: 50%;
+        bottom: 50%;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 1020;
+        overflow: hidden;
+        transition: 1s;
+        opacity: 0;
+    }
+    
+    .update {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: rgb(238, 229, 229);
+        position: relative;
+        padding: 40px;
+        box-shadow: 0 0 50px #ccc;
+        border-radius: 10px;
+    }
+    
+    .close-update {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        transition: all .5s;
+    }
+    
+    .close-update:hover {
+        color: red;
+        cursor: pointer;
+    }
+    
+    .img-profile {
+        width: 150px;
+        height: 150px;
+        border: 1px solid #89998c;
+        border-radius: 50%;
+    }
+    
+    .menu {
+        display: inline-block;
+        position: relative;
+    }
+    
+    .menu-action {
+        position: absolute;
+        width: 100%;
+        top: 105%;
+        right: 0;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #3f4146;
+        z-index: 1000;
+        display: none;
+        background-color: #fff;
+    }
+    
+    .menu-action li a {
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+        color: rgb(46, 27, 27);
+        padding: 2px 0;
+        font-size: 15px;
+        transition: .5s;
+    }
+    
+    .menu-action li a:hover {
+        background-color: rgb(148, 229, 231);
+    }
+    
+    .details-order {
+        position: fixed;
+        top: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #ccc;
+        border: 1px solid #9aafe7;
+        z-index: 1000;
+    }
+    /* biểu đồ */
+    
+    .highcharts-figure,
+    .highcharts-data-table table {
+        min-width: 310px;
+        max-width: 800px;
+        margin: 1em auto;
+    }
+    
+    .highcharts-data-table table {
+        font-family: Verdana, sans-serif;
+        border-collapse: collapse;
+        border: 1px solid #EBEBEB;
+        margin: 10px auto;
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    .highcharts-data-table caption {
+        padding: 1em 0;
+        font-size: 1.2em;
+        color: #555;
+    }
+    
+    .highcharts-data-table th {
+        font-weight: 600;
+        padding: 0.5em;
+    }
+    
+    .highcharts-data-table td,
+    .highcharts-data-table th,
+    .highcharts-data-table caption {
+        padding: 0.5em;
+    }
+    
+    .highcharts-data-table thead tr,
+    .highcharts-data-table tr:nth-child(even) {
+        background: #f8f8f8;
+    }
+    
+    .highcharts-data-table tr:hover {
+        background: #f1f7ff;
+    }
+    
+    @media only screen and (max-width:575.92px) {
+        .update {
+            padding: 20px 10px !important;
+        }
+    }

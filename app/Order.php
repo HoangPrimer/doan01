@@ -3,11 +3,15 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Spatie\Activitylog\Traits\LogsActivity;
 class Order extends Model
 {
+
+    use LogsActivity;
+    protected static $logName = 'Đơn Hàng';
+
     protected $fillable = [
-        'od_customer_id','od_status','od_name','od_phone','od_address','od_gender','od_email','od_total','od_payment','od_note'
+        'od_customer_id','od_status','od_name','od_phone','od_address','od_gender','od_email','od_total','od_payment','od_note','od_code'
     ];
    
     public function Item(){

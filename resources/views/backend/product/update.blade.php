@@ -91,7 +91,7 @@
             </div>
             <div class="form-group mt-3">
                 <button type="submit" class="btn btn-success btn-lg">Lưu <i class="fas fa-check ms-2"></i></button>
-                <a href="{{ route('list_product') }}" class="btn btn-danger btn-lg">Back List<i
+                <a href="{{ route('a.list_product') }}" class="btn btn-danger btn-lg">Back List<i
                         class="fas fa-undo ms-2"></i></a>
             </div>
     </div>

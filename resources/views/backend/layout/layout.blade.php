@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="{{ asset('css/backend/backend.css') }}">
     <link href="{{ asset('css/fontawesome-free-5.15.3-web/css/all.css') }}" rel="stylesheet">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    {{-- <script src="https://code.highcharts.com/modules/export-data.js"></script> --}}
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     <!-- <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
     <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
     <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script> 
@@ -22,22 +26,22 @@
     <a id="url_list_trademark" data-url="{{ route('list_trademark') }}" hidden>location</a>
     <a id="url_list_product" data-url="{{ route('a.list_product') }}" hidden>location</a>
 
-    @if(session('message'))
-    <div id="toast">
-        <div class="toast toast--success">
-            <div class="toast__icon">
-                <i class="far fa-check-circle"></i>
-            </div>
-            <div class="toast__body">
-                <p class="m-0">{{ session('message') }}</p>
-            </div>
-            <div class="toast__close">
-                <i class="fas fa-times"></i>
+    @if (session('message'))
+        <div id="toast">
+            <div class="toast toast--success">
+                <div class="toast__icon">
+                    <i class="far fa-check-circle"></i>
+                </div>
+                <div class="toast__body">
+                    <p class="m-0">{{ session('message') }}</p>
+                </div>
+                <div class="toast__close">
+                    <i class="fas fa-times"></i>
+                </div>
             </div>
         </div>
-    </div>
     @endif
-    
+
     @include('backend.layout.header')
     <div class="container-fluid  ">
         <div class="row">
@@ -46,12 +50,17 @@
             <!-- end header  -->
 
             <!-- start main -->
-            <main class="col-md-9 ms-sm-auto col-lg-10 py-3">
+            <main class="col-md-9 ms-sm-auto col-lg-10 p-3">
                 @yield('content')
             </main>
             <!-- end   main -->
         </div>
     </div>
+
+    <!-- Modal -->
+
+    <!-- Button trigger modal -->
+
     <script>
         let location_href = window.location.href;
         let menuItem = $('.abc');
@@ -70,6 +79,7 @@
     <script type="text/javascript" src="/js/backend/order.js"></script>
     <script type="text/javascript" src="/js/backend/user.js"></script>
     <script type="text/javascript" src="/js/backend/admin.js"></script>
+    <script type="text/javascript" src="/js/backend/profile.js"></script>
     <script src="/bootstaps5/js/bootstrap.js"></script>
 </body>
 

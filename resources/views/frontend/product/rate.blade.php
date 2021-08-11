@@ -1,9 +1,9 @@
 <div class="rate_c">
     <div class="rate_c_left p-4">
-        @for( $i=1 ; $i<= 5 ; $i++) @php if($i<=number_format($star)){ $color='color: #4737d6;' ; } else { $color=' color: #c6caca;' ; } @endphp
-            <p data-index="{{$i}}" data-rating="{{number_format($star)}}" class="fa fa-star" style="{{$color}};  font-size: 20px;padding:5px;"></p>
+        @for( $i=1 ; $i<= 5 ; $i++) @php if($i<=number_format($product->Rate->avg('r_star'))){ $color='color: #4737d6;' ; } else { $color=' color: #c6caca;' ; } @endphp
+            <p data-index="{{$i}}"" class="fa fa-star" style="{{$color}};  font-size: 20px;padding:5px;"></p>
         @endfor
-            <p class="mt-2"> {{number_format($star,1)}}/5</p>
+            <p class="mt-2"> {{number_format($product->Rate->avg('r_star'),1)}}/5</p>
             <p class="mt-2"> {{count($product->Rate)}} Lượt đánh giá</p>
     </div>
     <div class="rate_c_center">
@@ -51,7 +51,7 @@
     <span class="error_star"></span>
     <div class="rate">
         <input name="id" class="id_rate" type="text" hidden value="{{$product->id}}">
-        <textarea name="danhgia" id="" placeholder="Vui lòng đăng nhập trước khi Nhập đánh giá...." required></textarea>
+        <textarea name="danhgia"  placeholder="Vui lòng đăng nhập trước khi Nhập đánh giá...." required></textarea>
         <span class="error_text"></span>
 
         <a href="#"
@@ -68,7 +68,7 @@
 
  @foreach($product->Rate as $rate)
     <div class="content">
-        <h5 >{{$rate->User->name}}</h5>
+        <h5 class="m-0" >{{$rate->User->name}}</h5>
     @for( $i=1 ; $i<= 5  ; $i++)
      @php
         if($i<= $rate->r_star){
@@ -79,7 +79,7 @@
            $color  = ' color: #c6caca;';
         }
         @endphp
-        <m data-index="{{$i}}" data-rating="{{number_format($star)}}" class="fa fa-star my-2" style ="{{$color}};font-size: 14px;"></m>
+        <m data-index="{{$i}}" class="fa fa-star my-2" style ="{{$color}};font-size: 14px;"></m>
         @endfor
         <span>{{$rate->r_content}}</span>
         <small>{{$rate->created_at}}</small>

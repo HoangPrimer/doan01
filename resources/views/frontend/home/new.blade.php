@@ -1,5 +1,5 @@
-<section id="news" class="mt-5">
-    <div class="container">
+<section  class="py-5">
+    <div class="container border-show py-3">
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <div class="news__title">

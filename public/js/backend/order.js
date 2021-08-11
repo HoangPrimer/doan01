@@ -174,3 +174,16 @@ $(document).on('click', '.delete_order', function delete_order(event) {
         });
     }
 });
+
+////////////////////////////////////////////////////////////////////
+
+$(document).on('click', '.menu-button', function() {
+    if ($(this).parent('.menu').find('.menu-action').css('display') == 'none') {
+        $(this).parent('.menu').find('.menu-action').css('display', 'block');
+
+    } else {
+        $(this).parent('.menu').find('.menu-action').css('display', 'none');
+    }
+});
+
+// ====================================================  //

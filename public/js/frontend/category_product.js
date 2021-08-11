@@ -53,25 +53,7 @@ function changefillter(type, element) {
 }
 
 
-// sap xep 
-$(document).on('change', '#sort_category_product', function() {
-    let key = $(this).val();
-    let url = $(this).data('url');
-    let id_category = $('.category_id').val();
 
-    $.ajax({
-        url: url,
-        method: "GET",
-        dataType: 'json',
-        data: {
-            id: id_category,
-            key: key,
-        },
-        success: function(data) {
-            $('.category_product_list').html(data.abc);
-        },
-    });
-});
 
 // srearch 
 $(document).on('keyup', '#search_category_product', function search_category_product() {
@@ -95,48 +77,3 @@ $(document).on('keyup', '#search_category_product', function search_category_pro
 });
 
 ////////////////////////////
-
-$(document).ready(function() {
-
-    $(document).on('click', '.page-link', function(event) {
-        event.preventDefault();
-        var page = $(this).attr('href').split('page=')[1];
-        let key = $('#sort_category_product').val();
-        fetch_data(page, key);
-    });
-
-    function fetch_data(page, key) {
-        var _token = $("input[name=_token]").val();
-        let url = $('.category_id').data('url');
-        let id_category = $('.category_id').val();
-        $.ajax({
-            url: url,
-            method: "POST",
-            data: {
-                _token: _token,
-                page: page,
-                key: key,
-                id: id_category,
-            },
-            success: function(data) {
-                $('.category_product_list').html(data.abc);
-            }
-        });
-    }
-
-});
-
-//            doc them nut 
-
-$(document).on('click', '.read_more', function read_more() {
-    $('.product-desc').css('height', 'auto');
-    $('.hide-more').removeClass('d-none');
-    $(this).addClass('d-none');
-
-});
-$(document).on('click', '.hide-more', function hide_more() {
-    $('.product-desc').css('height', '600px');
-    $('.read_more').removeClass('d-none');
-    $(this).addClass('d-none');
-
-});

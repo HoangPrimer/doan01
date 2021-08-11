@@ -1,5 +1,5 @@
-<section class="bg-light py-5 " id="expertise">
-    <div class="container">
+<section class=" py-5 ">
+    <div class="container border-show py-3">
         <h2>THẨM ĐỊNH ĐỒNG HỒ</h2>
         <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 g-3 mt-2 ">
             <div class="col my-1">

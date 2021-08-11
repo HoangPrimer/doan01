@@ -3,7 +3,7 @@
 </div>
 @if(count($product->Rate) > 0)
 <div class="d-flex flex-wrap my-3">
-    @for( $i=1 ; $i<= 5 ; $i++) @php if($i<= number_format($star)){ $color='color: #4737d6;' ; } else { $color=' color: #c6caca;' ; } @endphp <sao data-index="{{$i}}" data-rating="{{number_format($star)}}" class="fa fa-star me-2" style="{{$color}};">
+    @for( $i=1 ; $i<= 5 ; $i++) @php if($i<= number_format($product->Rate->avg('r_star'))){ $color='color: #4737d6;' ; } else { $color=' color: #c6caca;' ; } @endphp <sao data-index="{{$i}}" class="fa fa-star me-2" style="{{$color}};">
         </sao>
         @endfor
         <span class="ms-3 fs-5 text-primary">{{count($product->Rate)}} Lượt đánh giá</span>

@@ -8,6 +8,9 @@ use Spatie\Activitylog\Traits\LogsActivity;
 class Product extends Model
 {
     use LogsActivity;
+    protected static $logName = 'San pham';
+
+    
     protected $fillable = [
         'pro_code', 'pro_slug', 'pro_category_id', 'pro_trademark_id', 'pro_user_id',
         'pro_source', 'pro_machine_type', 'pro_size', 'pro_thickness', 
@@ -16,14 +19,7 @@ class Product extends Model
         'pro_hot', 'pro_price_entry', 'pro_price', 'pro_sale', 'pro_amount', 'pro_amount_sell',
         'pro_desc', 'pro_status',
     ];
-    protected static $logAttributes  =[
-        'pro_code', 'pro_slug', 'pro_category_id', 'pro_trademark_id', 'pro_user_id',
-        'pro_source', 'pro_machine_type', 'pro_size', 'pro_thickness', 'pro_shell_material', 'pro_rope_material',
-        'pro_glass_material', 'pro_waterproof', 'pro_function', 'pro_guarantee', 'pro_gender',
-        'pro_hot', 'pro_price_entry', 'pro_price', 'pro_sale', 'pro_amount', 'pro_amount_sell','pro_manufacturing',
-        'pro_desc', 'pro_status',
-    ];
-    protected static $logName = 'San pham';
+  
 
     public function Comment()
     {

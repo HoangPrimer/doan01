@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Hash;
 use App\User;
 use App\Product;
 use App\Rate;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Validator;
 
 class Cart_Controller extends Controller
@@ -88,13 +89,14 @@ class Cart_Controller extends Controller
                     }
                 }
                 $oder     =  new Order;
+                $oder->od_code  = rand(100000,999999). Str::random(5).rand(1000,9999);
                 $oder->od_customer_id  = $customer_id;
                 $oder->od_name = $request->name;
                 $oder->od_phone = $request->phone;
                 $oder->od_address = $request->address;
                 $oder->od_gender = $request->gender;
                 $oder->od_email  =   $request->email;
-                $oder->od_status  =   "Chờ Duyệt";
+                $oder->od_status  =   "0";
                 $oder->od_total = $request->tongtien;
                 $oder->od_payment = $request->payment;
                 $oder->od_note = $request->note;
@@ -152,8 +154,10 @@ class Cart_Controller extends Controller
                 ];
             } else {
                 $cart[$id] = [
+                    'id' => $product->pro_slug,
+                    'category_slug' => $product->Category->c_slug,
                     'masp' => $product->pro_code,
-                    'anh' => $product->Image->img_file_path,
+                    'anh' => $product->Image->first()->img_file_path,
                     'thuonghieu' => $product->Trademark->tr_name,
                     'price' => $product->pro_sale,
                     'soluong' => 1,

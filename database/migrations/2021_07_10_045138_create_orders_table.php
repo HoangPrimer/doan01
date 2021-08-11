@@ -17,7 +17,8 @@ class CreateOrdersTable extends Migration
             $table->Increments('id');
             $table->integer('od_customer_id')->unsigned();
             $table->foreign('od_customer_id')->references('id')->on('customers')->onDelete('cascade');
-            $table->string('od_status');
+            $table->tinyInteger('od_status');
+            $table->string('od_code');
             $table->string('od_name');
             $table->integer('od_phone');
             $table->string('od_address');
@@ -25,7 +26,7 @@ class CreateOrdersTable extends Migration
             $table->string('od_email');
             $table->integer('od_total');
             $table->string('od_payment');
-            $table->string('od_note');
+            $table->string('od_note')->nullable();
             $table->timestamps();
         });
     }

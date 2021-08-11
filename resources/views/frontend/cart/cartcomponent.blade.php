@@ -69,7 +69,7 @@
                  </tbody>
              </table>
          </div>
-         <h4 style="text-align: right;">Tổng Tiền: {{ number_format($total) }} VNĐ</h4>
+         <h4 class="text-end text-danger">Tổng Tiền: {{ number_format($total) }} VNĐ</h4>
 
          <input type="text" hidden name='tongtien' value="{{ $total }}">
          <div class="col-lg-6">
@@ -84,7 +84,11 @@
                  <div class="mb-4">
                      <span class="fs-5"> <i class="fas fa-mobile-alt me-2"></i> Số Điện Thoại :</span>
                      <div class="my-2 d-flex align-items-center">
-                         <input class="form-control" type="number" name="phone" value="{{ Auth::user()->phone }}">
+                         @if(Auth::user()->phone == '')
+                            <input class="form-control" type="number" name="phone" >
+                         @else
+                            <input class="form-control" type="number" name="phone" value="0{{ Auth::user()->phone }}">
+                         @endif
                      </div>
                      <p class="err_phone text-danger fs-5"></p>
                  </div>

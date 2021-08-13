@@ -35,10 +35,6 @@ Route::group(['namespace' => 'User'], function () {
         'uses' => 'Login_Register_Controller@getlogin'
     ]);
 
-    Route::get('register', [
-        'as' => 'register',
-        'uses' => 'Login_Register_Controller@getregister'
-    ]);
 
     Route::get('logout', [
         'as' => 'logout',

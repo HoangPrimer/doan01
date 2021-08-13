@@ -74,18 +74,26 @@
     </div>
 
     <div class="row mt-5">
-        <div class="col-xl-8">
-            <div id="container" style=" height:400px; " data-listDay="{{ $list_day }}"
-                data-money="{{ $arrRevuenueOrderMonth }}" data-money-default="{{ $arrRevuenueOrderMonthDefault }}">
-            </div>
-        </div>
-
-        <div class="col-xl-4">
-            <div id="container-1" style=" height:400px;" data-json="{{ $status_order }}">
+        <div class="col-xl-12 overflow-scroll scroll-hidden ">
+            <div id="container" style=" height:500px;min-width: 1000px; " data-listDay="{{ $list_day }}"
+                data-money="{{ $arrRevuenueOrderMonth }}" data-money-default="{{ $arrRevuenueOrderMonthDefault }}"
+                data-money-cancel="{{ $arrRevuenueOrderMonthCancel }}"
+                data-money-onway="{{ $arrRevuenueOrderMonthOnway }}"
+                data-money-approved="{{ $arrRevuenueOrderMonthApproved }}">
             </div>
         </div>
     </div>
 
+    <div class="row mt-5">
+        <div class="col-xl-8 overflow-scroll scroll-hidden">
+            <div id="container-2" style=" height:500px;min-width: 1000px; " data-money-product="{{ $arrTop10Money }}">
+            </div>
+        </div>
+        <div class="col-xl-4 ">
+            <div id="container-1" style=" height:500px;" data-json="{{ $status_order }}">
+            </div>
+        </div>
+    </div>
     <div class="row d-flex justify-content-between mt-5 mx-2 ">
         <div class="col-lg-12 col-xl-8 p-0">
             <div class="table-responsive   border-primary border-top border-3 p-1 "
@@ -172,7 +180,7 @@
                                     <img style="width:80px" src="{{ $top->Image()->value('img_file_path') }}" alt="">
                                 </div>
                                 <div class="ms-2 break-all" style="max-width: 170px;">
-                                    <p class="m-0 fw-bold"><i class="far fa-eye"></i>  {{ $top->pro_view }} lượt xem</p>
+                                    <p class="m-0 fw-bold"><i class="far fa-eye"></i> {{ $top->pro_view }} lượt xem</p>
                                     <p class="m-0 ">{{ $top->pro_code }}</p>
                                 </div>
                             </div>
@@ -187,117 +195,5 @@
         </div>
     </div>
 
-    <script>
-        let listday = $('#container').attr('data-listDay');
-        let dataOrder = $('#container-1').attr('data-json');
-        let dataMoney = $('#container').attr('data-money');
-        let dataMoneyDefault = $('#container').attr('data-money-default');
-        dataOrder = JSON.parse(dataOrder);
-        listday = JSON.parse(listday);
-        dataMoney = JSON.parse(dataMoney);
-        dataMoneyDefault = JSON.parse(dataMoneyDefault);
 
-
-        Highcharts.chart('container', {
-            chart: {
-                type: 'spline'
-            },
-            title: {
-                text: 'Biểu đồ doanh thu các ngày trong tháng'
-            },
-            subtitle: {
-                text: 'Source: WorldClimate.com'
-            },
-            xAxis: {
-                categories: listday,
-                labels: {
-                    rotation: -45,
-                    style: {
-                        fontSize: '13px',
-                        fontFamily: 'Verdana, sans-serif'
-                    }
-                }
-            },
-            yAxis: {
-                title: {
-                    text: 'Mức Tiền'
-                },
-                labels: {
-                    formatter: function() {
-                        return this.value + 'đ';
-                    }
-                }
-            },
-            tooltip: {
-                crosshairs: true,
-                shared: true
-            },
-            plotOptions: {
-                spline: {
-                    marker: {
-                        radius: 3,
-                        lineColor: '#666666',
-                        lineWidth: 1
-                    }
-                }
-            },
-            series: [{
-                    name: 'Đã Giao',
-                    marker: {
-                        symbol: 'circle'
-                    },
-                    data: dataMoney
-
-                },
-                {
-                    name: 'Chờ Duyệt',
-                    marker: {
-                        symbol: 'diamond'
-                    },
-                    data:dataMoneyDefault
-                },
-            ]
-        });
-
-
-        // Create the chart
-        Highcharts.chart('container-1', {
-            chart: {
-                type: 'pie'
-            },
-            title: {
-                text: 'Thống kê trạng thái đơn hàng'
-            },
-
-            accessibility: {
-                announceNewData: {
-                    enabled: true
-                },
-                point: {
-                    valueSuffix: '%'
-                }
-            },
-
-            plotOptions: {
-                series: {
-                    dataLabels: {
-                        enabled: true,
-                        format: '{point.name}: {point.y}'
-                    }
-                }
-            },
-
-            tooltip: {
-                headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-                pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
-            },
-
-            series: [{
-                name: "Browsers",
-                colorByPoint: true,
-                data: dataOrder
-            }],
-
-        });
-    </script>
 @endsection

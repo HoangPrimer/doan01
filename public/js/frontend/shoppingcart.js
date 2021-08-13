@@ -7,8 +7,15 @@ $(document).on('click', '.shopping', function addTocart(event) {
         url: urlCart,
         dataType: 'json',
         success: function(data) {
-            alert('Đã thêm vào giỏ hàng');
             $('#header').html(data.header);
+            toastr.success("Đã thêm vào giỏ!");
+            toastr.options = {
+                "newestOnTop": true,
+                "positionClass": "toast-top-right",
+                "showDuration": "300",
+                "hideDuration": "3000",
+            }
+
         },
         error: function() {},
     });
@@ -32,7 +39,14 @@ $(document).on('click', '.cart_update', function updatecart(event) {
         success: function(data) {
             if (data.code === 200) {
                 $('.shopping_cart').html(data.cart_component);
-                alert('Cập Nhật Thành Công');
+                toastr.info("Đã cập nhật!")
+
+                toastr.options = {
+                    "newestOnTop": true,
+                    "positionClass": "toast-top-right",
+                    "showDuration": "300",
+                    "hideDuration": "3000",
+                }
             }
         },
         error: function() {
@@ -60,7 +74,13 @@ $(document).on('click', '.del_cart', function delcart(event) {
 
                 $('.shopping_cart').html(data.cart_component);
                 $('#header').html(data.header);
-                alert('Đã Xóa');
+                toastr.error("Đã Xóa !!!")
+                toastr.options = {
+                    "newestOnTop": true,
+                    "positionClass": "toast-top-right",
+                    "showDuration": "300",
+                    "hideDuration": "3000",
+                }
             }
         },
         error: function() {
@@ -92,9 +112,18 @@ $(document).on('submit', '#form_oder', function form_oder(event) {
                 $('.err_address').html(data.address);
             }
             if (data.code === 300) {
-                alert(data.message);
+
                 $('.shopping_cart').html(data.shopcart);
                 $('#header').html(data.headers);
+
+                toastr.success("Cảm ơn bạn đã đặt hàng! Chúng tôi sẽ liên hệ với bạn sớm.")
+
+                toastr.options = {
+                    "newestOnTop": true,
+                    "positionClass": "toast-top-right",
+                    "showDuration": "300",
+                    "hideDuration": "3000",
+                }
             }
         },
     });

@@ -34,7 +34,7 @@
                 </td>
                 <td>{{ date('d-m-Y', strtotime($list->created_at)) }}</td>
                 <td style="width: 220px">
-                    <a href="{{ route('order_details', $list->id) }}" class="btn btn-md btn-success m-2"
+                    <a data-url="{{ route('order_details', $list->id) }}" class="btn btn-md btn-success m-2 details"
                         title="Thông tin chi tiết">
                         Chi tiết <i class="ms-2 fas fa-info-circle "></i>
                     </a>

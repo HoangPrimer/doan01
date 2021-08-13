@@ -158,9 +158,9 @@
                 <div class="col-lg-9 col-md-12">
                     <div class="product-desc">
                         <p>Mô Tả Sản Phẩm</p>
-                        <span>{!! $product->pro_desc !!}</span>
+                        <div class="length">{!! $product->pro_desc !!}</div>
                     </div>
-                    <div class="d-flex align-items-center justify-content-center py-3">
+                    <div class="text-center py-3 leg">
                         <p class="btn btn-primary read_more">Xem Thêm</p>
                         <p class="btn btn-primary hide-more d-none">Thu gọn</p>
                     </div>
@@ -312,5 +312,6 @@
         </div>
     </section>
     <!-- end kien thuc dong ho -->
+
 
 @endsection

@@ -14,12 +14,19 @@ $(document).on('click', '.show_rate',
 
 /////////////////////////////
 
-$(document).on('click', '.imgThum', imgThum);
-
-function imgThum() {
+$(document).on('click', '.imgThum', function imgThum() {
     let src = $(this).attr('src');
     $('.img_parent').attr('src', src);
-}
+    let abc = $('.imgThum');
+
+    for (let i = 0; i < abc.length; i++) {
+        $(abc[i]).css({ 'border': '1px solid #ccc', 'padding': '0' });
+    }
+    $(this).css({
+        'border': '1px solid #4524ff',
+        'padding': '2px'
+    });
+});
 
 /////////////////////////////////
 
@@ -40,7 +47,25 @@ $(document).on('click', '.add_comment',
                     $('.comment').html(data.viewcomment);
                 }
                 if (data.code === 300) {
-                    alert('Vui lòng đăng nhập để bình luận');
+                    Command: toastr["warning"]("Vui lòng đăng nhập để bình luận.")
+
+                        toastr.options = {
+                        "closeButton": false,
+                        "debug": false,
+                        "newestOnTop": true,
+                        "progressBar": false,
+                        "positionClass": "toast-top-right",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "2000",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    }
                 }
                 if (data.code === 400) {
                     $('.ers').html(data.text);
@@ -73,13 +98,67 @@ $(document).on('click', '.add_rate', function add_rate(event) {
             if (data.code === 200) {
                 $('.rating').html(data.viewrate);
                 $('.product-info').html(data.viewcenter);
-                alert('Cảm ơn Bạn đã dánh giá sản phẩm!!!')
+                Command: toastr["success"]("Cảm ơn bạn đã đánh giá!!!")
+
+                toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "newestOnTop": true,
+                    "progressBar": false,
+                    "positionClass": "toast-top-right",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "2000",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                }
             }
             if (data.code === 300) {
-                alert('Bạn đã đánh giá sản phẩm này rồi!!!');
+                Command: toastr["error"]("Bạn đã đánh giá rồi!!!")
+
+                    toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "newestOnTop": true,
+                    "progressBar": false,
+                    "positionClass": "toast-top-right",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "2000",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                }
             }
             if (data.code === 400) {
-                alert('Vui lòng đăng nhập để đánh giá');
+                Command: toastr["warning"]("Vui lòng đăng nhập để đánh giá.")
+
+                    toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "newestOnTop": true,
+                    "progressBar": false,
+                    "positionClass": "toast-top-right",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "2000",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                }
             }
             if (data.err = 'err') {
                 $('.error_star').html(data.star);

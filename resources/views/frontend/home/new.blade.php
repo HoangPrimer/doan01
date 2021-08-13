@@ -10,7 +10,7 @@
         <div class="row list-new">
             <div class="col-lg-3 col-md-4">
                 <div class="news__item">
-                    <a href="#"><img src="./image/default/tin1.jpg" alt="#"></a>
+                    <a href="#"><img src="./image/default/tin1.jpg" alt="#" class="mb-1"></a>
                     <a href="#">TẤT TẦN TẬT VỀ ĐỒNG HỒ SEIKO 5: HUYỂN THOẠI VỀ...</a>
                     <p> <i class="far fa-calendar-alt me-2"></i>19/04/2021</p>
                     <span>Cùng với Orient SK Mặt Lửa, Casio F91, Poljot, Rado Silver Star, hai đại diện danh giá đến từ thương ... </span>
@@ -18,7 +18,7 @@
             </div>
             <div class="col-lg-3 col-md-4">
                 <div class="news__item">
-                    <a href="#"><img src="./image/default/tin2.png" alt="#"></a>
+                    <a href="#"><img src="./image/default/tin2.png" alt="#" class="mb-1"></a>
                     <a href="#">OGIVAL TRÂU VÀNG PHÚ QUÝ - BÁU VẬT PHONG THỦY...</a>
                     <p> <i class="far fa-calendar-alt  me-2"></i>04/02/2021</p>
                     <span>Năm Tân Sửu sở hữu Ngưu Vàng là chuẩn nhất, đặc biệt là các bác tuổi Sửu lại càng tuyệt vời hơn. ... </span>
@@ -26,7 +26,7 @@
             </div>
             <div class="col-lg-3 col-md-4">
                 <div class="news__item">
-                    <a href="#"><img src="./image/default/tin3.jpg" alt="#"></a>
+                    <a href="#"><img src="./image/default/tin3.jpg" alt="#" class="mb-1"></a>
                     <a href="#">[NEW] SRWATCH GALAXY “LIMITED”: NGỠ TƯỞNG SIÊU ...</a>
                     <p> <i class="far fa-calendar-alt  me-2"></i>02/02/2021</p>
                     <span>Nếu nhìn thoáng qua, rất nhiều anh em sẽ lầm tưởng đẩy là siêu phẩm đình đám đến từ Thụy Sĩ - HUBLOT ... </span>

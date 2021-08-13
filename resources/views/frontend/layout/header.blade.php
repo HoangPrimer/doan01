@@ -64,7 +64,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="{{route('home')}}">
+                    <a class="nav-link disabled text-light" href="{{route('home')}}">
                         Thương Hiệu
                     </a>
                 </li>
@@ -85,6 +85,16 @@
                         @endif
                 @endforeach
                 @endif
+                <li class="nav-item">
+                    <a class="nav-link disabled text-light" href="{{route('home')}}">
+                        Liên hệ
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled text-light" href="{{route('home')}}">
+                        Tin Tức
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

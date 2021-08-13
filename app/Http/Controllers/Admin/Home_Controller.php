@@ -9,6 +9,7 @@ use App\Product;
 use App\User;
 use App\Comment;
 use App\Helper\Date;
+use App\Item;
 use App\Rate;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
@@ -41,6 +42,17 @@ class Home_Controller extends Controller
         // danh sách ngày trong tháng
         $list_day = Date::getListDayInMonth();
 
+        // top 10 product bán nhiều nhất
+        $arrTop10Money = [];
+        $top10 = DB::table('orders')->join('items', 'orders.id', '=', 'items.i_order_id')
+            ->where('od_status','3')
+            ->select(DB::raw('sum(i_total) as pro_total_money'), DB::raw('i_product_code as pro_code'))
+            ->groupBy('i_product_code')->orderBy('pro_total_money', 'desc')->limit(10)->get();
+        foreach ($top10 as $key => $top) {
+            $arrTop10Money[] = [$top->pro_code, (float)($top->pro_total_money / 1000000)];
+        }
+
+
         // thống kê đơn hàng
         $order_default = Order::where('od_status', '0')->select('id')->count();
         $order_approved = Order::where('od_status', '1')->select('id')->count();
@@ -65,9 +77,25 @@ class Home_Controller extends Controller
             ->select(DB::raw('sum(od_total) as totalMoney'), DB::raw('DATE(created_at) day'))
             ->groupBy('day')
             ->get()->toArray();
+        $revuenueOrderMonthCancel = Order::where('od_status', '4')->whereMonth('created_at', date('m'))
+            ->select(DB::raw('sum(od_total) as totalMoney'), DB::raw('DATE(created_at) day'))
+            ->groupBy('day')
+            ->get()->toArray();
+        $revuenueOrderMonthOnway = Order::where('od_status', '2')->whereMonth('created_at', date('m'))
+            ->select(DB::raw('sum(od_total) as totalMoney'), DB::raw('DATE(created_at) day'))
+            ->groupBy('day')
+            ->get()->toArray();
+        $revuenueOrderMonthApproved = Order::where('od_status', '1')->whereMonth('created_at', date('m'))
+            ->select(DB::raw('sum(od_total) as totalMoney'), DB::raw('DATE(created_at) day'))
+            ->groupBy('day')
+            ->get()->toArray();
 
         $arrRevuenueOrderMonth = [];
         $arrRevuenueOrderMonthDefault = [];
+        $arrRevuenueOrderMonthCancel = [];
+        $arrRevuenueOrderMonthOnway = [];
+        $arrRevuenueOrderMonthApproved = [];
+
         foreach ($list_day as $day) {
             $total = 0;
             foreach ($revuenueOrderMonth as $key => $revenue) {
@@ -86,6 +114,31 @@ class Home_Controller extends Controller
                 }
             }
             $arrRevuenueOrderMonthDefault[] = (int)$total;
+
+            $total = 0;
+            foreach ($revuenueOrderMonthCancel as $key => $revenue) {
+                if ($revenue['day'] == $day) {
+                    $total = $revenue['totalMoney'];
+                    break;
+                }
+            }
+            $arrRevuenueOrderMonthCancel[] = (int)$total;
+            $total = 0;
+            foreach ($revuenueOrderMonthOnway as $key => $revenue) {
+                if ($revenue['day'] == $day) {
+                    $total = $revenue['totalMoney'];
+                    break;
+                }
+            }
+            $arrRevuenueOrderMonthOnway[] = (int)$total;
+            $total = 0;
+            foreach ($revuenueOrderMonthApproved as $key => $revenue) {
+                if ($revenue['day'] == $day) {
+                    $total = $revenue['totalMoney'];
+                    break;
+                }
+            }
+            $arrRevuenueOrderMonthApproved[] = (int)$total;
         }
 
         // dữ liệu
@@ -101,6 +154,10 @@ class Home_Controller extends Controller
             'status_order' => json_encode($status_order),
             'arrRevuenueOrderMonth' => json_encode($arrRevuenueOrderMonth),
             'arrRevuenueOrderMonthDefault' => json_encode($arrRevuenueOrderMonthDefault),
+            'arrRevuenueOrderMonthCancel' => json_encode($arrRevuenueOrderMonthCancel),
+            'arrRevuenueOrderMonthOnway' => json_encode($arrRevuenueOrderMonthOnway),
+            'arrRevuenueOrderMonthApproved' => json_encode($arrRevuenueOrderMonthApproved),
+            'arrTop10Money' => json_encode($arrTop10Money),
         ];
         return view('backend.home', $data);
     }

@@ -43,6 +43,7 @@
                             <li class="fs-5">{{ $or->od_name }} - 0{{ $or->od_phone }}</li>
                             <li class="fs-5">Địa chỉ nhận hàng: {{ $or->od_address }}</li>
                             <li class="fs-5">Ghi chú : {{ $or->od_note }}</li>
+                            <li class="fs-5">Ghi chú : {{ $or->od_payment }}</li>
                         </ul>
                     </div>
                     <div class="w-100 mt-3  py-3 text-center ">

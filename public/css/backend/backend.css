@@ -253,90 +253,6 @@
         display: none;
     }
     /*-------------------------------------------------toassst----*/
-    
-    .toast {
-        min-width: 250px;
-        max-width: 600px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        background-color: rgb(255, 255, 255);
-        border-radius: 5px;
-        border-left: 3px solid;
-        border: 0.5px solid #3498db;
-        animation: left 1s ease forwards, out 1s ease 2s forwards;
-    }
-    
-    @keyframes left {
-        from {
-            opacity: 0;
-            transform: translateY(-120px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    
-    @keyframes out {
-        to {
-            opacity: 0;
-        }
-    }
-    
-    #toast {
-        position: fixed;
-        top: 100px;
-        right: 50%;
-        transform: translateX(50%);
-    }
-    
-    .toast .toast__icon {
-        font-size: 25px;
-    }
-    
-    .toast .toast__close {
-        font-size: 24px;
-        color: rgb(151, 146, 146);
-        cursor: pointer;
-    }
-    
-    .toast .toast__body {
-        flex-grow: 1;
-        font-size: 20px;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    
-    .toast .toast__icon,
-    .toast .toast__close {
-        padding: 10px 16px;
-    }
-    
-    .toast--success {
-        border-color: #47d864;
-    }
-    
-    .toast--success .toast__icon {
-        color: #47d864;
-    }
-    
-    .toast--success .toast__body {
-        color: #47d864;
-    }
-    
-    .toast--error {
-        border-color: red;
-    }
-    
-    .toast--error .toast__icon {
-        color: red;
-    }
-    
-    .toast--error .toast__body {
-        color: red;
-    }
     /*--------------------------------------------------------------------------------------------------*/
     /* profile */
     
@@ -455,6 +371,11 @@
         border: 1px solid #9aafe7;
         z-index: 1000;
     }
+    /* ======================  */
+    
+    .scroll-hidden::-webkit-scrollbar {
+        display: none;
+    }
     /* biểu đồ */
     
     .highcharts-figure,
@@ -503,5 +424,8 @@
     @media only screen and (max-width:575.92px) {
         .update {
             padding: 20px 10px !important;
+        }
+        #container-1 {
+            height: 300px !important;
         }
     }

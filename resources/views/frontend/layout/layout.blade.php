@@ -14,46 +14,25 @@
     <link rel="stylesheet" href="{{ asset('/css/frontend/login_register.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/frontend/profile.css') }}">
     <link href="{{ asset('/css/fontawesome-free-5.15.3-web/css/all.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://codeseven.github.io/toastr/build/toastr.min.css">
+
     <!--load all styles -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <title>Xwatch VN</title>
 </head>
 
 <body>
     <a data-url="{{ route('cart') }}" class="url_cart" hidden>aaaa</a>
-    @if (session('message'))
-        <div id="toast">
-            <div class="toast toast--success">
-                <div class="toast__icon">
-                    <i class="far fa-check-circle"></i>
-                </div>
-                <div class="toast__body">
-                    <p>{{ session('message') }}</p>
-                </div>
-                <div class="toast__close">
-                    <i class="fas fa-times"></i>
-                </div>
-            </div>
-        </div>
+    @if (session('toastr'))
+        <script>
+            var TYPE_MESSAGE = "{{ session('toastr.type') }}";
+            var MESSAGE = "{{ session('toastr.message') }}";
+        </script>
     @endif
-    @if (session('error'))
-        <div id="toast">
-            <div class="toast toast--error">
-                <div class="toast__icon">
-                    <i class="far fa-check-circle"></i>
-                </div>
-                <div class="toast__body">
-                    {{ session('error') }}
-                </div>
-                <div class="toast__close">
-                    <i class="fas fa-times"></i>
-                </div>
-            </div>
-        </div>
-    @endif
+
+
     <!-- header -->
-    <header id="header">
+    <header id="header" class="sticky-top">
         @include('frontend.layout.header')
     </header>
 
@@ -68,6 +47,8 @@
     </footer>
 
     <!-- js -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/bootstaps5/js/bootstrap.js"></script>
     <script src="/js/frontend/profile_login.js"></script>
     <script src="/js/frontend/layout.js"></script>
@@ -76,6 +57,20 @@
     <script src="/js/frontend/category_product.js"></script>
     <script src="/js/frontend/product_details.js"></script>
     <script src="/js/frontend/search.js"></script>
+    <script src="https://codeseven.github.io/toastr/build/toastr.min.js"></script>
+    <script>
+        if (typeof TYPE_MESSAGE != "undefined") {
+            switch (TYPE_MESSAGE) {
+                case 'success':
+                    toastr.success(MESSAGE);
+                    break;
+                case 'error':
+                    toastr.error(MESSAGE);
+                    break;
+            }
+        }
+    </script>
+
     <script>
         // sap xep 
         $(document).on('change', '#sort_category_product', function() {

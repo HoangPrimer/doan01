@@ -74,8 +74,14 @@ $(document).on('submit', '#create_product', function create_product(event) {
                 }
             }
             if (data.code === 300) {
-                alert('Thêm Thành Công');
-                location.reload();
+                toastr.success("Thêm thành công");
+                toastr.options = {
+                    "newestOnTop": true,
+                    "showDuration": "300",
+                }
+                setTimeout(function load() {
+                    location.reload();
+                }, 500);
             }
         },
     });
@@ -137,8 +143,15 @@ $(document).on('submit', '#update_product', function update_product(event) {
                 }
             }
             if (data.code === 300) {
-                alert('Cập Nhật Thành Công');
-                $(location).attr('href', url_list_product);
+                toastr.info("Cập nhật thành công");
+                toastr.options = {
+                    "newestOnTop": true,
+                    "showDuration": "300",
+                }
+                setTimeout(function() {
+                    $(location).attr('href', url_list_product);
+                }, 500);
+
             }
         },
     });
@@ -160,7 +173,11 @@ $(document).on('click', '#delete_product', function delete_product(event) {
             cache: false,
             processData: false,
             success: function(data) {
-                alert('Xóa Thành Công');
+                toastr.error("Xóa thành công");
+                toastr.options = {
+                    "newestOnTop": true,
+                    "showDuration": "300",
+                }
                 $('.list_product').html(data.new_list_product);
                 $('.total_product').text(data.all);
             },
@@ -193,6 +210,11 @@ $(document).on('click', '.show_hide_product', function show_hide_product(event) 
                     $(me).removeClass('btn-primary');
                     $(me).addClass('btn-danger');
                 }
+                toastr.info("Cập nhật thành công");
+                toastr.options = {
+                    "newestOnTop": true,
+                    "showDuration": "300",
+                }
             } else {
                 $(me).text('Hiện');
                 if ($(me).hasClass('btn-danger') === false) {
@@ -202,6 +224,11 @@ $(document).on('click', '.show_hide_product', function show_hide_product(event) 
                 } else {
                     $(me).removeClass('btn-danger');
                     $(me).addClass('btn-primary');
+                }
+                toastr.info("Cập nhật thành công");
+                toastr.options = {
+                    "newestOnTop": true,
+                    "showDuration": "300",
                 }
             }
         },
@@ -232,6 +259,11 @@ $(document).on('click', '.show_hot_product', function show_hot_product(event) {
                     $(me).removeClass('btn-primary');
                     $(me).addClass('btn-danger');
                 }
+                toastr.info("Cập nhật thành công");
+                toastr.options = {
+                    "newestOnTop": true,
+                    "showDuration": "300",
+                }
             } else {
                 $(me).text('Có');
                 if ($(me).hasClass('btn-danger') === false) {
@@ -241,6 +273,11 @@ $(document).on('click', '.show_hot_product', function show_hot_product(event) {
                 } else {
                     $(me).removeClass('btn-danger');
                     $(me).addClass('btn-primary');
+                }
+                toastr.info("Cập nhật thành công");
+                toastr.options = {
+                    "newestOnTop": true,
+                    "showDuration": "300",
                 }
             }
         },

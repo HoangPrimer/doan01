@@ -50,8 +50,14 @@ $(document).on('submit', '#create_trademark', function create_trademark(event) {
                 $('.err_tr_logo').html(data.tr_logo);
             }
             if (data.code === 300) {
-                alert('Thêm Thành Công');
-                location.reload();
+                toastr.success("Thêm thành công");
+                toastr.options = {
+                    "newestOnTop": true,
+                    "showDuration": "300",
+                }
+                setTimeout(function load() {
+                    location.reload();
+                }, 500);
             }
         },
     });
@@ -77,8 +83,16 @@ $(document).on('submit', '#update_trademark', function update_trademark(event) {
                 $('.err_tr_logo').html(data.tr_logo);
             }
             if (data.code === 300) {
-                alert('Cập Nhật Thành Công');
-                $(location).attr('href', url_list_trademark);
+
+                toastr.info("Cập nhật thành công");
+                toastr.options = {
+                    "newestOnTop": true,
+                    "showDuration": "300",
+                }
+                setTimeout(function load() {
+                    $(location).attr('href', url_list_trademark);
+                }, 500);
+
             }
         },
     });
@@ -100,7 +114,11 @@ $(document).on('click', '#delete_trademark', function delete_trademark(event) {
             cache: false,
             processData: false,
             success: function(data) {
-                alert('Xóa Thành Công');
+                toastr.error("Xóa thành công");
+                toastr.options = {
+                    "newestOnTop": true,
+                    "showDuration": "300",
+                }
                 $('.list_trademark').html(data.new_list_trademark);
                 $('.total_trademark').text(data.all);
             },

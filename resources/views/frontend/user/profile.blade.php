@@ -48,9 +48,9 @@
                         <label class="fs-5 fw-bold">Giới Tính :</label>
                         <div class="info-item">
                             @if (Auth::user()->gender == '')
-                                <span class="fs-5" id="gender-info">Chưa có thông tin</span>
+                                <span class="fs-5">Chưa có thông tin</span>
                             @else
-                                <span class="fs-5" id="gender-info">{{ Auth::user()->gender }}</span>
+                                <span class="fs-5">{{ Auth::user()->gender }}</span>
                             @endif
                             <i class="fs-5 fas fa-pencil-alt"></i>
                         </div>
@@ -59,9 +59,9 @@
                         <label class="fs-5 fw-bold">Địa Chỉ :</label>
                         <div class="info-item">
                             @if (Auth::user()->address == '')
-                                <span class="fs-5" id="gender-info">Chưa có thông tin</span>
+                                <span class="fs-5">Chưa có thông tin</span>
                             @else
-                                <span class="fs-5" id="gender-info">{{ Auth::user()->address }}</span>
+                                <span class="fs-5">{{ Auth::user()->address }}</span>
                             @endif
                             <i class="fs-5 fas fa-pencil-alt"></i>
                         </div>
@@ -82,7 +82,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($a = DB::table('orders')->where('od_phone', Auth::user()->phone)->orderBy('id', 'desc')->get() as $item)
+                                    @foreach ($a = DB::table('orders')->where('od_phone', Auth::user()->phone)->orderBy('id', 'desc')->get()
+        as $item)
                                         <tr>
                                             <td style="width: 150px;">
                                                 <a href="{{ route('user_order_details', $item->od_code) }}"
@@ -91,7 +92,8 @@
                                                 </a>
                                             </td>
                                             <td style="width: 220px;word-break: break-all">
-                                                @foreach (DB::table('items')->where('i_order_id', $item->id)->get() as $i)
+                                                @foreach (DB::table('items')->where('i_order_id', $item->id)->get()
+        as $i)
                                                     Đồng Hồ {{ $i->i_product_code }} ,
                                                 @endforeach
                                             </td>
@@ -150,19 +152,14 @@
                 <div class="mb-3">
                     <label class="fs-5 fw-bold">Giới Tính :</label>
                     <div class="my-2">
-                        @if (Auth::user()->gender == '')
-                            <select class="form-control" name="gender">
-                                <option value="">Chưa có thông tin</option>
-                                <option value="Nam">Nam</option>
-                                <option value="Nữ">Nữ</option>
-                            </select>
-                        @else
-                            <select class="form-control" name="gender" id="gender">
-                                <option value="">Chưa có thông tin</option>
-                                <option value="Nam">Nam</option>
-                                <option value="Nữ">Nữ</option>
-                            </select>
-                        @endif
+                        <select class="form-control" name="gender">
+                            <option value="" {{ Auth::user()->gender == '' ? "selected='selected'" : '' }}>Chưa có
+                                thông tin</option>
+                            <option value="Nam" {{ (Auth::user()->gender ?? '') == 'Nam' ? "selected='selected'" : '' }}>
+                                Nam</option>
+                            <option value="Nữ" {{ (Auth::user()->gender ?? '') == 'Nữ' ? "selected='selected'" : '' }}>Nữ
+                            </option>
+                        </select>
                         <p class="fs-5 err_gender text-danger"></p>
                     </div>
                 </div>
@@ -186,10 +183,5 @@
             </form>
         </div>
     </section>
-    <script>
-        let gender = $('#gender-info').text();
-        $(document).ready(function() {
-            $('#gender').val(gender);
-        });
-    </script>
+
 @endsection

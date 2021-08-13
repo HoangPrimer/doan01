@@ -10,6 +10,6 @@ class Customer extends Model
         'ct_name', 'ct_email', 'ct_phone','ct_address','ct_gender',
     ];
     public function Order(){
-        return $this->hasMany('App\Oder','od_customer_id','id');
+        return $this->hasMany('App\Order','od_customer_id','id');
     }
 }

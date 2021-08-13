@@ -18,8 +18,14 @@ $(document).on('submit', '#create_category', function create_category(event) {
                 $('.err_c_desc').html(data.c_desc);
             }
             if (data.code === 300) {
-                alert('Thêm Thành Công');
-                location.reload();
+                toastr.success("Thêm thành công");
+                toastr.options = {
+                    "newestOnTop": true,
+                    "showDuration": "300",
+                }
+                setTimeout(function load() {
+                    location.reload();
+                }, 500);
             }
         },
     });
@@ -45,8 +51,14 @@ $(document).on('submit', '#update_category', function update_category(event) {
                 $('.err_c_desc').html(data.c_desc);
             }
             if (data.code === 300) {
-                alert('Cập Nhật Thành Công');
-                $(location).attr('href', url_list_category);
+                toastr.info("Cập nhật thành công");
+                toastr.options = {
+                    "newestOnTop": true,
+                    "showDuration": "300",
+                }
+                setTimeout(function() {
+                    $(location).attr('href', url_list_category);
+                }, 500);
             }
         },
     });
@@ -68,7 +80,11 @@ $(document).on('click', '#delete_category', function delete_category(event) {
             cache: false,
             processData: false,
             success: function(data) {
-                alert('Xóa Thành Công');
+                toastr.error("Xóa thành công");
+                toastr.options = {
+                    "newestOnTop": true,
+                    "showDuration": "300",
+                }
                 $('.list_category').html(data.new_list_category);
                 $('.total_category').text(data.all);
             },
@@ -135,6 +151,11 @@ $(document).on('click', '.show_hide_category', function show_hide_category(event
                     $(me).removeClass('btn-primary');
                     $(me).addClass('btn-danger');
                 }
+                toastr.success("Cập nhật thành công");
+                toastr.options = {
+                    "newestOnTop": true,
+                    "showDuration": "300",
+                }
             } else {
                 $(me).text('Hiện');
                 if ($(me).hasClass('btn-danger') === false) {
@@ -144,6 +165,11 @@ $(document).on('click', '.show_hide_category', function show_hide_category(event
                 } else {
                     $(me).removeClass('btn-danger');
                     $(me).addClass('btn-primary');
+                }
+                toastr.success("Cập nhật thành công");
+                toastr.options = {
+                    "newestOnTop": true,
+                    "showDuration": "300",
                 }
             }
         },

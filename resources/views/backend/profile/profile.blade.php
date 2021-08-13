@@ -54,8 +54,8 @@
             </div>
             <div class="mb-2">
                 <label>Giới Tính :</label>
-                <input class="my-1 ms-5 me-3" type="radio" name="gender" value="Nam"><span>Nam</span>
-                <input class="my-1 ms-5 me-3" type="radio" name="gender" value="Nữ"><span>Nữ</span>
+                <input class="my-1 ms-5 me-3" type="radio" name="gender" value="Nam"  {{ ($profile->gender ?? '') == 'Nam' ? 'checked' : '' }} ><span>Nam</span>
+                <input class="my-1 ms-5 me-3" type="radio" name="gender" value="Nữ"  {{ ($profile->gender ?? '') == 'Nữ' ? 'checked' : '' }}><span>Nữ</span>
                 <p class="err_gender text-danger"></p>
             </div>
             <div class="mb-2">

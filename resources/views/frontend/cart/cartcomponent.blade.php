@@ -3,27 +3,27 @@
          @csrf
          <div class="table-responsive">
              <table class="table table-bordered border-primary">
-                 <thead >
+                 <thead>
                      <tr>
-                         <td >
+                         <td>
                              <p class="fs-5">STT</p>
                          </td>
-                         <td >
+                         <td>
                              <p class="fs-5">Tên Sản Phẩm</p>
                          </td>
-                         <td >
+                         <td>
                              <p class="fs-5">Ảnh</p>
                          </td>
-                         <td >
+                         <td>
                              <p class="fs-5">Đơn Giá</p>
                          </td>
-                         <td >
+                         <td>
                              <p class="fs-5">Số Lượng</p>
                          </td>
-                         <td >
+                         <td>
                              <p class="fs-5">Thành Tiền</p>
                          </td>
-                         <td >
+                         <td>
                              <p class="fs-5">Hành Động</p>
                          </td>
                      </tr>
@@ -42,7 +42,8 @@
                                  <p class="fs-5">{{ $id += 1 }}</p>
                              </td>
                              <td>
-                                 <a href="{{ route('product.index',['category' => $ac['category_slug'], 'id' => $ac['id']]) }}" class="fs-5">Đồng hồ {{ $ac['thuonghieu'] }} {{ $ac['masp'] }}</a>
+                                 <a href="{{ route('product.index', ['category' => $ac['category_slug'], 'id' => $ac['id']]) }}"
+                                     class="fs-5">Đồng hồ {{ $ac['thuonghieu'] }} {{ $ac['masp'] }}</a>
                              </td>
                              <td style="width: 110px">
                                  <img src="{{ $ac['anh'] }}" alt="" style="width: 100px">
@@ -50,8 +51,8 @@
                              <td>
                                  <p class="fs-5">{{ number_format($ac['price']) }} VNĐ</p>
                              </td>
-                             <td style="width: 100px"><input class="form-control soluong" type="number" value="{{ $ac['soluong'] }}"
-                                     min="1">
+                             <td style="width: 100px"><input class="form-control soluong" type="number"
+                                     value="{{ $ac['soluong'] }}" min="1">
                              </td>
                              <td>
                                  <p class="fs-5">{{ number_format($ac['price'] * $ac['soluong']) }} VNĐ</p>
@@ -84,10 +85,11 @@
                  <div class="mb-4">
                      <span class="fs-5"> <i class="fas fa-mobile-alt me-2"></i> Số Điện Thoại :</span>
                      <div class="my-2 d-flex align-items-center">
-                         @if(Auth::user()->phone == '')
-                            <input class="form-control" type="number" name="phone" >
+                         @if (Auth::user()->phone == '')
+                             <input class="form-control" type="number" name="phone">
                          @else
-                            <input class="form-control" type="number" name="phone" value="0{{ Auth::user()->phone }}">
+                             <input class="form-control" type="number" name="phone"
+                                 value="0{{ Auth::user()->phone }}">
                          @endif
                      </div>
                      <p class="err_phone text-danger fs-5"></p>
@@ -107,11 +109,14 @@
                      <p class="err_address text-danger fs-5"></p>
                  </div>
                  <div class="mb-4">
-                     <span class="fs-5"><i class="fas fa-venus-mars me-2"></i>Giới tính :</span>
+                     <span class="fs-5"><i class="fas fa-venus-mars me-2"></i>Giới tính
+                         :{{ Auth::user()->gender }}</span>
                      <div class="my-2 d-flex align-items-center">
-                         <input class="form-check-input fs-5" type="radio" name="gender" value="Nam"><span
+                         <input class="form-check-input fs-5" type="radio" name="gender" value="Nam"
+                             {{ (Auth::user()->gender ?? '') == 'Nam' ? 'checked' : '' }}><span
                              class="mx-3 fs-5">Nam</span>
-                         <input class="form-check-input fs-5" type="radio" name="gender" value="Nữ"><span
+                         <input class="form-check-input fs-5" type="radio" name="gender" value="Nữ"
+                             {{ (Auth::user()->gender ?? '') == 'Nữ' ? 'checked' : '' }}><span
                              class="mx-3 fs-5">Nữ</span>
                      </div>
                      <p class="err_gender text-danger fs-5"></p>
@@ -120,7 +125,7 @@
                      <span class="fs-5"><i class="fas fa-dollar-sign me-2"></i>Thanh Toán :</span>
                      <div class="my-2 d-flex align-items-center">
                          <input class="form-check-input fs-5 me-3" type="radio" name="payment"
-                             value="Thanh Toán Khi Nhận Hàng">
+                             value="Thanh Toán Khi Nhận Hàng" checked>
                          <span class="fs-5">Thanh Toán Khi Nhận Hàng</span>
                      </div>
                      <p class="err_payment text-danger fs-5"></p>
@@ -178,7 +183,7 @@
                      <span class="fs-5"><i class="fas fa-dollar-sign me-2"></i>Thanh Toán :</span>
                      <div class="my-2 d-flex align-items-center">
                          <input class="form-check-input fs-5 me-3" type="radio" name="payment"
-                             value="Thanh Toán Khi Nhận Hàng">
+                             value="Thanh Toán Khi Nhận Hàng" checked >
                          <span class="fs-5">Thanh Toán Khi Nhận Hàng</span>
                      </div>
                      <p class="err_payment text-danger fs-5"></p>

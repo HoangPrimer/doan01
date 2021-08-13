@@ -39,8 +39,27 @@ $(document).on('submit', '#form_register', function form_register(event) {
                 $('.err__repassword').html(data.repassword);
             }
             if (data.code === 300) {
-                alert('Đăng ký thành công!');
-                location.reload
+
+                location.reload();
+                Command: toastr["success"]("Đăng Ký Thành Công!")
+
+                toastr.options = {
+                    "closeButton": false,
+                    "gỡ lỗi": false,
+                    "newestOnTop": false,
+                    "processBar": false,
+                    "positionClass": "toast-top-right",
+                    "PreventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "3000",
+                    "hideDuration": "3000",
+                    "timeOut": "5000",
+                    "ExtendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "tuyến tính",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                }
             }
         },
     });

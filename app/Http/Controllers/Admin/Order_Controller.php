@@ -227,9 +227,13 @@ class Order_Controller extends Controller
     // chi tiết đơn hàng
     public function order_details($id)
     {
-
-        $order_details  =  Order::find($id);
-        return view('backend.order.details', compact('order_details'));
+        if(request()->ajax()){
+            $order_details  =  Order::find($id);
+            $html =  view('backend.order.details', compact('order_details'))->render();
+            return response([
+                'html' => $html,
+            ]);
+        }
     }
 
     public function action($id, $key)
@@ -259,7 +263,7 @@ class Order_Controller extends Controller
                     break;
             }
             $order->save();
-            return  redirect()->back()->with('message', 'Cập Nhật Thành Công');
+            return  redirect()->back()->with('toastr',['message'=>'Cập Nhật Thành Công','type'=>'success'] );
         }
     }
 

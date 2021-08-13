@@ -82,7 +82,19 @@ if ($(window).width() < 767) {
     });
 }
 
-// remove toát 
-setTimeout(function() {
-    $('#toast').remove();
-}, 3000);
+
+$(document).on('click', '.details', function(event) {
+    event.preventDefault();
+    let url = $(this).data('url');
+    $.ajax({
+        url: url,
+    }).done(function(results) {
+        $('.modal-content').html(results.html);
+        $('#exampleModalCenter').modal('show');
+    });
+});
+$(document).on('click', '.close-modal', function(event) {
+    event.preventDefault();
+    $('#exampleModalCenter').modal('hide');
+
+});

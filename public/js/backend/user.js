@@ -51,7 +51,11 @@ $(document).on('click', '#delete_comment', function delete_comment(event) {
             success: function(data) {
                 $('.list_comment').html(data.new_list_comment);
                 $('.total_comment').html(data.all);
-                alert('Đã Xóa');
+                toastr.error("Xóa thành công");
+                toastr.options = {
+                    "newestOnTop": true,
+                    "showDuration": "300",
+                }
             },
         });
     }
@@ -113,7 +117,11 @@ $(document).on('click', '#delete_rate', function delete_rate(event) {
             success: function(data) {
                 $('.list_rate').html(data.new_list_rate);
                 $('.total_rate').html(data.all);
-                alert('Đã Xóa');
+                toastr.error("Xóa thành công");
+                toastr.options = {
+                    "newestOnTop": true,
+                    "showDuration": "300",
+                }
             },
         });
     }
@@ -175,7 +183,11 @@ $(document).on('click', '#delete_user', function delete_user(event) {
             success: function(data) {
                 $('.list_user').html(data.new_list_user);
                 $('.total_user').html(data.all);
-                alert('Đã Xóa');
+                toastr.error("Xóa thành công");
+                toastr.options = {
+                    "newestOnTop": true,
+                    "showDuration": "300",
+                }
             },
         });
     }
@@ -236,7 +248,11 @@ $(document).on('click', '#delete_customer', function delete_customer(event) {
             success: function(data) {
                 $('.list_customer').html(data.new_list_customer);
                 $('.total_customer').html(data.all);
-                alert('Đã Xóa');
+                toastr.error("Xóa thành công");
+                toastr.options = {
+                    "newestOnTop": true,
+                    "showDuration": "300",
+                }
             },
         });
     }

@@ -52,7 +52,14 @@ function changefillter(type, element) {
 
 }
 
-
+$(document).ready(function() {
+    let height = $('.length').css('height').split('px')[0];
+    if (height < 450) {
+        $('.leg').css('display', 'none');
+    } else {
+        $('.leg').css('display', 'block');
+    }
+})
 
 
 // srearch 

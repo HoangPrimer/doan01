@@ -7,22 +7,34 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="3000">
                     <img src="/image/default/slide1.jpg" class="d-block w-100" alt="...">
                 </div>
-                <div class="carousel-item" data-bs-interval="3000">
+                <div class="carousel-item" data-bs-interval="2000">
                     <img src="/image/default/slide2.jpg" class="d-block w-100" alt="...">
                 </div>
-                <div class="carousel-item" data-bs-interval="3000">
+                <div class="carousel-item" data-bs-interval="2000">
                     <img src="/image/default/slide3.jpg" class="d-block w-100" alt="...">
                 </div>
-                <div class="carousel-item" data-bs-interval="3000">
+                <div class="carousel-item" data-bs-interval="2000">
                     <img src="/image/default/slide4.jpg" class="d-block w-100" alt="...">
                 </div>
-                <div class="carousel-item" data-bs-interval="3000">
+                <div class="carousel-item" data-bs-interval="2000">
                     <img src="/image/default/slide5.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="/image/default/slide6.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="/image/default/slide7.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="/image/default/slide8.jpg" class="d-block w-100" alt="...">
                 </div>
 
             </div>

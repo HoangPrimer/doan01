@@ -1,8 +1,8 @@
 <div class="album py-5 ">
     <div class="container border-show py-5">
         <div class="row mb-4">
-            <div class="d-flex justify-content-center align-items-center">
-                <h2 class="fw-normal">SẢN PHẨM NỔI BẬT</h2>
+            <div class="d-flex justify-content-center align-items-center nameme">
+                <h2 class="fw-normal m-0">SẢN PHẨM NỔI BẬT</h2>
             </div>
             <div class="product__hot-menu my-4">
                 <span class="item_btn " onclick="change__product('nam',this)">ĐỒNG HỒ NAM</span>
@@ -10,11 +10,11 @@
             </div>
         </div>
 
-        <div id="nam" class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
+        <div id="nam" class="row row-cols-2 row-cols-sm-3 row-cols-md-4 ">
             @if(count($product_male)>0)
             @foreach($product_male as $male)
-            <div class="col ">
-                <div class="card ">
+            <div class="col mb-4">
+                <div class="card h-100">
                     <div class="overflow-hidden position-relative">
                         <a href="{{ route('product.index',['category'=> $male ->Category->c_slug , 'id' => $male ->pro_slug]) }}" title="Chi tiết sản phẩm" class="image-product">
                             <img class="img-fluid " src="{{$male->Image()->value('img_file_path')}}" alt="loading">
@@ -62,11 +62,11 @@
             </div>
             @endif
         </div>
-        <div id="nu" class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3 ">
+        <div id="nu" class="row row-cols-2 row-cols-sm-3 row-cols-md-4">
             @if(count($product_female)>0)
             @foreach($product_female as $male)
-            <div class="col">
-                <div class="card ">
+            <div class="col mb-4">
+                <div class="card h-100">
                     <div class="overflow-hidden position-relative">
                         <a href="{{ route('product.index',['category'=> $male ->Category->c_slug , 'id' => $male ->pro_slug]) }}" title="Chi tiết sản phẩm" class="image-product">
                             <img class="img-fluid " src="{{$male->Image()->value('img_file_path')}}" alt="loading">

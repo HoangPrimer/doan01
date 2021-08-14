@@ -27,7 +27,7 @@
             <div class="footer__info">
                 <ul class="menu-sub1">
                     <li>
-                        <p class="d-flex justify-content-between">Chăm sóc khách hàng
+                        <p class="d-flex justify-content-between m-0">Chăm sóc khách hàng
                             <i class="fas fa-chevron-down d-md-none  p-1 show_info_footer"></i>
                             <i class="fas fa-chevron-up d-none d-md-none p-1 hide_info_footer"></i>
                         </p>
@@ -39,7 +39,7 @@
                         </ul>
                     </li>
                     <li>
-                        <p class="d-flex justify-content-between">Về Xwatch
+                        <p class="d-flex justify-content-between m-0">Về Xwatch
                             <i class="fas fa-chevron-down d-md-none p-1 show_info_footer"></i>
                             <i class="fas fa-chevron-up d-none d-md-none p-1 hide_info_footer"></i>
                         </p>
@@ -51,7 +51,7 @@
                         </ul>
                     </li>
                     <li>
-                        <p class="d-flex justify-content-between">Tiện ích
+                        <p class="d-flex justify-content-between m-0">Tiện ích
                             <i class="fas fa-chevron-down d-md-none p-1 show_info_footer"></i>
                             <i class="fas fa-chevron-up d-none d-md-none p-1 hide_info_footer"></i>
                         </p>

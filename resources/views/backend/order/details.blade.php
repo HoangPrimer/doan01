@@ -1,9 +1,9 @@
 <div class="modal-header">
-    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+    <h5 class="modal-title fs-3 text-danger" id="exampleModalLongTitle">Chi tiết đơn hàng</h5>
 </div>
 <div class="modal-body">
     <div class="table-responsive">
-        <table class="table">
+        <table class="table"style="min-width: 800px">
             <thead>
                 <tr>
                     <th class="col-sm-1">#</th>

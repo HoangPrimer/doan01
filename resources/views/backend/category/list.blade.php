@@ -20,7 +20,7 @@
             <a class="btn btn-lg btn-primary " href="{{ route('create_category') }}">Thêm</a>
             <div class="form-group me-2">
                 <span class="fs-4"> Sắp xếp theo :</span>
-                <select class="sort_list_category px-2 py-1" data-url="{{ route('sort_category') }}">
+                <select class="sort_list_category p-1" data-url="{{ route('sort_category') }}">
                     <option value="new">Mới Nhất</option>
                     <option value="old">Cũ Nhất</option>
                     <option value="abc_asc">Từ A -> Z </option>

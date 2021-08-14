@@ -17,10 +17,6 @@ window.onclick = function(event) {
 }
 
 
-// go thong bao toaast
-setTimeout(function() {
-    $('#toast').remove();
-}, 3000);
 
 // =========================== hiển thị thông tin footer
 
@@ -29,7 +25,7 @@ $(document).on('click', '.show_info_footer', function show_info_footer(event) {
     let me = $(this);
     let ul = $(this).parent('p').parent('li').find('ul.sub-menu');
     let hide = $(this).parent('p').find('.hide_info_footer');
-    let height = ul.find('li').css('height');
+
     let li = ul.find('li');
 
     for (let i = 0.0000000; i <= 1; i++) {

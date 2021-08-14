@@ -1,4 +1,4 @@
-<table class="table table-striped table-bordered border-primary ">
+<table class="table table-striped table-bordered border-primary " style="min-width: 1000px">
     <thead>
         <tr>
             <th scope="col" class="text-center">#</th>
@@ -30,12 +30,12 @@
                     @endif
                 </td>
                 <td>{{ date('d-m-Y', strtotime($list->created_at)) }}</td>
-                <td style="width: 220px">
-                    <a data-url="{{ route('order_details', $list->id) }}" class="btn btn-md btn-success m-2 details"
+                <td style="width: 125px">
+                    <a data-url="{{ route('order_details', $list->id) }}" class="btn btn-md btn-success details"
                         title="Thông tin chi tiết">
                         Chi tiết <i class="ms-2 fas fa-info-circle "></i>
                     </a>
-                    <div class="menu">
+                    <div class="menu mt-2">
                         <a class="menu-button btn btn-info d-flex align-items-center">
                             Hành Động
                             <i class="ms-3 fa fa-caret-down"></i>

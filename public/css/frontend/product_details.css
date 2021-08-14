@@ -312,8 +312,9 @@
 
 .rate_c_center .main-item .row_star {
     width: 80%;
-    height: 20px;
-    background-color: #ebf1fd;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #e5e8ee;
     margin: 0 10px;
 }
 

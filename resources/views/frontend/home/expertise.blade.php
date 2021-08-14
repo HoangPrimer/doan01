@@ -1,6 +1,10 @@
 <section class=" py-5 ">
     <div class="container border-show py-3">
-        <h2>THẨM ĐỊNH ĐỒNG HỒ</h2>
+        <div class="row mb-4">
+            <div class="d-flex justify-content-center align-items-center nameme">
+                <h2 class="fw-normal m-0">THẨM ĐỊNH ĐỒNG HỒ</h2>
+            </div>
+        </div>
         <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 g-3 mt-2 ">
             <div class="col my-1">
                 <div class="expertise__image">

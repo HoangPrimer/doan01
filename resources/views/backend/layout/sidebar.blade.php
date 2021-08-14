@@ -1,5 +1,5 @@
 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
-    <div class="position-sticky pt-3">
+    <div class="position-sticky pt-3 px-1">
         <div class="px-3 mb-3 d-flex align-items-center flex-wrap ">
             <div class="image">
                 <img src="{{ Auth::user()->image }}" style="width:50px; height:50px; border-radius:50%;"

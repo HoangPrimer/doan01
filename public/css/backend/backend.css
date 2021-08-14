@@ -134,25 +134,31 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        transition: .5s;
     }
     
     .dropdown-btn:hover {
-        color: rgb(7, 92, 250) !important;
+        background-color: #3f474e;
+        border-radius: 4px;
+        color: #fff;
     }
     
     .active {
-        background-color: rgb(217, 231, 229);
-        color: #000 !important;
+        background-color: rgb(237, 245, 244) !important;
+        color: rgb(15, 10, 10) !important;
+        border-radius: 4px;
     }
     
     .dropdown-container {
-        display: none;
+        height: 0;
         overflow: hidden;
+        opacity: 0;
+        transition: .5s;
     }
     
     .dropdown-container .abc {
-        margin: 5px 0;
-        color: rgb(190, 191, 199);
+        margin-bottom: 5px;
+        color: rgb(230, 230, 236);
         position: relative;
         transition: 0.5s;
     }
@@ -160,6 +166,7 @@
     .dropdown-container .abc:hover {
         box-shadow: 0 0 2px 2px #c9d4f1;
         color: #fff !important;
+        border-radius: 4px;
     }
     
     .fa-caret-down {
@@ -419,6 +426,28 @@
     
     .highcharts-data-table tr:hover {
         background: #f1f7ff;
+    }
+    
+    #container-3 {
+        height: 500px;
+        width: 800px;
+        margin: 0 auto;
+    }
+    
+    .highcharts-tooltip>span {
+        padding: 10px;
+        white-space: normal !important;
+        width: 200px;
+    }
+    
+    .loading {
+        margin-top: 10em;
+        text-align: center;
+        color: gray;
+    }
+    
+    .f32 .flag {
+        vertical-align: middle !important;
     }
     
     @media only screen and (max-width:575.92px) {

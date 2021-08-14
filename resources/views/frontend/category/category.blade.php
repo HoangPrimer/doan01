@@ -292,7 +292,7 @@
                                 data-url="{{ route('category.search') }}">
                         </div>
                     </div>
-                    <div id="result_fillter" class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-3 category_product_list">
+                    <div id="result_fillter" class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 category_product_list">
                         @include('frontend.category.child_category')
                     </div>
                 </div>

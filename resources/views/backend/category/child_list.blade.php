@@ -1,4 +1,4 @@
-<table class="table table-striped table-bordered border-primary ">
+<table class="table table-striped table-bordered border-primary " style="min-width: 1000px">
     <thead>
         <tr>
             <th scope="col" class="text-center">#</th>
@@ -24,7 +24,7 @@
                     <td><a data-url="{{ route('show_hide_category', $list->id) }}"
                             class="btn btn-md btn-primary show_hide_category">Hiện</a></td>
                 @endif
-                <td class="col-sm-1">{{ $list->created_at }}</td>
+                <td class="col-sm-1">{{ date('d-m-Y', strtotime($list->created_at)) }}</td>
                 <td>
                     <a href="{{ route('update_category', $list->id) }}" class="btn btn-md btn-primary m-2">
                         <i class="fas fa-pencil-alt"></i>

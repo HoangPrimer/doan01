@@ -158,10 +158,12 @@
     }
     ul.menu-sub1>li {
         width: 100%;
-        padding: 5px;
+        padding: 0 5px;
         border: 1px solid #83cdff;
         margin-bottom: 10px;
-        padding-bottom: 5px;
+    }
+    ul.menu-sub1>li p {
+        font-size: 16px;
     }
     .sub-menu {
         height: 0;

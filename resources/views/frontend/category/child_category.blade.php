@@ -1,7 +1,7 @@
 @if (!empty($product))
     @foreach ($product as $male)
-        <div class="col">
-            <div class="card ">
+        <div class="col mb-4">
+            <div class="card h-100 ">
                 <div class="overflow-hidden position-relative">
                     <a href="{{ route('product.index', ['category' => $male->Category->c_slug, 'id' => $male->pro_slug]) }}"
                         title="Chi tiết sản phẩm" class="image-product">

@@ -1,6 +1,10 @@
 <section class="py-5">
-    <div class="container main-feedback border-show py-3">
-        <h2 class="mb-4">KHÁCH HÀNG NÓI GÌ VỀ CHÚNG TÔI</h2>
+    <div class="container main-feedback border-show py-3 ">
+        <div class="row mb-4">
+            <div class="d-flex justify-content-center align-items-center nameme">
+                <h2 class="fw-normal m-0">KHÁCH HÀNG NÓI GÌ VỀ CHÚNG TÔI</h2>
+            </div>
+        </div>
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-3 list-feedback">
             <div class="col">
                 <div class="feedback__video">

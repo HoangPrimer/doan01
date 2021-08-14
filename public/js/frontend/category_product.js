@@ -34,12 +34,12 @@ function changefillter(type, element) {
                 break;
             case 'day':
                 $('#thuonghieu').css('height', '0');
-                $('#gia').css('display', '0');
+                $('#gia').css('height', '0');
                 $('#kieumay').css('height', '0');
                 $('#size').css('height', '0');
                 break;
             case 'size':
-                $('#thuonghieu').css('display', '0');
+                $('#thuonghieu').css('height', '0');
                 $('#gia').css('height', 'none');
                 $('#kieumay').css('height', '0');
                 $('#day').css('height', '0');

@@ -1,6 +1,5 @@
 @extends('backend.layout.layout')
 @section('content')
-
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center mb-3 border-bottom">
         <h2 class="m-0">Cập Nhật Sản Phẩm </h2>
         <div class="nav">
@@ -28,9 +27,11 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <label for="pro_category_id">Danh Mục Sản Phẩm : </label>
                     <select type="text" class="form-control" name="pro_category_id" id="pro_category_id">
-                        <option value="{{ $update_product->Category->id }}">{{ $update_product->Category->c_name }}</option>
                         @foreach ($list_category as $category)
-                            <option value="{{ $category->id }}"> {{ $category->c_name }}</option>
+                            <option value="{{ $category->id }}"
+                                {{ $update_product->pro_category_id == $category->id ? 'selected' : '' }}>
+                                {{ $category->c_name }}
+                            </option>
                         @endforeach
                     </select>
                     <span class="text-danger err_pro_category_id fs-5"></span>
@@ -89,13 +90,12 @@
                     id="pro_desc"> {{ $update_product->pro_desc }}</textarea>
                 <span class="text-danger err_pro_desc  fs-5"></span>
             </div>
-            <div class="form-group mt-3">
+            <div class="form-group mt-3 ">
                 <button type="submit" class="btn btn-success btn-lg">Lưu <i class="fas fa-check ms-2"></i></button>
                 <a href="{{ route('a.list_product') }}" class="btn btn-danger btn-lg">Back List<i
                         class="fas fa-undo ms-2"></i></a>
             </div>
-    </div>
-    </form>
+        </form>
     </div>
 
 @endsection

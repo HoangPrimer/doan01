@@ -176,7 +176,6 @@ Route::middleware(['admin'])->group(function () {
                 'as' => 'post_update_profile',
                 'uses' => 'Profile_Controller@post_update_profile'
             ]);
-          
         });
 
 

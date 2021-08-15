@@ -13,7 +13,7 @@ $(document).on('click', '.shopping', function addTocart(event) {
                 "newestOnTop": true,
                 "positionClass": "toast-top-right",
                 "showDuration": "300",
-                "hideDuration": "3000",
+                "hideDuration": "1000",
             }
 
         },
@@ -45,7 +45,7 @@ $(document).on('click', '.cart_update', function updatecart(event) {
                     "newestOnTop": true,
                     "positionClass": "toast-top-right",
                     "showDuration": "300",
-                    "hideDuration": "3000",
+                    "hideDuration": "1000",
                 }
             }
         },
@@ -79,7 +79,7 @@ $(document).on('click', '.del_cart', function delcart(event) {
                     "newestOnTop": true,
                     "positionClass": "toast-top-right",
                     "showDuration": "300",
-                    "hideDuration": "3000",
+                    "hideDuration": "1000",
                 }
             }
         },
@@ -122,7 +122,7 @@ $(document).on('submit', '#form_oder', function form_oder(event) {
                     "newestOnTop": true,
                     "positionClass": "toast-top-right",
                     "showDuration": "300",
-                    "hideDuration": "3000",
+                    "hideDuration": "2000",
                 }
             }
         },

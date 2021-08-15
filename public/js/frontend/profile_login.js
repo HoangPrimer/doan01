@@ -8,6 +8,9 @@ $(document).on('click', '.dangky', function dangky(event) {
         'opacity': '1',
     });
 });
+
+// /////////////////////////////
+
 $(document).on('click', '.huy', function huy(event) {
     $('.login').css({
         'top': '50%',
@@ -18,6 +21,7 @@ $(document).on('click', '.huy', function huy(event) {
     });
 });
 
+///////////////////////////
 
 $(document).on('submit', '#form_register', function form_register(event) {
     event.preventDefault();
@@ -40,26 +44,16 @@ $(document).on('submit', '#form_register', function form_register(event) {
             }
             if (data.code === 300) {
 
-                location.reload();
                 Command: toastr["success"]("Đăng Ký Thành Công!")
-
                 toastr.options = {
-                    "closeButton": false,
-                    "gỡ lỗi": false,
                     "newestOnTop": false,
-                    "processBar": false,
                     "positionClass": "toast-top-right",
-                    "PreventDuplicates": false,
-                    "onclick": null,
-                    "showDuration": "3000",
-                    "hideDuration": "3000",
-                    "timeOut": "5000",
-                    "ExtendedTimeOut": "1000",
-                    "showEasing": "swing",
-                    "hideEasing": "tuyến tính",
-                    "showMethod": "fadeIn",
-                    "hideMethod": "fadeOut"
+                    "showDuration": "300",
+                    "hideDuration": "1000",
                 }
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
             }
         },
     });
@@ -111,10 +105,25 @@ $(document).on('change', '#avatar', function change_avatar(event) {
         processData: false,
         success: function(data) {
             if (data.code === 200) {
-                alert(data.avatar);
+                Command: toastr["error"](data.avatar);
+                toastr.options = {
+                    "newestOnTop": false,
+                    "positionClass": "toast-top-right",
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                }
             }
             if (data.code === 300) {
-                location.reload();
+                Command: toastr["success"]("Cập nhật Thành Công!");
+                toastr.options = {
+                    "newestOnTop": false,
+                    "positionClass": "toast-top-right",
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                }
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
             }
         },
     });
@@ -141,8 +150,16 @@ $(document).on('submit', '#update_profile', function change_avatar(event) {
                 $('.err_address').html(data.address);
             }
             if (data.code === 300) {
-                alert('Cập nhật thành công !!!');
-                location.reload();
+                Command: toastr["success"]("Cập nhật Thành Công!");
+                toastr.options = {
+                    "newestOnTop": false,
+                    "positionClass": "toast-top-right",
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                }
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
             }
         },
     });

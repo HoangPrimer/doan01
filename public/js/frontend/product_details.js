@@ -7,8 +7,6 @@ $(document).on('click', '.show_rate',
         } else {
             $('.form_rate').css('display', 'none');
         }
-
-
     }
 );
 
@@ -48,35 +46,18 @@ $(document).on('click', '.add_comment',
                 }
                 if (data.code === 300) {
                     Command: toastr["warning"]("Vui lòng đăng nhập để bình luận.")
-
-                        toastr.options = {
-                        "closeButton": false,
-                        "debug": false,
+                    toastr.options = {
                         "newestOnTop": true,
-                        "progressBar": false,
                         "positionClass": "toast-top-right",
-                        "preventDuplicates": false,
-                        "onclick": null,
-                        "showDuration": "2000",
+                        "showDuration": "300",
                         "hideDuration": "1000",
-                        "timeOut": "5000",
-                        "extendedTimeOut": "1000",
-                        "showEasing": "swing",
-                        "hideEasing": "linear",
-                        "showMethod": "fadeIn",
-                        "hideMethod": "fadeOut"
                     }
                 }
                 if (data.code === 400) {
                     $('.ers').html(data.text);
                 }
-
-            },
-            error: function() {
-
             },
         });
-
     }
 );
 
@@ -99,75 +80,35 @@ $(document).on('click', '.add_rate', function add_rate(event) {
                 $('.rating').html(data.viewrate);
                 $('.product-info').html(data.viewcenter);
                 Command: toastr["success"]("Cảm ơn bạn đã đánh giá!!!")
-
                 toastr.options = {
-                    "closeButton": false,
-                    "debug": false,
                     "newestOnTop": true,
-                    "progressBar": false,
                     "positionClass": "toast-top-right",
-                    "preventDuplicates": false,
-                    "onclick": null,
-                    "showDuration": "2000",
+                    "showDuration": "300",
                     "hideDuration": "1000",
-                    "timeOut": "5000",
-                    "extendedTimeOut": "1000",
-                    "showEasing": "swing",
-                    "hideEasing": "linear",
-                    "showMethod": "fadeIn",
-                    "hideMethod": "fadeOut"
                 }
             }
             if (data.code === 300) {
                 Command: toastr["error"]("Bạn đã đánh giá rồi!!!")
-
-                    toastr.options = {
-                    "closeButton": false,
-                    "debug": false,
+                toastr.options = {
                     "newestOnTop": true,
-                    "progressBar": false,
                     "positionClass": "toast-top-right",
-                    "preventDuplicates": false,
-                    "onclick": null,
-                    "showDuration": "2000",
+                    "showDuration": "300",
                     "hideDuration": "1000",
-                    "timeOut": "5000",
-                    "extendedTimeOut": "1000",
-                    "showEasing": "swing",
-                    "hideEasing": "linear",
-                    "showMethod": "fadeIn",
-                    "hideMethod": "fadeOut"
                 }
             }
             if (data.code === 400) {
                 Command: toastr["warning"]("Vui lòng đăng nhập để đánh giá.")
-
-                    toastr.options = {
-                    "closeButton": false,
-                    "debug": false,
+                toastr.options = {
                     "newestOnTop": true,
-                    "progressBar": false,
                     "positionClass": "toast-top-right",
-                    "preventDuplicates": false,
-                    "onclick": null,
-                    "showDuration": "2000",
+                    "showDuration": "300",
                     "hideDuration": "1000",
-                    "timeOut": "5000",
-                    "extendedTimeOut": "1000",
-                    "showEasing": "swing",
-                    "hideEasing": "linear",
-                    "showMethod": "fadeIn",
-                    "hideMethod": "fadeOut"
                 }
             }
             if (data.err = 'err') {
                 $('.error_star').html(data.star);
                 $('.error_text').html(data.text);
             }
-
-        },
-        error: function() {
-
         },
     });
 });
@@ -185,7 +126,6 @@ $(document).on('click', '.buy-now', function buy_now(event) {
             $(location).attr('href', url_shoppingCart);
             $('#header').html(data.header);
         },
-        error: function() {},
     });
 });
 
@@ -203,5 +143,4 @@ $(document).on('click', '.hide-more', function hide_more() {
     $('.product-desc').css('height', '500px');
     $('.read_more').removeClass('d-none');
     $(this).addClass('d-none');
-
 });

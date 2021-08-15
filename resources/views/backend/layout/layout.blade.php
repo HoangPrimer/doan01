@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="{{ asset('/bootstaps5/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/backend.css') }}">
     <link href="{{ asset('css/fontawesome-free-5.15.3-web/css/all.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://codeseven.github.io/toastr/build/toastr.min.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
 
 
 
@@ -23,37 +21,32 @@
     <a id="url_list_product" data-url="{{ route('a.list_product') }}" hidden>location</a>
 
     @if (session('toastr'))
-        <script>
-            var TYPE_MESSAGE = "{{ session('toastr.type') }}";
-            var MESSAGE = "{{ session('toastr.message') }}";
-        </script>
+    <script>
+        var TYPE_MESSAGE = "{{ session('toastr.type') }}";
+        var MESSAGE = "{{ session('toastr.message') }}";
+    </script>
     @endif
 
     @include('backend.layout.header')
-    <div class="container-fluid  ">
-        <div class="row">
-            <!-- start  header -->
-            @include('backend.layout.sidebar')
-            <!-- end header  -->
 
-            <!-- start main -->
+    <div class="container-fluid">
+        <div class="row">
+            @include('backend.layout.sidebar')
             <main class="col-md-9 ms-sm-auto col-lg-10 p-3">
                 @yield('content')
             </main>
-            <!-- end   main -->
         </div>
     </div>
 
-    <div class="modal fade bd-example-modal-xl  bd-example-modal-lg  " id="exampleModalCenter">
-        <div class="modal-dialog modal-dialog-centered  modal-fullscreen-lg-down  modal-xl">
+    <div class="modal fade bd-example-modal-xl bd-example-modal-lg" id="exampleModalCenter">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-lg-down  modal-xl">
             <div class="modal-content">
 
             </div>
         </div>
     </div>
 
-
-
+    {{-- js --}}
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
@@ -69,6 +62,19 @@
     <script type="text/javascript" src="/js/backend/profile.js"></script>
     <script src="/bootstaps5/js/bootstrap.js"></script>
     <script src="https://codeseven.github.io/toastr/build/toastr.min.js"></script>
+    {{-- end js --}}
+    <script>
+        if (typeof TYPE_MESSAGE != "undefined") {
+            switch (TYPE_MESSAGE) {
+                case 'success':
+                    toastr.success(MESSAGE);
+                    break;
+                case 'error':
+                    toastr.error(MESSAGE);
+                    break;
+            }
+        }
+    </script>
 </body>
 
 </html>

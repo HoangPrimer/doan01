@@ -14,9 +14,10 @@
     <link rel="stylesheet" href="{{ asset('/css/frontend/login_register.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/frontend/profile.css') }}">
     <link href="{{ asset('/css/fontawesome-free-5.15.3-web/css/all.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://codeseven.github.io/toastr/build/toastr.min.css">
+    {{-- <link rel="stylesheet" href="https://codeseven.github.io/toastr/build/toastr.min.css"> --}}
 
-    <!--load all styles -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <title>Xwatch VN</title>
 </head>
@@ -24,10 +25,10 @@
 <body>
     <a data-url="{{ route('cart') }}" class="url_cart" hidden>aaaa</a>
     @if (session('toastr'))
-        <script>
-            var TYPE_MESSAGE = "{{ session('toastr.type') }}";
+    <script>
+        var TYPE_MESSAGE = "{{ session('toastr.type') }}";
             var MESSAGE = "{{ session('toastr.message') }}";
-        </script>
+    </script>
     @endif
 
 
@@ -47,8 +48,7 @@
     </footer>
 
     <!-- js -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script src="/bootstaps5/js/bootstrap.js"></script>
     <script src="/js/frontend/profile_login.js"></script>
     <script src="/js/frontend/layout.js"></script>

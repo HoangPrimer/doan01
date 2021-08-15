@@ -167,8 +167,15 @@ $(document).on('click', '.delete_order', function delete_order(event) {
             processData: false,
             success: function(data) {
                 if (data.success === 200) {
-                    alert('Xóa Thành Công');
-                    location.reload();
+                    toastr.error("Xóa thành công");
+                    toastr.options = {
+                        "newestOnTop": true,
+                        "showDuration": "300",
+                    }
+                    setTimeout(function() {
+                        location.reload();
+                    }, 500);
+
                 }
             },
         });

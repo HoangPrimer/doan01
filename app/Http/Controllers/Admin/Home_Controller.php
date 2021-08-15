@@ -45,7 +45,7 @@ class Home_Controller extends Controller
         // top 10 product bán nhiều nhất
         $arrTop10Money = [];
         $top10 = DB::table('orders')->join('items', 'orders.id', '=', 'items.i_order_id')
-            ->where('od_status','3')
+            ->where('od_status', '3')
             ->select(DB::raw('sum(i_total) as pro_total_money'), DB::raw('i_product_code as pro_code'))
             ->groupBy('i_product_code')->orderBy('pro_total_money', 'desc')->limit(10)->get();
         foreach ($top10 as $key => $top) {

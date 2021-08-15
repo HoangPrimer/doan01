@@ -16,8 +16,6 @@ window.onclick = function(event) {
     }
 }
 
-
-
 // =========================== hiển thị thông tin footer
 
 $(document).on('click', '.show_info_footer', function show_info_footer(event) {
@@ -41,7 +39,7 @@ $(document).on('click', '.show_info_footer', function show_info_footer(event) {
 });
 
 
-// =========================== ẩn thông tin footer
+// =========================== ẩn thông tin footer ============== //
 
 $(document).on('click', '.hide_info_footer', function hide_info_footer() {
 

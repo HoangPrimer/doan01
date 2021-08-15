@@ -55,7 +55,11 @@ $(document).on('click', '#delete_admin', function delete_admin(event) {
                 } else {
                     $('.list_admin').html(data.new_list_admin);
                     $('.total_admin').html(data.all);
-                    alert('Đã Xóa');
+                    toastr.error("Xóa thành công");
+                    toastr.options = {
+                        "newestOnTop": true,
+                        "showDuration": "300",
+                    }
                 }
             },
         });

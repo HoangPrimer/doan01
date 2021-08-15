@@ -47,15 +47,23 @@
 
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <label for="pro_source">Nguồn Gốc:</label>
-                    <input type="text" class="form-control" name="pro_source" id="pro_source"
-                        placeholder="Nhập nguồn gốc ...">
+                    <select class="form-control" name="pro_source" id="pro_source">
+                        <option value="">Chọn --</option>
+                        <option value="Trung Quốc"> Trung Quốc</option>
+                        <option value="Nhật Bản "> Nhật Bản </option>
+                        <option value="Đức"> Đức</option>
+                        <option value="Mỹ"> Mỹ</option>
+                        <option value="Thụy Sỹ">Thụy Sỹ</option>
+                        <option value="Pháp">Pháp</option>
+                        <option value="Anh">Anh</option>
+                    </select>
                     <span class="text-danger err_pro_source fs-5"></span>
                 </div>
             </div>
             <div class="row mt-2">
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <label for="pro_machine_type">Kiểu Máy :</label>
-                    <select type="text" class="form-control" name="pro_machine_type" id="pro_machine_type">
+                    <select class="form-control" name="pro_machine_type" id="pro_machine_type">
                         <option value="">Chọn --</option>
                         <option value="Quartz (Pin)"> Quartz (Pin)</option>
                         <option value="Automatic "> Automatic </option>
@@ -66,24 +74,13 @@
                     <span class="text-danger err_pro_machine_type fs-5"></span>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
-                    <label for="pro_size">Kích Cỡ (mm) :</label>
-                    <input type="text" class="form-control" name="pro_size" id="pro_size" placeholder="Nhập đường kính ...">
-                    <span class="text-danger err_pro_size fs-5"></span>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <label for="pro_thickness">Độ Dày (mm) :</label>
-                    <input type="text" class="form-control" name="pro_thickness" id="pro_thickness"
-                        placeholder="Nhập độ dày ...">
-                    <span class="text-danger err_pro_thickness fs-5"></span>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
                     <label for="pro_shell_material">Chất Liệu Vỏ:</label>
-                    <input type="text" class="form-control" name="pro_shell_material" id="pro_shell_material"
-                        placeholder="Nhập chất liệu vỏ ...">
+                    <select type="text" class="form-control" name="pro_shell_material" id="pro_shell_material">
+                        <option value="">Chọn --</option>
+                        <option value="Thép Không Gỉ" selected>Thép Không Gỉ</option>
+                    </select>
                     <span class="text-danger err_pro_shell_material fs-5"></span>
                 </div>
-            </div>
-            <div class="row mt-2 ">
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <label for="pro_rope_material">Loại Dây:</label>
                     <select type="text" class="form-control" name="pro_rope_material" id="pro_rope_material">
@@ -108,10 +105,32 @@
                     </select>
                     <span class="text-danger err_pro_glass_material fs-5"></span>
                 </div>
+            </div>
+            <div class="row mt-2 ">
                 <div class="col-lg-3 col-md-6 col-sm-6">
-                    <label for="pro_waterproof">Chống Nước(m):</label>
-                    <input type="number" class="form-control" name="pro_waterproof" id="pro_waterproof"
-                        placeholder="Nhập chống nước ...">
+                    <label for="pro_manufacturing">Nơi sản xuất :</label>
+                    <select class="form-control" name="pro_manufacturing" id="pro_manufacturing">
+                        <option value="">Chọn --</option>
+                        <option value="Trung Quốc"> Trung Quốc</option>
+                        <option value="Nhật Bản "> Nhật Bản </option>
+                        <option value="Đức"> Đức</option>
+                        <option value="Mỹ"> Mỹ</option>
+                        <option value="Thụy Sỹ">Thụy Sỹ</option>
+                        <option value="Pháp">Pháp</option>
+                        <option value="Anh">Anh</option>
+                    </select>
+                    <span class="text-danger err_pro_manufacturing fs-5"></span>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <label for="pro_waterproof">Chống Nước (atm):</label>
+                    <select type="text" class="form-control" name="pro_waterproof" id="pro_waterproof">
+                        <option value="">Chọn --</option>
+                        <option value="1">1 ATM</option>
+                        <option value="2">2 ATM </option>
+                        <option value="3">3 ATM</option>
+                        <option value="4">4 ATM</option>
+                        <option value="5">5 ATM</option>
+                    </select>
                     <span class="text-danger err_pro_waterproof fs-5"></span>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
@@ -120,19 +139,24 @@
                         placeholder="Nhập chức năng ...">
                     <span class="text-danger err_pro_function fs-5"></span>
                 </div>
-            </div>
-            <div class="row mt-2">
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <label for="pro_guarantee">Bảo Hành :</label>
                     <input type="text" class="form-control" name="pro_guarantee" id="pro_guarantee"
                         placeholder="Nhập bảo hành ...">
                     <span class="text-danger err_pro_guarantee fs-5"></span>
                 </div>
+            </div>
+            <div class="row mt-2">
                 <div class="col-lg-3 col-md-6 col-sm-6">
-                    <label for="pro_manufacturing">Nơi sản xuất :</label>
-                    <input type="text" class="form-control" name="pro_manufacturing" id="pro_manufacturing"
-                        placeholder="Nhập nơi sản xuất">
-                    <span class="text-danger err_pro_manufacturing fs-5"></span>
+                    <label for="pro_size">Kích Cỡ (mm) :</label>
+                    <input type="text" class="form-control" name="pro_size" id="pro_size" placeholder="Nhập đường kính ...">
+                    <span class="text-danger err_pro_size fs-5"></span>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <label for="pro_thickness">Độ Dày (mm) :</label>
+                    <input type="text" class="form-control" name="pro_thickness" id="pro_thickness"
+                        placeholder="Nhập độ dày ...">
+                    <span class="text-danger err_pro_thickness fs-5"></span>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <label for="pro_amount">Số Lượng :</label>
@@ -154,7 +178,7 @@
                     <span class="text-danger err_pro_price fs-5"></span>
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-6">
-                    <label for="pro_sale">Giá Được Giảm :</label>
+                    <label for="pro_sale">Giá Khuyến Mãi :</label>
                     <input type="number" class="form-control " name="pro_sale" id="pro_sale" value="0">
                     <span class="text-danger err_pro_sale fs-5"></span>
                 </div>
@@ -163,7 +187,7 @@
                     <div class="form-control">
                         <input type="radio" class="form-check-input me-2" name="pro_hot" value="1"><span
                             class="me-4">Có</span>
-                        <input type="radio" class="form-check-input me-2" name="pro_hot" value="0"><span
+                        <input type="radio" class="form-check-input me-2" name="pro_hot" value="0" checked><span
                             class="me-4">Không</span>
                     </div>
                     <span class="text-danger err_pro_hot fs-5"></span>
@@ -171,7 +195,7 @@
                 <div class="col-lg-5 col-md-6 col-sm-6">
                     <label for="pro_gender">Giới Tính :</label>
                     <div class="form-control">
-                        <input type="radio" class="form-check-input me-2" name="pro_gender" value="Nam"><span
+                        <input type="radio" class="form-check-input me-2" name="pro_gender" value="Nam" checked><span
                             class="me-4">Nam</span>
                         <input type="radio" class="form-check-input me-2" name="pro_gender" value="Nữ"><span
                             class="me-4">Nữ</span>

@@ -185,12 +185,12 @@
                                 <td class="right"><span>{{ $product->pro_machine_type }}</span></td>
                             </tr>
                             <tr>
-                                <td class="left"><span>Kích Cỡ (mm) :</span></td>
-                                <td class="right"><span>{{ $product->pro_size }}</span></td>
+                                <td class="left"><span>Kích Cỡ :</span></td>
+                                <td class="right"><span>{{ $product->pro_size }}  mm</span></td>
                             </tr>
                             <tr>
-                                <td class="left"><span>Độ Dày (mm):</span></td>
-                                <td class="right"><span>{{ $product->pro_thickness }}</span></td>
+                                <td class="left"><span>Độ Dày :</span></td>
+                                <td class="right"><span>{{ $product->pro_thickness }} mm</span></td>
                             </tr>
                             <tr>
                                 <td class="left"> <span>Chất Liệu Vỏ:</span></td>
@@ -205,8 +205,8 @@
                                 <td class="right"><span>{{ $product->pro_glass_material }}</span></td>
                             </tr>
                             <tr>
-                                <td class="left"><span>Độ Chịu Nước (m):</span></td>
-                                <td class="right"><span>{{ $product->pro_waterproof }}</span></td>
+                                <td class="left"><span>Độ Chịu Nước:</span></td>
+                                <td class="right"><span>{{ $product->pro_waterproof }} ATM</span></td>
                             </tr>
                             <tr>
                                 <td class="left"><span>Chức Năng :</span></td>

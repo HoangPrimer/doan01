@@ -27,7 +27,8 @@
     @if (session('toastr'))
     <script>
         var TYPE_MESSAGE = "{{ session('toastr.type') }}";
-            var MESSAGE = "{{ session('toastr.message') }}";
+        var MESSAGE = "{{ session('toastr.message') }}";
+
     </script>
     @endif
 
@@ -69,11 +70,15 @@
                     break;
             }
         }
+
     </script>
 
     <script>
         // sap xep 
-        $(document).on('change', '#sort_category_product', function() {
+        $(document).on('change', '#sort_category_product', fillter);
+        $(document).on('click', '.ckeck_product', fillter);
+
+        function fillter() {
             let trademark = get_fillter_text('trademark');
             let may = get_fillter_text('may');
             let clday = get_fillter_text('clday');
@@ -83,26 +88,25 @@
             let key = $('#sort_category_product').val();
 
             $.ajax({
-                url: "{{ route('category.sort') }}",
-                method: "GET",
-                dataType: 'json',
-                data: {
-                    id: id_category,
-                    key: key,
-                    trademark: trademark,
-                    price: price,
-                    may: may,
-                    clday: clday,
-                    kichco: kichco,
-                },
-                success: function(data) {
+                url: "{{ route('category.sort') }}"
+                , method: "GET"
+                , dataType: 'json'
+                , data: {
+                    id: id_category
+                    , key: key
+                    , trademark: trademark
+                    , price: price
+                    , may: may
+                    , clday: clday
+                    , kichco: kichco
+                , }
+                , success: function(data) {
                     $('.category_product_list').html(data.abc);
-                },
-            });
-        });
+                }
+            , });
+        };
 
-        $(document).on('click', '.ckeck_product', function() {
-
+        function fetch_data(page) {
             let trademark = get_fillter_text('trademark');
             let may = get_fillter_text('may');
             let clday = get_fillter_text('clday');
@@ -110,29 +114,27 @@
             let kichco = $('#kichco:checked').val();
             let id_category = $('.category_id').val();
             let key = $('#sort_category_product').val();
-
             $.ajax({
-                url: "{{ route('category.sort') }}",
-                method: "GET",
-                data: {
-                    id: id_category,
-                    trademark: trademark,
-                    price: price,
-                    may: may,
-                    clday: clday,
-                    kichco: kichco,
-                },
-                success: function(data) {
-                    if (data.all === 0) {
-                        $('.category_product_list').html('Không Có Sản Phẩm Phù Hợp !');
-
-                    } else {
-                        $('.category_product_list').html(data.abc);
-                    }
-
-                },
+                url: "{{ route('category.sort') }}"
+                , method: "GET"
+                , data: {
+                    page: page
+                    , key: key
+                    , id: id_category
+                    , trademark: trademark
+                    , price: price
+                    , may: may
+                    , clday: clday
+                    , kichco: kichco
+                , }
+                , success: function(data) {
+                    $('.category_product_list').html(data.abc);
+                }
             });
-        });
+
+        };
+
+
 
         function get_fillter_text(text_id) {
             let fillterData = [];
@@ -152,33 +154,6 @@
 
         });
 
-        function fetch_data(page) {
-            let trademark = get_fillter_text('trademark');
-            let may = get_fillter_text('may');
-            let clday = get_fillter_text('clday');
-            let price = $('#price:checked').val();
-            let kichco = $('#kichco:checked').val();
-            let id_category = $('.category_id').val();
-            let key = $('#sort_category_product').val();
-            $.ajax({
-                url: "{{ route('category.sort') }}",
-                method: "GET",
-                data: {
-                    page: page,
-                    key: key,
-                    id: id_category,
-                    trademark: trademark,
-                    price: price,
-                    may: may,
-                    clday: clday,
-                    kichco: kichco,
-                },
-                success: function(data) {
-                    $('.category_product_list').html(data.abc);
-                }
-            });
-
-        };
     </script>
 
 </body>

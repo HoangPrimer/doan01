@@ -85,7 +85,7 @@ class Category_Product_Controller extends Controller
                         break;
                 }
             }
-            $product->orderBy('id','desc');
+            // $product->orderBy('id','desc');
             if ($request->has('key')){
                 $key = $request->key;
                 if ($key == 'new') {

@@ -1,4 +1,4 @@
-<section  class="py-5">
+<section class="py-5">
     <div class="container border-show py-3">
         <div class="row">
             <div class="col-lg-12 col-md-12">
@@ -32,8 +32,8 @@
                     <span>Nếu nhìn thoáng qua, rất nhiều anh em sẽ lầm tưởng đẩy là siêu phẩm đình đám đến từ Thụy Sĩ - HUBLOT ... </span>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-12 ">
-                <span class="d-block fs-3 mb-3 lh-1">BÁO CHÍ NÓI VỀ XWATCH</span>
+            <div class="col-lg-3 col-md-12 pt-2 ">
+                <span class="d-block fs-3 mb-3 lh-1 m-0">BÁO CHÍ NÓI VỀ XWATCH</span>
                 <div class="news__tv ">
                     <a href="#">
                         <img src="./image/default/dantri_1557884275.jpg" alt="#">

@@ -13,12 +13,10 @@
         <div class="main-item">
             <label for="">{{$key}} <small class="fa fa-star"></small></label>
             <div class="row_star">
-                <div class="zero"
-                    style="width:{{($abc['total'] / count($product->Rate) *100)}}%;height:100%;background-color: blue;border-radius:5px">
+                <div class="zero" style="width:{{($abc['total'] / count($product->Rate) *100)}}%;height:100%;background-color: blue;border-radius:5px">
                 </div>
             </div>
-            <label
-                class="text-primary fw-bold ">{{ number_format(($abc['total'] / count($product->Rate) *100)) }}%</label>
+            <label class="text-primary fw-bold ">{{ number_format(($abc['total'] / count($product->Rate) *100)) }}%</label>
         </div>
         @endforeach
         @else

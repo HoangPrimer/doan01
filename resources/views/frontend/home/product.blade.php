@@ -43,15 +43,15 @@
                         <gia class="d-block text-danger ">{{number_format($male->pro_sale)}} - VND </gia>
                         @endif
                         @for( $i=1 ; $i<= 5 ; $i++) @php if($i<=number_format( $male->Rate->avg('r_star'))){ $color='color: #4737d6;' ; }
-                        else { $color=' color: #c6caca;' ; }
-                        @endphp
-                        <sao data-index="{{$i}}" class="fa fa-star" style="{{$color}}"></sao>
-                        @endfor
-                        <div class="mt-2 hover-show">
-                            <a href="#" title="Thêm vào giỏ hàng" class="shopping btn btn-success px-4" data-url="{{route('cart.add',$male->id)}}">
-                                <i class="fas fa-cart-plus me-3"></i> Thêm vào giỏ
-                            </a>
-                        </div>
+                            else { $color=' color: #c6caca;' ; }
+                            @endphp
+                            <sao data-index="{{$i}}" class="fa fa-star" style="{{$color}}"></sao>
+                            @endfor
+                            <div class="mt-2 hover-show">
+                                <a href="#" title="Thêm vào giỏ hàng" class="shopping btn btn-success px-4" data-url="{{route('cart.add',$male->id)}}">
+                                    <i class="fas fa-cart-plus me-3"></i> Thêm vào giỏ
+                                </a>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -95,15 +95,15 @@
                         <gia class="d-block text-danger ">{{number_format($male->pro_sale)}} - VND </gia>
                         @endif
                         @for( $i=1 ; $i<= 5 ; $i++) @php if($i<=number_format( $male->Rate->avg('r_star'))){ $color='color: #4737d6;' ; }
-                        else { $color=' color: #c6caca;' ; }
-                        @endphp
-                        <sao data-index="{{$i}}" class="fa fa-star" style="{{$color}}"></sao>
-                        @endfor
-                        <div class="mt-2 hover-show">
-                            <a href="#" title="Thêm vào giỏ hàng" class="shopping btn btn-success px-4" data-url="{{route('cart.add',$male->id)}}">
-                                <i class="fas fa-cart-plus me-3"></i>Thêm vào giỏ
-                            </a>
-                        </div>
+                            else { $color=' color: #c6caca;' ; }
+                            @endphp
+                            <sao data-index="{{$i}}" class="fa fa-star" style="{{$color}}"></sao>
+                            @endfor
+                            <div class="mt-2 hover-show">
+                                <a href="#" title="Thêm vào giỏ hàng" class="shopping btn btn-success px-4" data-url="{{route('cart.add',$male->id)}}">
+                                    <i class="fas fa-cart-plus me-3"></i>Thêm vào giỏ
+                                </a>
+                            </div>
 
                     </div>
                 </div>

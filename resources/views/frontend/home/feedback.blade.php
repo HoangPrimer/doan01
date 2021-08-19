@@ -1,6 +1,6 @@
 <section class="py-5">
     <div class="container main-feedback border-show py-3 ">
-        <div class="row mb-4">
+        <div class="row m-0">
             <div class="d-flex justify-content-center align-items-center nameme">
                 <h2 class="fw-normal m-0">KHÁCH HÀNG NÓI GÌ VỀ CHÚNG TÔI</h2>
             </div>

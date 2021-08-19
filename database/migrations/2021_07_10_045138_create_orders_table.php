@@ -20,7 +20,7 @@ class CreateOrdersTable extends Migration
             $table->tinyInteger('od_status');
             $table->string('od_code');
             $table->string('od_name');
-            $table->integer('od_phone');
+            $table->string('od_phone');
             $table->string('od_address');
             $table->string('od_gender');
             $table->string('od_email');

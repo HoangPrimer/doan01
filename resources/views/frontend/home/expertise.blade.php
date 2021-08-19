@@ -5,7 +5,7 @@
                 <h2 class="fw-normal m-0">THẨM ĐỊNH ĐỒNG HỒ</h2>
             </div>
         </div>
-        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 g-3 mt-2 ">
+        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 g-3 ">
             <div class="col my-1">
                 <div class="expertise__image">
                     <a href="#"><img src="./image/default/250-trieu-mua-dong-ho-fake_1562925486.jpg" alt="#"></a>

@@ -14,9 +14,13 @@ use Illuminate\Support\Facades\Validator;
 class Profile_Controller extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+            
     public function profile()
     {
-
         $cart = session()->get('cart');
         return view('frontend.user.profile', compact('cart'));
     }
@@ -40,7 +44,7 @@ class Profile_Controller extends Controller
                 return response()->json([
                     'code' => 200,
                     'avatar' => $data->errors()->get('avatar'),
-                ]);
+                ],200);
             } else {
                 $user = User::find($request->id);
                 if ($request->hasFile('avatar')) {
@@ -53,7 +57,7 @@ class Profile_Controller extends Controller
                 $user->save();
                 return response()->json([
                     'code' => 300,
-                ]);
+                ],200);
             }
         }
     }

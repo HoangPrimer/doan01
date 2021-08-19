@@ -10,9 +10,6 @@
     <link rel="stylesheet" href="{{ asset('css/backend/backend.css') }}">
     <link href="{{ asset('css/fontawesome-free-5.15.3-web/css/all.css') }}" rel="stylesheet">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-
-
 </head>
 
 <body>
@@ -24,6 +21,7 @@
     <script>
         var TYPE_MESSAGE = "{{ session('toastr.type') }}";
         var MESSAGE = "{{ session('toastr.message') }}";
+
     </script>
     @endif
 
@@ -74,6 +72,7 @@
                     break;
             }
         }
+
     </script>
 </body>
 

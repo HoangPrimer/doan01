@@ -229,28 +229,18 @@
         text-align: center !important;
         width: 120px !important;
     }
-    /* feed back */
-    .main-feedback {
-        overflow: scroll;
-    }
-    .main-feedback::-webkit-scrollbar,
-    .list-new::-webkit-scrollbar {
-        display: none;
-    }
     .list-feedback {
-        height: 400px !important;
-        width: 940px !important;
+        width: 100% !important;
         overflow-x: auto !important;
         overflow-y: hidden;
         margin-top: 10px !important;
         background-color: #fff !important;
-        display: flex;
-    }
-    .list-feedback .col {
-        width: 310px !important;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 80%;
     }
     .feedback__video {
-        height: auto !important;
+        height: 240px !important;
         padding: 10px !important;
     }
     /* tham dinh dong ho */
@@ -261,17 +251,21 @@
     /*new */
     .list-new {
         width: 100% !important;
-        overflow: scroll !important;
-        height: 400px !important;
+        height: 470px !important;
         margin: 0 !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 80%;
     }
     .news__tv {
-        flex-direction: row !important;
+        flex-direction: column !important;
         padding: 0 !important;
         justify-content: space-between !important;
     }
     .news__tv a {
-        width: 32% !important;
+        width: 70% !important;
     }
     .news__tv a img {
         width: 100% !important;
@@ -318,7 +312,7 @@
 
 @media only screen and (max-width: 575.98px) {
     h2 {
-        font-size: 20px !important;
+        font-size: 16px !important;
     }
     /* header */
     .logo {

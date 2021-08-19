@@ -2,6 +2,9 @@
 
 #login {
     padding: 200px 0;
+    background-image: url("/image/default/aaa.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .login {

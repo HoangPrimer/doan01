@@ -43,7 +43,7 @@ class Home_Controller extends Controller
                     ->orwhere('pro_glass_material', 'like', '%' . $key . '%');
             })
             ->select('products.*', 'categories.c_slug', 'trademarks.tr_name')
-            ->where('pro_status', '1');
+            ->where('pro_status', '1')->orderBy('pro_amount_sell','desc');
 
         $all =     $search->get();
         $search = $search->paginate($number);
